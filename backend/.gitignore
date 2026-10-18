@@ -1,0 +1,24 @@
+# Secrets : ne jamais publier
+.env
+.env.backup
+.env.production
+*.pem
+auth.json
+
+# Dépendances et fichiers générés
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+/bootstrap/cache/*.php
+.phpunit.result.cache
+/.phpunit.cache
+
+# Éditeurs et système
+/.idea
+/.vscode
+.DS_Store
+Thumbs.db

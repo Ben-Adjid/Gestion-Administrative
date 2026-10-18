@@ -1,0 +1,22 @@
+# Secrets : ne jamais publier (les fichiers *.example restent versionnés)
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Dépendances et builds
+/node_modules
+/.next
+/.next-dev
+/.next-verify
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# Journaux, éditeurs et système
+npm-debug.log*
+/.idea
+/.vscode
+.DS_Store
+Thumbs.db

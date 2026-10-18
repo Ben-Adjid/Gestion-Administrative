@@ -1,0 +1,159 @@
+name: Communauté
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/demarches/{slug}/reviews'
+    metadata:
+      custom: []
+      groupName: Communauté
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Avis sur une démarche'
+      description: 'Avis publiés après modération, avec la synthèse des prix et délais réellement constatés par les usagers.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      slug:
+        custom: []
+        name: slug
+        description: 'Identifiant de la fiche.'
+        required: true
+        example: passeport-biometrique
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      slug: passeport-biometrique
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"summary":{"count":0,"average_rating":0,"median_price":null,"median_duration_days":null},"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/questions
+    metadata:
+      custom: []
+      groupName: Communauté
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Questions et réponses'
+      description: 'Questions publiées et leurs réponses publiées (après modération).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      demarche:
+        custom: []
+        name: demarche
+        description: 'Slug d’une fiche : seulement ses questions.'
+        required: false
+        example: passeport-biometrique
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      q:
+        custom: []
+        name: q
+        description: 'Mot-clé dans les questions.'
+        required: false
+        example: délai
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      per_page:
+        custom: []
+        name: per_page
+        description: 'Questions par page, de 1 à 50 (20 par défaut).'
+        required: false
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      demarche: passeport-biometrique
+      q: délai
+      per_page: 20
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[],"meta":{"current_page":1,"last_page":1,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+.admin-console {
+  --admin-background: #f3f5f7;
+  --admin-border: #dce2e8;
+  --admin-ink: #172536;
+  background: var(--admin-background);
+  color: var(--admin-ink);
+}
+
+.admin-console [class~="bg-slate-950"],
+.admin-console [class~="bg-slate-900"],
+.admin-console [class~="bg-slate-900/80"] {
+  background-color: #fff !important;
+}
+
+.admin-console [class~="bg-slate-800"],
+.admin-console [class~="bg-slate-800/80"],
+.admin-console [class~="bg-slate-800/60"] {
+  background-color: #f1f4f7 !important;
+}
+
+.admin-console [class~="bg-slate-800/30"] {
+  background-color: #f8fafc !important;
+}
+
+.admin-console [class~="border-slate-800"],
+.admin-console [class~="border-slate-800/80"],
+.admin-console [class~="border-slate-800/60"],
+.admin-console [class~="border-slate-700"],
+.admin-console [class~="border-slate-700/80"] {
+  border-color: var(--admin-border) !important;
+}
+
+.admin-console [class~="text-slate-100"],
+.admin-console [class~="text-slate-200"],
+.admin-console [class~="text-slate-300"],
+.admin-console [class~="text-slate-400"] {
+  color: #465568 !important;
+}
+
+.admin-console [class~="text-white"]:not(button):not(a) {
+  color: var(--admin-ink) !important;
+}
+
+.admin-console input,
+.admin-console textarea,
+.admin-console select {
+  color: var(--admin-ink);
+}
+
+.admin-console header {
+  background-color: rgb(255 255 255 / 96%);
+  border-color: var(--admin-border);
+}
+
+/* ------------------------------------------------------------------ Impression des fiches
+   Mise en page sobre sur papier A4 : menus et boutons masqués (classes print:hidden),
+   titres jamais isolés en bas de page, encadrés non coupés, couleurs d'arrière-plan retirées. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 14mm 16mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #0f172a;
+    font-size: 11pt;
+  }
+
+  .fiche-print h1,
+  .fiche-print h2,
+  .fiche-print h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .fiche-print li,
+  .fiche-print p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .fiche-print a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Cases à cocher des pièces : imprimées comme des cases vides à cocher au stylo. */
+  .fiche-print input[type='checkbox'] {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,156 @@
+name: Calendrier
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/calendar
+    metadata:
+      custom: []
+      groupName: Calendrier
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Calendrier administratif'
+      description: |-
+        Dates publiées en cours ou à venir. Chaque date indique son type (kind), son statut (ongoing ou upcoming)
+        et le nombre de jours restants (days_left : jusqu’à la fin d’une période en cours, sinon jusqu’au début).
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      category:
+        custom: []
+        name: category
+        description: 'Domaine : elections, education, exams, identity, tax, other.'
+        required: false
+        example: exams
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      kind:
+        custom: []
+        name: kind
+        description: 'Type d’échéance : period (période d’inscription…), deadline (date limite), event (date unique).'
+        required: false
+        example: deadline
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      category: exams
+      kind: deadline
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/calendar/{id}.ics'
+    metadata:
+      custom: []
+      groupName: Calendrier
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Ajouter une date à son agenda'
+      description: 'Fichier iCalendar (.ics). Une date limite reçoit un rappel 3 jours avant.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'Identifiant de la date publiée.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters:
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: 'BEGIN:VCALENDAR'
+        headers: []
+        description: 'Fichier .ics'
+      -
+        custom: []
+        status: 404
+        content: '{"message": "Ressource introuvable."}'
+        headers: []
+        description: 'Date inconnue ou non publiée'
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

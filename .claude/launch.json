@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sngect-ui",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:/Users/aboub/Desktop/SNGECT/frontend", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,1374 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "API publique DemarchesTchad",
+        "_postman_id": "6e1d1cfc-87fb-4d69-90de-25bd566d5ca9",
+        "description": "Donn\u00e9es ouvertes du guide ind\u00e9pendant DemarchesTchad : d\u00e9marches administratives au Tchad (pi\u00e8ces, co\u00fbts, d\u00e9lais, lieux), villes et bureaux, parcours de vie, diaspora et calendrier administratif.",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "D\u00e9marches",
+            "description": "",
+            "item": [
+                {
+                    "name": "Lister les d\u00e9marches",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/demarches",
+                            "query": [
+                                {
+                                    "key": "q",
+                                    "value": "passeport",
+                                    "description": "Mot-cl\u00e9 recherch\u00e9 dans le titre, le r\u00e9sum\u00e9, la description, l\u2019institution et le lieu (alias : search).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "categorie",
+                                    "value": "identite",
+                                    "description": "Slug ou identifiant de cat\u00e9gorie (alias : category).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "is_online",
+                                    "value": "",
+                                    "description": "Seulement les d\u00e9marches faisables en ligne (true) ou sur place (false).",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "sort",
+                                    "value": "views",
+                                    "description": "Tri : relevance (par d\u00e9faut avec q), views (par d\u00e9faut sans q), title, recent.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "15",
+                                    "description": "Fiches par page, de 1 \u00e0 50 (15 par d\u00e9faut).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "1",
+                                    "description": "Num\u00e9ro de page.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue du contenu : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/demarches?q=passeport&categorie=identite&is_online=&sort=views&per_page=15&page=1&lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Liste pagin\u00e9e des fiches publi\u00e9es, avec recherche (synonymes compris), filtres et tri.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/demarches?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/demarches?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/demarches?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/demarches\",\"per_page\":15,\"to\":null,\"total\":0}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Consulter une d\u00e9marche",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/demarches\/:slug",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue du contenu : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/demarches\/:slug?lang=fr",
+                            "variable": [
+                                {
+                                    "id": "slug",
+                                    "key": "slug",
+                                    "value": "passeport-biometrique",
+                                    "description": "Identifiant de la fiche."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Fiche compl\u00e8te : pi\u00e8ces, conditions, \u00e9tapes, co\u00fbt, d\u00e9lai, institution et bureaux o\u00f9 l\u2019effectuer (avec leur ville).",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":8,\"language\":\"fr\",\"is_translated\":true,\"title\":\"Passeport Biom\\u00e9trique\",\"slug\":\"passeport-biometrique\",\"summary\":\"Obtenir ou renouveler votre passeport biom\\u00e9trique tchadien\",\"description\":\"Le passeport biom\\u00e9trique est le document de voyage officiel de la R\\u00e9publique du Tchad. Il int\\u00e8gre une puce \\u00e9lectronique contenant les donn\\u00e9es biom\\u00e9triques du titulaire (empreintes, photo). Obligatoire pour tout voyage international.\",\"required_documents\":[\"Acte de naissance (original ou copie l\\u00e9galis\\u00e9e)\",\"Carte d'identit\\u00e9 nationale valide\",\"Deux photos biom\\u00e9triques r\\u00e9centes (fond blanc, 4x6)\",\"Extrait de casier judiciaire vierge (moins de 3 mois)\",\"Re\\u00e7u de paiement des frais\",\"Ancien passeport (si renouvellement)\"],\"procedure_steps\":[\"Retirer le formulaire de demande au bureau des passeports\",\"Remplir et signer le formulaire\",\"Constituer le dossier complet\",\"D\\u00e9poser le dossier au guichet\",\"Payer les frais de 75 000 FCFA \\u00e0 la caisse\",\"Se pr\\u00e9senter pour la prise des empreintes biom\\u00e9triques\",\"Attendre la notification (SMS ou affichage)\",\"R\\u00e9cup\\u00e9rer le passeport muni de votre re\\u00e7u\"],\"conditions\":[],\"cost\":\"60 000 FCFA\",\"cost_amount\":60000,\"extra_costs\":[],\"cost_estimate\":{\"official\":60000,\"extras\":0,\"total\":60000,\"complete\":true},\"abroad_available\":false,\"abroad_info\":null,\"offices\":[{\"id\":19,\"name\":\"Antenne ANATS de Mongo\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Antenne%20ANATS%20de%20Mongo%2C%20Mongo%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/www.alwihdainfo.com\\\/tchad-afflux-des-voyageurs-a-l-anats-de-mongo-pour-la-delivrance-du-passeport-a104358\\\/\",\"is_active\":true,\"city\":{\"id\":19,\"slug\":\"mongo\",\"name\":\"Mongo\"}},{\"id\":17,\"name\":\"Centre d'accueil ANATS du 10e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":11,\"name\":\"Centre d'accueil ANATS du 1er arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":12,\"name\":\"Centre d'accueil ANATS du 2e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":13,\"name\":\"Centre d'accueil ANATS du 5e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":14,\"name\":\"Centre d'accueil ANATS du 6e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":15,\"name\":\"Centre d'accueil ANATS du 7e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":16,\"name\":\"Centre d'accueil ANATS du 8e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":18,\"name\":\"Centre de d\\u00e9livrance de titres s\\u00e9curis\\u00e9s de Bongor (ANATS)\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20de%20d%C3%A9livrance%20de%20titres%20s%C3%A9curis%C3%A9s%20de%20Bongor%20%28ANATS%29%2C%20Bongor%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/www.alwihdainfo.com\\\/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987\\\/\",\"is_active\":true,\"city\":{\"id\":9,\"slug\":\"bongor\",\"name\":\"Bongor\"}}],\"processing_time\":\"15-30 jours\",\"processing_time_days\":null,\"institution\":\"Agence Nationale des Titres S\\u00e9curis\\u00e9s (ANATS)\",\"location\":\"Centres d'accueil de l'ANATS (N'Djam\\u00e9na et chefs-lieux de province)\",\"contact_email\":null,\"contact_phone\":null,\"official_source_url\":\"https:\\\/\\\/www.alwihdainfo.com\\\/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987\\\/\",\"last_verified_at\":null,\"status\":\"published\",\"is_online\":false,\"online_url\":null,\"views_count\":2,\"categorie\":{\"id\":14,\"name\":\"Voyage et Visa\",\"name_fr\":\"Voyage et Visa\",\"slug\":\"voyage\",\"description\":\"Passeport, visas et documents de voyage.\",\"icon\":\"ti-plane\",\"color\":\"gray\",\"display_order\":8,\"is_active\":true},\"created_at\":\"2026-10-11T12:48:11.000000Z\",\"updated_at\":\"2026-10-14T17:17:50.000000Z\"}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cat\u00e9gories",
+            "description": "",
+            "item": [
+                {
+                    "name": "Lister les cat\u00e9gories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des noms : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/categories?lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Cat\u00e9gories actives avec le nombre de fiches publi\u00e9es de chacune.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":12,\"name\":\"\\u00c9tat civil\",\"name_fr\":\"\\u00c9tat civil\",\"slug\":\"etat-civil\",\"description\":\"Actes de naissance, de mariage et de d\\u00e9c\\u00e8s.\",\"icon\":\"ti-heart\",\"color\":\"teal\",\"display_order\":1,\"is_active\":true,\"demarches_count\":3},{\"id\":1,\"name\":\"\\u00c9tudes\",\"name_fr\":\"\\u00c9tudes\",\"slug\":\"etudes\",\"description\":\"Proc\\u00e9dures d'\\u00e9ducation\",\"icon\":\"ti-school\",\"color\":\"#2563EB\",\"display_order\":2,\"is_active\":true,\"demarches_count\":1},{\"id\":11,\"name\":\"Identit\\u00e9\",\"name_fr\":\"Identit\\u00e9\",\"slug\":\"identite\",\"description\":\"Carte d\\u2019identit\\u00e9, inscription \\u00e9lectorale et documents d\\u2019identit\\u00e9.\",\"icon\":\"ti-id\",\"color\":\"blue\",\"display_order\":3,\"is_active\":true,\"demarches_count\":2},{\"id\":13,\"name\":\"L\\u00e9galisations\",\"name_fr\":\"L\\u00e9galisations\",\"slug\":\"legalisations\",\"description\":\"L\\u00e9galisation de signatures et certification de copies.\",\"icon\":\"ti-certificate\",\"color\":\"#2563EB\",\"display_order\":4,\"is_active\":true,\"demarches_count\":0},{\"id\":2,\"name\":\"Sant\\u00e9\",\"name_fr\":\"Sant\\u00e9\",\"slug\":\"sante\",\"description\":\"Services de sant\\u00e9\",\"icon\":\"ti-heart-rate-monitor\",\"color\":\"coral\",\"display_order\":5,\"is_active\":true,\"demarches_count\":1},{\"id\":6,\"name\":\"Travail\",\"name_fr\":\"Travail\",\"slug\":\"travail\",\"description\":\"Emploi et assurance\",\"icon\":\"ti-briefcase\",\"color\":\"green\",\"display_order\":6,\"is_active\":true,\"demarches_count\":0},{\"id\":3,\"name\":\"Justice\",\"name_fr\":\"Justice\",\"slug\":\"justice\",\"description\":\"Proc\\u00e9dures judiciaires\",\"icon\":\"ti-gavel\",\"color\":\"pink\",\"display_order\":7,\"is_active\":true,\"demarches_count\":1},{\"id\":14,\"name\":\"Voyage et Visa\",\"name_fr\":\"Voyage et Visa\",\"slug\":\"voyage\",\"description\":\"Passeport, visas et documents de voyage.\",\"icon\":\"ti-plane\",\"color\":\"gray\",\"display_order\":8,\"is_active\":true,\"demarches_count\":1},{\"id\":5,\"name\":\"Transport\",\"name_fr\":\"Transport\",\"slug\":\"transport\",\"description\":\"Permis et documents\",\"icon\":\"ti-car\",\"color\":\"red\",\"display_order\":9,\"is_active\":true,\"demarches_count\":1},{\"id\":4,\"name\":\"Urbanisme et logement\",\"name_fr\":\"Urbanisme et logement\",\"slug\":\"urbanisme\",\"description\":\"Permis de construire, terrains et logement.\",\"icon\":\"ti-building\",\"color\":\"orange\",\"display_order\":10,\"is_active\":true,\"demarches_count\":1}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "D\u00e9marches d\u2019une cat\u00e9gorie",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories\/:slug\/demarches",
+                            "query": [
+                                {
+                                    "key": "per_page",
+                                    "value": "50",
+                                    "description": "Fiches par page, de 1 \u00e0 100 (50 par d\u00e9faut).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue du contenu : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/categories\/:slug\/demarches?per_page=50&lang=fr",
+                            "variable": [
+                                {
+                                    "id": "slug",
+                                    "key": "slug",
+                                    "value": "etudes",
+                                    "description": "Identifiant de la cat\u00e9gorie."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Fiches publi\u00e9es d\u2019une cat\u00e9gorie, les plus consult\u00e9es d\u2019abord ; la cat\u00e9gorie est jointe \u00e0 la r\u00e9ponse.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":5,\"language\":\"fr\",\"is_translated\":true,\"title\":\"Inscription Universit\\u00e9\",\"slug\":\"inscription-universite\",\"summary\":\"S'inscrire dans une universit\\u00e9 tchadienne\",\"description\":\"L'inscription universitaire est le processus permettant aux \\u00e9tudiants admis d'enregistrer leur admission et de payer les frais d'inscription. Chaque universit\\u00e9 a ses propres frais et conditions.\",\"required_documents\":[\"Lettre d'admission\",\"Relev\\u00e9 de notes BAC\",\"Copie identit\\u00e9\",\"Certificat de naissance\",\"Photo 4x6\"],\"procedure_steps\":[\"Recevoir lettre d'admission\",\"Retirer formulaire\",\"Payer les frais\",\"D\\u00e9poser dossier\",\"Attendre confirmation\",\"Recevoir num\\u00e9ro inscription\"],\"conditions\":[],\"cost\":\"50\\u00a0000 FCFA\",\"cost_amount\":50000,\"extra_costs\":[],\"cost_estimate\":{\"official\":50000,\"extras\":0,\"total\":50000,\"complete\":true},\"abroad_available\":false,\"abroad_info\":null,\"processing_time\":\"3-5 jours\",\"processing_time_days\":null,\"institution\":\"Universit\\u00e9 de N'Djam\\u00e9na\",\"location\":\"Campus Principal, Quartier du Fleuve\",\"contact_email\":null,\"contact_phone\":null,\"official_source_url\":null,\"last_verified_at\":null,\"status\":\"published\",\"is_online\":false,\"online_url\":null,\"views_count\":0,\"categorie\":{\"id\":1,\"name\":\"\\u00c9tudes\",\"name_fr\":\"\\u00c9tudes\",\"slug\":\"etudes\",\"description\":\"Proc\\u00e9dures d'\\u00e9ducation\",\"icon\":\"ti-school\",\"color\":\"#2563EB\",\"display_order\":2,\"is_active\":true},\"created_at\":\"2026-10-11T12:05:57.000000Z\",\"updated_at\":\"2026-10-14T17:17:50.000000Z\"}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/categories\\\/etudes\\\/demarches?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/categories\\\/etudes\\\/demarches?page=1\",\"prev\":null,\"next\":null},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":1,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/categories\\\/etudes\\\/demarches?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/categories\\\/etudes\\\/demarches\",\"per_page\":50,\"to\":1,\"total\":1},\"categorie\":{\"id\":1,\"name\":\"\\u00c9tudes\",\"name_fr\":\"\\u00c9tudes\",\"slug\":\"etudes\",\"description\":\"Proc\\u00e9dures d'\\u00e9ducation\",\"icon\":\"ti-school\",\"color\":\"#2563EB\",\"display_order\":2,\"is_active\":true}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Recherche",
+            "description": "",
+            "item": [
+                {
+                    "name": "Suggestions de recherche",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/search\/suggest",
+                            "query": [
+                                {
+                                    "key": "q",
+                                    "value": "passe",
+                                    "description": "Texte saisi (3 caract\u00e8res minimum).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/search\/suggest?q=passe&lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Jusqu\u2019\u00e0 8 fiches correspondant au d\u00e9but de saisie, avec extrait et cat\u00e9gorie. Rien en dessous de 3 caract\u00e8res.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":8,\"title\":\"Passeport Biom\\u00e9trique\",\"slug\":\"passeport-biometrique\",\"excerpt\":\"Obtenir ou renouveler votre passeport biom\\u00e9trique tchadien\",\"category\":\"Voyage et Visa\",\"institution\":\"Agence Nationale des Titres S\\u00e9curis\\u00e9s (ANATS)\",\"cost\":\"60 000 FCFA\",\"cost_amount\":60000,\"processing_time\":\"15-30 jours\"},{\"id\":9,\"title\":\"Acte de Naissance\",\"slug\":\"acte-de-naissance\",\"excerpt\":\"Obtenir un extrait ou une copie int\\u00e9grale de votre acte de naissance\",\"category\":\"\\u00c9tat civil\",\"institution\":\"Centre d'\\u00c9tat Civil \\u2014 Mairie de votre commune\",\"cost\":\"1\\u00a0000 FCFA\",\"cost_amount\":1000,\"processing_time\":\"1-5 jours\"},{\"id\":11,\"title\":\"Casier Judiciaire\",\"slug\":\"casier-judiciaire\",\"excerpt\":\"Obtenir un extrait de casier judiciaire (bulletin n\\u00b03)\",\"category\":\"Justice\",\"institution\":\"Tribunal de Grande Instance de N'Djam\\u00e9na\",\"cost\":\"2\\u00a0000 FCFA\",\"cost_amount\":2000,\"processing_time\":\"3-7 jours\"}]}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Villes et bureaux",
+            "description": "",
+            "item": [
+                {
+                    "name": "Lister les villes",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cities",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/cities?lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Villes actives avec le nombre de bureaux administratifs enregistr\u00e9s dans chacune.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\",\"province\":\"Ville de N'Djam\\u00e9na\",\"offices_count\":7},{\"id\":2,\"slug\":\"moundou\",\"name\":\"Moundou\",\"province\":\"Logone Occidental\",\"offices_count\":0},{\"id\":3,\"slug\":\"sarh\",\"name\":\"Sarh\",\"province\":\"Moyen-Chari\",\"offices_count\":0},{\"id\":4,\"slug\":\"abeche\",\"name\":\"Ab\\u00e9ch\\u00e9\",\"province\":\"Ouadda\\u00ef\",\"offices_count\":0},{\"id\":22,\"slug\":\"am-timan\",\"name\":\"Am Timan\",\"province\":\"Salamat\",\"offices_count\":0},{\"id\":13,\"slug\":\"amdjarass\",\"name\":\"Amdjarass\",\"province\":\"Ennedi Est\",\"offices_count\":0},{\"id\":5,\"slug\":\"ati\",\"name\":\"Ati\",\"province\":\"Batha\",\"offices_count\":0},{\"id\":6,\"slug\":\"bardai\",\"name\":\"Barda\\u00ef\",\"province\":\"Tibesti\",\"offices_count\":0},{\"id\":7,\"slug\":\"biltine\",\"name\":\"Biltine\",\"province\":\"Wadi Fira\",\"offices_count\":0},{\"id\":8,\"slug\":\"bol\",\"name\":\"Bol\",\"province\":\"Lac\",\"offices_count\":0},{\"id\":9,\"slug\":\"bongor\",\"name\":\"Bongor\",\"province\":\"Mayo-Kebbi Est\",\"offices_count\":1},{\"id\":10,\"slug\":\"doba\",\"name\":\"Doba\",\"province\":\"Logone Oriental\",\"offices_count\":0},{\"id\":12,\"slug\":\"fada\",\"name\":\"Fada\",\"province\":\"Ennedi Ouest\",\"offices_count\":0},{\"id\":11,\"slug\":\"faya-largeau\",\"name\":\"Faya-Largeau\",\"province\":\"Borkou\",\"offices_count\":0},{\"id\":14,\"slug\":\"goz-beida\",\"name\":\"Goz Be\\u00efda\",\"province\":\"Sila\",\"offices_count\":0},{\"id\":15,\"slug\":\"koumra\",\"name\":\"Koumra\",\"province\":\"Mandoul\",\"offices_count\":0},{\"id\":16,\"slug\":\"lai\",\"name\":\"La\\u00ef\",\"province\":\"Tandjil\\u00e9\",\"offices_count\":0},{\"id\":17,\"slug\":\"mao\",\"name\":\"Mao\",\"province\":\"Kanem\",\"offices_count\":0},{\"id\":18,\"slug\":\"massakory\",\"name\":\"Massakory\",\"province\":\"Hadjer-Lamis\",\"offices_count\":0},{\"id\":23,\"slug\":\"massenya\",\"name\":\"Massenya\",\"province\":\"Chari-Baguirmi\",\"offices_count\":0},{\"id\":19,\"slug\":\"mongo\",\"name\":\"Mongo\",\"province\":\"Gu\\u00e9ra\",\"offices_count\":1},{\"id\":20,\"slug\":\"moussoro\",\"name\":\"Moussoro\",\"province\":\"Barh El Gazel\",\"offices_count\":0},{\"id\":21,\"slug\":\"pala\",\"name\":\"Pala\",\"province\":\"Mayo-Kebbi Ouest\",\"offices_count\":0},{\"id\":24,\"slug\":\"kelo\",\"name\":\"K\\u00e9lo\",\"province\":\"Tandjil\\u00e9\",\"offices_count\":0}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Consulter une ville",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/cities\/:slug",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/cities\/:slug?lang=fr",
+                            "variable": [
+                                {
+                                    "id": "slug",
+                                    "key": "slug",
+                                    "value": "ndjamena",
+                                    "description": "Identifiant de la ville."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "La ville, ses bureaux (adresse, horaires, contacts v\u00e9rifi\u00e9s, source) et les d\u00e9marches qu\u2019on peut y faire.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\",\"province\":\"Ville de N'Djam\\u00e9na\",\"offices\":[{\"id\":17,\"name\":\"Centre d'accueil ANATS du 10e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":11,\"name\":\"Centre d'accueil ANATS du 1er arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":12,\"name\":\"Centre d'accueil ANATS du 2e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":13,\"name\":\"Centre d'accueil ANATS du 5e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":14,\"name\":\"Centre d'accueil ANATS du 6e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":15,\"name\":\"Centre d'accueil ANATS du 7e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]},{\"id\":16,\"name\":\"Centre d'accueil ANATS du 8e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"},\"demarches\":[{\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\"},{\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\"}]}]}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Parcours de vie",
+            "description": "",
+            "item": [
+                {
+                    "name": "Lister les parcours de vie",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/life-events",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/life-events?lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Situations de vie (naissance, mariage, voyage\u2026) regroupant plusieurs d\u00e9marches.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"slug\":\"voyager-a-l-etranger\",\"title\":\"Je veux voyager \\u00e0 l'\\u00e9tranger\",\"description\":\"Le passeport demande un acte de naissance, une carte d\\u2019identit\\u00e9 et un casier judiciaire : faites-les dans cet ordre.\",\"icon\":\"plane\",\"steps_count\":4},{\"slug\":\"obtenir-mes-papiers\",\"title\":\"J'ai besoin de mes papiers d'identit\\u00e9\",\"description\":\"La carte nationale d\\u2019identit\\u00e9 demande d\\u2019abord un certificat de naissance.\",\"icon\":\"id-card\",\"steps_count\":2},{\"slug\":\"j-ai-un-bebe\",\"title\":\"J'ai un b\\u00e9b\\u00e9\",\"description\":\"D\\u00e9clarez la naissance et obtenez l\\u2019acte de naissance : c\\u2019est le premier document de votre enfant.\",\"icon\":\"baby\",\"steps_count\":1},{\"slug\":\"je-me-marie\",\"title\":\"Je me marie\",\"description\":\"Le certificat de mariage demande une pi\\u00e8ce d\\u2019identit\\u00e9 : pr\\u00e9parez-la \\u00e0 l\\u2019avance.\",\"icon\":\"heart\",\"steps_count\":2},{\"slug\":\"je-perds-un-proche\",\"title\":\"Je perds un proche\",\"description\":\"L\\u2019acte de d\\u00e9c\\u00e8s est indispensable pour la succession, les pensions et la cl\\u00f4ture des comptes.\",\"icon\":\"flower\",\"steps_count\":1},{\"slug\":\"je-veux-voter\",\"title\":\"Je veux voter\",\"description\":\"L\\u2019inscription sur la liste \\u00e9lectorale demande un acte de naissance et une carte d\\u2019identit\\u00e9 valide.\",\"icon\":\"vote\",\"steps_count\":3},{\"slug\":\"j-entre-a-l-universite\",\"title\":\"J'entre \\u00e0 l'universit\\u00e9\",\"description\":\"L\\u2019inscription demande un certificat de naissance et une copie de votre pi\\u00e8ce d\\u2019identit\\u00e9.\",\"icon\":\"graduation-cap\",\"steps_count\":3},{\"slug\":\"je-veux-conduire\",\"title\":\"Je veux conduire\",\"description\":\"Le permis de conduire demande une pi\\u00e8ce d\\u2019identit\\u00e9.\",\"icon\":\"car\",\"steps_count\":2},{\"slug\":\"je-construis\",\"title\":\"Je construis ma maison\",\"description\":\"Le permis de construire demande une pi\\u00e8ce d\\u2019identit\\u00e9, un titre de propri\\u00e9t\\u00e9 et un plan sign\\u00e9.\",\"icon\":\"home\",\"steps_count\":2}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Consulter un parcours de vie",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/life-events\/:slug",
+                            "query": [
+                                {
+                                    "key": "city",
+                                    "value": "ndjamena",
+                                    "description": "Slug d\u2019une ville : ajoute les bureaux de cette ville \u00e0 chaque \u00e9tape.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/life-events\/:slug?city=ndjamena&lang=fr",
+                            "variable": [
+                                {
+                                    "id": "slug",
+                                    "key": "slug",
+                                    "value": "voyager-a-l-etranger",
+                                    "description": "Identifiant du parcours."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Les d\u00e9marches du parcours dans l\u2019ordre et le co\u00fbt total \u00e0 pr\u00e9voir.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"slug\":\"voyager-a-l-etranger\",\"title\":\"Je veux voyager \\u00e0 l'\\u00e9tranger\",\"description\":\"Le passeport demande un acte de naissance, une carte d\\u2019identit\\u00e9 et un casier judiciaire : faites-les dans cet ordre.\",\"icon\":\"plane\",\"steps\":[{\"position\":1,\"slug\":\"acte-de-naissance\",\"title\":\"Acte de Naissance\",\"summary\":\"Obtenir un extrait ou une copie int\\u00e9grale de votre acte de naissance\",\"cost\":\"1\\u00a0000 FCFA\",\"processing_time\":\"1-5 jours\",\"required_documents\":[\"Livret de famille ou d\\u00e9claration de naissance originale\",\"Pi\\u00e8ce d'identit\\u00e9 du demandeur (parent ou int\\u00e9ress\\u00e9 majeur)\",\"Formulaire de demande d'acte\"],\"location\":\"Mairie de N'Djam\\u00e9na ou commune de naissance\",\"cost_estimate\":{\"official\":1000,\"extras\":0,\"total\":1000,\"complete\":true},\"abroad_available\":false,\"offices\":[]},{\"position\":2,\"slug\":\"carte-didentite-nationale\",\"title\":\"Carte d'Identit\\u00e9 Nationale\",\"summary\":\"Demander ou renouveler votre carte d'identit\\u00e9 nationale\",\"cost\":\"5\\u00a0000 FCFA\",\"processing_time\":\"10-15 jours\",\"required_documents\":[\"Copie de l'acte de naissance\",\"Justificatif de profession (si n\\u00e9cessaire)\",\"Deux photos d'identit\\u00e9 en couleur\",\"Trois copies de cartes d'identit\\u00e9 de t\\u00e9moins\"],\"location\":\"Centres d'accueil de l'ANATS (N'Djam\\u00e9na et chefs-lieux de province)\",\"cost_estimate\":{\"official\":5000,\"extras\":0,\"total\":5000,\"complete\":true},\"abroad_available\":false,\"offices\":[{\"id\":11,\"name\":\"Centre d'accueil ANATS du 1er arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":12,\"name\":\"Centre d'accueil ANATS du 2e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":13,\"name\":\"Centre d'accueil ANATS du 5e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":14,\"name\":\"Centre d'accueil ANATS du 6e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":15,\"name\":\"Centre d'accueil ANATS du 7e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":16,\"name\":\"Centre d'accueil ANATS du 8e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":17,\"name\":\"Centre d'accueil ANATS du 10e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}}]},{\"position\":3,\"slug\":\"casier-judiciaire\",\"title\":\"Casier Judiciaire\",\"summary\":\"Obtenir un extrait de casier judiciaire (bulletin n\\u00b03)\",\"cost\":\"2\\u00a0000 FCFA\",\"processing_time\":\"3-7 jours\",\"required_documents\":[\"Carte d'identit\\u00e9 nationale ou passeport valide\",\"Extrait d'acte de naissance\",\"Formulaire de demande rempli\",\"Re\\u00e7u de paiement des frais\"],\"location\":\"Palais de Justice, Avenue F\\u00e9lix \\u00c9bou\\u00e9, N'Djam\\u00e9na\",\"cost_estimate\":{\"official\":2000,\"extras\":0,\"total\":2000,\"complete\":true},\"abroad_available\":false,\"offices\":[]},{\"position\":4,\"slug\":\"passeport-biometrique\",\"title\":\"Passeport Biom\\u00e9trique\",\"summary\":\"Obtenir ou renouveler votre passeport biom\\u00e9trique tchadien\",\"cost\":\"60 000 FCFA\",\"processing_time\":\"15-30 jours\",\"required_documents\":[\"Acte de naissance (original ou copie l\\u00e9galis\\u00e9e)\",\"Carte d'identit\\u00e9 nationale valide\",\"Deux photos biom\\u00e9triques r\\u00e9centes (fond blanc, 4x6)\",\"Extrait de casier judiciaire vierge (moins de 3 mois)\",\"Re\\u00e7u de paiement des frais\",\"Ancien passeport (si renouvellement)\"],\"location\":\"Centres d'accueil de l'ANATS (N'Djam\\u00e9na et chefs-lieux de province)\",\"cost_estimate\":{\"official\":60000,\"extras\":0,\"total\":60000,\"complete\":true},\"abroad_available\":false,\"offices\":[{\"id\":11,\"name\":\"Centre d'accueil ANATS du 1er arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":12,\"name\":\"Centre d'accueil ANATS du 2e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":13,\"name\":\"Centre d'accueil ANATS du 5e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":14,\"name\":\"Centre d'accueil ANATS du 6e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":15,\"name\":\"Centre d'accueil ANATS du 7e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":16,\"name\":\"Centre d'accueil ANATS du 8e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}},{\"id\":17,\"name\":\"Centre d'accueil ANATS du 10e arrondissement\",\"address\":null,\"opening_hours\":null,\"phone\":null,\"latitude\":null,\"longitude\":null,\"directions_url\":\"https:\\\/\\\/www.google.com\\\/maps\\\/dir\\\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad\",\"source_url\":\"https:\\\/\\\/tchadinfos.com\\\/2023\\\/01\\\/31\\\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\\\/\",\"is_active\":true,\"city\":{\"id\":1,\"slug\":\"ndjamena\",\"name\":\"N'Djam\\u00e9na\"}}]}],\"total\":{\"amount\":68000,\"complete\":true}}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Diaspora",
+            "description": "",
+            "item": [
+                {
+                    "name": "Diaspora",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/diaspora",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/diaspora?lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "D\u00e9marches possibles depuis l\u2019\u00e9tranger et repr\u00e9sentations diplomatiques du Tchad.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"demarches\":[],\"representations\":[{\"id\":8,\"country\":\"Canada\",\"city\":\"Ottawa\",\"type\":\"embassy\",\"address\":\"350 Sparks Street, Suite 802, Ottawa, ON K1R 7S8\",\"phone\":null,\"email\":null,\"website\":null,\"source_url\":\"https:\\\/\\\/www.international.gc.ca\\\/protocol-protocole\\\/addresses.aspx?lang=eng\",\"notes\":null},{\"id\":7,\"country\":\"\\u00c9tats-Unis\",\"city\":\"Washington\",\"type\":\"embassy\",\"address\":\"2401 Massachusetts Ave NW, Washington, DC 20008\",\"phone\":\"+1 202 652 1312\",\"email\":\"info@chadembassy.us\",\"website\":\"https:\\\/\\\/chadembassy.us\",\"source_url\":\"https:\\\/\\\/chadembassy.us\",\"notes\":null},{\"id\":6,\"country\":\"France\",\"city\":\"Paris\",\"type\":\"embassy\",\"address\":\"65 rue des Belles Feuilles, 75016 Paris\",\"phone\":\"+33 1 45 53 36 75\",\"email\":\"ambassadedutchadparis@wanadoo.fr\",\"website\":null,\"source_url\":\"https:\\\/\\\/www.diplomatie.gouv.fr\\\/fr\\\/services\\\/annuaire-et-contacts\\\/representations-etrangeres\\\/paris-ambassade-du-tchad\",\"notes\":null}]}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Calendrier",
+            "description": "",
+            "item": [
+                {
+                    "name": "Calendrier administratif",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/calendar",
+                            "query": [
+                                {
+                                    "key": "category",
+                                    "value": "exams",
+                                    "description": "Domaine : elections, education, exams, identity, tax, other.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "kind",
+                                    "value": "deadline",
+                                    "description": "Type d\u2019\u00e9ch\u00e9ance : period (p\u00e9riode d\u2019inscription\u2026), deadline (date limite), event (date unique).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/calendar?category=exams&kind=deadline&lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Dates publi\u00e9es en cours ou \u00e0 venir. Chaque date indique son type (kind), son statut (ongoing ou upcoming)\net le nombre de jours restants (days_left : jusqu\u2019\u00e0 la fin d\u2019une p\u00e9riode en cours, sinon jusqu\u2019au d\u00e9but).",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Ajouter une date \u00e0 son agenda",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/calendar\/:id.ics",
+                            "query": [
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/calendar\/:id.ics?lang=fr",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": 1,
+                                    "description": "Identifiant de la date publi\u00e9e."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Fichier iCalendar (.ics). Une date limite re\u00e7oit un rappel 3 jours avant.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "BEGIN:VCALENDAR",
+                            "name": "Fichier .ics"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\"message\": \"Ressource introuvable.\"}",
+                            "name": "Date inconnue ou non publi\u00e9e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Communaut\u00e9",
+            "description": "",
+            "item": [
+                {
+                    "name": "Avis sur une d\u00e9marche",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/demarches\/:slug\/reviews",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/demarches\/:slug\/reviews",
+                            "variable": [
+                                {
+                                    "id": "slug",
+                                    "key": "slug",
+                                    "value": "passeport-biometrique",
+                                    "description": "Identifiant de la fiche."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Avis publi\u00e9s apr\u00e8s mod\u00e9ration, avec la synth\u00e8se des prix et d\u00e9lais r\u00e9ellement constat\u00e9s par les usagers.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"summary\":{\"count\":0,\"average_rating\":0,\"median_price\":null,\"median_duration_days\":null},\"data\":[]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Questions et r\u00e9ponses",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/questions",
+                            "query": [
+                                {
+                                    "key": "demarche",
+                                    "value": "passeport-biometrique",
+                                    "description": "Slug d\u2019une fiche : seulement ses questions.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "q",
+                                    "value": "d\u00e9lai",
+                                    "description": "Mot-cl\u00e9 dans les questions.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "20",
+                                    "description": "Questions par page, de 1 \u00e0 50 (20 par d\u00e9faut).",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "fr",
+                                    "description": "Langue des textes : fr (par d\u00e9faut), en ou ar.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/v1\/questions?demarche=passeport-biometrique&q=d%C3%A9lai&per_page=20&lang=fr"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Questions publi\u00e9es et leurs r\u00e9ponses publi\u00e9es (apr\u00e8s mod\u00e9ration).",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "content-security-policy",
+                                    "value": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+                                },
+                                {
+                                    "key": "x-content-type-options",
+                                    "value": "nosniff"
+                                },
+                                {
+                                    "key": "x-frame-options",
+                                    "value": "DENY"
+                                },
+                                {
+                                    "key": "referrer-policy",
+                                    "value": "strict-origin-when-cross-origin"
+                                },
+                                {
+                                    "key": "permissions-policy",
+                                    "value": "geolocation=(), microphone=(), camera=()"
+                                },
+                                {
+                                    "key": "cross-origin-resource-policy",
+                                    "value": "same-site"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "100"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "99"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[],\"meta\":{\"current_page\":1,\"last_page\":1,\"total\":0}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

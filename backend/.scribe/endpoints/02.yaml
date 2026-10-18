@@ -1,0 +1,135 @@
+name: 'Villes et bureaux'
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/cities
+    metadata:
+      custom: []
+      groupName: 'Villes et bureaux'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Lister les villes'
+      description: 'Villes actives avec le nombre de bureaux administratifs enregistrés dans chacune.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na","province":"Ville de N''Djam\u00e9na","offices_count":7},{"id":2,"slug":"moundou","name":"Moundou","province":"Logone Occidental","offices_count":0},{"id":3,"slug":"sarh","name":"Sarh","province":"Moyen-Chari","offices_count":0},{"id":4,"slug":"abeche","name":"Ab\u00e9ch\u00e9","province":"Ouadda\u00ef","offices_count":0},{"id":22,"slug":"am-timan","name":"Am Timan","province":"Salamat","offices_count":0},{"id":13,"slug":"amdjarass","name":"Amdjarass","province":"Ennedi Est","offices_count":0},{"id":5,"slug":"ati","name":"Ati","province":"Batha","offices_count":0},{"id":6,"slug":"bardai","name":"Barda\u00ef","province":"Tibesti","offices_count":0},{"id":7,"slug":"biltine","name":"Biltine","province":"Wadi Fira","offices_count":0},{"id":8,"slug":"bol","name":"Bol","province":"Lac","offices_count":0},{"id":9,"slug":"bongor","name":"Bongor","province":"Mayo-Kebbi Est","offices_count":1},{"id":10,"slug":"doba","name":"Doba","province":"Logone Oriental","offices_count":0},{"id":12,"slug":"fada","name":"Fada","province":"Ennedi Ouest","offices_count":0},{"id":11,"slug":"faya-largeau","name":"Faya-Largeau","province":"Borkou","offices_count":0},{"id":14,"slug":"goz-beida","name":"Goz Be\u00efda","province":"Sila","offices_count":0},{"id":15,"slug":"koumra","name":"Koumra","province":"Mandoul","offices_count":0},{"id":16,"slug":"lai","name":"La\u00ef","province":"Tandjil\u00e9","offices_count":0},{"id":17,"slug":"mao","name":"Mao","province":"Kanem","offices_count":0},{"id":18,"slug":"massakory","name":"Massakory","province":"Hadjer-Lamis","offices_count":0},{"id":23,"slug":"massenya","name":"Massenya","province":"Chari-Baguirmi","offices_count":0},{"id":19,"slug":"mongo","name":"Mongo","province":"Gu\u00e9ra","offices_count":1},{"id":20,"slug":"moussoro","name":"Moussoro","province":"Barh El Gazel","offices_count":0},{"id":21,"slug":"pala","name":"Pala","province":"Mayo-Kebbi Ouest","offices_count":0},{"id":24,"slug":"kelo","name":"K\u00e9lo","province":"Tandjil\u00e9","offices_count":0}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/cities/{slug}'
+    metadata:
+      custom: []
+      groupName: 'Villes et bureaux'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Consulter une ville'
+      description: 'La ville, ses bureaux (adresse, horaires, contacts vérifiés, source) et les démarches qu’on peut y faire.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      slug:
+        custom: []
+        name: slug
+        description: 'Identifiant de la ville.'
+        required: true
+        example: ndjamena
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      slug: ndjamena
+    queryParameters:
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na","province":"Ville de N''Djam\u00e9na","offices":[{"id":17,"name":"Centre d''accueil ANATS du 10e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":11,"name":"Centre d''accueil ANATS du 1er arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":12,"name":"Centre d''accueil ANATS du 2e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":13,"name":"Centre d''accueil ANATS du 5e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":14,"name":"Centre d''accueil ANATS du 6e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":15,"name":"Centre d''accueil ANATS du 7e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]},{"id":16,"name":"Centre d''accueil ANATS du 8e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"},"demarches":[{"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale"},{"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique"}]}]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

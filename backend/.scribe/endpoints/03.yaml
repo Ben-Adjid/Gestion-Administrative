@@ -1,0 +1,147 @@
+name: 'Parcours de vie'
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/life-events
+    metadata:
+      custom: []
+      groupName: 'Parcours de vie'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Lister les parcours de vie'
+      description: 'Situations de vie (naissance, mariage, voyage…) regroupant plusieurs démarches.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"slug":"voyager-a-l-etranger","title":"Je veux voyager \u00e0 l''\u00e9tranger","description":"Le passeport demande un acte de naissance, une carte d\u2019identit\u00e9 et un casier judiciaire : faites-les dans cet ordre.","icon":"plane","steps_count":4},{"slug":"obtenir-mes-papiers","title":"J''ai besoin de mes papiers d''identit\u00e9","description":"La carte nationale d\u2019identit\u00e9 demande d\u2019abord un certificat de naissance.","icon":"id-card","steps_count":2},{"slug":"j-ai-un-bebe","title":"J''ai un b\u00e9b\u00e9","description":"D\u00e9clarez la naissance et obtenez l\u2019acte de naissance : c\u2019est le premier document de votre enfant.","icon":"baby","steps_count":1},{"slug":"je-me-marie","title":"Je me marie","description":"Le certificat de mariage demande une pi\u00e8ce d\u2019identit\u00e9 : pr\u00e9parez-la \u00e0 l\u2019avance.","icon":"heart","steps_count":2},{"slug":"je-perds-un-proche","title":"Je perds un proche","description":"L\u2019acte de d\u00e9c\u00e8s est indispensable pour la succession, les pensions et la cl\u00f4ture des comptes.","icon":"flower","steps_count":1},{"slug":"je-veux-voter","title":"Je veux voter","description":"L\u2019inscription sur la liste \u00e9lectorale demande un acte de naissance et une carte d\u2019identit\u00e9 valide.","icon":"vote","steps_count":3},{"slug":"j-entre-a-l-universite","title":"J''entre \u00e0 l''universit\u00e9","description":"L\u2019inscription demande un certificat de naissance et une copie de votre pi\u00e8ce d\u2019identit\u00e9.","icon":"graduation-cap","steps_count":3},{"slug":"je-veux-conduire","title":"Je veux conduire","description":"Le permis de conduire demande une pi\u00e8ce d\u2019identit\u00e9.","icon":"car","steps_count":2},{"slug":"je-construis","title":"Je construis ma maison","description":"Le permis de construire demande une pi\u00e8ce d\u2019identit\u00e9, un titre de propri\u00e9t\u00e9 et un plan sign\u00e9.","icon":"home","steps_count":2}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/life-events/{slug}'
+    metadata:
+      custom: []
+      groupName: 'Parcours de vie'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Consulter un parcours de vie'
+      description: 'Les démarches du parcours dans l’ordre et le coût total à prévoir.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      slug:
+        custom: []
+        name: slug
+        description: 'Identifiant du parcours.'
+        required: true
+        example: voyager-a-l-etranger
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      slug: voyager-a-l-etranger
+    queryParameters:
+      city:
+        custom: []
+        name: city
+        description: 'Slug d’une ville : ajoute les bureaux de cette ville à chaque étape.'
+        required: false
+        example: ndjamena
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      lang:
+        custom: []
+        name: lang
+        description: 'Langue des textes : fr (par défaut), en ou ar.'
+        required: false
+        example: fr
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      city: ndjamena
+      lang: fr
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":{"slug":"voyager-a-l-etranger","title":"Je veux voyager \u00e0 l''\u00e9tranger","description":"Le passeport demande un acte de naissance, une carte d\u2019identit\u00e9 et un casier judiciaire : faites-les dans cet ordre.","icon":"plane","steps":[{"position":1,"slug":"acte-de-naissance","title":"Acte de Naissance","summary":"Obtenir un extrait ou une copie int\u00e9grale de votre acte de naissance","cost":"1\u00a0000 FCFA","processing_time":"1-5 jours","required_documents":["Livret de famille ou d\u00e9claration de naissance originale","Pi\u00e8ce d''identit\u00e9 du demandeur (parent ou int\u00e9ress\u00e9 majeur)","Formulaire de demande d''acte"],"location":"Mairie de N''Djam\u00e9na ou commune de naissance","cost_estimate":{"official":1000,"extras":0,"total":1000,"complete":true},"abroad_available":false,"offices":[]},{"position":2,"slug":"carte-didentite-nationale","title":"Carte d''Identit\u00e9 Nationale","summary":"Demander ou renouveler votre carte d''identit\u00e9 nationale","cost":"5\u00a0000 FCFA","processing_time":"10-15 jours","required_documents":["Copie de l''acte de naissance","Justificatif de profession (si n\u00e9cessaire)","Deux photos d''identit\u00e9 en couleur","Trois copies de cartes d''identit\u00e9 de t\u00e9moins"],"location":"Centres d''accueil de l''ANATS (N''Djam\u00e9na et chefs-lieux de province)","cost_estimate":{"official":5000,"extras":0,"total":5000,"complete":true},"abroad_available":false,"offices":[{"id":11,"name":"Centre d''accueil ANATS du 1er arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":12,"name":"Centre d''accueil ANATS du 2e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":13,"name":"Centre d''accueil ANATS du 5e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":14,"name":"Centre d''accueil ANATS du 6e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":15,"name":"Centre d''accueil ANATS du 7e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":16,"name":"Centre d''accueil ANATS du 8e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":17,"name":"Centre d''accueil ANATS du 10e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}}]},{"position":3,"slug":"casier-judiciaire","title":"Casier Judiciaire","summary":"Obtenir un extrait de casier judiciaire (bulletin n\u00b03)","cost":"2\u00a0000 FCFA","processing_time":"3-7 jours","required_documents":["Carte d''identit\u00e9 nationale ou passeport valide","Extrait d''acte de naissance","Formulaire de demande rempli","Re\u00e7u de paiement des frais"],"location":"Palais de Justice, Avenue F\u00e9lix \u00c9bou\u00e9, N''Djam\u00e9na","cost_estimate":{"official":2000,"extras":0,"total":2000,"complete":true},"abroad_available":false,"offices":[]},{"position":4,"slug":"passeport-biometrique","title":"Passeport Biom\u00e9trique","summary":"Obtenir ou renouveler votre passeport biom\u00e9trique tchadien","cost":"60 000 FCFA","processing_time":"15-30 jours","required_documents":["Acte de naissance (original ou copie l\u00e9galis\u00e9e)","Carte d''identit\u00e9 nationale valide","Deux photos biom\u00e9triques r\u00e9centes (fond blanc, 4x6)","Extrait de casier judiciaire vierge (moins de 3 mois)","Re\u00e7u de paiement des frais","Ancien passeport (si renouvellement)"],"location":"Centres d''accueil de l''ANATS (N''Djam\u00e9na et chefs-lieux de province)","cost_estimate":{"official":60000,"extras":0,"total":60000,"complete":true},"abroad_available":false,"offices":[{"id":11,"name":"Centre d''accueil ANATS du 1er arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":12,"name":"Centre d''accueil ANATS du 2e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":13,"name":"Centre d''accueil ANATS du 5e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":14,"name":"Centre d''accueil ANATS du 6e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":15,"name":"Centre d''accueil ANATS du 7e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":16,"name":"Centre d''accueil ANATS du 8e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}},{"id":17,"name":"Centre d''accueil ANATS du 10e arrondissement","address":null,"opening_hours":null,"phone":null,"latitude":null,"longitude":null,"directions_url":"https:\/\/www.google.com\/maps\/dir\/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad","source_url":"https:\/\/tchadinfos.com\/2023\/01\/31\/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement\/","is_active":true,"city":{"id":1,"slug":"ndjamena","name":"N''Djam\u00e9na"}}]}],"total":{"amount":68000,"complete":true}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-security-policy: "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+          x-content-type-options: nosniff
+          x-frame-options: DENY
+          referrer-policy: strict-origin-when-cross-origin
+          permissions-policy: 'geolocation=(), microphone=(), camera=()'
+          cross-origin-resource-policy: same-site
+          x-ratelimit-limit: '100'
+          x-ratelimit-remaining: '99'
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

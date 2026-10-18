@@ -1,0 +1,3699 @@
+openapi: 3.0.3
+info:
+  title: 'API publique DemarchesTchad'
+  description: 'Données ouvertes du guide indépendant DemarchesTchad : démarches administratives au Tchad (pièces, coûts, délais, lieux), villes et bureaux, parcours de vie, diaspora et calendrier administratif.'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+tags:
+  -
+    name: Démarches
+    description: ''
+  -
+    name: Catégories
+    description: ''
+  -
+    name: Recherche
+    description: ''
+  -
+    name: 'Villes et bureaux'
+    description: ''
+  -
+    name: 'Parcours de vie'
+    description: ''
+  -
+    name: Diaspora
+    description: ''
+  -
+    name: Calendrier
+    description: ''
+  -
+    name: Communauté
+    description: ''
+paths:
+  /api/v1/demarches:
+    get:
+      summary: 'Lister les démarches'
+      operationId: listerLesDmarches
+      description: 'Liste paginée des fiches publiées, avec recherche (synonymes compris), filtres et tri.'
+      parameters:
+        -
+          in: query
+          name: q
+          description: 'Mot-clé recherché dans le titre, le résumé, la description, l’institution et le lieu (alias : search).'
+          example: passeport
+          required: false
+          schema:
+            type: string
+            description: 'Mot-clé recherché dans le titre, le résumé, la description, l’institution et le lieu (alias : search).'
+            example: passeport
+        -
+          in: query
+          name: categorie
+          description: 'Slug ou identifiant de catégorie (alias : category).'
+          example: identite
+          required: false
+          schema:
+            type: string
+            description: 'Slug ou identifiant de catégorie (alias : category).'
+            example: identite
+        -
+          in: query
+          name: is_online
+          description: 'Seulement les démarches faisables en ligne (true) ou sur place (false).'
+          example: false
+          required: false
+          schema:
+            type: boolean
+            description: 'Seulement les démarches faisables en ligne (true) ou sur place (false).'
+            example: false
+        -
+          in: query
+          name: sort
+          description: 'Tri : relevance (par défaut avec q), views (par défaut sans q), title, recent.'
+          example: views
+          required: false
+          schema:
+            type: string
+            description: 'Tri : relevance (par défaut avec q), views (par défaut sans q), title, recent.'
+            example: views
+        -
+          in: query
+          name: per_page
+          description: 'Fiches par page, de 1 à 50 (15 par défaut).'
+          example: 15
+          required: false
+          schema:
+            type: integer
+            description: 'Fiches par page, de 1 à 50 (15 par défaut).'
+            example: 15
+        -
+          in: query
+          name: page
+          description: 'Numéro de page.'
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: 'Numéro de page.'
+            example: 1
+        -
+          in: query
+          name: lang
+          description: 'Langue du contenu : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue du contenu : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  links:
+                    first: 'http://localhost:8000/api/v1/demarches?page=1'
+                    last: 'http://localhost:8000/api/v1/demarches?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: null
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/v1/demarches?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/v1/demarches'
+                    per_page: 15
+                    to: null
+                    total: 0
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/demarches?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/demarches?page=1'
+                      prev:
+                        type: string
+                        example: null
+                        nullable: true
+                      next:
+                        type: string
+                        example: null
+                        nullable: true
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: string
+                        example: null
+                        nullable: true
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/v1/demarches?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                              nullable: true
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/demarches'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: string
+                        example: null
+                        nullable: true
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Démarches
+      security: []
+  '/api/v1/demarches/{slug}':
+    get:
+      summary: 'Consulter une démarche'
+      operationId: consulterUneDmarche
+      description: 'Fiche complète : pièces, conditions, étapes, coût, délai, institution et bureaux où l’effectuer (avec leur ville).'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue du contenu : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue du contenu : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 8
+                    language: fr
+                    is_translated: true
+                    title: 'Passeport Biométrique'
+                    slug: passeport-biometrique
+                    summary: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                    description: 'Le passeport biométrique est le document de voyage officiel de la République du Tchad. Il intègre une puce électronique contenant les données biométriques du titulaire (empreintes, photo). Obligatoire pour tout voyage international.'
+                    required_documents:
+                      - 'Acte de naissance (original ou copie légalisée)'
+                      - "Carte d'identité nationale valide"
+                      - 'Deux photos biométriques récentes (fond blanc, 4x6)'
+                      - 'Extrait de casier judiciaire vierge (moins de 3 mois)'
+                      - 'Reçu de paiement des frais'
+                      - 'Ancien passeport (si renouvellement)'
+                    procedure_steps:
+                      - 'Retirer le formulaire de demande au bureau des passeports'
+                      - 'Remplir et signer le formulaire'
+                      - 'Constituer le dossier complet'
+                      - 'Déposer le dossier au guichet'
+                      - 'Payer les frais de 75 000 FCFA à la caisse'
+                      - 'Se présenter pour la prise des empreintes biométriques'
+                      - 'Attendre la notification (SMS ou affichage)'
+                      - 'Récupérer le passeport muni de votre reçu'
+                    conditions: []
+                    cost: '60 000 FCFA'
+                    cost_amount: 60000
+                    extra_costs: []
+                    cost_estimate:
+                      official: 60000
+                      extras: 0
+                      total: 60000
+                      complete: true
+                    abroad_available: false
+                    abroad_info: null
+                    offices:
+                      -
+                        id: 19
+                        name: 'Antenne ANATS de Mongo'
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Antenne%20ANATS%20de%20Mongo%2C%20Mongo%2C%20Tchad'
+                        source_url: 'https://www.alwihdainfo.com/tchad-afflux-des-voyageurs-a-l-anats-de-mongo-pour-la-delivrance-du-passeport-a104358/'
+                        is_active: true
+                        city:
+                          id: 19
+                          slug: mongo
+                          name: Mongo
+                      -
+                        id: 17
+                        name: "Centre d'accueil ANATS du 10e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 11
+                        name: "Centre d'accueil ANATS du 1er arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 12
+                        name: "Centre d'accueil ANATS du 2e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 13
+                        name: "Centre d'accueil ANATS du 5e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 14
+                        name: "Centre d'accueil ANATS du 6e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 15
+                        name: "Centre d'accueil ANATS du 7e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 16
+                        name: "Centre d'accueil ANATS du 8e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                      -
+                        id: 18
+                        name: 'Centre de délivrance de titres sécurisés de Bongor (ANATS)'
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20de%20d%C3%A9livrance%20de%20titres%20s%C3%A9curis%C3%A9s%20de%20Bongor%20%28ANATS%29%2C%20Bongor%2C%20Tchad'
+                        source_url: 'https://www.alwihdainfo.com/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987/'
+                        is_active: true
+                        city:
+                          id: 9
+                          slug: bongor
+                          name: Bongor
+                    processing_time: '15-30 jours'
+                    processing_time_days: null
+                    institution: 'Agence Nationale des Titres Sécurisés (ANATS)'
+                    location: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                    contact_email: null
+                    contact_phone: null
+                    official_source_url: 'https://www.alwihdainfo.com/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987/'
+                    last_verified_at: null
+                    status: published
+                    is_online: false
+                    online_url: null
+                    views_count: 2
+                    categorie:
+                      id: 14
+                      name: 'Voyage et Visa'
+                      name_fr: 'Voyage et Visa'
+                      slug: voyage
+                      description: 'Passeport, visas et documents de voyage.'
+                      icon: ti-plane
+                      color: gray
+                      display_order: 8
+                      is_active: true
+                    created_at: '2026-10-11T12:48:11.000000Z'
+                    updated_at: '2026-10-14T17:17:50.000000Z'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 8
+                      language:
+                        type: string
+                        example: fr
+                      is_translated:
+                        type: boolean
+                        example: true
+                      title:
+                        type: string
+                        example: 'Passeport Biométrique'
+                      slug:
+                        type: string
+                        example: passeport-biometrique
+                      summary:
+                        type: string
+                        example: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                      description:
+                        type: string
+                        example: 'Le passeport biométrique est le document de voyage officiel de la République du Tchad. Il intègre une puce électronique contenant les données biométriques du titulaire (empreintes, photo). Obligatoire pour tout voyage international.'
+                      required_documents:
+                        type: array
+                        example:
+                          - 'Acte de naissance (original ou copie légalisée)'
+                          - "Carte d'identité nationale valide"
+                          - 'Deux photos biométriques récentes (fond blanc, 4x6)'
+                          - 'Extrait de casier judiciaire vierge (moins de 3 mois)'
+                          - 'Reçu de paiement des frais'
+                          - 'Ancien passeport (si renouvellement)'
+                        items:
+                          type: string
+                      procedure_steps:
+                        type: array
+                        example:
+                          - 'Retirer le formulaire de demande au bureau des passeports'
+                          - 'Remplir et signer le formulaire'
+                          - 'Constituer le dossier complet'
+                          - 'Déposer le dossier au guichet'
+                          - 'Payer les frais de 75 000 FCFA à la caisse'
+                          - 'Se présenter pour la prise des empreintes biométriques'
+                          - 'Attendre la notification (SMS ou affichage)'
+                          - 'Récupérer le passeport muni de votre reçu'
+                        items:
+                          type: string
+                      conditions:
+                        type: array
+                        example: []
+                      cost:
+                        type: string
+                        example: '60 000 FCFA'
+                      cost_amount:
+                        type: integer
+                        example: 60000
+                      extra_costs:
+                        type: array
+                        example: []
+                      cost_estimate:
+                        type: object
+                        properties:
+                          official:
+                            type: integer
+                            example: 60000
+                          extras:
+                            type: integer
+                            example: 0
+                          total:
+                            type: integer
+                            example: 60000
+                          complete:
+                            type: boolean
+                            example: true
+                      abroad_available:
+                        type: boolean
+                        example: false
+                      abroad_info:
+                        type: string
+                        example: null
+                        nullable: true
+                      offices:
+                        type: array
+                        example:
+                          -
+                            id: 19
+                            name: 'Antenne ANATS de Mongo'
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Antenne%20ANATS%20de%20Mongo%2C%20Mongo%2C%20Tchad'
+                            source_url: 'https://www.alwihdainfo.com/tchad-afflux-des-voyageurs-a-l-anats-de-mongo-pour-la-delivrance-du-passeport-a104358/'
+                            is_active: true
+                            city:
+                              id: 19
+                              slug: mongo
+                              name: Mongo
+                          -
+                            id: 17
+                            name: "Centre d'accueil ANATS du 10e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 11
+                            name: "Centre d'accueil ANATS du 1er arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 12
+                            name: "Centre d'accueil ANATS du 2e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 13
+                            name: "Centre d'accueil ANATS du 5e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 14
+                            name: "Centre d'accueil ANATS du 6e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 15
+                            name: "Centre d'accueil ANATS du 7e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 16
+                            name: "Centre d'accueil ANATS du 8e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 18
+                            name: 'Centre de délivrance de titres sécurisés de Bongor (ANATS)'
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20de%20d%C3%A9livrance%20de%20titres%20s%C3%A9curis%C3%A9s%20de%20Bongor%20%28ANATS%29%2C%20Bongor%2C%20Tchad'
+                            source_url: 'https://www.alwihdainfo.com/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987/'
+                            is_active: true
+                            city:
+                              id: 9
+                              slug: bongor
+                              name: Bongor
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 19
+                            name:
+                              type: string
+                              example: 'Antenne ANATS de Mongo'
+                            address:
+                              type: string
+                              example: null
+                              nullable: true
+                            opening_hours:
+                              type: string
+                              example: null
+                              nullable: true
+                            phone:
+                              type: string
+                              example: null
+                              nullable: true
+                            latitude:
+                              type: string
+                              example: null
+                              nullable: true
+                            longitude:
+                              type: string
+                              example: null
+                              nullable: true
+                            directions_url:
+                              type: string
+                              example: 'https://www.google.com/maps/dir/?api=1&destination=Antenne%20ANATS%20de%20Mongo%2C%20Mongo%2C%20Tchad'
+                            source_url:
+                              type: string
+                              example: 'https://www.alwihdainfo.com/tchad-afflux-des-voyageurs-a-l-anats-de-mongo-pour-la-delivrance-du-passeport-a104358/'
+                            is_active:
+                              type: boolean
+                              example: true
+                            city:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                  example: 19
+                                slug:
+                                  type: string
+                                  example: mongo
+                                name:
+                                  type: string
+                                  example: Mongo
+                      processing_time:
+                        type: string
+                        example: '15-30 jours'
+                      processing_time_days:
+                        type: string
+                        example: null
+                        nullable: true
+                      institution:
+                        type: string
+                        example: 'Agence Nationale des Titres Sécurisés (ANATS)'
+                      location:
+                        type: string
+                        example: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                      contact_email:
+                        type: string
+                        example: null
+                        nullable: true
+                      contact_phone:
+                        type: string
+                        example: null
+                        nullable: true
+                      official_source_url:
+                        type: string
+                        example: 'https://www.alwihdainfo.com/tchad-ouverture-d-un-centre-de-delivrance-de-titres-securises-a-bongor-a120987/'
+                      last_verified_at:
+                        type: string
+                        example: null
+                        nullable: true
+                      status:
+                        type: string
+                        example: published
+                      is_online:
+                        type: boolean
+                        example: false
+                      online_url:
+                        type: string
+                        example: null
+                        nullable: true
+                      views_count:
+                        type: integer
+                        example: 2
+                      categorie:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 14
+                          name:
+                            type: string
+                            example: 'Voyage et Visa'
+                          name_fr:
+                            type: string
+                            example: 'Voyage et Visa'
+                          slug:
+                            type: string
+                            example: voyage
+                          description:
+                            type: string
+                            example: 'Passeport, visas et documents de voyage.'
+                          icon:
+                            type: string
+                            example: ti-plane
+                          color:
+                            type: string
+                            example: gray
+                          display_order:
+                            type: integer
+                            example: 8
+                          is_active:
+                            type: boolean
+                            example: true
+                      created_at:
+                        type: string
+                        example: '2026-10-11T12:48:11.000000Z'
+                      updated_at:
+                        type: string
+                        example: '2026-10-14T17:17:50.000000Z'
+      tags:
+        - Démarches
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'Identifiant de la fiche.'
+        example: passeport-biometrique
+        required: true
+        schema:
+          type: string
+  /api/v1/categories:
+    get:
+      summary: 'Lister les catégories'
+      operationId: listerLesCatgories
+      description: 'Catégories actives avec le nombre de fiches publiées de chacune.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des noms : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des noms : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 12
+                      name: 'État civil'
+                      name_fr: 'État civil'
+                      slug: etat-civil
+                      description: 'Actes de naissance, de mariage et de décès.'
+                      icon: ti-heart
+                      color: teal
+                      display_order: 1
+                      is_active: true
+                      demarches_count: 3
+                    -
+                      id: 1
+                      name: Études
+                      name_fr: Études
+                      slug: etudes
+                      description: "Procédures d'éducation"
+                      icon: ti-school
+                      color: '#2563EB'
+                      display_order: 2
+                      is_active: true
+                      demarches_count: 1
+                    -
+                      id: 11
+                      name: Identité
+                      name_fr: Identité
+                      slug: identite
+                      description: 'Carte d’identité, inscription électorale et documents d’identité.'
+                      icon: ti-id
+                      color: blue
+                      display_order: 3
+                      is_active: true
+                      demarches_count: 2
+                    -
+                      id: 13
+                      name: Légalisations
+                      name_fr: Légalisations
+                      slug: legalisations
+                      description: 'Légalisation de signatures et certification de copies.'
+                      icon: ti-certificate
+                      color: '#2563EB'
+                      display_order: 4
+                      is_active: true
+                      demarches_count: 0
+                    -
+                      id: 2
+                      name: Santé
+                      name_fr: Santé
+                      slug: sante
+                      description: 'Services de santé'
+                      icon: ti-heart-rate-monitor
+                      color: coral
+                      display_order: 5
+                      is_active: true
+                      demarches_count: 1
+                    -
+                      id: 6
+                      name: Travail
+                      name_fr: Travail
+                      slug: travail
+                      description: 'Emploi et assurance'
+                      icon: ti-briefcase
+                      color: green
+                      display_order: 6
+                      is_active: true
+                      demarches_count: 0
+                    -
+                      id: 3
+                      name: Justice
+                      name_fr: Justice
+                      slug: justice
+                      description: 'Procédures judiciaires'
+                      icon: ti-gavel
+                      color: pink
+                      display_order: 7
+                      is_active: true
+                      demarches_count: 1
+                    -
+                      id: 14
+                      name: 'Voyage et Visa'
+                      name_fr: 'Voyage et Visa'
+                      slug: voyage
+                      description: 'Passeport, visas et documents de voyage.'
+                      icon: ti-plane
+                      color: gray
+                      display_order: 8
+                      is_active: true
+                      demarches_count: 1
+                    -
+                      id: 5
+                      name: Transport
+                      name_fr: Transport
+                      slug: transport
+                      description: 'Permis et documents'
+                      icon: ti-car
+                      color: red
+                      display_order: 9
+                      is_active: true
+                      demarches_count: 1
+                    -
+                      id: 4
+                      name: 'Urbanisme et logement'
+                      name_fr: 'Urbanisme et logement'
+                      slug: urbanisme
+                      description: 'Permis de construire, terrains et logement.'
+                      icon: ti-building
+                      color: orange
+                      display_order: 10
+                      is_active: true
+                      demarches_count: 1
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 12
+                        name: 'État civil'
+                        name_fr: 'État civil'
+                        slug: etat-civil
+                        description: 'Actes de naissance, de mariage et de décès.'
+                        icon: ti-heart
+                        color: teal
+                        display_order: 1
+                        is_active: true
+                        demarches_count: 3
+                      -
+                        id: 1
+                        name: Études
+                        name_fr: Études
+                        slug: etudes
+                        description: "Procédures d'éducation"
+                        icon: ti-school
+                        color: '#2563EB'
+                        display_order: 2
+                        is_active: true
+                        demarches_count: 1
+                      -
+                        id: 11
+                        name: Identité
+                        name_fr: Identité
+                        slug: identite
+                        description: 'Carte d’identité, inscription électorale et documents d’identité.'
+                        icon: ti-id
+                        color: blue
+                        display_order: 3
+                        is_active: true
+                        demarches_count: 2
+                      -
+                        id: 13
+                        name: Légalisations
+                        name_fr: Légalisations
+                        slug: legalisations
+                        description: 'Légalisation de signatures et certification de copies.'
+                        icon: ti-certificate
+                        color: '#2563EB'
+                        display_order: 4
+                        is_active: true
+                        demarches_count: 0
+                      -
+                        id: 2
+                        name: Santé
+                        name_fr: Santé
+                        slug: sante
+                        description: 'Services de santé'
+                        icon: ti-heart-rate-monitor
+                        color: coral
+                        display_order: 5
+                        is_active: true
+                        demarches_count: 1
+                      -
+                        id: 6
+                        name: Travail
+                        name_fr: Travail
+                        slug: travail
+                        description: 'Emploi et assurance'
+                        icon: ti-briefcase
+                        color: green
+                        display_order: 6
+                        is_active: true
+                        demarches_count: 0
+                      -
+                        id: 3
+                        name: Justice
+                        name_fr: Justice
+                        slug: justice
+                        description: 'Procédures judiciaires'
+                        icon: ti-gavel
+                        color: pink
+                        display_order: 7
+                        is_active: true
+                        demarches_count: 1
+                      -
+                        id: 14
+                        name: 'Voyage et Visa'
+                        name_fr: 'Voyage et Visa'
+                        slug: voyage
+                        description: 'Passeport, visas et documents de voyage.'
+                        icon: ti-plane
+                        color: gray
+                        display_order: 8
+                        is_active: true
+                        demarches_count: 1
+                      -
+                        id: 5
+                        name: Transport
+                        name_fr: Transport
+                        slug: transport
+                        description: 'Permis et documents'
+                        icon: ti-car
+                        color: red
+                        display_order: 9
+                        is_active: true
+                        demarches_count: 1
+                      -
+                        id: 4
+                        name: 'Urbanisme et logement'
+                        name_fr: 'Urbanisme et logement'
+                        slug: urbanisme
+                        description: 'Permis de construire, terrains et logement.'
+                        icon: ti-building
+                        color: orange
+                        display_order: 10
+                        is_active: true
+                        demarches_count: 1
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 12
+                        name:
+                          type: string
+                          example: 'État civil'
+                        name_fr:
+                          type: string
+                          example: 'État civil'
+                        slug:
+                          type: string
+                          example: etat-civil
+                        description:
+                          type: string
+                          example: 'Actes de naissance, de mariage et de décès.'
+                        icon:
+                          type: string
+                          example: ti-heart
+                        color:
+                          type: string
+                          example: teal
+                        display_order:
+                          type: integer
+                          example: 1
+                        is_active:
+                          type: boolean
+                          example: true
+                        demarches_count:
+                          type: integer
+                          example: 3
+      tags:
+        - Catégories
+      security: []
+  '/api/v1/categories/{slug}/demarches':
+    get:
+      summary: 'Démarches d’une catégorie'
+      operationId: dmarchesDuneCatgorie
+      description: 'Fiches publiées d’une catégorie, les plus consultées d’abord ; la catégorie est jointe à la réponse.'
+      parameters:
+        -
+          in: query
+          name: per_page
+          description: 'Fiches par page, de 1 à 100 (50 par défaut).'
+          example: 50
+          required: false
+          schema:
+            type: integer
+            description: 'Fiches par page, de 1 à 100 (50 par défaut).'
+            example: 50
+        -
+          in: query
+          name: lang
+          description: 'Langue du contenu : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue du contenu : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 5
+                      language: fr
+                      is_translated: true
+                      title: 'Inscription Université'
+                      slug: inscription-universite
+                      summary: "S'inscrire dans une université tchadienne"
+                      description: "L'inscription universitaire est le processus permettant aux étudiants admis d'enregistrer leur admission et de payer les frais d'inscription. Chaque université a ses propres frais et conditions."
+                      required_documents:
+                        - "Lettre d'admission"
+                        - 'Relevé de notes BAC'
+                        - 'Copie identité'
+                        - 'Certificat de naissance'
+                        - 'Photo 4x6'
+                      procedure_steps:
+                        - "Recevoir lettre d'admission"
+                        - 'Retirer formulaire'
+                        - 'Payer les frais'
+                        - 'Déposer dossier'
+                        - 'Attendre confirmation'
+                        - 'Recevoir numéro inscription'
+                      conditions: []
+                      cost: "50\_000 FCFA"
+                      cost_amount: 50000
+                      extra_costs: []
+                      cost_estimate:
+                        official: 50000
+                        extras: 0
+                        total: 50000
+                        complete: true
+                      abroad_available: false
+                      abroad_info: null
+                      processing_time: '3-5 jours'
+                      processing_time_days: null
+                      institution: "Université de N'Djaména"
+                      location: 'Campus Principal, Quartier du Fleuve'
+                      contact_email: null
+                      contact_phone: null
+                      official_source_url: null
+                      last_verified_at: null
+                      status: published
+                      is_online: false
+                      online_url: null
+                      views_count: 0
+                      categorie:
+                        id: 1
+                        name: Études
+                        name_fr: Études
+                        slug: etudes
+                        description: "Procédures d'éducation"
+                        icon: ti-school
+                        color: '#2563EB'
+                        display_order: 2
+                        is_active: true
+                      created_at: '2026-10-11T12:05:57.000000Z'
+                      updated_at: '2026-10-14T17:17:50.000000Z'
+                  links:
+                    first: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                    last: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                    prev: null
+                    next: null
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 1
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://localhost:8000/api/v1/categories/etudes/demarches'
+                    per_page: 50
+                    to: 1
+                    total: 1
+                  categorie:
+                    id: 1
+                    name: Études
+                    name_fr: Études
+                    slug: etudes
+                    description: "Procédures d'éducation"
+                    icon: ti-school
+                    color: '#2563EB'
+                    display_order: 2
+                    is_active: true
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 5
+                        language: fr
+                        is_translated: true
+                        title: 'Inscription Université'
+                        slug: inscription-universite
+                        summary: "S'inscrire dans une université tchadienne"
+                        description: "L'inscription universitaire est le processus permettant aux étudiants admis d'enregistrer leur admission et de payer les frais d'inscription. Chaque université a ses propres frais et conditions."
+                        required_documents:
+                          - "Lettre d'admission"
+                          - 'Relevé de notes BAC'
+                          - 'Copie identité'
+                          - 'Certificat de naissance'
+                          - 'Photo 4x6'
+                        procedure_steps:
+                          - "Recevoir lettre d'admission"
+                          - 'Retirer formulaire'
+                          - 'Payer les frais'
+                          - 'Déposer dossier'
+                          - 'Attendre confirmation'
+                          - 'Recevoir numéro inscription'
+                        conditions: []
+                        cost: "50\_000 FCFA"
+                        cost_amount: 50000
+                        extra_costs: []
+                        cost_estimate:
+                          official: 50000
+                          extras: 0
+                          total: 50000
+                          complete: true
+                        abroad_available: false
+                        abroad_info: null
+                        processing_time: '3-5 jours'
+                        processing_time_days: null
+                        institution: "Université de N'Djaména"
+                        location: 'Campus Principal, Quartier du Fleuve'
+                        contact_email: null
+                        contact_phone: null
+                        official_source_url: null
+                        last_verified_at: null
+                        status: published
+                        is_online: false
+                        online_url: null
+                        views_count: 0
+                        categorie:
+                          id: 1
+                          name: Études
+                          name_fr: Études
+                          slug: etudes
+                          description: "Procédures d'éducation"
+                          icon: ti-school
+                          color: '#2563EB'
+                          display_order: 2
+                          is_active: true
+                        created_at: '2026-10-11T12:05:57.000000Z'
+                        updated_at: '2026-10-14T17:17:50.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 5
+                        language:
+                          type: string
+                          example: fr
+                        is_translated:
+                          type: boolean
+                          example: true
+                        title:
+                          type: string
+                          example: 'Inscription Université'
+                        slug:
+                          type: string
+                          example: inscription-universite
+                        summary:
+                          type: string
+                          example: "S'inscrire dans une université tchadienne"
+                        description:
+                          type: string
+                          example: "L'inscription universitaire est le processus permettant aux étudiants admis d'enregistrer leur admission et de payer les frais d'inscription. Chaque université a ses propres frais et conditions."
+                        required_documents:
+                          type: array
+                          example:
+                            - "Lettre d'admission"
+                            - 'Relevé de notes BAC'
+                            - 'Copie identité'
+                            - 'Certificat de naissance'
+                            - 'Photo 4x6'
+                          items:
+                            type: string
+                        procedure_steps:
+                          type: array
+                          example:
+                            - "Recevoir lettre d'admission"
+                            - 'Retirer formulaire'
+                            - 'Payer les frais'
+                            - 'Déposer dossier'
+                            - 'Attendre confirmation'
+                            - 'Recevoir numéro inscription'
+                          items:
+                            type: string
+                        conditions:
+                          type: array
+                          example: []
+                        cost:
+                          type: string
+                          example: "50\_000 FCFA"
+                        cost_amount:
+                          type: integer
+                          example: 50000
+                        extra_costs:
+                          type: array
+                          example: []
+                        cost_estimate:
+                          type: object
+                          properties:
+                            official:
+                              type: integer
+                              example: 50000
+                            extras:
+                              type: integer
+                              example: 0
+                            total:
+                              type: integer
+                              example: 50000
+                            complete:
+                              type: boolean
+                              example: true
+                        abroad_available:
+                          type: boolean
+                          example: false
+                        abroad_info:
+                          type: string
+                          example: null
+                          nullable: true
+                        processing_time:
+                          type: string
+                          example: '3-5 jours'
+                        processing_time_days:
+                          type: string
+                          example: null
+                          nullable: true
+                        institution:
+                          type: string
+                          example: "Université de N'Djaména"
+                        location:
+                          type: string
+                          example: 'Campus Principal, Quartier du Fleuve'
+                        contact_email:
+                          type: string
+                          example: null
+                          nullable: true
+                        contact_phone:
+                          type: string
+                          example: null
+                          nullable: true
+                        official_source_url:
+                          type: string
+                          example: null
+                          nullable: true
+                        last_verified_at:
+                          type: string
+                          example: null
+                          nullable: true
+                        status:
+                          type: string
+                          example: published
+                        is_online:
+                          type: boolean
+                          example: false
+                        online_url:
+                          type: string
+                          example: null
+                          nullable: true
+                        views_count:
+                          type: integer
+                          example: 0
+                        categorie:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 1
+                            name:
+                              type: string
+                              example: Études
+                            name_fr:
+                              type: string
+                              example: Études
+                            slug:
+                              type: string
+                              example: etudes
+                            description:
+                              type: string
+                              example: "Procédures d'éducation"
+                            icon:
+                              type: string
+                              example: ti-school
+                            color:
+                              type: string
+                              example: '#2563EB'
+                            display_order:
+                              type: integer
+                              example: 2
+                            is_active:
+                              type: boolean
+                              example: true
+                        created_at:
+                          type: string
+                          example: '2026-10-11T12:05:57.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2026-10-14T17:17:50.000000Z'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                      last:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                      prev:
+                        type: string
+                        example: null
+                        nullable: true
+                      next:
+                        type: string
+                        example: null
+                        nullable: true
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://localhost:8000/api/v1/categories/etudes/demarches?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: null
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                              nullable: true
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://localhost:8000/api/v1/categories/etudes/demarches'
+                      per_page:
+                        type: integer
+                        example: 50
+                      to:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 1
+                  categorie:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: Études
+                      name_fr:
+                        type: string
+                        example: Études
+                      slug:
+                        type: string
+                        example: etudes
+                      description:
+                        type: string
+                        example: "Procédures d'éducation"
+                      icon:
+                        type: string
+                        example: ti-school
+                      color:
+                        type: string
+                        example: '#2563EB'
+                      display_order:
+                        type: integer
+                        example: 2
+                      is_active:
+                        type: boolean
+                        example: true
+      tags:
+        - Catégories
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'Identifiant de la catégorie.'
+        example: etudes
+        required: true
+        schema:
+          type: string
+  /api/v1/search/suggest:
+    get:
+      summary: 'Suggestions de recherche'
+      operationId: suggestionsDeRecherche
+      description: 'Jusqu’à 8 fiches correspondant au début de saisie, avec extrait et catégorie. Rien en dessous de 3 caractères.'
+      parameters:
+        -
+          in: query
+          name: q
+          description: 'Texte saisi (3 caractères minimum).'
+          example: passe
+          required: true
+          schema:
+            type: string
+            description: 'Texte saisi (3 caractères minimum).'
+            example: passe
+        -
+          in: query
+          name: lang
+          description: 'Langue : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 8
+                      title: 'Passeport Biométrique'
+                      slug: passeport-biometrique
+                      excerpt: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                      category: 'Voyage et Visa'
+                      institution: 'Agence Nationale des Titres Sécurisés (ANATS)'
+                      cost: '60 000 FCFA'
+                      cost_amount: 60000
+                      processing_time: '15-30 jours'
+                    -
+                      id: 9
+                      title: 'Acte de Naissance'
+                      slug: acte-de-naissance
+                      excerpt: 'Obtenir un extrait ou une copie intégrale de votre acte de naissance'
+                      category: 'État civil'
+                      institution: "Centre d'État Civil — Mairie de votre commune"
+                      cost: "1\_000 FCFA"
+                      cost_amount: 1000
+                      processing_time: '1-5 jours'
+                    -
+                      id: 11
+                      title: 'Casier Judiciaire'
+                      slug: casier-judiciaire
+                      excerpt: 'Obtenir un extrait de casier judiciaire (bulletin n°3)'
+                      category: Justice
+                      institution: "Tribunal de Grande Instance de N'Djaména"
+                      cost: "2\_000 FCFA"
+                      cost_amount: 2000
+                      processing_time: '3-7 jours'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 8
+                        title: 'Passeport Biométrique'
+                        slug: passeport-biometrique
+                        excerpt: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                        category: 'Voyage et Visa'
+                        institution: 'Agence Nationale des Titres Sécurisés (ANATS)'
+                        cost: '60 000 FCFA'
+                        cost_amount: 60000
+                        processing_time: '15-30 jours'
+                      -
+                        id: 9
+                        title: 'Acte de Naissance'
+                        slug: acte-de-naissance
+                        excerpt: 'Obtenir un extrait ou une copie intégrale de votre acte de naissance'
+                        category: 'État civil'
+                        institution: "Centre d'État Civil — Mairie de votre commune"
+                        cost: "1\_000 FCFA"
+                        cost_amount: 1000
+                        processing_time: '1-5 jours'
+                      -
+                        id: 11
+                        title: 'Casier Judiciaire'
+                        slug: casier-judiciaire
+                        excerpt: 'Obtenir un extrait de casier judiciaire (bulletin n°3)'
+                        category: Justice
+                        institution: "Tribunal de Grande Instance de N'Djaména"
+                        cost: "2\_000 FCFA"
+                        cost_amount: 2000
+                        processing_time: '3-7 jours'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 8
+                        title:
+                          type: string
+                          example: 'Passeport Biométrique'
+                        slug:
+                          type: string
+                          example: passeport-biometrique
+                        excerpt:
+                          type: string
+                          example: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                        category:
+                          type: string
+                          example: 'Voyage et Visa'
+                        institution:
+                          type: string
+                          example: 'Agence Nationale des Titres Sécurisés (ANATS)'
+                        cost:
+                          type: string
+                          example: '60 000 FCFA'
+                        cost_amount:
+                          type: integer
+                          example: 60000
+                        processing_time:
+                          type: string
+                          example: '15-30 jours'
+      tags:
+        - Recherche
+      security: []
+  /api/v1/cities:
+    get:
+      summary: 'Lister les villes'
+      operationId: listerLesVilles
+      description: 'Villes actives avec le nombre de bureaux administratifs enregistrés dans chacune.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      slug: ndjamena
+                      name: "N'Djaména"
+                      province: "Ville de N'Djaména"
+                      offices_count: 7
+                    -
+                      id: 2
+                      slug: moundou
+                      name: Moundou
+                      province: 'Logone Occidental'
+                      offices_count: 0
+                    -
+                      id: 3
+                      slug: sarh
+                      name: Sarh
+                      province: Moyen-Chari
+                      offices_count: 0
+                    -
+                      id: 4
+                      slug: abeche
+                      name: Abéché
+                      province: Ouaddaï
+                      offices_count: 0
+                    -
+                      id: 22
+                      slug: am-timan
+                      name: 'Am Timan'
+                      province: Salamat
+                      offices_count: 0
+                    -
+                      id: 13
+                      slug: amdjarass
+                      name: Amdjarass
+                      province: 'Ennedi Est'
+                      offices_count: 0
+                    -
+                      id: 5
+                      slug: ati
+                      name: Ati
+                      province: Batha
+                      offices_count: 0
+                    -
+                      id: 6
+                      slug: bardai
+                      name: Bardaï
+                      province: Tibesti
+                      offices_count: 0
+                    -
+                      id: 7
+                      slug: biltine
+                      name: Biltine
+                      province: 'Wadi Fira'
+                      offices_count: 0
+                    -
+                      id: 8
+                      slug: bol
+                      name: Bol
+                      province: Lac
+                      offices_count: 0
+                    -
+                      id: 9
+                      slug: bongor
+                      name: Bongor
+                      province: 'Mayo-Kebbi Est'
+                      offices_count: 1
+                    -
+                      id: 10
+                      slug: doba
+                      name: Doba
+                      province: 'Logone Oriental'
+                      offices_count: 0
+                    -
+                      id: 12
+                      slug: fada
+                      name: Fada
+                      province: 'Ennedi Ouest'
+                      offices_count: 0
+                    -
+                      id: 11
+                      slug: faya-largeau
+                      name: Faya-Largeau
+                      province: Borkou
+                      offices_count: 0
+                    -
+                      id: 14
+                      slug: goz-beida
+                      name: 'Goz Beïda'
+                      province: Sila
+                      offices_count: 0
+                    -
+                      id: 15
+                      slug: koumra
+                      name: Koumra
+                      province: Mandoul
+                      offices_count: 0
+                    -
+                      id: 16
+                      slug: lai
+                      name: Laï
+                      province: Tandjilé
+                      offices_count: 0
+                    -
+                      id: 17
+                      slug: mao
+                      name: Mao
+                      province: Kanem
+                      offices_count: 0
+                    -
+                      id: 18
+                      slug: massakory
+                      name: Massakory
+                      province: Hadjer-Lamis
+                      offices_count: 0
+                    -
+                      id: 23
+                      slug: massenya
+                      name: Massenya
+                      province: Chari-Baguirmi
+                      offices_count: 0
+                    -
+                      id: 19
+                      slug: mongo
+                      name: Mongo
+                      province: Guéra
+                      offices_count: 1
+                    -
+                      id: 20
+                      slug: moussoro
+                      name: Moussoro
+                      province: 'Barh El Gazel'
+                      offices_count: 0
+                    -
+                      id: 21
+                      slug: pala
+                      name: Pala
+                      province: 'Mayo-Kebbi Ouest'
+                      offices_count: 0
+                    -
+                      id: 24
+                      slug: kelo
+                      name: Kélo
+                      province: Tandjilé
+                      offices_count: 0
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        slug: ndjamena
+                        name: "N'Djaména"
+                        province: "Ville de N'Djaména"
+                        offices_count: 7
+                      -
+                        id: 2
+                        slug: moundou
+                        name: Moundou
+                        province: 'Logone Occidental'
+                        offices_count: 0
+                      -
+                        id: 3
+                        slug: sarh
+                        name: Sarh
+                        province: Moyen-Chari
+                        offices_count: 0
+                      -
+                        id: 4
+                        slug: abeche
+                        name: Abéché
+                        province: Ouaddaï
+                        offices_count: 0
+                      -
+                        id: 22
+                        slug: am-timan
+                        name: 'Am Timan'
+                        province: Salamat
+                        offices_count: 0
+                      -
+                        id: 13
+                        slug: amdjarass
+                        name: Amdjarass
+                        province: 'Ennedi Est'
+                        offices_count: 0
+                      -
+                        id: 5
+                        slug: ati
+                        name: Ati
+                        province: Batha
+                        offices_count: 0
+                      -
+                        id: 6
+                        slug: bardai
+                        name: Bardaï
+                        province: Tibesti
+                        offices_count: 0
+                      -
+                        id: 7
+                        slug: biltine
+                        name: Biltine
+                        province: 'Wadi Fira'
+                        offices_count: 0
+                      -
+                        id: 8
+                        slug: bol
+                        name: Bol
+                        province: Lac
+                        offices_count: 0
+                      -
+                        id: 9
+                        slug: bongor
+                        name: Bongor
+                        province: 'Mayo-Kebbi Est'
+                        offices_count: 1
+                      -
+                        id: 10
+                        slug: doba
+                        name: Doba
+                        province: 'Logone Oriental'
+                        offices_count: 0
+                      -
+                        id: 12
+                        slug: fada
+                        name: Fada
+                        province: 'Ennedi Ouest'
+                        offices_count: 0
+                      -
+                        id: 11
+                        slug: faya-largeau
+                        name: Faya-Largeau
+                        province: Borkou
+                        offices_count: 0
+                      -
+                        id: 14
+                        slug: goz-beida
+                        name: 'Goz Beïda'
+                        province: Sila
+                        offices_count: 0
+                      -
+                        id: 15
+                        slug: koumra
+                        name: Koumra
+                        province: Mandoul
+                        offices_count: 0
+                      -
+                        id: 16
+                        slug: lai
+                        name: Laï
+                        province: Tandjilé
+                        offices_count: 0
+                      -
+                        id: 17
+                        slug: mao
+                        name: Mao
+                        province: Kanem
+                        offices_count: 0
+                      -
+                        id: 18
+                        slug: massakory
+                        name: Massakory
+                        province: Hadjer-Lamis
+                        offices_count: 0
+                      -
+                        id: 23
+                        slug: massenya
+                        name: Massenya
+                        province: Chari-Baguirmi
+                        offices_count: 0
+                      -
+                        id: 19
+                        slug: mongo
+                        name: Mongo
+                        province: Guéra
+                        offices_count: 1
+                      -
+                        id: 20
+                        slug: moussoro
+                        name: Moussoro
+                        province: 'Barh El Gazel'
+                        offices_count: 0
+                      -
+                        id: 21
+                        slug: pala
+                        name: Pala
+                        province: 'Mayo-Kebbi Ouest'
+                        offices_count: 0
+                      -
+                        id: 24
+                        slug: kelo
+                        name: Kélo
+                        province: Tandjilé
+                        offices_count: 0
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        slug:
+                          type: string
+                          example: ndjamena
+                        name:
+                          type: string
+                          example: "N'Djaména"
+                        province:
+                          type: string
+                          example: "Ville de N'Djaména"
+                        offices_count:
+                          type: integer
+                          example: 7
+      tags:
+        - 'Villes et bureaux'
+      security: []
+  '/api/v1/cities/{slug}':
+    get:
+      summary: 'Consulter une ville'
+      operationId: consulterUneVille
+      description: 'La ville, ses bureaux (adresse, horaires, contacts vérifiés, source) et les démarches qu’on peut y faire.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    slug: ndjamena
+                    name: "N'Djaména"
+                    province: "Ville de N'Djaména"
+                    offices:
+                      -
+                        id: 17
+                        name: "Centre d'accueil ANATS du 10e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 11
+                        name: "Centre d'accueil ANATS du 1er arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 12
+                        name: "Centre d'accueil ANATS du 2e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 13
+                        name: "Centre d'accueil ANATS du 5e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 14
+                        name: "Centre d'accueil ANATS du 6e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 15
+                        name: "Centre d'accueil ANATS du 7e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                      -
+                        id: 16
+                        name: "Centre d'accueil ANATS du 8e arrondissement"
+                        address: null
+                        opening_hours: null
+                        phone: null
+                        latitude: null
+                        longitude: null
+                        directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                        source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                        is_active: true
+                        city:
+                          id: 1
+                          slug: ndjamena
+                          name: "N'Djaména"
+                        demarches:
+                          -
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                          -
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      slug:
+                        type: string
+                        example: ndjamena
+                      name:
+                        type: string
+                        example: "N'Djaména"
+                      province:
+                        type: string
+                        example: "Ville de N'Djaména"
+                      offices:
+                        type: array
+                        example:
+                          -
+                            id: 17
+                            name: "Centre d'accueil ANATS du 10e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 11
+                            name: "Centre d'accueil ANATS du 1er arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 12
+                            name: "Centre d'accueil ANATS du 2e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 13
+                            name: "Centre d'accueil ANATS du 5e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 14
+                            name: "Centre d'accueil ANATS du 6e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 15
+                            name: "Centre d'accueil ANATS du 7e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                          -
+                            id: 16
+                            name: "Centre d'accueil ANATS du 8e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                            demarches:
+                              -
+                                slug: carte-didentite-nationale
+                                title: "Carte d'Identité Nationale"
+                              -
+                                slug: passeport-biometrique
+                                title: 'Passeport Biométrique'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 17
+                            name:
+                              type: string
+                              example: "Centre d'accueil ANATS du 10e arrondissement"
+                            address:
+                              type: string
+                              example: null
+                              nullable: true
+                            opening_hours:
+                              type: string
+                              example: null
+                              nullable: true
+                            phone:
+                              type: string
+                              example: null
+                              nullable: true
+                            latitude:
+                              type: string
+                              example: null
+                              nullable: true
+                            longitude:
+                              type: string
+                              example: null
+                              nullable: true
+                            directions_url:
+                              type: string
+                              example: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url:
+                              type: string
+                              example: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active:
+                              type: boolean
+                              example: true
+                            city:
+                              type: object
+                              properties:
+                                id:
+                                  type: integer
+                                  example: 1
+                                slug:
+                                  type: string
+                                  example: ndjamena
+                                name:
+                                  type: string
+                                  example: "N'Djaména"
+                            demarches:
+                              type: array
+                              example:
+                                -
+                                  slug: carte-didentite-nationale
+                                  title: "Carte d'Identité Nationale"
+                                -
+                                  slug: passeport-biometrique
+                                  title: 'Passeport Biométrique'
+                              items:
+                                type: object
+                                properties:
+                                  slug:
+                                    type: string
+                                    example: carte-didentite-nationale
+                                  title:
+                                    type: string
+                                    example: "Carte d'Identité Nationale"
+      tags:
+        - 'Villes et bureaux'
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'Identifiant de la ville.'
+        example: ndjamena
+        required: true
+        schema:
+          type: string
+  /api/v1/life-events:
+    get:
+      summary: 'Lister les parcours de vie'
+      operationId: listerLesParcoursDeVie
+      description: 'Situations de vie (naissance, mariage, voyage…) regroupant plusieurs démarches.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      slug: voyager-a-l-etranger
+                      title: "Je veux voyager à l'étranger"
+                      description: 'Le passeport demande un acte de naissance, une carte d’identité et un casier judiciaire : faites-les dans cet ordre.'
+                      icon: plane
+                      steps_count: 4
+                    -
+                      slug: obtenir-mes-papiers
+                      title: "J'ai besoin de mes papiers d'identité"
+                      description: 'La carte nationale d’identité demande d’abord un certificat de naissance.'
+                      icon: id-card
+                      steps_count: 2
+                    -
+                      slug: j-ai-un-bebe
+                      title: "J'ai un bébé"
+                      description: 'Déclarez la naissance et obtenez l’acte de naissance : c’est le premier document de votre enfant.'
+                      icon: baby
+                      steps_count: 1
+                    -
+                      slug: je-me-marie
+                      title: 'Je me marie'
+                      description: 'Le certificat de mariage demande une pièce d’identité : préparez-la à l’avance.'
+                      icon: heart
+                      steps_count: 2
+                    -
+                      slug: je-perds-un-proche
+                      title: 'Je perds un proche'
+                      description: 'L’acte de décès est indispensable pour la succession, les pensions et la clôture des comptes.'
+                      icon: flower
+                      steps_count: 1
+                    -
+                      slug: je-veux-voter
+                      title: 'Je veux voter'
+                      description: 'L’inscription sur la liste électorale demande un acte de naissance et une carte d’identité valide.'
+                      icon: vote
+                      steps_count: 3
+                    -
+                      slug: j-entre-a-l-universite
+                      title: "J'entre à l'université"
+                      description: 'L’inscription demande un certificat de naissance et une copie de votre pièce d’identité.'
+                      icon: graduation-cap
+                      steps_count: 3
+                    -
+                      slug: je-veux-conduire
+                      title: 'Je veux conduire'
+                      description: 'Le permis de conduire demande une pièce d’identité.'
+                      icon: car
+                      steps_count: 2
+                    -
+                      slug: je-construis
+                      title: 'Je construis ma maison'
+                      description: 'Le permis de construire demande une pièce d’identité, un titre de propriété et un plan signé.'
+                      icon: home
+                      steps_count: 2
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        slug: voyager-a-l-etranger
+                        title: "Je veux voyager à l'étranger"
+                        description: 'Le passeport demande un acte de naissance, une carte d’identité et un casier judiciaire : faites-les dans cet ordre.'
+                        icon: plane
+                        steps_count: 4
+                      -
+                        slug: obtenir-mes-papiers
+                        title: "J'ai besoin de mes papiers d'identité"
+                        description: 'La carte nationale d’identité demande d’abord un certificat de naissance.'
+                        icon: id-card
+                        steps_count: 2
+                      -
+                        slug: j-ai-un-bebe
+                        title: "J'ai un bébé"
+                        description: 'Déclarez la naissance et obtenez l’acte de naissance : c’est le premier document de votre enfant.'
+                        icon: baby
+                        steps_count: 1
+                      -
+                        slug: je-me-marie
+                        title: 'Je me marie'
+                        description: 'Le certificat de mariage demande une pièce d’identité : préparez-la à l’avance.'
+                        icon: heart
+                        steps_count: 2
+                      -
+                        slug: je-perds-un-proche
+                        title: 'Je perds un proche'
+                        description: 'L’acte de décès est indispensable pour la succession, les pensions et la clôture des comptes.'
+                        icon: flower
+                        steps_count: 1
+                      -
+                        slug: je-veux-voter
+                        title: 'Je veux voter'
+                        description: 'L’inscription sur la liste électorale demande un acte de naissance et une carte d’identité valide.'
+                        icon: vote
+                        steps_count: 3
+                      -
+                        slug: j-entre-a-l-universite
+                        title: "J'entre à l'université"
+                        description: 'L’inscription demande un certificat de naissance et une copie de votre pièce d’identité.'
+                        icon: graduation-cap
+                        steps_count: 3
+                      -
+                        slug: je-veux-conduire
+                        title: 'Je veux conduire'
+                        description: 'Le permis de conduire demande une pièce d’identité.'
+                        icon: car
+                        steps_count: 2
+                      -
+                        slug: je-construis
+                        title: 'Je construis ma maison'
+                        description: 'Le permis de construire demande une pièce d’identité, un titre de propriété et un plan signé.'
+                        icon: home
+                        steps_count: 2
+                    items:
+                      type: object
+                      properties:
+                        slug:
+                          type: string
+                          example: voyager-a-l-etranger
+                        title:
+                          type: string
+                          example: "Je veux voyager à l'étranger"
+                        description:
+                          type: string
+                          example: 'Le passeport demande un acte de naissance, une carte d’identité et un casier judiciaire : faites-les dans cet ordre.'
+                        icon:
+                          type: string
+                          example: plane
+                        steps_count:
+                          type: integer
+                          example: 4
+      tags:
+        - 'Parcours de vie'
+      security: []
+  '/api/v1/life-events/{slug}':
+    get:
+      summary: 'Consulter un parcours de vie'
+      operationId: consulterUnParcoursDeVie
+      description: 'Les démarches du parcours dans l’ordre et le coût total à prévoir.'
+      parameters:
+        -
+          in: query
+          name: city
+          description: 'Slug d’une ville : ajoute les bureaux de cette ville à chaque étape.'
+          example: ndjamena
+          required: false
+          schema:
+            type: string
+            description: 'Slug d’une ville : ajoute les bureaux de cette ville à chaque étape.'
+            example: ndjamena
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    slug: voyager-a-l-etranger
+                    title: "Je veux voyager à l'étranger"
+                    description: 'Le passeport demande un acte de naissance, une carte d’identité et un casier judiciaire : faites-les dans cet ordre.'
+                    icon: plane
+                    steps:
+                      -
+                        position: 1
+                        slug: acte-de-naissance
+                        title: 'Acte de Naissance'
+                        summary: 'Obtenir un extrait ou une copie intégrale de votre acte de naissance'
+                        cost: "1\_000 FCFA"
+                        processing_time: '1-5 jours'
+                        required_documents:
+                          - 'Livret de famille ou déclaration de naissance originale'
+                          - "Pièce d'identité du demandeur (parent ou intéressé majeur)"
+                          - "Formulaire de demande d'acte"
+                        location: "Mairie de N'Djaména ou commune de naissance"
+                        cost_estimate:
+                          official: 1000
+                          extras: 0
+                          total: 1000
+                          complete: true
+                        abroad_available: false
+                        offices: []
+                      -
+                        position: 2
+                        slug: carte-didentite-nationale
+                        title: "Carte d'Identité Nationale"
+                        summary: "Demander ou renouveler votre carte d'identité nationale"
+                        cost: "5\_000 FCFA"
+                        processing_time: '10-15 jours'
+                        required_documents:
+                          - "Copie de l'acte de naissance"
+                          - 'Justificatif de profession (si nécessaire)'
+                          - "Deux photos d'identité en couleur"
+                          - "Trois copies de cartes d'identité de témoins"
+                        location: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                        cost_estimate:
+                          official: 5000
+                          extras: 0
+                          total: 5000
+                          complete: true
+                        abroad_available: false
+                        offices:
+                          -
+                            id: 11
+                            name: "Centre d'accueil ANATS du 1er arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 12
+                            name: "Centre d'accueil ANATS du 2e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 13
+                            name: "Centre d'accueil ANATS du 5e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 14
+                            name: "Centre d'accueil ANATS du 6e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 15
+                            name: "Centre d'accueil ANATS du 7e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 16
+                            name: "Centre d'accueil ANATS du 8e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 17
+                            name: "Centre d'accueil ANATS du 10e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                      -
+                        position: 3
+                        slug: casier-judiciaire
+                        title: 'Casier Judiciaire'
+                        summary: 'Obtenir un extrait de casier judiciaire (bulletin n°3)'
+                        cost: "2\_000 FCFA"
+                        processing_time: '3-7 jours'
+                        required_documents:
+                          - "Carte d'identité nationale ou passeport valide"
+                          - "Extrait d'acte de naissance"
+                          - 'Formulaire de demande rempli'
+                          - 'Reçu de paiement des frais'
+                        location: "Palais de Justice, Avenue Félix Éboué, N'Djaména"
+                        cost_estimate:
+                          official: 2000
+                          extras: 0
+                          total: 2000
+                          complete: true
+                        abroad_available: false
+                        offices: []
+                      -
+                        position: 4
+                        slug: passeport-biometrique
+                        title: 'Passeport Biométrique'
+                        summary: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                        cost: '60 000 FCFA'
+                        processing_time: '15-30 jours'
+                        required_documents:
+                          - 'Acte de naissance (original ou copie légalisée)'
+                          - "Carte d'identité nationale valide"
+                          - 'Deux photos biométriques récentes (fond blanc, 4x6)'
+                          - 'Extrait de casier judiciaire vierge (moins de 3 mois)'
+                          - 'Reçu de paiement des frais'
+                          - 'Ancien passeport (si renouvellement)'
+                        location: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                        cost_estimate:
+                          official: 60000
+                          extras: 0
+                          total: 60000
+                          complete: true
+                        abroad_available: false
+                        offices:
+                          -
+                            id: 11
+                            name: "Centre d'accueil ANATS du 1er arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 12
+                            name: "Centre d'accueil ANATS du 2e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 13
+                            name: "Centre d'accueil ANATS du 5e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 14
+                            name: "Centre d'accueil ANATS du 6e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 15
+                            name: "Centre d'accueil ANATS du 7e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 16
+                            name: "Centre d'accueil ANATS du 8e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                          -
+                            id: 17
+                            name: "Centre d'accueil ANATS du 10e arrondissement"
+                            address: null
+                            opening_hours: null
+                            phone: null
+                            latitude: null
+                            longitude: null
+                            directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                            source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                            is_active: true
+                            city:
+                              id: 1
+                              slug: ndjamena
+                              name: "N'Djaména"
+                    total:
+                      amount: 68000
+                      complete: true
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      slug:
+                        type: string
+                        example: voyager-a-l-etranger
+                      title:
+                        type: string
+                        example: "Je veux voyager à l'étranger"
+                      description:
+                        type: string
+                        example: 'Le passeport demande un acte de naissance, une carte d’identité et un casier judiciaire : faites-les dans cet ordre.'
+                      icon:
+                        type: string
+                        example: plane
+                      steps:
+                        type: array
+                        example:
+                          -
+                            position: 1
+                            slug: acte-de-naissance
+                            title: 'Acte de Naissance'
+                            summary: 'Obtenir un extrait ou une copie intégrale de votre acte de naissance'
+                            cost: "1\_000 FCFA"
+                            processing_time: '1-5 jours'
+                            required_documents:
+                              - 'Livret de famille ou déclaration de naissance originale'
+                              - "Pièce d'identité du demandeur (parent ou intéressé majeur)"
+                              - "Formulaire de demande d'acte"
+                            location: "Mairie de N'Djaména ou commune de naissance"
+                            cost_estimate:
+                              official: 1000
+                              extras: 0
+                              total: 1000
+                              complete: true
+                            abroad_available: false
+                            offices: []
+                          -
+                            position: 2
+                            slug: carte-didentite-nationale
+                            title: "Carte d'Identité Nationale"
+                            summary: "Demander ou renouveler votre carte d'identité nationale"
+                            cost: "5\_000 FCFA"
+                            processing_time: '10-15 jours'
+                            required_documents:
+                              - "Copie de l'acte de naissance"
+                              - 'Justificatif de profession (si nécessaire)'
+                              - "Deux photos d'identité en couleur"
+                              - "Trois copies de cartes d'identité de témoins"
+                            location: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                            cost_estimate:
+                              official: 5000
+                              extras: 0
+                              total: 5000
+                              complete: true
+                            abroad_available: false
+                            offices:
+                              -
+                                id: 11
+                                name: "Centre d'accueil ANATS du 1er arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 12
+                                name: "Centre d'accueil ANATS du 2e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 13
+                                name: "Centre d'accueil ANATS du 5e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 14
+                                name: "Centre d'accueil ANATS du 6e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 15
+                                name: "Centre d'accueil ANATS du 7e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 16
+                                name: "Centre d'accueil ANATS du 8e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 17
+                                name: "Centre d'accueil ANATS du 10e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                          -
+                            position: 3
+                            slug: casier-judiciaire
+                            title: 'Casier Judiciaire'
+                            summary: 'Obtenir un extrait de casier judiciaire (bulletin n°3)'
+                            cost: "2\_000 FCFA"
+                            processing_time: '3-7 jours'
+                            required_documents:
+                              - "Carte d'identité nationale ou passeport valide"
+                              - "Extrait d'acte de naissance"
+                              - 'Formulaire de demande rempli'
+                              - 'Reçu de paiement des frais'
+                            location: "Palais de Justice, Avenue Félix Éboué, N'Djaména"
+                            cost_estimate:
+                              official: 2000
+                              extras: 0
+                              total: 2000
+                              complete: true
+                            abroad_available: false
+                            offices: []
+                          -
+                            position: 4
+                            slug: passeport-biometrique
+                            title: 'Passeport Biométrique'
+                            summary: 'Obtenir ou renouveler votre passeport biométrique tchadien'
+                            cost: '60 000 FCFA'
+                            processing_time: '15-30 jours'
+                            required_documents:
+                              - 'Acte de naissance (original ou copie légalisée)'
+                              - "Carte d'identité nationale valide"
+                              - 'Deux photos biométriques récentes (fond blanc, 4x6)'
+                              - 'Extrait de casier judiciaire vierge (moins de 3 mois)'
+                              - 'Reçu de paiement des frais'
+                              - 'Ancien passeport (si renouvellement)'
+                            location: "Centres d'accueil de l'ANATS (N'Djaména et chefs-lieux de province)"
+                            cost_estimate:
+                              official: 60000
+                              extras: 0
+                              total: 60000
+                              complete: true
+                            abroad_available: false
+                            offices:
+                              -
+                                id: 11
+                                name: "Centre d'accueil ANATS du 1er arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%201er%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 12
+                                name: "Centre d'accueil ANATS du 2e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%202e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 13
+                                name: "Centre d'accueil ANATS du 5e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%205e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 14
+                                name: "Centre d'accueil ANATS du 6e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%206e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 15
+                                name: "Centre d'accueil ANATS du 7e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%207e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 16
+                                name: "Centre d'accueil ANATS du 8e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%208e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                              -
+                                id: 17
+                                name: "Centre d'accueil ANATS du 10e arrondissement"
+                                address: null
+                                opening_hours: null
+                                phone: null
+                                latitude: null
+                                longitude: null
+                                directions_url: 'https://www.google.com/maps/dir/?api=1&destination=Centre%20d%27accueil%20ANATS%20du%2010e%20arrondissement%2C%20N%27Djam%C3%A9na%2C%20Tchad'
+                                source_url: 'https://tchadinfos.com/2023/01/31/tchad-lanats-ouvre-un-centre-dans-le-8eme-arrondissement/'
+                                is_active: true
+                                city:
+                                  id: 1
+                                  slug: ndjamena
+                                  name: "N'Djaména"
+                        items:
+                          type: object
+                          properties:
+                            position:
+                              type: integer
+                              example: 1
+                            slug:
+                              type: string
+                              example: acte-de-naissance
+                            title:
+                              type: string
+                              example: 'Acte de Naissance'
+                            summary:
+                              type: string
+                              example: 'Obtenir un extrait ou une copie intégrale de votre acte de naissance'
+                            cost:
+                              type: string
+                              example: "1\_000 FCFA"
+                            processing_time:
+                              type: string
+                              example: '1-5 jours'
+                            required_documents:
+                              type: array
+                              example:
+                                - 'Livret de famille ou déclaration de naissance originale'
+                                - "Pièce d'identité du demandeur (parent ou intéressé majeur)"
+                                - "Formulaire de demande d'acte"
+                              items:
+                                type: string
+                            location:
+                              type: string
+                              example: "Mairie de N'Djaména ou commune de naissance"
+                            cost_estimate:
+                              type: object
+                              properties:
+                                official:
+                                  type: integer
+                                  example: 1000
+                                extras:
+                                  type: integer
+                                  example: 0
+                                total:
+                                  type: integer
+                                  example: 1000
+                                complete:
+                                  type: boolean
+                                  example: true
+                            abroad_available:
+                              type: boolean
+                              example: false
+                            offices:
+                              type: array
+                              example: []
+                      total:
+                        type: object
+                        properties:
+                          amount:
+                            type: integer
+                            example: 68000
+                          complete:
+                            type: boolean
+                            example: true
+      tags:
+        - 'Parcours de vie'
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'Identifiant du parcours.'
+        example: voyager-a-l-etranger
+        required: true
+        schema:
+          type: string
+  /api/v1/diaspora:
+    get:
+      summary: Diaspora
+      operationId: diaspora
+      description: 'Démarches possibles depuis l’étranger et représentations diplomatiques du Tchad.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    demarches: []
+                    representations:
+                      -
+                        id: 8
+                        country: Canada
+                        city: Ottawa
+                        type: embassy
+                        address: '350 Sparks Street, Suite 802, Ottawa, ON K1R 7S8'
+                        phone: null
+                        email: null
+                        website: null
+                        source_url: 'https://www.international.gc.ca/protocol-protocole/addresses.aspx?lang=eng'
+                        notes: null
+                      -
+                        id: 7
+                        country: États-Unis
+                        city: Washington
+                        type: embassy
+                        address: '2401 Massachusetts Ave NW, Washington, DC 20008'
+                        phone: '+1 202 652 1312'
+                        email: info@chadembassy.us
+                        website: 'https://chadembassy.us'
+                        source_url: 'https://chadembassy.us'
+                        notes: null
+                      -
+                        id: 6
+                        country: France
+                        city: Paris
+                        type: embassy
+                        address: '65 rue des Belles Feuilles, 75016 Paris'
+                        phone: '+33 1 45 53 36 75'
+                        email: ambassadedutchadparis@wanadoo.fr
+                        website: null
+                        source_url: 'https://www.diplomatie.gouv.fr/fr/services/annuaire-et-contacts/representations-etrangeres/paris-ambassade-du-tchad'
+                        notes: null
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      demarches:
+                        type: array
+                        example: []
+                      representations:
+                        type: array
+                        example:
+                          -
+                            id: 8
+                            country: Canada
+                            city: Ottawa
+                            type: embassy
+                            address: '350 Sparks Street, Suite 802, Ottawa, ON K1R 7S8'
+                            phone: null
+                            email: null
+                            website: null
+                            source_url: 'https://www.international.gc.ca/protocol-protocole/addresses.aspx?lang=eng'
+                            notes: null
+                          -
+                            id: 7
+                            country: États-Unis
+                            city: Washington
+                            type: embassy
+                            address: '2401 Massachusetts Ave NW, Washington, DC 20008'
+                            phone: '+1 202 652 1312'
+                            email: info@chadembassy.us
+                            website: 'https://chadembassy.us'
+                            source_url: 'https://chadembassy.us'
+                            notes: null
+                          -
+                            id: 6
+                            country: France
+                            city: Paris
+                            type: embassy
+                            address: '65 rue des Belles Feuilles, 75016 Paris'
+                            phone: '+33 1 45 53 36 75'
+                            email: ambassadedutchadparis@wanadoo.fr
+                            website: null
+                            source_url: 'https://www.diplomatie.gouv.fr/fr/services/annuaire-et-contacts/representations-etrangeres/paris-ambassade-du-tchad'
+                            notes: null
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 8
+                            country:
+                              type: string
+                              example: Canada
+                            city:
+                              type: string
+                              example: Ottawa
+                            type:
+                              type: string
+                              example: embassy
+                            address:
+                              type: string
+                              example: '350 Sparks Street, Suite 802, Ottawa, ON K1R 7S8'
+                            phone:
+                              type: string
+                              example: null
+                              nullable: true
+                            email:
+                              type: string
+                              example: null
+                              nullable: true
+                            website:
+                              type: string
+                              example: null
+                              nullable: true
+                            source_url:
+                              type: string
+                              example: 'https://www.international.gc.ca/protocol-protocole/addresses.aspx?lang=eng'
+                            notes:
+                              type: string
+                              example: null
+                              nullable: true
+      tags:
+        - Diaspora
+      security: []
+  /api/v1/calendar:
+    get:
+      summary: 'Calendrier administratif'
+      operationId: calendrierAdministratif
+      description: "Dates publiées en cours ou à venir. Chaque date indique son type (kind), son statut (ongoing ou upcoming)\net le nombre de jours restants (days_left : jusqu’à la fin d’une période en cours, sinon jusqu’au début)."
+      parameters:
+        -
+          in: query
+          name: category
+          description: 'Domaine : elections, education, exams, identity, tax, other.'
+          example: exams
+          required: false
+          schema:
+            type: string
+            description: 'Domaine : elections, education, exams, identity, tax, other.'
+            example: exams
+        -
+          in: query
+          name: kind
+          description: 'Type d’échéance : period (période d’inscription…), deadline (date limite), event (date unique).'
+          example: deadline
+          required: false
+          schema:
+            type: string
+            description: 'Type d’échéance : period (période d’inscription…), deadline (date limite), event (date unique).'
+            example: deadline
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Calendrier
+      security: []
+  '/api/v1/calendar/{id}.ics':
+    get:
+      summary: 'Ajouter une date à son agenda'
+      operationId: ajouterUneDateSonAgenda
+      description: 'Fichier iCalendar (.ics). Une date limite reçoit un rappel 3 jours avant.'
+      parameters:
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: 'Fichier .ics'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'BEGIN:VCALENDAR'
+        404:
+          description: 'Date inconnue ou non publiée'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Ressource introuvable.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Ressource introuvable.'
+      tags:
+        - Calendrier
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'Identifiant de la date publiée.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/demarches/{slug}/reviews':
+    get:
+      summary: 'Avis sur une démarche'
+      operationId: avisSurUneDmarche
+      description: 'Avis publiés après modération, avec la synthèse des prix et délais réellement constatés par les usagers.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  summary:
+                    count: 0
+                    average_rating: 0
+                    median_price: null
+                    median_duration_days: null
+                  data: []
+                properties:
+                  summary:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                        example: 0
+                      average_rating:
+                        type: integer
+                        example: 0
+                      median_price:
+                        type: string
+                        example: null
+                        nullable: true
+                      median_duration_days:
+                        type: string
+                        example: null
+                        nullable: true
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Communauté
+      security: []
+    parameters:
+      -
+        in: path
+        name: slug
+        description: 'Identifiant de la fiche.'
+        example: passeport-biometrique
+        required: true
+        schema:
+          type: string
+  /api/v1/questions:
+    get:
+      summary: 'Questions et réponses'
+      operationId: questionsEtRponses
+      description: 'Questions publiées et leurs réponses publiées (après modération).'
+      parameters:
+        -
+          in: query
+          name: demarche
+          description: 'Slug d’une fiche : seulement ses questions.'
+          example: passeport-biometrique
+          required: false
+          schema:
+            type: string
+            description: 'Slug d’une fiche : seulement ses questions.'
+            example: passeport-biometrique
+        -
+          in: query
+          name: q
+          description: 'Mot-clé dans les questions.'
+          example: délai
+          required: false
+          schema:
+            type: string
+            description: 'Mot-clé dans les questions.'
+            example: délai
+        -
+          in: query
+          name: per_page
+          description: 'Questions par page, de 1 à 50 (20 par défaut).'
+          example: 20
+          required: false
+          schema:
+            type: integer
+            description: 'Questions par page, de 1 à 50 (20 par défaut).'
+            example: 20
+        -
+          in: query
+          name: lang
+          description: 'Langue des textes : fr (par défaut), en ou ar.'
+          example: fr
+          required: false
+          schema:
+            type: string
+            description: 'Langue des textes : fr (par défaut), en ou ar.'
+            example: fr
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  meta:
+                    current_page: 1
+                    last_page: 1
+                    total: 0
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 1
+                      total:
+                        type: integer
+                        example: 0
+      tags:
+        - Communauté
+      security: []
