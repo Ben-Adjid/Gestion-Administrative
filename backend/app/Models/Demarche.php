@@ -46,6 +46,8 @@ class Demarche extends Model
         'cost_amount',
         'extra_costs',
         'processing_time',
+        'validity',
+        'source_hash',
         'processing_time_en',
         'processing_time_ar',
         'processing_time_days',

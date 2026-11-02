@@ -1,0 +1,2714 @@
+[
+  {
+    "number": 1,
+    "slug": "carte-didentite-nationale",
+    "category": "identite",
+    "title": "Carte Nationale d'Identité (CNI) — première demande",
+    "source_page": 4,
+    "location": "Délégation de la Sécurité publique / Commissariat de police",
+    "institution": "Délégation de la Sécurité publique",
+    "cost": "5 000 FCFA (timbre fiscal)",
+    "processing_time": "2 à 8 semaines selon disponibilité",
+    "validity": "10 ans",
+    "required_documents": [
+      "Acte de naissance original ou jugement supplétif",
+      "2 photos d'identité récentes (fond blanc, 4x4 cm)",
+      "Certificat de résidence (délivré par le chef de quartier)",
+      "Timbre fiscal de 5 000 FCFA",
+      "Formulaire de demande CNI rempli (disponible sur place)",
+      "Pour les mineurs de 15 à 17 ans : autorisation parentale + CNI du parent"
+    ],
+    "conditions": [
+      "Obligatoire pour tout citoyen tchadien à partir de 15 ans",
+      "La demande doit être faite dans la circonscription du domicile",
+      "En cas de perte, une déclaration de perte au commissariat est obligatoire avant la nouvelle demande",
+      "Toute CNI périmée depuis plus de 6 mois doit être renouvelée en suivant la même procédure",
+      "L'empreinte digitale des 10 doigts est obligatoirement relevée lors du dépôt",
+      "Le demandeur doit se présenter physiquement — aucun mandataire accepté pour les empreintes"
+    ],
+    "procedure_steps": [
+      "Se rendre au commissariat/délégation avec toutes les pièces",
+      "Remplir le formulaire de demande sur place",
+      "Déposer le dossier complet au guichet",
+      "Recevoir le récépissé de dépôt (à conserver précieusement)",
+      "Revenir à la date indiquée pour retrait (ou attendre convocation)",
+      "Présenter le récépissé pour retirer la CNI"
+    ]
+  },
+  {
+    "number": 2,
+    "slug": "renouvellement-de-la-cni-expiree-ou-deterioree",
+    "category": "identite",
+    "title": "Renouvellement de la CNI (expirée ou détériorée)",
+    "source_page": 4,
+    "location": "Délégation de la Sécurité publique / Commissariat",
+    "institution": "Délégation de la Sécurité publique",
+    "cost": "5 000 FCFA",
+    "processing_time": "2 à 6 semaines",
+    "validity": "10 ans",
+    "required_documents": [
+      "Ancienne CNI (même expirée ou détériorée)",
+      "2 photos d'identité récentes (fond blanc, 4x4 cm)",
+      "Timbre fiscal de 5 000 FCFA",
+      "Certificat de résidence si changement d'adresse"
+    ],
+    "conditions": [
+      "L'ancienne CNI doit être remise au guichet lors du dépôt",
+      "En cas de CNI détériorée illisible, fournir en plus l'acte de naissance",
+      "Renouvellement possible 3 mois avant la date d'expiration"
+    ],
+    "procedure_steps": [
+      "Réunir les pièces requises",
+      "Se présenter au commissariat du domicile",
+      "Déposer l'ancienne CNI et les documents",
+      "Récupérer le récépissé de dépôt",
+      "Retirer la nouvelle CNI à la date indiquée"
+    ]
+  },
+  {
+    "number": 3,
+    "slug": "declaration-de-perte-de-cni",
+    "category": "identite",
+    "title": "Déclaration de perte de CNI",
+    "source_page": 5,
+    "location": "Commissariat de police ou Brigade de gendarmerie",
+    "institution": "Commissariat de police ou Brigade de gendarmerie",
+    "cost": "Gratuit à 1 000 FCFA (frais variables)",
+    "processing_time": "Immédiat (le jour même)",
+    "validity": "Valable 3 mois pour engager le renouvellement",
+    "required_documents": [
+      "Pièce d'identité alternative (passeport, permis de conduire, carte scolaire)",
+      "Numéro de la CNI perdue si mémorisé",
+      "Déclaration sur l'honneur de la perte"
+    ],
+    "conditions": [
+      "La déclaration de perte est obligatoire avant toute nouvelle demande de CNI",
+      "Utiliser la CNI perdue déclarée est un délit pénal",
+      "Le récépissé de déclaration de perte tient lieu de pièce d'identité temporaire pendant 3 mois"
+    ],
+    "procedure_steps": [
+      "Se rendre au commissariat ou à la gendarmerie",
+      "Expliquer les circonstances de la perte",
+      "Remplir le formulaire de déclaration de perte",
+      "Obtenir le récépissé signé et tamponné",
+      "Utiliser ce récépissé pour entamer la demande de nouvelle CNI"
+    ]
+  },
+  {
+    "number": 4,
+    "slug": "permis-de-conduire",
+    "category": "identite",
+    "title": "Permis de conduire — première demande (catégorie B)",
+    "source_page": 5,
+    "location": "Direction des Transports terrestres / Auto-écoles agréées / Centre d'examen",
+    "institution": "Direction des Transports terrestres",
+    "cost": "25 000 à 50 000 FCFA (frais d'école + frais examen)",
+    "processing_time": "2 à 4 mois (formation incluse)",
+    "validity": "10 ans",
+    "required_documents": [
+      "CNI valide ou acte de naissance (minimum 18 ans pour catégorie B)",
+      "Certificat médical d'aptitude à la conduite (délivré par médecin agréé)",
+      "4 photos d'identité récentes (fond blanc)",
+      "Timbre fiscal (montant variable selon préfecture)",
+      "Attestation de réussite au code de la route (auto-école)",
+      "Attestation de réussite à l'examen pratique de conduite",
+      "Formulaire de demande de permis (Direction des Transports)"
+    ],
+    "conditions": [
+      "Âge minimum : 18 ans pour catégorie B (voiture), 16 ans pour catégorie AM (cyclomoteur)",
+      "La formation dans une auto-école agréée est obligatoire (minimum 20h de conduite)",
+      "L'examen théorique (code) doit être réussi avant l'accès à l'examen pratique",
+      "En cas d'échec à l'examen, nouvelle tentative possible après 15 jours minimum",
+      "Le certificat médical ne doit pas dater de plus de 3 mois au moment du dépôt",
+      "Catégories : A (moto), B (voiture), C (camion), D (bus), E (remorque)"
+    ],
+    "procedure_steps": [
+      "S'inscrire dans une auto-école agréée par la Direction des Transports",
+      "Suivre la formation théorique (code) et pratique (conduite)",
+      "Passer et réussir l'examen théorique au centre d'examen officiel",
+      "Passer et réussir l'examen pratique avec un inspecteur agréé",
+      "Constituer le dossier complet avec toutes les pièces",
+      "Déposer le dossier à la Direction des Transports",
+      "Retirer le permis définitif (récépissé provisoire délivré dans l'attente)"
+    ]
+  },
+  {
+    "number": 5,
+    "slug": "renouvellement-du-permis-de-conduire",
+    "category": "identite",
+    "title": "Renouvellement du permis de conduire",
+    "source_page": 6,
+    "location": "Direction des Transports terrestres",
+    "institution": "Direction des Transports terrestres",
+    "cost": "15 000 à 25 000 FCFA",
+    "processing_time": "2 à 6 semaines",
+    "validity": "10 ans",
+    "required_documents": [
+      "Ancien permis de conduire (même expiré)",
+      "Certificat médical d'aptitude (moins de 3 mois)",
+      "2 photos d'identité récentes",
+      "CNI valide",
+      "Timbre fiscal"
+    ],
+    "conditions": [
+      "Renouvellement à effectuer dans les 3 mois suivant l'expiration",
+      "Au-delà de 2 ans d'expiration, un examen pratique peut être exigé",
+      "Catégorie D (bus) : renouvellement tous les 5 ans avec visite médicale obligatoire"
+    ],
+    "procedure_steps": [
+      "Passer la visite médicale chez un médecin agréé",
+      "Constituer le dossier",
+      "Déposer à la Direction des Transports",
+      "Retirer le nouveau permis"
+    ]
+  },
+  {
+    "number": 6,
+    "slug": "certificat-de-nationalite-tchadienne",
+    "category": "identite",
+    "title": "Certificat de nationalité tchadienne",
+    "source_page": 7,
+    "location": "Tribunal de grande instance du domicile",
+    "institution": "Tribunal de grande instance du domicile",
+    "cost": "5 000 à 15 000 FCFA",
+    "processing_time": "2 à 4 semaines",
+    "validity": "Permanente (à renouveler si informations changent)",
+    "required_documents": [
+      "Acte de naissance original",
+      "CNI du demandeur",
+      "Acte de naissance du père (prouvant la nationalité tchadienne du père)",
+      "CNI ou passeport du père",
+      "Certificat de résidence du demandeur",
+      "Timbre fiscal",
+      "Formulaire de demande (disponible au tribunal)",
+      "Pour les femmes mariées : acte de mariage en plus"
+    ],
+    "conditions": [
+      "La nationalité tchadienne s'acquiert par la filiation paternelle (père tchadien)",
+      "Obligatoire pour : concours de la fonction publique, inscription à l'université publique, demande de passeport",
+      "En cas de père étranger, la mère tchadienne peut transmettre la nationalité — procédure différente",
+      "Ce certificat n'est pas la même chose que la CNI — il prouve le lien à la nationalité tchadienne"
+    ],
+    "procedure_steps": [
+      "Se rendre au greffe du Tribunal de grande instance",
+      "Déposer le dossier complet avec les pièces",
+      "Le juge examine le dossier et vérifie la filiation",
+      "L'ordonnance de nationalité est délivrée",
+      "Retirer le certificat au greffe"
+    ]
+  },
+  {
+    "number": 46,
+    "slug": "certificat-de-residence",
+    "category": "identite",
+    "title": "Certificat de résidence",
+    "source_page": 8,
+    "location": "Chef de quartier / Commissariat",
+    "institution": "Chef de quartier",
+    "cost": "Gratuit à 2 000 FCFA",
+    "processing_time": "1–3 jours",
+    "validity": "3 mois",
+    "required_documents": [
+      "CNI du demandeur",
+      "Présence d'un chef de quartier ou d'un agent de police"
+    ],
+    "conditions": [
+      "Atteste du lieu de domicile actuel",
+      "Exigé pour CNI, passeport, mariage, bourse",
+      "En cas de déménagement récent : témoignage de voisins peut être requis"
+    ],
+    "procedure_steps": [
+      "Se présenter chez le chef de quartier",
+      "Il vérifie la résidence et signe l'attestation",
+      "Faire tamponner au commissariat si requis"
+    ]
+  },
+  {
+    "number": 47,
+    "slug": "laissez-passer-frontalier",
+    "category": "identite",
+    "title": "Laissez-passer frontalier",
+    "source_page": 8,
+    "location": "Direction de l'immigration / Préfecture frontalière",
+    "institution": "Direction de l'immigration",
+    "cost": "5 000 à 15 000 FCFA",
+    "processing_time": "1–5 jours",
+    "validity": "1 an",
+    "required_documents": [
+      "CNI valide",
+      "2 photos biométriques",
+      "Formulaire de demande",
+      "Justificatif d'activité transfrontalière",
+      "Timbre fiscal"
+    ],
+    "conditions": [
+      "Réservé aux résidents des zones frontalières (50 km)",
+      "Permet de franchir la frontière sans passeport",
+      "Valable uniquement pour le pays frontalier désigné",
+      "Non valable pour les voyages au-delà de la zone frontalière"
+    ],
+    "procedure_steps": [
+      "Déposer le dossier à la préfecture ou direction immigration",
+      "Vérification du domicile en zone frontalière",
+      "Délivrance du laissez-passer"
+    ]
+  },
+  {
+    "number": 48,
+    "slug": "carte-d-identite-diplomatique-ou-consulaire",
+    "category": "identite",
+    "title": "Carte d'identité diplomatique ou consulaire",
+    "source_page": 9,
+    "location": "Ministère des Affaires étrangères",
+    "institution": "Ministère des Affaires étrangères",
+    "cost": "Gratuit (pour agents de l'État)",
+    "processing_time": "2–4 semaines",
+    "validity": "Durée de la mission",
+    "required_documents": [
+      "Ordre de mission ou décret de nomination",
+      "Acte de naissance",
+      "2 photos biométriques",
+      "CNI ordinaire du fonctionnaire"
+    ],
+    "conditions": [
+      "Réservée aux agents diplomatiques et consulaires tchadiens en mission",
+      "Délivrée par le Ministère des Affaires étrangères sur demande du Ministère employeur",
+      "Conféré des immunités et privilèges diplomatiques selon la Convention de Vienne"
+    ],
+    "procedure_steps": [
+      "Le Ministère employeur saisit le MAE",
+      "Le MAE vérifie le statut et délivre la carte",
+      "La carte est remise à l'agent avant sa prise de poste"
+    ]
+  },
+  {
+    "number": 69,
+    "slug": "carte-biometrique-pour-les-refugies-hcr-gouvernement",
+    "category": "identite",
+    "title": "Carte biométrique pour les réfugiés (HCR/Gouvernement)",
+    "source_page": 9,
+    "location": "Commission Nationale d'Éligibilité (CNE) / HCR",
+    "institution": "Commission Nationale d'Éligibilité (CNE)",
+    "cost": "Gratuit",
+    "processing_time": "1–6 mois",
+    "validity": "1–2 ans renouvelable",
+    "required_documents": [
+      "Formulaire de demande d'asile",
+      "Déclaration circonstanciée des raisons de la fuite",
+      "Photos biométriques",
+      "Tout document d'identité disponible (même non valide)"
+    ],
+    "conditions": [
+      "Le Tchad accueille des réfugiés du Soudan, RCA, Nigeria, Cameroun",
+      "Le statut de réfugié est accordé par la CNE après audition individuelle",
+      "La carte de réfugié permet la circulation sur le territoire tchadien et l'accès aux services",
+      "Les réfugiés ne peuvent pas être refoulés vers leur pays d'origine si risque de persécution"
+    ],
+    "procedure_steps": [
+      "Se présenter au HCR ou à la CNE",
+      "Entretien individuel de demande d'asile",
+      "Examen du dossier par la commission",
+      "Notification de la décision",
+      "Délivrance de la carte de réfugié si statut accordé"
+    ]
+  },
+  {
+    "number": 75,
+    "slug": "renouvellement-de-la-carte-d-etudiant",
+    "category": "identite",
+    "title": "Renouvellement de la carte d'étudiant",
+    "source_page": 10,
+    "location": "Établissement d'enseignement",
+    "institution": "Établissement d'enseignement",
+    "cost": "Gratuit à 2 000 FCFA",
+    "processing_time": "Immédiat à 1 semaine",
+    "validity": "1 an scolaire/universitaire",
+    "required_documents": [
+      "Reçu de paiement des frais de scolarité de l'année en cours",
+      "Photo d'identité récente",
+      "Ancienne carte étudiant"
+    ],
+    "conditions": [
+      "La carte étudiant est renouvelée chaque année académique",
+      "Elle est indispensable pour accéder aux services universitaires (bibliothèque, restaurant, transport)",
+      "Elle peut servir de pièce d'identité complémentaire mais pas de titre d'identité officiel"
+    ],
+    "procedure_steps": [
+      "Payer les frais de scolarité",
+      "Se rendre au secrétariat avec les pièces",
+      "Recevoir la carte renouvelée État civil Ministère de l'Administration du territoire / Mairies Cette section regroupe 11 démarches relevant de État civil. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 7 Déclaration de naissance (dans les délais légaux — 30 jours) Gratuit Immédiat (le jour de la déclaration) 8 Jugement supplétif d'acte de naissance (déclaration tardive) 10 000 à 30 000 FCFA (frais de justice + avocat optionnel) 1 à 3 mois 9 Extrait d'acte de naissance (copie) Gratuit à 500 FCFA selon mairie Immédiat à 3 jours 10 Acte de mariage civil Gratuit à 5 000 FCFA (variable selon mairie) Publication des bans : 15 jours minimum avant cérémonie 11 Acte de décès Gratuit Immédiat (déclaration à faire dans 3 jours) 12 Livret de famille Gratuit Délivré lors du mariage civil ou de la naissance du 1er enfant 13 Reconnaissance d'enfant naturel Gratuit à 2 000 FCFA Immédiat à 15 jours 49 Transcription de mariage célébré à l'étranger 5 000 à 15 000 FCFA 1–3 mois 50 Divorce judiciaire 50 000 à 300 000 FCFA (honoraires avocat inclus) 3 mois à 2 ans 51 Adoption légale d'un enfant 100 000 à 500 000 FCFA 6 mois à 2 ans 76 Changement de nom (procédure judiciaire) 50 000 à 200 000 FCFA 3–6 mois"
+    ]
+  },
+  {
+    "number": 7,
+    "slug": "declaration-de-naissance-dans-les-delais-legaux-30-jours",
+    "category": "etat-civil",
+    "title": "Déclaration de naissance (dans les délais légaux — 30 jours)",
+    "source_page": 12,
+    "location": "Mairie ou Centre d'état civil du lieu de naissance",
+    "institution": "Mairie ou Centre d'état civil du lieu de naissance",
+    "cost": "Gratuit",
+    "processing_time": "Immédiat (le jour de la déclaration)",
+    "validity": "Permanente",
+    "required_documents": [
+      "Certificat d'accouchement délivré par la maternité ou le centre de santé",
+      "CNI ou acte de naissance du père",
+      "CNI ou acte de naissance de la mère",
+      "Présence de 2 témoins majeurs avec leurs pièces d'identité",
+      "Déclaration orale ou écrite des prénoms et noms choisis"
+    ],
+    "conditions": [
+      "Délai légal : 30 jours à compter de la naissance — au-delà, jugement supplétif obligatoire",
+      "Si naissance à domicile sans assistance médicale : déclaration de 2 témoins ayant assisté à l'accouchement",
+      "Naissance de parents inconnus : déclaration par l'établissement de santé ou l'officier d'état civil",
+      "Les prénoms doivent être conformes aux usages tchadiens (pas de prénoms fantaisistes)",
+      "Un enfant né de parents non mariés peut porter le nom du père si celui-ci reconnaît l'enfant"
+    ],
+    "procedure_steps": [
+      "Se rendre à la mairie dans les 30 jours suivant la naissance",
+      "Présenter le certificat d'accouchement et les pièces d'identité des parents",
+      "L'officier d'état civil rédige l'acte de naissance",
+      "Les témoins signent l'acte",
+      "L'acte est inscrit au registre d'état civil",
+      "Un extrait d'acte de naissance est remis immédiatement"
+    ]
+  },
+  {
+    "number": 8,
+    "slug": "jugement-suppletif-d-acte-de-naissance-declaration-tardive",
+    "category": "etat-civil",
+    "title": "Jugement supplétif d'acte de naissance (déclaration tardive)",
+    "source_page": 12,
+    "location": "Tribunal de grande instance ou Justice de paix",
+    "institution": "Tribunal de grande instance ou Justice de paix",
+    "cost": "10 000 à 30 000 FCFA (frais de justice + avocat optionnel)",
+    "processing_time": "1 à 3 mois",
+    "validity": "Permanente (a valeur d'acte de naissance)",
+    "required_documents": [
+      "Certificat de baptême ou attestation scolaire mentionnant la date de naissance",
+      "Témoignage de 2 personnes connaissant le déclarant (parents, voisins, anciens)",
+      "CNI des témoins",
+      "Certificat de résidence du demandeur",
+      "Timbre fiscal",
+      "Formulaire de requête (disponible au tribunal)",
+      "Si scolarisé : bulletins scolaires, certificats de scolarité",
+      "Si baptisé : carnet de baptême ou attestation de l'église/mosquée"
+    ],
+    "conditions": [
+      "Obligatoire pour toute naissance non déclarée dans les 30 jours",
+      "Le tribunal vérifie la cohérence des documents fournis avant de valider",
+      "Un jugement supplétif a exactement la même valeur juridique qu'un acte de naissance",
+      "La date retenue est celle déclarée par les témoins, vérifiée par les documents",
+      "En l'absence de tout document, le tribunal peut ordonner une enquête sociale"
+    ],
+    "procedure_steps": [
+      "Réunir tous les documents disponibles prouvant l'existence et la date de naissance",
+      "Déposer la requête au greffe du tribunal avec les pièces",
+      "Le juge fixe une date d'audience",
+      "Les témoins comparaissent et témoignent",
+      "Le juge rend l'ordonnance de jugement supplétif",
+      "Retirer le jugement au greffe",
+      "Présenter le jugement à la mairie pour inscription au registre d'état civil"
+    ]
+  },
+  {
+    "number": 9,
+    "slug": "acte-de-naissance",
+    "category": "etat-civil",
+    "title": "Extrait d'acte de naissance (copie)",
+    "source_page": 13,
+    "location": "Mairie du lieu de naissance",
+    "institution": "Mairie du lieu de naissance",
+    "cost": "Gratuit à 500 FCFA selon mairie",
+    "processing_time": "Immédiat à 3 jours",
+    "validity": "Généralement 3 mois pour les démarches officielles",
+    "required_documents": [
+      "Numéro de l'acte de naissance (si connu)",
+      "Nom complet, prénom(s), date et lieu de naissance du déclarant",
+      "CNI ou pièce d'identité du demandeur",
+      "Lien de parenté si demande pour autrui"
+    ],
+    "conditions": [
+      "Peut être demandé par l'intéressé, ses parents, son conjoint ou son représentant légal",
+      "Les tiers (employeurs, administrations) ne peuvent pas demander directement",
+      "L'extrait avec filiation mentionne les parents — l'extrait sans filiation ne les mentionne pas",
+      "Valide 3 mois pour la plupart des démarches administratives et consulaires"
+    ],
+    "procedure_steps": [
+      "Se rendre à la mairie du lieu de naissance",
+      "Présenter sa CNI et indiquer ses informations d'état civil",
+      "L'officier vérifie dans le registre",
+      "L'extrait est délivré signé et tamponné"
+    ]
+  },
+  {
+    "number": 10,
+    "slug": "certificat-de-mariage",
+    "category": "etat-civil",
+    "title": "Acte de mariage civil",
+    "source_page": 14,
+    "location": "Mairie du domicile de l'un des époux",
+    "institution": "Mairie du domicile de l'un des époux",
+    "cost": "Gratuit à 5 000 FCFA (variable selon mairie)",
+    "processing_time": "Publication des bans : 15 jours minimum avant cérémonie",
+    "validity": "Permanente",
+    "required_documents": [
+      "Actes de naissance des deux époux (moins de 3 mois)",
+      "CNI des deux époux",
+      "Certificat de résidence des deux époux",
+      "Certificat de célibat ou de divorce (si déjà marié)",
+      "4 témoins majeurs (2 par époux) avec leurs CNI",
+      "Pour les étrangers : extrait d'acte de naissance légalisé + certificat de coutume",
+      "Consentement des parents si l'un des époux est mineur (18 ans minimum pour femme, 20 ans pour homme)",
+      "2 photos d'identité de chaque époux"
+    ],
+    "conditions": [
+      "Le mariage civil est la seule forme légalement reconnue au Tchad pour les droits civils",
+      "Le mariage coutumier ou religieux n'a pas de valeur juridique sans le mariage civil",
+      "Âge légal : 18 ans pour la femme, 20 ans pour l'homme (dérogation possible avec autorisation du président du tribunal)",
+      "La bigamie est légalement interdite dans le mariage civil (un seul mariage civil à la fois)",
+      "Publication des bans obligatoire 15 jours avant la date de célébration",
+      "Les témoins doivent être présents physiquement le jour de la cérémonie"
+    ],
+    "procedure_steps": [
+      "Déposer le dossier à la mairie au moins 15 jours avant la date souhaitée",
+      "La mairie publie les bans (affichage public 15 jours)",
+      "Si aucune opposition dans les 15 jours, la cérémonie peut avoir lieu",
+      "Cérémonie en présence de l'officier d'état civil, des époux et des témoins",
+      "Signature de l'acte de mariage par tous",
+      "Livret de famille et acte de mariage remis aux époux"
+    ]
+  },
+  {
+    "number": 11,
+    "slug": "acte-de-deces",
+    "category": "etat-civil",
+    "title": "Acte de décès",
+    "source_page": 14,
+    "location": "Mairie du lieu du décès",
+    "institution": "Mairie du lieu du décès",
+    "cost": "Gratuit",
+    "processing_time": "Immédiat (déclaration à faire dans 3 jours)",
+    "validity": "Permanente",
+    "required_documents": [
+      "Certificat médical de décès (délivré par le médecin ayant constaté le décès)",
+      "CNI ou acte de naissance du défunt",
+      "CNI du déclarant (proche parent)",
+      "Livret de famille si disponible",
+      "En cas de décès sans certificat médical : déclaration de 2 témoins"
+    ],
+    "conditions": [
+      "Délai légal de déclaration : 3 jours suivant le décès",
+      "Si décès en dehors d'un établissement de santé : déclaration par un proche avec 2 témoins",
+      "L'acte de décès est nécessaire pour : succession, clôture de comptes, pension de veuvage",
+      "En cas de décès violent (accident, homicide) : la gendarmerie/police doit être informée avant la déclaration civile"
+    ],
+    "procedure_steps": [
+      "Obtenir le certificat médical de décès auprès du médecin ou de l'hôpital",
+      "Se rendre à la mairie dans les 3 jours",
+      "Présenter les documents et déclarer le décès",
+      "L'officier enregistre le décès et délivre l'acte de décès",
+      "Plusieurs copies certifiées sont remises à la famille"
+    ]
+  },
+  {
+    "number": 12,
+    "slug": "livret-de-famille",
+    "category": "etat-civil",
+    "title": "Livret de famille",
+    "source_page": 15,
+    "location": "Mairie",
+    "institution": "Mairie",
+    "cost": "Gratuit",
+    "processing_time": "Délivré lors du mariage civil ou de la naissance du 1er enfant",
+    "validity": "Permanent (mis à jour à chaque événement)",
+    "required_documents": [
+      "Acte de mariage (si couple marié)",
+      "Actes de naissance des époux",
+      "Actes de naissance des enfants (à ajouter au fil des naissances)"
+    ],
+    "conditions": [
+      "Délivré automatiquement lors du mariage civil",
+      "Pour les parents non mariés : délivré à la naissance du premier enfant commun reconnu",
+      "En cas de perte : duplicata possible à la mairie avec acte de mariage et CNI",
+      "Toute naissance, adoption, décès ou divorce doit être reporté sur le livret"
+    ],
+    "procedure_steps": [
+      "Le livret est remis automatiquement lors du mariage à la mairie",
+      "Pour un duplicata : se rendre à la mairie avec l'acte de mariage et la CNI",
+      "Pour chaque naissance ultérieure : apporter le livret à la mairie pour mise à jour"
+    ]
+  },
+  {
+    "number": 13,
+    "slug": "reconnaissance-d-enfant-naturel",
+    "category": "etat-civil",
+    "title": "Reconnaissance d'enfant naturel",
+    "source_page": 16,
+    "location": "Mairie ou Officier d'état civil",
+    "institution": "Mairie ou Officier d'état civil",
+    "cost": "Gratuit à 2 000 FCFA",
+    "processing_time": "Immédiat à 15 jours",
+    "validity": "Permanente",
+    "required_documents": [
+      "CNI du père reconnaissant",
+      "Acte de naissance de l'enfant",
+      "CNI de la mère",
+      "Présence physique du père (reconnaissance volontaire)",
+      "Formulaire de reconnaissance (disponible à la mairie)"
+    ],
+    "conditions": [
+      "La reconnaissance peut se faire avant la naissance (reconnaissance prénatale), à la naissance ou après",
+      "Elle est volontaire — le père ne peut être forcé que par voie judiciaire (action en recherche de paternité)",
+      "La reconnaissance donne à l'enfant le droit de porter le nom du père et les droits successoraux",
+      "Si la mère refuse : saisir le tribunal pour expertise et reconnaissance judiciaire"
+    ],
+    "procedure_steps": [
+      "Le père se présente à la mairie",
+      "Déclare vouloir reconnaître l'enfant devant l'officier d'état civil",
+      "Signe l'acte de reconnaissance",
+      "L'officier met à jour le registre et l'acte de naissance de l'enfant"
+    ]
+  },
+  {
+    "number": 49,
+    "slug": "transcription-de-mariage-celebre-a-l-etranger",
+    "category": "etat-civil",
+    "title": "Transcription de mariage célébré à l'étranger",
+    "source_page": 16,
+    "location": "Mairie de N'Djamena / Service central d'état civil",
+    "institution": "Mairie de N'Djamena",
+    "cost": "5 000 à 15 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "Permanente",
+    "required_documents": [
+      "Acte de mariage étranger original",
+      "Traduction certifiée en français",
+      "Légalisation par l'ambassade tchadienne du pays concerné",
+      "CNI des deux époux",
+      "Actes de naissance des deux époux"
+    ],
+    "conditions": [
+      "Obligatoire pour les citoyens tchadiens mariés à l'étranger souhaitant faire reconnaître leur mariage au Tchad",
+      "Le mariage doit être valide selon le droit du pays où il a été célébré",
+      "Délai de transcription : 3 mois après le retour au Tchad"
+    ],
+    "procedure_steps": [
+      "Légaliser l'acte de mariage étranger par l'ambassade tchadienne",
+      "Faire traduire si nécessaire",
+      "Déposer à la mairie centrale",
+      "Transcription dans les registres d'état civil tchadiens"
+    ]
+  },
+  {
+    "number": 50,
+    "slug": "divorce-judiciaire",
+    "category": "etat-civil",
+    "title": "Divorce judiciaire",
+    "source_page": 17,
+    "location": "Tribunal de grande instance",
+    "institution": "Tribunal de grande instance",
+    "cost": "50 000 à 300 000 FCFA (honoraires avocat inclus)",
+    "processing_time": "3 mois à 2 ans",
+    "validity": "Permanente",
+    "required_documents": [
+      "Acte de mariage",
+      "CNI des deux époux",
+      "Actes de naissance des enfants",
+      "Justificatifs de revenus (pour pension alimentaire)",
+      "Liste des biens communs",
+      "Avocat obligatoire"
+    ],
+    "conditions": [
+      "Le divorce n'est prononcé que par le tribunal — pas de divorce administratif",
+      "Causes reconnues : faute grave, séparation de fait de 2 ans, consentement mutuel",
+      "Le juge statue sur : garde des enfants, pension alimentaire, partage des biens",
+      "Le jugement de divorce doit être transcrit sur l'acte de mariage à la mairie",
+      "La réconciliation peut être tentée par le juge avant le prononcé du divorce"
+    ],
+    "procedure_steps": [
+      "Mandater un avocat",
+      "Déposer la requête en divorce au tribunal",
+      "Tentative de conciliation devant le juge",
+      "Si pas de conciliation : instruction du dossier",
+      "Audience et jugement",
+      "Transcription du jugement à la mairie"
+    ]
+  },
+  {
+    "number": 51,
+    "slug": "adoption-legale-d-un-enfant",
+    "category": "etat-civil",
+    "title": "Adoption légale d'un enfant",
+    "source_page": 18,
+    "location": "Tribunal de grande instance / Juge aux affaires familiales",
+    "institution": "Tribunal de grande instance",
+    "cost": "100 000 à 500 000 FCFA",
+    "processing_time": "6 mois à 2 ans",
+    "validity": "Permanente",
+    "required_documents": [
+      "Demande écrite des adoptants",
+      "CNI et actes de naissance des adoptants",
+      "Certificat médical des adoptants (aptitude physique)",
+      "Enquête sociale (effectuée par un assistant social agréé)",
+      "Acte de naissance de l'enfant à adopter",
+      "Consentement des parents biologiques (ou preuve d'abandon)",
+      "Casier judiciaire vierge des adoptants"
+    ],
+    "conditions": [
+      "L'adoption plénière est irréversible et rompt les liens avec la famille biologique",
+      "L'adoption simple maintient certains liens avec la famille biologique",
+      "Conditions : adoptants mariés depuis plus de 5 ans OU célibataire de plus de 30 ans",
+      "L'enfant doit avoir moins de 15 ans pour l'adoption plénière",
+      "Une enquête sociale préalable est obligatoire"
+    ],
+    "procedure_steps": [
+      "Déposer la requête d'adoption au tribunal",
+      "Enquête sociale auprès des adoptants",
+      "Période d'essai (placement provisoire)",
+      "Audience devant le juge",
+      "Jugement d'adoption",
+      "Transcription sur l'état civil de l'enfant"
+    ]
+  },
+  {
+    "number": 76,
+    "slug": "changement-de-nom-procedure-judiciaire",
+    "category": "etat-civil",
+    "title": "Changement de nom (procédure judiciaire)",
+    "source_page": 18,
+    "location": "Tribunal de grande instance",
+    "institution": "Tribunal de grande instance",
+    "cost": "50 000 à 200 000 FCFA",
+    "processing_time": "3–6 mois",
+    "validity": "Permanente",
+    "required_documents": [
+      "Requête motivée adressée au Président du tribunal",
+      "CNI actuelle",
+      "Acte de naissance actuel",
+      "Casier judiciaire",
+      "Publications légales (2 journaux — obligatoires)",
+      "Motif sérieux et légitime à justifier"
+    ],
+    "conditions": [
+      "Le changement de nom est strictement encadré par la loi",
+      "Motifs acceptés : nom ridicule, difficile à prononcer, étranger à la culture tchadienne",
+      "La décision est publiée au Journal Officiel",
+      "Elle vaut modification de l'état civil et nécessite une nouvelle CNI",
+      "Un délai d'opposition de 3 mois est ouvert après publication"
+    ],
+    "procedure_steps": [
+      "Consulter un avocat pour la rédaction de la requête",
+      "Publier dans 2 journaux (preuve de publication à joindre)",
+      "Déposer la requête au tribunal",
+      "Audience",
+      "Jugement et publication au JO",
+      "Mise à jour de l'état civil et nouvelle CNI Voyage & Visas Ministère des Affaires étrangères / Direction de l'immigration Cette section regroupe 7 démarches relevant de Voyage & Visas. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 14 Passeport ordinaire tchadien — première demande 50 000 à 85 000 FCFA selon urgence 2 à 6 semaines (normal) / 5 à 10 jours (urgent) 15 Renouvellement de passeport 50 000 à 85 000 FCFA 2 à 6 semaines 16 Visa de sortie du territoire (autorisation) 5 000 à 15 000 FCFA 24 à 72 heures 17 Demande de visa Schengen (pays européens) 80 EUR (environ 52 000 FCFA) — non remboursable 15 à 30 jours ouvrables 18 Autorisation de sortie du territoire pour mineur 2 000 à 10 000 FCFA selon lieu de légalisation 1 à 5 jours 52 Visa pour l'Arabie Saoudite (Hajj / Omra) 150 000 à 300 000 FCFA (visa + pèlerinage) 2–6 semaines 53 Déclaration de perte de passeport Gratuit à 2 000 FCFA Immédiat"
+    ]
+  },
+  {
+    "number": 14,
+    "slug": "passeport-biometrique",
+    "category": "voyage",
+    "title": "Passeport ordinaire tchadien — première demande",
+    "source_page": 21,
+    "location": "Direction Générale de la Documentation et de l'Immigration (DGDI) — N'Djamena",
+    "institution": "Direction Générale de la Documentation et de l'Immigration (DGDI) — N'Djamena",
+    "cost": "50 000 à 85 000 FCFA selon urgence",
+    "processing_time": "2 à 6 semaines (normal) / 5 à 10 jours (urgent)",
+    "validity": "5 ans",
+    "required_documents": [
+      "CNI valide (en cours de validité)",
+      "Acte de naissance original (moins de 3 mois)",
+      "Certificat de nationalité tchadienne",
+      "2 photos biométriques récentes (fond blanc, 3,5x4,5 cm, tête nue)",
+      "Timbre fiscal (montant selon catégorie)",
+      "Formulaire de demande de passeport (disponible à la DGDI)",
+      "Reçu de paiement des frais à la Trésorerie nationale",
+      "Pour les fonctionnaires : autorisation de l'employeur (ordre de mission)",
+      "Pour les mineurs : acte de naissance + CNI des deux parents + autorisation parentale"
+    ],
+    "conditions": [
+      "Le passeport tchadien est un document biométrique depuis 2012",
+      "Tout citoyen tchadien peut en faire la demande à partir de 0 an (enfant inclus)",
+      "Les mineurs voyagent avec leur propre passeport OU inscrits sur le passeport parental",
+      "Renouveler au moins 6 mois avant expiration pour les voyages internationaux (exigence des pays de destination)",
+      "Un passeport périmé n'est pas accepté — même pour rentrer au Tchad depuis certains pays",
+      "La DGDI est la seule autorité compétente — pas de délégation en province pour les passeports biométriques"
+    ],
+    "procedure_steps": [
+      "Payer les frais de passeport à la Trésorerie nationale (obtenir le reçu)",
+      "Récupérer le formulaire à la DGDI et le remplir",
+      "Déposer le dossier complet au guichet de la DGDI",
+      "Prise d'empreintes digitales et photo biométrique sur place",
+      "Récupérer le récépissé de dépôt avec date de retrait estimée",
+      "Retirer le passeport à la date indiquée avec le récépissé et la CNI"
+    ]
+  },
+  {
+    "number": 15,
+    "slug": "renouvellement-de-passeport",
+    "category": "voyage",
+    "title": "Renouvellement de passeport",
+    "source_page": 21,
+    "location": "DGDI — N'Djamena",
+    "institution": "DGDI — N'Djamena",
+    "cost": "50 000 à 85 000 FCFA",
+    "processing_time": "2 à 6 semaines",
+    "validity": "5 ans",
+    "required_documents": [
+      "Ancien passeport (même expiré ou plein)",
+      "CNI valide",
+      "2 photos biométriques récentes",
+      "Timbre fiscal",
+      "Formulaire de renouvellement (DGDI)",
+      "Reçu de paiement à la Trésorerie"
+    ],
+    "conditions": [
+      "L'ancien passeport est remis lors du retrait du nouveau (il est annulé avec un trou perforé)",
+      "Si l'ancien passeport contient des visas valides, signaler au guichet — ils peuvent être transférés",
+      "En cas de perte du passeport, procédure différente (voir Déclaration de perte de passeport)"
+    ],
+    "procedure_steps": [
+      "Payer à la Trésorerie nationale",
+      "Déposer le dossier à la DGDI avec l'ancien passeport",
+      "Prise d'empreintes et photo sur place",
+      "Retirer le nouveau passeport avec l'ancien annulé"
+    ]
+  },
+  {
+    "number": 16,
+    "slug": "visa-de-sortie-du-territoire-autorisation",
+    "category": "voyage",
+    "title": "Visa de sortie du territoire (autorisation)",
+    "source_page": 22,
+    "location": "Direction de l'immigration / Préfecture",
+    "institution": "Direction de l'immigration",
+    "cost": "5 000 à 15 000 FCFA",
+    "processing_time": "24 à 72 heures",
+    "validity": "Usage unique ou 30 jours",
+    "required_documents": [
+      "Passeport valide",
+      "Billet d'avion ou preuve de voyage",
+      "Formulaire de demande de visa de sortie",
+      "Timbre fiscal",
+      "Justificatif du motif du voyage (invitation, convocation, ordre de mission)",
+      "Pour les mineurs : autorisation parentale légalisée"
+    ],
+    "conditions": [
+      "Obligatoire pour tout ressortissant tchadien souhaitant quitter le territoire",
+      "Les fonctionnaires doivent obtenir un ordre de mission de leur ministère",
+      "Les mineurs non accompagnés doivent avoir une autorisation parentale légalisée par un notaire ou la mairie",
+      "En cas d'urgence médicale : procédure accélérée possible avec certificat médical"
+    ],
+    "procedure_steps": [
+      "Déposer le dossier à la Direction de l'immigration",
+      "Payer les frais correspondants",
+      "Obtenir l'autorisation dans les délais",
+      "Présenter l'autorisation aux services d'immigration à l'aéroport"
+    ]
+  },
+  {
+    "number": 17,
+    "slug": "demande-de-visa-schengen-pays-europeens",
+    "category": "voyage",
+    "title": "Demande de visa Schengen (pays européens)",
+    "source_page": 23,
+    "location": "Ambassade ou Consulat du pays concerné à N'Djamena",
+    "institution": "Ambassade ou Consulat du pays concerné à N'Djamena",
+    "cost": "80 EUR (environ 52 000 FCFA) — non remboursable",
+    "processing_time": "15 à 30 jours ouvrables",
+    "validity": "Selon décision consulaire (court séjour : max 90 jours)",
+    "required_documents": [
+      "Passeport valide avec au moins 3 mois de validité après retour prévu",
+      "2 pages vierges minimum dans le passeport",
+      "2 photos biométriques (normes Schengen)",
+      "Formulaire de demande Schengen (ambassade)",
+      "Assurance voyage couvrant la zone Schengen (minimum 30 000 EUR)",
+      "Réservation d'hôtel ou hébergement confirmé",
+      "Billet d'avion aller-retour ou preuve de voyage",
+      "Justificatif de moyens financiers suffisants (relevé bancaire 3 derniers mois)",
+      "Lettre de motivation / objet du voyage",
+      "Pour les salariés : attestation employeur + 3 fiches de paie",
+      "Pour les étudiants : certificat d'inscription + autorisation de l'établissement",
+      "Pour invitation famille/amis : lettre d'invitation légalisée par mairie française",
+      "Preuve de propriété ou attaches au Tchad (titre foncier, contrat travail, etc.)"
+    ],
+    "conditions": [
+      "Les frais de visa ne sont jamais remboursés même en cas de refus",
+      "Le visa Schengen permet la circulation dans les 27 pays de l'espace Schengen",
+      "Le premier pays d'entrée ou de séjour principal doit être celui qui délivre le visa",
+      "Un refus doit être contesté dans les délais indiqués sur la notification de refus",
+      "Le consulat peut convoquer pour un entretien biométrique — présence obligatoire",
+      "Les données biométriques (empreintes, photo) sont enregistrées dans le VIS (Visa Information System)"
+    ],
+    "procedure_steps": [
+      "Prendre rendez-vous sur le site de l'ambassade ou via TLScontact/VFS Global",
+      "Constituer le dossier complet selon la liste fournie par l'ambassade",
+      "Se présenter au rendez-vous avec TOUS les originaux et copies",
+      "Laisser le passeport à l'ambassade pour traitement",
+      "Retirer le passeport avec visa ou notification de refus dans les délais"
+    ]
+  },
+  {
+    "number": 18,
+    "slug": "autorisation-de-sortie-du-territoire-pour-mineur",
+    "category": "voyage",
+    "title": "Autorisation de sortie du territoire pour mineur",
+    "source_page": 23,
+    "location": "Mairie, Tribunal, Notaire ou Direction de l'immigration",
+    "institution": "Mairie, Tribunal, Notaire ou Direction de l'immigration",
+    "cost": "2 000 à 10 000 FCFA selon lieu de légalisation",
+    "processing_time": "1 à 5 jours",
+    "validity": "Usage unique ou durée spécifiée",
+    "required_documents": [
+      "CNI des deux parents",
+      "Acte de naissance de l'enfant",
+      "Passeport de l'enfant",
+      "Formulaire d'autorisation de sortie de territoire (à rédiger)",
+      "Identité de l'accompagnateur adulte",
+      "Billet de transport"
+    ],
+    "conditions": [
+      "Obligatoire pour tout mineur de moins de 18 ans voyageant sans ses deux parents",
+      "Si un seul parent voyage avec l'enfant : autorisation du parent absent requise",
+      "L'autorisation doit mentionner la destination, les dates et l'identité de l'accompagnateur",
+      "Elle doit être légalisée par un notaire ou la mairie pour être acceptée à l'étranger",
+      "En cas de parent décédé : fournir l'acte de décès du parent absent",
+      "En cas de parent inconnu ou disparu : décision du juge des tutelles requise"
+    ],
+    "procedure_steps": [
+      "Rédiger la lettre d'autorisation parentale",
+      "La faire légaliser par la mairie ou un notaire",
+      "Joindre les copies des CNI des parents",
+      "Présenter l'ensemble à l'immigration lors du départ"
+    ]
+  },
+  {
+    "number": 52,
+    "slug": "visa-pour-l-arabie-saoudite-hajj-omra",
+    "category": "voyage",
+    "title": "Visa pour l'Arabie Saoudite (Hajj / Omra)",
+    "source_page": 24,
+    "location": "Ambassade d'Arabie Saoudite à N'Djamena",
+    "institution": "Ambassade d'Arabie Saoudite à N'Djamena",
+    "cost": "150 000 à 300 000 FCFA (visa + pèlerinage)",
+    "processing_time": "2–6 semaines",
+    "validity": "Durée du pèlerinage",
+    "required_documents": [
+      "Passeport valide (min 6 mois)",
+      "Photo biométrique",
+      "Certificat de vaccination méningite (obligatoire)",
+      "Preuve de paiement du forfait Hajj/Omra",
+      "Pour les femmes : attestation de mahram (tuteur masculin)",
+      "Acte de mariage (femmes mariées)",
+      "Formulaire visa Arabie Saoudite"
+    ],
+    "conditions": [
+      "Le visa Hajj est délivré uniquement par quota attribué au Tchad par l'Arabie Saoudite",
+      "La vaccination contre la méningite est OBLIGATOIRE (certificat exigé)",
+      "Les femmes de moins de 45 ans doivent voyager avec un mahram (mari, père, frère)",
+      "Certaines compagnies de pèlerinage agréées gèrent le visa collectivement"
+    ],
+    "procedure_steps": [
+      "S'inscrire auprès d'un opérateur de pèlerinage agréé par le Ministère des Affaires religieuses",
+      "Passer la vaccination méningite",
+      "Déposer le dossier via l'opérateur ou directement à l'ambassade",
+      "Recevoir le visa",
+      "Voyager avec le groupe"
+    ]
+  },
+  {
+    "number": 53,
+    "slug": "declaration-de-perte-de-passeport",
+    "category": "voyage",
+    "title": "Déclaration de perte de passeport",
+    "source_page": 25,
+    "location": "Commissariat de police / DGDI",
+    "institution": "Commissariat de police",
+    "cost": "Gratuit à 2 000 FCFA",
+    "processing_time": "Immédiat",
+    "validity": "3 mois (pour refaire le passeport)",
+    "required_documents": [
+      "Pièce d'identité alternative (CNI)",
+      "Déclaration sur l'honneur",
+      "Numéro du passeport perdu si mémorisé"
+    ],
+    "conditions": [
+      "Toute perte de passeport doit être déclarée immédiatement",
+      "Si perte à l'étranger : déclarer également à l'ambassade tchadienne du pays où la perte a eu lieu",
+      "Le récépissé de déclaration de perte permet de rentrer au Tchad via laissez-passer consulaire",
+      "Utiliser un passeport déclaré perdu est un délit pénal"
+    ],
+    "procedure_steps": [
+      "Se rendre au commissariat",
+      "Remplir la déclaration de perte",
+      "Obtenir le récépissé tamponné",
+      "Entamer la procédure de nouveau passeport avec ce récépissé Études & Formation Ministère de l'Éducation nationale / Ministère de l'Enseignement supérieur Cette section regroupe 9 démarches relevant de Études & Formation. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 19 Inscription au Baccalauréat tchadien 5 000 à 10 000 FCFA (frais d'inscription) Selon calendrier scolaire (janvier– mars généralement) 20 Attestation de réussite au Baccalauréat Gratuit à 5 000 FCFA 1 à 6 mois après les résultats 21 Inscription à l'Université de N'Djamena ou universités publiques 10 000 à 30 000 FCFA (frais d'inscription variables par faculté) Selon calendrier universitaire (juillet– octobre) 22 Demande de bourse nationale d'études Gratuit (demande) 2 à 4 mois (commission de sélection) 23 Équivalence de diplôme étranger 15 000 à 50 000 FCFA 2 à 6 mois 24 Certificat de scolarité (attestation de fréquentation) Gratuit à 1 000 FCFA Immédiat à 3 jours 54 Demande de bourse d'études à l'étranger (bourse d'État) Gratuit (demande) 3–6 mois 55 Attestation de formation professionnelle Gratuit à 5 000 FCFA Immédiat à 15 jours 56 Concours d'entrée à la Fonction publique 5 000 à 15 000 FCFA (frais de dossier) Selon calendrier des concours (publié chaque année)"
+    ]
+  },
+  {
+    "number": 19,
+    "slug": "inscription-au-baccalaureat-tchadien",
+    "category": "etudes",
+    "title": "Inscription au Baccalauréat tchadien",
+    "source_page": 27,
+    "location": "Direction Régionale de l'Éducation Nationale (DREN) / Office du Baccalauréat",
+    "institution": "Direction Régionale de l'Éducation Nationale (DREN)",
+    "cost": "5 000 à 10 000 FCFA (frais d'inscription)",
+    "processing_time": "Selon calendrier scolaire (janvier–mars généralement)",
+    "validity": "Pour l'année scolaire en cours",
+    "required_documents": [
+      "Relevés de notes des classes de Seconde, Première et Terminale",
+      "Certificat de scolarité en classe de Terminale",
+      "Acte de naissance (moins de 3 mois)",
+      "CNI ou carte d'élève valide",
+      "4 photos d'identité (fond blanc)",
+      "Formulaire d'inscription (disponible à la DREN)",
+      "Reçu de paiement des frais d'inscription",
+      "Autorisation parentale si mineur de moins de 18 ans"
+    ],
+    "conditions": [
+      "Être régulièrement inscrit en classe de Terminale dans un établissement reconnu par l'État",
+      "Avoir une moyenne générale suffisante en Première (selon filière)",
+      "Les candidats libres doivent fournir en plus : justificatif de résidence et niveau scolaire prouvé",
+      "L'inscription n'est définitive qu'après paiement des frais et validation par la DREN",
+      "En cas d'absence aux épreuves sans motif valable : note 0 à toutes les épreuves manquées",
+      "Candidats en situation de handicap : demande d'aménagement à faire lors de l'inscription"
+    ],
+    "procedure_steps": [
+      "Retirer le formulaire d'inscription à la DREN ou dans l'établissement",
+      "Remplir le formulaire et réunir les pièces",
+      "Payer les frais d'inscription (obtenir le reçu)",
+      "Déposer le dossier à la DREN dans les délais",
+      "Vérifier l'affectation (centre d'examen) sur les listes publiées",
+      "Se présenter au centre d'examen avec la convocation et la CNI"
+    ]
+  },
+  {
+    "number": 20,
+    "slug": "attestation-de-reussite-au-baccalaureat",
+    "category": "etudes",
+    "title": "Attestation de réussite au Baccalauréat",
+    "source_page": 27,
+    "location": "Office du Baccalauréat / DREN",
+    "institution": "Office du Baccalauréat",
+    "cost": "Gratuit à 5 000 FCFA",
+    "processing_time": "1 à 6 mois après les résultats",
+    "validity": "Permanente (attestation provisoire valable 1 an)",
+    "required_documents": [
+      "Récépissé d'inscription au baccalauréat",
+      "CNI",
+      "Convocation d'examen",
+      "Numéro de candidat"
+    ],
+    "conditions": [
+      "L'attestation provisoire est délivrée en attente du diplôme définitif",
+      "Le diplôme définitif est délivré 6 à 18 mois après les résultats",
+      "En cas de perte du diplôme : duplicata possible contre frais et déclaration de perte",
+      "Les mentions (Passable, Assez Bien, Bien, Très Bien) sont indiquées sur le diplôme"
+    ],
+    "procedure_steps": [
+      "Se rendre à la DREN après publication des résultats",
+      "Présenter le récépissé d'inscription et la CNI",
+      "Recevoir l'attestation provisoire",
+      "Revenir quelques mois plus tard pour le diplôme définitif"
+    ]
+  },
+  {
+    "number": 21,
+    "slug": "inscription-universite",
+    "category": "etudes",
+    "title": "Inscription à l'Université de N'Djamena ou universités publiques",
+    "source_page": 28,
+    "location": "Secrétariat de la Faculté concernée / Direction des Affaires académiques",
+    "institution": "Secrétariat de la Faculté concernée",
+    "cost": "10 000 à 30 000 FCFA (frais d'inscription variables par faculté)",
+    "processing_time": "Selon calendrier universitaire (juillet–octobre)",
+    "validity": "Pour l'année universitaire en cours",
+    "required_documents": [
+      "Diplôme de Baccalauréat original ou attestation de réussite",
+      "Relevés de notes du Baccalauréat (série et mentions)",
+      "Acte de naissance (moins de 3 mois)",
+      "CNI valide",
+      "Certificat de nationalité tchadienne (pour certaines filières)",
+      "4 photos d'identité récentes",
+      "Casier judiciaire vierge (certaines filières)",
+      "Reçu de paiement des frais d'inscription",
+      "Formulaire d'inscription (Université)"
+    ],
+    "conditions": [
+      "Numerus clausus dans certaines filières (Médecine, Droit, Génie) — sélection sur dossier",
+      "Les étrangers doivent fournir en plus une autorisation d'études délivrée par le Ministère",
+      "La réinscription est annuelle — tout étudiant non réinscrit dans les délais perd sa place",
+      "L'étudiant ayant deux fois la même année académique peut être exclu de la filière",
+      "Les boursiers doivent fournir leur attestation de bourse lors de l'inscription"
+    ],
+    "procedure_steps": [
+      "Vérifier les dates et filières disponibles sur les affichages universitaires",
+      "Retirer et remplir le formulaire d'inscription",
+      "Payer les frais à la caisse de l'université",
+      "Déposer le dossier complet au secrétariat",
+      "Obtenir la carte d'étudiant et l'attestation d'inscription"
+    ]
+  },
+  {
+    "number": 22,
+    "slug": "demande-de-bourse-nationale-d-etudes",
+    "category": "etudes",
+    "title": "Demande de bourse nationale d'études",
+    "source_page": 29,
+    "location": "Direction des Bourses — Ministère de l'Enseignement supérieur",
+    "institution": "Direction des Bourses — Ministère de l'Enseignement supérieur",
+    "cost": "Gratuit (demande)",
+    "processing_time": "2 à 4 mois (commission de sélection)",
+    "validity": "1 an renouvelable sous conditions",
+    "required_documents": [
+      "Acte de naissance",
+      "CNI",
+      "Certificat de nationalité tchadienne",
+      "Diplôme de Baccalauréat avec les mentions",
+      "Attestation d'inscription universitaire en cours",
+      "Relevés de notes universitaires (si déjà inscrit)",
+      "Certificat de résidence",
+      "Attestation de situation familiale (parents, revenus)",
+      "Lettre de motivation adressée au Ministre",
+      "Formulaire de demande de bourse (Ministère)"
+    ],
+    "conditions": [
+      "La bourse nationale est attribuée sous conditions de ressources et de mérite académique",
+      "Priorité aux étudiants en Médecine, Ingénierie et Sciences",
+      "Le montant est fixé par décret (varie selon le niveau : Licence, Master, Doctorat)",
+      "La bourse est suspendue en cas d'abandon ou d'échec répété",
+      "Les boursiers à l'étranger doivent envoyer chaque semestre une attestation de présence",
+      "Le remboursement peut être exigé en cas d'abandon sans motif valable"
+    ],
+    "procedure_steps": [
+      "Retirer le formulaire à la Direction des Bourses",
+      "Constituer le dossier complet",
+      "Déposer le dossier dans les délais de la campagne annuelle",
+      "Attendre la décision de la commission (liste publiée au Ministère)",
+      "Si retenu : signer la convention de bourse et commencer à percevoir la bourse"
+    ]
+  },
+  {
+    "number": 23,
+    "slug": "equivalence-de-diplome-etranger",
+    "category": "etudes",
+    "title": "Équivalence de diplôme étranger",
+    "source_page": 29,
+    "location": "Ministère de l'Enseignement supérieur — Direction des équivalences",
+    "institution": "Ministère de l'Enseignement supérieur — Direction des équivalences",
+    "cost": "15 000 à 50 000 FCFA",
+    "processing_time": "2 à 6 mois",
+    "validity": "Permanente",
+    "required_documents": [
+      "Diplôme original obtenu à l'étranger",
+      "Relevés de notes officiels (originaux)",
+      "Traduction certifiée en français par un traducteur assermenté (si diplôme non francophone)",
+      "Légalisation du diplôme par l'ambassade du Tchad dans le pays d'obtention",
+      "Programme détaillé des études (syllabus)",
+      "CNI ou passeport",
+      "Acte de naissance",
+      "Lettre de demande d'équivalence",
+      "Timbre fiscal"
+    ],
+    "conditions": [
+      "L'équivalence est obligatoire pour exercer une profession réglementée au Tchad avec un diplôme étranger",
+      "Les diplômes de la CEMAC (Cameroun, Gabon, Congo, RCA, Guinée Équatoriale) bénéficient d'une procédure simplifiée",
+      "Une commission académique examine le programme pour valider l'équivalence niveau par niveau",
+      "L'équivalence peut être partielle (niveau reconnu inférieur à celui obtenu)",
+      "Un diplôme non reconnu par le Ministère de l'Enseignement supérieur du pays d'obtention n'est pas équivalable"
+    ],
+    "procedure_steps": [
+      "Faire légaliser le diplôme par l'ambassade tchadienne dans le pays d'obtention",
+      "Faire traduire en français si nécessaire (traducteur assermenté)",
+      "Déposer le dossier complet au Ministère",
+      "La commission d'équivalence examine le dossier",
+      "Recevoir la décision (accordée, partiellement accordée ou refusée avec motifs)"
+    ]
+  },
+  {
+    "number": 24,
+    "slug": "certificat-de-scolarite-attestation-de-frequentation",
+    "category": "etudes",
+    "title": "Certificat de scolarité (attestation de fréquentation)",
+    "source_page": 30,
+    "location": "Établissement scolaire / universitaire du demandeur",
+    "institution": "Établissement scolaire",
+    "cost": "Gratuit à 1 000 FCFA",
+    "processing_time": "Immédiat à 3 jours",
+    "validity": "1 an scolaire / universitaire (pour l'année en cours)",
+    "required_documents": [
+      "Être régulièrement inscrit dans l'établissement",
+      "Pièce d'identité",
+      "Reçu de paiement des frais de scolarité (prouver que les frais sont à jour)"
+    ],
+    "conditions": [
+      "Délivré uniquement pour l'année académique en cours",
+      "Exigé pour les démarches de bourse, visa étudiant, transport en commun à tarif réduit",
+      "L'établissement peut refuser de délivrer l'attestation si les frais de scolarité ne sont pas réglés"
+    ],
+    "procedure_steps": [
+      "Se rendre au secrétariat de l'établissement",
+      "Faire la demande verbale ou écrite",
+      "Présenter le reçu des frais de scolarité",
+      "Recevoir l'attestation signée et tamponnée"
+    ]
+  },
+  {
+    "number": 54,
+    "slug": "demande-de-bourse-d-etudes-a-l-etranger-bourse-d-etat",
+    "category": "etudes",
+    "title": "Demande de bourse d'études à l'étranger (bourse d'État)",
+    "source_page": 31,
+    "location": "Direction des Bourses — Ministère Enseignement supérieur",
+    "institution": "Direction des Bourses — Ministère Enseignement supérieur",
+    "cost": "Gratuit (demande)",
+    "processing_time": "3–6 mois",
+    "validity": "1 an renouvelable",
+    "required_documents": [
+      "Baccalauréat avec mentions",
+      "Relevés de notes universitaires",
+      "CNI et acte de naissance",
+      "Certificat de nationalité",
+      "Lettre de motivation",
+      "Lettres de recommandation (2)",
+      "Preuve d'admission dans l'établissement étranger (si disponible)",
+      "Formulaire de bourse"
+    ],
+    "conditions": [
+      "Réservée aux étudiants ayant obtenu leur Bac avec au moins mention Assez Bien",
+      "Priorité : Médecine, Ingénierie, Sciences fondamentales",
+      "L'étudiant doit s'engager à revenir servir au Tchad après ses études (engagement sur l'honneur)",
+      "La bourse couvre : frais de scolarité + allocation mensuelle (variable selon pays)",
+      "Suspension en cas d'abandon ou d'échec répété (plus de 2 fois la même année)"
+    ],
+    "procedure_steps": [
+      "Retirer le formulaire à la Direction des Bourses",
+      "Constituer le dossier complet",
+      "Soumettre avant la date limite de la campagne annuelle",
+      "Commission de sélection (entretien possible)",
+      "Notification et mise en place de la bourse"
+    ]
+  },
+  {
+    "number": 55,
+    "slug": "attestation-de-formation-professionnelle",
+    "category": "etudes",
+    "title": "Attestation de formation professionnelle",
+    "source_page": 32,
+    "location": "Centre de formation / Ministère de la Formation professionnelle",
+    "institution": "Centre de formation",
+    "cost": "Gratuit à 5 000 FCFA",
+    "processing_time": "Immédiat à 15 jours",
+    "validity": "Permanente",
+    "required_documents": [
+      "Avoir complété la formation",
+      "Pièce d'identité",
+      "Reçu d'inscription à la formation"
+    ],
+    "conditions": [
+      "L'attestation prouve la participation et l'achèvement d'une formation",
+      "Le titre doit être délivré par un centre agréé par l'État pour avoir une valeur officielle",
+      "Les formations non agréées peuvent être reconnues par une validation des acquis"
+    ],
+    "procedure_steps": [
+      "Compléter la formation",
+      "Demander l'attestation au centre",
+      "Vérifier que le centre est agréé par le Ministère",
+      "Recevoir l'attestation avec cachet officiel"
+    ]
+  },
+  {
+    "number": 56,
+    "slug": "concours-d-entree-a-la-fonction-publique",
+    "category": "etudes",
+    "title": "Concours d'entrée à la Fonction publique",
+    "source_page": 32,
+    "location": "Direction de la Fonction publique — Ministère de la Fonction publique",
+    "institution": "Direction de la Fonction publique — Ministère de la Fonction publique",
+    "cost": "5 000 à 15 000 FCFA (frais de dossier)",
+    "processing_time": "Selon calendrier des concours (publié chaque année)",
+    "validity": "Résultats valables pour le recrutement en cours",
+    "required_documents": [
+      "Acte de naissance (moins de 35 ans pour la plupart des corps)",
+      "CNI",
+      "Certificat de nationalité tchadienne",
+      "Diplôme requis selon le corps visé",
+      "Casier judiciaire vierge",
+      "Certificat médical d'aptitude",
+      "4 photos d'identité",
+      "Formulaire de candidature (Ministère)"
+    ],
+    "conditions": [
+      "Condition d'âge : 18 à 35 ans selon le corps (des dérogations existent)",
+      "Condition de nationalité : tchadienne obligatoire",
+      "Condition de casier : vierge de toute condamnation pénale définitive",
+      "Résidence au Tchad au moment du concours",
+      "Les diplômes étrangers doivent être préalablement équivalés"
+    ],
+    "procedure_steps": [
+      "Surveiller les annonces de concours (radio, presse, site du Ministère)",
+      "Retirer et remplir le formulaire de candidature",
+      "Déposer le dossier avant la date limite",
+      "Passer les épreuves écrites (admissibilité)",
+      "Si admissible : passer les épreuves orales ou pratiques (admission)",
+      "Résultats publiés et affectation des admis Travail & Emploi Ministère du Travail / CNPS / ANPE Cette section regroupe 8 démarches relevant de Travail & Emploi. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 25 Enregistrement d'un contrat de travail Gratuit Immédiat à 7 jours 26 Affiliation à la CNPS (salarié du secteur formel) Gratuit (obligation légale) Immédiat à 15 jours 27 Demande de pension de retraite CNPS Gratuit 1 à 3 mois 28 Attestation de travail / Certificat de travail Gratuit (obligation de l'employeur) Immédiat à 7 jours 29 Inscription à l'Agence Nationale Pour l'Emploi (ANPE) Gratuit Immédiat (inscription le jour même) 57 Déclaration d'accident de travail à la CNPS Gratuit (obligation légale de l'employeur) Déclaration dans 48h après l'accident 58 Licenciement économique — autorisation préalable Gratuit 1 à 3 mois 70 Permis de travail pour étranger 50 000 à 150 000 FCFA 1–3 mois"
+    ]
+  },
+  {
+    "number": 25,
+    "slug": "enregistrement-d-un-contrat-de-travail",
+    "category": "travail",
+    "title": "Enregistrement d'un contrat de travail",
+    "source_page": 35,
+    "location": "Inspection du Travail du lieu de travail",
+    "institution": "Inspection du Travail du lieu de travail",
+    "cost": "Gratuit",
+    "processing_time": "Immédiat à 7 jours",
+    "validity": "Permanente (vaut pour toute la durée du contrat)",
+    "required_documents": [
+      "Contrat de travail signé par les deux parties en 3 exemplaires",
+      "CNI de l'employeur (ou registre de commerce pour les entreprises)",
+      "CNI du salarié",
+      "Acte de naissance du salarié",
+      "Numéro d'employeur CNPS (si déjà affilié)"
+    ],
+    "conditions": [
+      "L'enregistrement du contrat est obligatoire dans les 8 jours suivant la prise de poste",
+      "Le contrat à durée indéterminée (CDI) est la forme normale du contrat de travail",
+      "Le contrat à durée déterminée (CDD) ne peut excéder 2 ans (renouvellement unique autorisé)",
+      "L'absence d'enregistrement expose l'employeur à des sanctions (amendes)",
+      "L'Inspection du Travail peut refuser l'enregistrement si le contrat ne respecte pas le Code du Travail tchadien",
+      "Toute clause contraire au Code du Travail est réputée nulle et de nul effet"
+    ],
+    "procedure_steps": [
+      "Rédiger et signer le contrat de travail en 3 exemplaires",
+      "Se rendre à l'Inspection du Travail dans les 8 jours",
+      "Déposer les 3 exemplaires avec les pièces jointes",
+      "L'inspecteur vérifie la conformité au Code du Travail",
+      "Un exemplaire visé est conservé par l'Inspection, un par l'employeur, un par le salarié"
+    ]
+  },
+  {
+    "number": 26,
+    "slug": "affiliation-a-la-cnps-salarie-du-secteur-formel",
+    "category": "travail",
+    "title": "Affiliation à la CNPS (salarié du secteur formel)",
+    "source_page": 35,
+    "location": "Caisse Nationale de Prévoyance Sociale — N'Djamena ou délégations régionales",
+    "institution": "Caisse Nationale de Prévoyance Sociale — N'Djamena ou délégations régionales",
+    "cost": "Gratuit (obligation légale)",
+    "processing_time": "Immédiat à 15 jours",
+    "validity": "Permanente tant que le salarié est en activité",
+    "required_documents": [
+      "Formulaire d'immatriculation salarié (CNPS)",
+      "Contrat de travail enregistré",
+      "CNI du salarié",
+      "Acte de naissance du salarié",
+      "Numéro d'employeur CNPS de l'entreprise",
+      "Photo d'identité du salarié (pour la carte CNPS)",
+      "Actes de naissance des enfants (pour allocations familiales)",
+      "Acte de mariage (si applicable)"
+    ],
+    "conditions": [
+      "L'affiliation à la CNPS est obligatoire pour tout salarié du secteur formel",
+      "Taux de cotisation employeur : 16,5% du salaire brut; salarié : 3,5%",
+      "Couverture : retraite, allocations familiales, accidents du travail",
+      "Les travailleurs indépendants peuvent s'affilier volontairement",
+      "L'employeur doit déclarer tout nouveau salarié dans les 8 jours suivant l'embauche",
+      "Les pénalités de retard sont importantes en cas de non-déclaration"
+    ],
+    "procedure_steps": [
+      "L'employeur déclare le salarié à la CNPS dans les 8 jours",
+      "Remplir le formulaire d'immatriculation salarié",
+      "Fournir les pièces justificatives",
+      "La CNPS attribue un numéro d'immatriculation personnel",
+      "La carte CNPS est délivrée au salarié"
+    ]
+  },
+  {
+    "number": 27,
+    "slug": "demande-de-pension-de-retraite-cnps",
+    "category": "travail",
+    "title": "Demande de pension de retraite CNPS",
+    "source_page": 36,
+    "location": "Caisse Nationale de Prévoyance Sociale",
+    "institution": "Caisse Nationale de Prévoyance Sociale",
+    "cost": "Gratuit",
+    "processing_time": "1 à 3 mois",
+    "validity": "Permanente (versement mensuel à vie)",
+    "required_documents": [
+      "Demande écrite adressée au Directeur Général de la CNPS",
+      "Attestation de cessation d'activité (délivrée par l'employeur)",
+      "Relevé individuel des cotisations CNPS (obtenu à la CNPS)",
+      "CNI valide",
+      "Acte de naissance",
+      "Acte de mariage (si applicable)",
+      "Actes de naissance des enfants à charge",
+      "RIB ou coordonnées bancaires / mobile money",
+      "Photo d'identité récente"
+    ],
+    "conditions": [
+      "Âge légal de départ à la retraite : 60 ans (55 ans pour certaines catégories à risques)",
+      "Durée minimale de cotisation : 15 ans (180 mois) pour une pension à taux plein",
+      "En dessous de 15 ans de cotisation : allocation de vieillesse (montant réduit)",
+      "Le dossier doit être déposé 3 à 6 mois avant la date de départ prévue",
+      "La pension est calculée sur la moyenne des 10 meilleures années de cotisation",
+      "Cumul emploi-retraite : interdit dans la fonction publique, possible dans le privé avec déclaration"
+    ],
+    "procedure_steps": [
+      "Obtenir l'attestation de cessation d'activité de son employeur",
+      "Demander le relevé de cotisations à la CNPS",
+      "Constituer le dossier complet",
+      "Déposer le dossier à la CNPS 3 mois avant la retraite",
+      "La commission CNPS examine le dossier et calcule la pension",
+      "Notification du montant de la pension",
+      "Premier versement le mois suivant la validation"
+    ]
+  },
+  {
+    "number": 28,
+    "slug": "attestation-de-travail-certificat-de-travail",
+    "category": "travail",
+    "title": "Attestation de travail / Certificat de travail",
+    "source_page": 37,
+    "location": "Employeur (département RH)",
+    "institution": "Employeur (département RH)",
+    "cost": "Gratuit (obligation de l'employeur)",
+    "processing_time": "Immédiat à 7 jours",
+    "validity": "Valide au moment de la délivrance (généralement 3 mois)",
+    "required_documents": [
+      "Demande écrite ou verbale du salarié",
+      "Aucune pièce spécifique requise (c'est l'employeur qui la produit)"
+    ],
+    "conditions": [
+      "L'employeur est légalement tenu de délivrer une attestation de travail sur demande du salarié",
+      "Elle doit mentionner : poste occupé, ancienneté, salaire (optionnel), statut (CDD/CDI)",
+      "Elle est différente du certificat de travail de fin de contrat (délivré à la rupture du contrat)",
+      "L'employeur ne peut pas refuser sans motif — recours possible à l'Inspection du Travail",
+      "En cas de licenciement : le certificat de travail doit être remis le jour même de la rupture"
+    ],
+    "procedure_steps": [
+      "Adresser une demande écrite à son responsable RH ou direction",
+      "Indiquer l'objet de la demande (visa, démarche bancaire, etc.)",
+      "Recevoir l'attestation dans les délais"
+    ]
+  },
+  {
+    "number": 29,
+    "slug": "inscription-a-l-agence-nationale-pour-l-emploi-anpe",
+    "category": "travail",
+    "title": "Inscription à l'Agence Nationale Pour l'Emploi (ANPE)",
+    "source_page": 37,
+    "location": "ANPE — N'Djamena ou délégations régionales",
+    "institution": "ANPE — N'Djamena ou délégations régionales",
+    "cost": "Gratuit",
+    "processing_time": "Immédiat (inscription le jour même)",
+    "validity": "1 an renouvelable",
+    "required_documents": [
+      "CNI valide",
+      "Diplômes et attestations de formation (originaux + copies)",
+      "CV à jour (2 exemplaires)",
+      "Certificats de travail des emplois précédents (si applicable)",
+      "2 photos d'identité",
+      "Certificat de résidence"
+    ],
+    "conditions": [
+      "L'inscription à l'ANPE donne accès aux offres d'emploi du secteur formel",
+      "La carte ANPE peut être exigée pour certains recrutements publics",
+      "Renouvellement annuel obligatoire pour maintenir le statut de demandeur d'emploi",
+      "L'ANPE peut proposer des formations de reconversion pour les chômeurs inscrits",
+      "Les allocations chômage n'existent pas actuellement au Tchad (à la différence des pays développés)"
+    ],
+    "procedure_steps": [
+      "Se rendre à l'ANPE avec les documents",
+      "Remplir la fiche d'inscription",
+      "Entretien avec un conseiller emploi",
+      "Recevoir la carte ANPE",
+      "Consulter régulièrement les offres et revenir pour les mises à jour"
+    ]
+  },
+  {
+    "number": 57,
+    "slug": "declaration-d-accident-de-travail-a-la-cnps",
+    "category": "travail",
+    "title": "Déclaration d'accident de travail à la CNPS",
+    "source_page": 38,
+    "location": "CNPS — Direction des Accidents du Travail",
+    "institution": "CNPS — Direction des Accidents du Travail",
+    "cost": "Gratuit (obligation légale de l'employeur)",
+    "processing_time": "Déclaration dans 48h après l'accident",
+    "validity": "Pour la durée du traitement",
+    "required_documents": [
+      "Déclaration d'accident de travail (formulaire CNPS)",
+      "Certificat médical initial de l'accidenté",
+      "CNI de l'accidenté",
+      "Numéro d'immatriculation CNPS de l'accidenté",
+      "Rapport d'accident établi par l'employeur"
+    ],
+    "conditions": [
+      "L'employeur a 48h pour déclarer tout accident survenu sur le lieu de travail ou en trajet",
+      "Le défaut de déclaration expose l'employeur à des sanctions pénales et financières",
+      "La CNPS prend en charge les soins médicaux et les indemnités journalières",
+      "En cas d'incapacité permanente : rente d'incapacité calculée selon le taux d'invalidité",
+      "En cas de décès : capital-décès et rente aux ayants droit"
+    ],
+    "procedure_steps": [
+      "L'employeur remplit le formulaire CNPS dans les 48h",
+      "Amener l'accidenté chez un médecin agréé CNPS",
+      "Transmettre le certificat médical initial à la CNPS",
+      "La CNPS ouvre un dossier et autorise la prise en charge médicale",
+      "Suivi jusqu'à la consolidation de l'état de santé"
+    ]
+  },
+  {
+    "number": 58,
+    "slug": "licenciement-economique-autorisation-prealable",
+    "category": "travail",
+    "title": "Licenciement économique — autorisation préalable",
+    "source_page": 39,
+    "location": "Direction du Travail / Inspection du Travail",
+    "institution": "Direction du Travail",
+    "cost": "Gratuit",
+    "processing_time": "1 à 3 mois",
+    "validity": "Usage unique (par vague de licenciements)",
+    "required_documents": [
+      "Demande écrite motivée de l'employeur",
+      "Plan de sauvegarde de l'emploi (si plus de 10 salariés licenciés)",
+      "Comptes de résultats des 3 derniers exercices",
+      "Liste des salariés concernés avec ancienneté et salaires",
+      "Procès-verbal de réunion des délégués du personnel"
+    ],
+    "conditions": [
+      "Tout licenciement économique de plus de 1 salarié doit être autorisé par l'Inspecteur du Travail",
+      "L'employeur doit consulter les délégués du personnel avant la demande",
+      "L'Inspecteur peut refuser si les motifs économiques ne sont pas établis",
+      "Priorité au reclassement interne avant tout licenciement",
+      "Indemnités de licenciement obligatoires selon l'ancienneté"
+    ],
+    "procedure_steps": [
+      "Consulter les délégués du personnel (procès-verbal)",
+      "Déposer la demande d'autorisation à l'Inspection du Travail",
+      "L'Inspecteur convoque les deux parties (employeur + délégués)",
+      "Décision de l'Inspecteur (accord ou refus motivé)",
+      "Si accord : procéder aux licenciements avec préavis légal et indemnités"
+    ]
+  },
+  {
+    "number": 70,
+    "slug": "permis-de-travail-pour-etranger",
+    "category": "travail",
+    "title": "Permis de travail pour étranger",
+    "source_page": 39,
+    "location": "Direction du Travail / Ministère du Travail",
+    "institution": "Direction du Travail",
+    "cost": "50 000 à 150 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "1 an renouvelable (lié au contrat)",
+    "required_documents": [
+      "Contrat de travail signé par les deux parties",
+      "CNI ou passeport de l'étranger",
+      "Diplômes et qualifications (légalisés)",
+      "Justification que le poste ne peut être pourvu par un Tchadien",
+      "RCCM de l'employeur",
+      "NIF de l'employeur",
+      "Casier judiciaire du pays d'origine de l'étranger"
+    ],
+    "conditions": [
+      "Tout étranger travaillant au Tchad doit avoir un permis de travail",
+      "L'employeur doit justifier que le profil n'existe pas localement (étude de marché)",
+      "Quota : le personnel étranger ne doit pas dépasser 25% de l'effectif total",
+      "Les travailleurs de la CEMAC bénéficient d'une procédure simplifiée",
+      "Sans permis de travail : l'employeur est passible d'amendes et l'étranger d'expulsion"
+    ],
+    "procedure_steps": [
+      "L'employeur dépose la demande avec le contrat et la justification",
+      "Le Ministère vérifie la non-disponibilité du profil localement",
+      "Commission d'examen",
+      "Délivrance du permis de travail",
+      "L'étranger peut légalement prendre ses fonctions Santé & Social Ministère de la Santé publique / Ministère des Affaires sociales Cette section regroupe 7 démarches relevant de Santé & Social. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 30 Certificat médical général 2 000 à 15 000 FCFA selon établissement Immédiat à 3 jours 31 Carnet de vaccination — mise à jour obligatoire voyage Gratuit (vaccins PEV) à 20 000 FCFA (vaccins voyage) Immédiat (certains vaccins nécessitent 2 à 4 semaines pour immunisation) 32 Demande d'attestation d'indigence (aide sociale) Gratuit 2 à 8 semaines (enquête sociale requise) 59 Carte d'invalidité (handicap) Gratuit 2–4 semaines 60 Autorisation d'exercice pour professionnel de santé 20 000 à 50 000 FCFA 1–3 mois 72 Autorisation d'importation de médicaments 50 000 à 200 000 FCFA 1–2 mois 77 Demande de remboursement CNPS (maladie) Gratuit (remboursement des frais engagés) 1–3 mois"
+    ]
+  },
+  {
+    "number": 30,
+    "slug": "certificat-medical-general",
+    "category": "sante",
+    "title": "Certificat médical général",
+    "source_page": 42,
+    "location": "Hôpital public ou Clinique privée agréée",
+    "institution": "Hôpital public ou Clinique privée agréée",
+    "cost": "2 000 à 15 000 FCFA selon établissement",
+    "processing_time": "Immédiat à 3 jours",
+    "validity": "Généralement 3 mois",
+    "required_documents": [
+      "Pièce d'identité (CNI)",
+      "Formulaire de demande de certificat médical (si requis par l'administration)",
+      "Carnet de santé (optionnel mais utile)"
+    ],
+    "conditions": [
+      "Doit être délivré par un médecin agréé par le Ministère de la Santé",
+      "Un certificat médical ne peut être délivré qu'après consultation physique du patient",
+      "En cas de fausse déclaration par le médecin : radiation et poursuites pénales",
+      "Valable généralement 3 mois pour les démarches administratives",
+      "Pour le permis de conduire : médecin agréé par la Direction des Transports uniquement",
+      "Pour les concours de la fonction publique : médecin des armées ou médecin hospitalier agréé"
+    ],
+    "procedure_steps": [
+      "Se rendre dans un établissement de santé agréé",
+      "Passer la consultation médicale avec le médecin",
+      "Le médecin rédige et signe le certificat",
+      "Obtenir le certificat tamponné et daté"
+    ]
+  },
+  {
+    "number": 31,
+    "slug": "carnet-de-vaccination-mise-a-jour-obligatoire-voyage",
+    "category": "sante",
+    "title": "Carnet de vaccination — mise à jour obligatoire voyage",
+    "source_page": 42,
+    "location": "Centre de santé public ou Centre de vaccination agréé",
+    "institution": "Centre de santé public ou Centre de vaccination agréé",
+    "cost": "Gratuit (vaccins PEV) à 20 000 FCFA (vaccins voyage)",
+    "processing_time": "Immédiat (certains vaccins nécessitent 2 à 4 semaines pour immunisation)",
+    "validity": "Selon le vaccin (de 1 an à vie)",
+    "required_documents": [
+      "Carnet de vaccination existant (à apporter pour mise à jour)",
+      "Pièce d'identité",
+      "Passeport (si voyage international)"
+    ],
+    "conditions": [
+      "La vaccination contre la Fièvre jaune est OBLIGATOIRE pour entrer dans la plupart des pays africains",
+      "Le vaccin Fièvre jaune est valable À VIE (depuis 2016) — un seul vaccin suffit",
+      "Méningite : obligatoire pour les voyageurs vers l'Arabie Saoudite (pèlerinage Hajj/Omra)",
+      "Les vaccins COVID-19, Hépatite A et B, Typhroïde sont recommandés selon la destination",
+      "Le carnet de vaccination international (carnet jaune) est le document officiel reconnu",
+      "Vaccins PEV (Programme Élargi de Vaccination) : gratuits dans les centres publics pour les enfants"
+    ],
+    "procedure_steps": [
+      "Se rendre au centre de vaccination avec le carnet existant",
+      "Indiquer la destination et la date de départ",
+      "Recevoir les vaccins recommandés et obligatoires",
+      "Le médecin met à jour et tampon le carnet de vaccination",
+      "Conserver le carnet de vaccination avec le passeport pour les voyages"
+    ]
+  },
+  {
+    "number": 32,
+    "slug": "demande-d-attestation-d-indigence-aide-sociale",
+    "category": "sante",
+    "title": "Demande d'attestation d'indigence (aide sociale)",
+    "source_page": 43,
+    "location": "Mairie / Préfecture / Ministère des Affaires sociales",
+    "institution": "Mairie",
+    "cost": "Gratuit",
+    "processing_time": "2 à 8 semaines (enquête sociale requise)",
+    "validity": "6 mois à 1 an",
+    "required_documents": [
+      "Lettre de demande motivée adressée au préfet ou au maire",
+      "CNI ou acte de naissance du demandeur",
+      "Certificat de résidence",
+      "Justificatifs de revenus (ou absence de revenus)",
+      "Actes de naissance des enfants à charge",
+      "Acte de mariage (si applicable)",
+      "Attestation de chômage ou d'absence de revenus (chef de quartier)"
+    ],
+    "conditions": [
+      "L'attestation d'indigence permet l'accès aux soins gratuits dans les hôpitaux publics",
+      "Une enquête sociale est menée par un assistant social pour vérifier la situation",
+      "Les soins couverts : consultations, hospitalisations, médicaments essentiels (liste officielle)",
+      "Elle ne couvre pas les examens spécialisés hors liste (scanner, IRM)",
+      "En cas de situation d'urgence médicale : procédure d'urgence sans attendre l'attestation"
+    ],
+    "procedure_steps": [
+      "Rédiger la lettre de demande et réunir les pièces",
+      "Déposer le dossier à la mairie ou préfecture",
+      "Un assistant social effectue une visite au domicile pour enquête",
+      "Le rapport social est établi",
+      "La commission valide et l'attestation est délivrée",
+      "Présenter l'attestation à l'hôpital pour la prise en charge"
+    ]
+  },
+  {
+    "number": 59,
+    "slug": "carte-d-invalidite-handicap",
+    "category": "sante",
+    "title": "Carte d'invalidité (handicap)",
+    "source_page": 44,
+    "location": "Ministère des Affaires sociales — Direction des personnes handicapées",
+    "institution": "Ministère des Affaires sociales — Direction des personnes handicapées",
+    "cost": "Gratuit",
+    "processing_time": "2–4 semaines",
+    "validity": "Variable (permanent ou temporaire selon le handicap)",
+    "required_documents": [
+      "Certificat médical décrivant le handicap (médecin spécialiste)",
+      "CNI du demandeur",
+      "Acte de naissance",
+      "2 photos d'identité",
+      "Formulaire de demande (Ministère)",
+      "Rapport d'un travailleur social (enquête terrain)"
+    ],
+    "conditions": [
+      "Ouvre droit à des avantages : réductions sur transports, exonérations fiscales, priorité dans les services",
+      "Le taux d'invalidité est évalué par une commission médicale",
+      "Pour les enfants : demande par les parents avec certificat médical spécialisé",
+      "La carte peut être temporaire (pour handicap susceptible d'amélioration) ou permanente"
+    ],
+    "procedure_steps": [
+      "Obtenir le certificat médical du spécialiste",
+      "Déposer le dossier au Ministère des Affaires sociales",
+      "Convocation devant la commission médicale d'évaluation",
+      "Attribution du taux d'invalidité",
+      "Délivrance de la carte"
+    ]
+  },
+  {
+    "number": 60,
+    "slug": "autorisation-d-exercice-pour-professionnel-de-sante",
+    "category": "sante",
+    "title": "Autorisation d'exercice pour professionnel de santé",
+    "source_page": 44,
+    "location": "Ministère de la Santé publique — Direction des Ressources humaines",
+    "institution": "Ministère de la Santé publique — Direction des Ressources humaines",
+    "cost": "20 000 à 50 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "Annuelle (renouvellement obligatoire)",
+    "required_documents": [
+      "Diplôme de médecine ou paramédical (légalisé si étranger)",
+      "Equivalence de diplôme (si diplôme étranger)",
+      "CNI",
+      "Casier judiciaire vierge",
+      "Certificat de bonne santé",
+      "2 photos d'identité",
+      "Formulaire de demande",
+      "Preuve d'affiliation à l'Ordre des Médecins du Tchad (pour médecins)"
+    ],
+    "conditions": [
+      "Aucun professionnel de santé ne peut exercer sans l'autorisation du Ministère",
+      "Les médecins doivent être inscrits à l'Ordre des Médecins",
+      "Les médecins étrangers doivent en plus obtenir un permis de travail",
+      "L'autorisation doit être affichée dans le cabinet ou l'établissement",
+      "Exercice illégal de la médecine : sanctions pénales lourdes"
+    ],
+    "procedure_steps": [
+      "S'inscrire à l'Ordre des Médecins (pour médecins)",
+      "Déposer le dossier au Ministère de la Santé",
+      "Commission d'examen du dossier",
+      "Inspection éventuelle du cabinet",
+      "Délivrance de l'autorisation"
+    ]
+  },
+  {
+    "number": 72,
+    "slug": "autorisation-d-importation-de-medicaments",
+    "category": "sante",
+    "title": "Autorisation d'importation de médicaments",
+    "source_page": 45,
+    "location": "Direction de la Pharmacie et du Médicament — Ministère de la Santé",
+    "institution": "Direction de la Pharmacie et du Médicament — Ministère de la Santé",
+    "cost": "50 000 à 200 000 FCFA",
+    "processing_time": "1–2 mois",
+    "validity": "Par importation (renouvellement à chaque expédition)",
+    "required_documents": [
+      "Licence pharmaceutique du demandeur",
+      "Fiche technique du médicament (en français)",
+      "Certificat de bonne fabrication du producteur",
+      "Résultats d'analyse du lot",
+      "Autorisation de mise sur le marché dans le pays d'origine",
+      "RCCM de l'importateur",
+      "NIF de l'importateur"
+    ],
+    "conditions": [
+      "Seuls les pharmaciens ou grossistes agréés peuvent importer des médicaments",
+      "Tout médicament importé doit être inscrit sur la liste nationale des médicaments essentiels ou avoir une AMM spécifique",
+      "Les médicaments périmés ou de mauvaise qualité sont détruits aux frais de l'importateur",
+      "Les stupéfiants et psychotropes font l'objet d'une réglementation encore plus stricte"
+    ],
+    "procedure_steps": [
+      "Vérifier que le médicament est autorisé au Tchad",
+      "Déposer le dossier à la Direction de la Pharmacie",
+      "Commission d'examen technique",
+      "Délivrance de l'autorisation d'importation",
+      "Présenter l'autorisation à la douane lors de l'importation"
+    ]
+  },
+  {
+    "number": 77,
+    "slug": "demande-de-remboursement-cnps-maladie",
+    "category": "sante",
+    "title": "Demande de remboursement CNPS (maladie)",
+    "source_page": 46,
+    "location": "CNPS — Bureau des Prestations",
+    "institution": "CNPS — Bureau des Prestations",
+    "cost": "Gratuit (remboursement des frais engagés)",
+    "processing_time": "1–3 mois",
+    "validity": "Usage unique par événement",
+    "required_documents": [
+      "Ordonnances médicales originales",
+      "Factures des médicaments (pharmacie)",
+      "Factures des consultations médicales",
+      "Résultats d'examens (si remboursables)",
+      "Formulaire de demande de remboursement CNPS",
+      "Carte CNPS du bénéficiaire",
+      "RIB ou coordonnées mobile money"
+    ],
+    "conditions": [
+      "Les assurés CNPS sont remboursés à 80% des frais médicaux sur la liste CNPS",
+      "Seuls les médicaments de la liste CNPS sont remboursables",
+      "Les soins doivent être effectués dans un établissement agréé CNPS",
+      "Délai de dépôt de la demande : 6 mois après la date des soins",
+      "Le conjoint et les enfants à charge sont couverts par l'assurance maladie CNPS"
+    ],
+    "procedure_steps": [
+      "Conserver toutes les factures et ordonnances lors des soins",
+      "Compléter le formulaire de remboursement",
+      "Déposer le dossier à la CNPS dans les 6 mois",
+      "La CNPS examine et valide les soins remboursables",
+      "Virement du remboursement sur le compte bancaire ou mobile money Justice & Légal Ministère de la Justice / Tribunaux / Parquet Cette section regroupe 6 démarches relevant de Justice & Légal. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 33 Extrait de casier judiciaire (Bulletin n°3) 1 000 à 3 000 FCFA 1 à 5 jours ouvrables 34 Procuration notariée 15 000 à 80 000 FCFA selon l'objet Immédiat à 3 jours 35 Déclaration de succession Variable (droits de succession selon montant de la succession) 6 mois à compter du décès (délai légal) 61 Plainte pénale — dépôt de plainte Gratuit Récépissé immédiat / enquête variable 62 Demande d'aide juridictionnelle Gratuit (c'est l'objet même de la demande) 1–4 semaines 78 Requête en référé (urgence judiciaire) 10 000 à 50 000 FCFA + honoraires avocat 48h à 15 jours (procédure d'urgence)"
+    ]
+  },
+  {
+    "number": 33,
+    "slug": "casier-judiciaire",
+    "category": "justice",
+    "title": "Extrait de casier judiciaire (Bulletin n°3)",
+    "source_page": 48,
+    "location": "Parquet du Tribunal de grande instance du lieu de naissance ou de résidence",
+    "institution": "Parquet du Tribunal de grande instance du lieu de naissance ou de résidence",
+    "cost": "1 000 à 3 000 FCFA",
+    "processing_time": "1 à 5 jours ouvrables",
+    "validity": "3 mois",
+    "required_documents": [
+      "CNI valide ou acte de naissance",
+      "Formulaire de demande de casier judiciaire (disponible au greffe)",
+      "Timbre fiscal",
+      "Frais de délivrance (reçu à obtenir avant le dépôt)"
+    ],
+    "conditions": [
+      "Le Bulletin n°3 est le seul délivrable à toute personne pour son propre compte",
+      "Le Bulletin n°1 (intégral) : uniquement pour les autorités judiciaires",
+      "Le Bulletin n°2 : pour certains administrations (Ministères, Barreau)",
+      "Valide 3 mois — à demander peu de temps avant la démarche qui l'exige",
+      "Peut être demandé pour autrui uniquement sur présentation d'un mandat notarié",
+      "Un casier judiciaire \"vierge\" signifie aucune condamnation pénale définitive inscrite"
+    ],
+    "procedure_steps": [
+      "Se rendre au Parquet du tribunal",
+      "Payer les frais à la caisse",
+      "Remplir le formulaire de demande",
+      "Déposer le dossier au greffe",
+      "Revenir dans les délais indiqués pour retirer le bulletin"
+    ]
+  },
+  {
+    "number": 34,
+    "slug": "procuration-notariee",
+    "category": "justice",
+    "title": "Procuration notariée",
+    "source_page": 48,
+    "location": "Étude notariale (Notaire agréé)",
+    "institution": "Étude notariale (Notaire agréé)",
+    "cost": "15 000 à 80 000 FCFA selon l'objet",
+    "processing_time": "Immédiat à 3 jours",
+    "validity": "Durée spécifiée dans l'acte (ou jusqu'à révocation)",
+    "required_documents": [
+      "CNI du mandant (celui qui donne pouvoir) — présence physique obligatoire",
+      "CNI du mandataire (celui qui reçoit le pouvoir) — présence facultative selon notaire",
+      "Description précise et détaillée de l'objet de la procuration",
+      "Documents relatifs à l'objet (ex: titre foncier pour vente immobilière)"
+    ],
+    "conditions": [
+      "La procuration notariée a force exécutoire et valeur légale complète",
+      "Elle est obligatoire pour : vente immobilière par représentant, successions, actes bancaires importants",
+      "Une procuration sous seing privé (non notariée) a une valeur moindre — refusée par certaines administrations",
+      "Elle peut être révoquée à tout moment par le mandant (notifier le mandataire)",
+      "Elle devient automatiquement caduque au décès du mandant",
+      "Pour les actes à l'étranger : la procuration doit être apostillée"
+    ],
+    "procedure_steps": [
+      "Prendre rendez-vous chez un notaire agréé",
+      "Se présenter avec les pièces et expliquer l'objet exact",
+      "Le notaire rédige l'acte de procuration",
+      "Le mandant signe devant le notaire",
+      "Le notaire authentifie et remet l'original (minute) au mandant",
+      "Remettre la copie au mandataire pour qu'il puisse agir"
+    ]
+  },
+  {
+    "number": 35,
+    "slug": "declaration-de-succession",
+    "category": "justice",
+    "title": "Déclaration de succession",
+    "source_page": 49,
+    "location": "Tribunal de grande instance / Notaire / Direction des Impôts",
+    "institution": "Tribunal de grande instance",
+    "cost": "Variable (droits de succession selon montant de la succession)",
+    "processing_time": "6 mois à compter du décès (délai légal)",
+    "validity": "Permanente",
+    "required_documents": [
+      "Acte de décès du défunt",
+      "Livret de famille ou actes de naissance des héritiers",
+      "CNI de tous les héritiers",
+      "Inventaire des biens du défunt (liste des biens immobiliers, bancaires, mobiliers)",
+      "Titres fonciers des biens immobiliers",
+      "Relevés de comptes bancaires (si soldes à la date du décès)",
+      "Testament s'il existe (déposé chez un notaire)",
+      "Acte de mariage du défunt (si marié)",
+      "Jugement de divorce (si divorcé)"
+    ],
+    "conditions": [
+      "La succession s'ouvre au lieu du dernier domicile du défunt",
+      "Délai de déclaration : 6 mois pour les résidents, 1 an pour les non-résidents",
+      "Les héritiers en ligne directe (enfants, parents) ont priorité selon le Code civil tchadien",
+      "En l'absence de testament : succession légale selon les règles de dévolution successorale",
+      "Les dettes du défunt sont prélevées sur la succession avant le partage",
+      "Le conjoint survivant a droit à une part réservataire légale",
+      "La déshérence (pas d'héritier) : les biens reviennent à l'État tchadien"
+    ],
+    "procedure_steps": [
+      "Obtenir l'acte de décès",
+      "Identifier tous les héritiers légaux et/ou testamentaires",
+      "Inventorier les biens du défunt avec un notaire si nécessaire",
+      "Déposer la déclaration de succession aux Impôts dans les 6 mois",
+      "Payer les droits de succession (si exigibles)",
+      "Procéder au partage des biens entre les héritiers",
+      "Faire transcrire les mutations immobilières au cadastre"
+    ]
+  },
+  {
+    "number": 61,
+    "slug": "plainte-penale-depot-de-plainte",
+    "category": "justice",
+    "title": "Plainte pénale — dépôt de plainte",
+    "source_page": 50,
+    "location": "Commissariat de police / Brigade de gendarmerie / Parquet",
+    "institution": "Commissariat de police",
+    "cost": "Gratuit",
+    "processing_time": "Récépissé immédiat / enquête variable",
+    "validity": "La plainte déclenche l'action judiciaire",
+    "required_documents": [
+      "Pièce d'identité du plaignant",
+      "Preuves disponibles : photos, témoins, documents",
+      "Description écrite ou orale des faits",
+      "Certificat médical en cas de coups et blessures"
+    ],
+    "conditions": [
+      "Le dépôt de plainte est un droit de tout citoyen victime d'une infraction",
+      "La police/gendarmerie est obligée d'enregistrer la plainte (refus = illégal)",
+      "Une plainte peut être classée sans suite si les faits ne constituent pas une infraction",
+      "Le plaignant peut se constituer partie civile pour obtenir des dommages et intérêts",
+      "Délai de prescription : 3 ans pour les délits, 10 ans pour les crimes"
+    ],
+    "procedure_steps": [
+      "Se rendre au commissariat ou à la gendarmerie",
+      "Exposer les faits à l'agent",
+      "L'agent rédige la main courante ou le procès-verbal",
+      "Signer le PV",
+      "Recevoir le récépissé de dépôt de plainte",
+      "Suivre l'évolution de l'enquête"
+    ]
+  },
+  {
+    "number": 62,
+    "slug": "demande-d-aide-juridictionnelle",
+    "category": "justice",
+    "title": "Demande d'aide juridictionnelle",
+    "source_page": 50,
+    "location": "Bureau d'aide juridictionnelle — Tribunal de grande instance",
+    "institution": "Bureau d'aide juridictionnelle — Tribunal de grande instance",
+    "cost": "Gratuit (c'est l'objet même de la demande)",
+    "processing_time": "1–4 semaines",
+    "validity": "Pour la durée de la procédure en cours",
+    "required_documents": [
+      "Formulaire de demande d'aide juridictionnelle",
+      "CNI du demandeur",
+      "Justificatifs de faibles ressources (salaires, absence de revenus)",
+      "Description de l'affaire en cours ou à engager",
+      "Attestation de domicile"
+    ],
+    "conditions": [
+      "Destinée aux personnes sans ressources suffisantes pour payer un avocat",
+      "Le bureau évalue les ressources et le bien-fondé apparent de la demande",
+      "En cas d'accord : l'État prend en charge les honoraires d'avocat et les frais de justice",
+      "Le bénéficiaire peut choisir son avocat dans la liste des avocats acceptant l'aide juridictionnelle",
+      "Le refus peut être contesté"
+    ],
+    "procedure_steps": [
+      "Retirer le formulaire au bureau d'aide juridictionnelle",
+      "Constituer le dossier",
+      "Déposer et attendre la décision",
+      "Si accordée : choisir un avocat et engager la procédure"
+    ]
+  },
+  {
+    "number": 78,
+    "slug": "requete-en-refere-urgence-judiciaire",
+    "category": "justice",
+    "title": "Requête en référé (urgence judiciaire)",
+    "source_page": 51,
+    "location": "Tribunal de grande instance — Président du tribunal",
+    "institution": "Tribunal de grande instance — Président du tribunal",
+    "cost": "10 000 à 50 000 FCFA + honoraires avocat",
+    "processing_time": "48h à 15 jours (procédure d'urgence)",
+    "validity": "Ordonnance provisoire (jusqu'au jugement au fond)",
+    "required_documents": [
+      "Requête en référé rédigée par un avocat",
+      "Pièces justificatives de l'urgence",
+      "CNI du demandeur",
+      "Convocation de la partie adverse (faite par le tribunal)"
+    ],
+    "conditions": [
+      "La procédure de référé est une procédure d'urgence — pas de jugement définitif",
+      "L'ordonnance de référé est provisoire — le litige doit être tranché au fond ultérieurement",
+      "Conditions : urgence manifeste OU trouble manifestement illicite",
+      "Exemples : expulsion abusive, violation flagrante d'un contrat, saisie illégale",
+      "L'ordonnance est exécutoire immédiatement, même en cas d'appel (sauf décision contraire)"
+    ],
+    "procedure_steps": [
+      "Mandater un avocat",
+      "Rédiger et déposer la requête en référé",
+      "Le président fixe une date d'audience rapide (24h à 7 jours)",
+      "Audience contradictoire",
+      "Ordonnance du président rendue le jour même ou sous 48h Légalisations & Foncier Ministère des Affaires étrangères / Cadastre / Notaires Cette section regroupe 7 démarches relevant de Légalisations & Foncier. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 36 Légalisation de signature 500 à 3 000 FCFA Immédiat à 48h 37 Apostille / Légalisation pour usage à l'étranger 10 000 à 30 000 FCFA par document 1 à 3 semaines 38 Titre foncier — demande de première immatriculation Variable selon superficie et valeur (5% à 10% de la valeur du bien) 6 mois à 2 ans 39 Copie certifiée conforme 500 à 2 000 FCFA Immédiat 63 Mutation de titre foncier (vente immobilière) Variable (5% à 10% de la valeur du bien en droits de mutation) 1–3 mois 64 Demande de permis de construire Variable selon superficie (50 000 à 500 000 FCFA) 1–3 mois 73 Homologation de testament 20 000 à 100 000 FCFA 1–3 mois"
+    ]
+  },
+  {
+    "number": 36,
+    "slug": "legalisation-de-signature",
+    "category": "legalisations",
+    "title": "Légalisation de signature",
+    "source_page": 54,
+    "location": "Mairie / Notaire / Préfecture",
+    "institution": "Mairie",
+    "cost": "500 à 3 000 FCFA",
+    "processing_time": "Immédiat à 48h",
+    "validity": "Permanente (authentification de la signature à un instant donné)",
+    "required_documents": [
+      "Pièce d'identité valide du signataire (CNI)",
+      "Document original à faire légaliser (non signé si possible — signer devant l'agent)",
+      "Présence physique du signataire obligatoire"
+    ],
+    "conditions": [
+      "La légalisation de signature certifie que la signature est bien celle de la personne identifiée",
+      "Elle n'authentifie pas le contenu du document (contrairement à l'acte notarié)",
+      "Obligatoire pour : contrats privés présentés à l'administration, procurations sous seing privé",
+      "Les mairies peuvent légaliser les signatures sur certains actes — d'autres nécessitent un notaire",
+      "La légalisation d'une signature fausse engage la responsabilité pénale du signataire"
+    ],
+    "procedure_steps": [
+      "Se présenter avec le document et la CNI",
+      "Signer le document devant l'agent (ou affirmer que la signature est la sienne)",
+      "L'agent certifie la signature et tamponne le document",
+      "Payer les frais correspondants"
+    ]
+  },
+  {
+    "number": 37,
+    "slug": "apostille-legalisation-pour-usage-a-l-etranger",
+    "category": "legalisations",
+    "title": "Apostille / Légalisation pour usage à l'étranger",
+    "source_page": 54,
+    "location": "Ministère des Affaires étrangères (Direction des Légalisations) — N'Djamena",
+    "institution": "Ministère des Affaires étrangères (Direction des Légalisations) — N'Djamena",
+    "cost": "10 000 à 30 000 FCFA par document",
+    "processing_time": "1 à 3 semaines",
+    "validity": "Permanente (vaut pour la période de validité du document légalisé)",
+    "required_documents": [
+      "Document original à légaliser (acte de naissance, diplôme, casier judiciaire, etc.)",
+      "Copie certifiée conforme du document",
+      "CNI du demandeur",
+      "Formulaire de demande de légalisation (Ministère des Affaires étrangères)",
+      "Frais de légalisation (reçu de paiement)"
+    ],
+    "conditions": [
+      "Le Tchad n'est pas signataire de la Convention de La Haye sur l'Apostille — procédure de légalisation classique",
+      "La légalisation se fait en chaîne : 1) Document authentifié par l'autorité émettrice, 2) Légalisé par le Ministère tchadien, 3) Légalisé par l'ambassade du pays de destination",
+      "Certains pays exigent que les documents soient traduits dans leur langue avant légalisation",
+      "Le délai peut varier selon les congés et le volume de dossiers au Ministère",
+      "Pour les actes d'état civil : passer d'abord par la mairie émettrice avant le Ministère"
+    ],
+    "procedure_steps": [
+      "Obtenir le document original auprès de l'autorité émettrice (mairie, université, tribunal)",
+      "Faire certifier le document par l'autorité émettrice",
+      "Déposer au Ministère des Affaires étrangères avec les pièces requises",
+      "Payer les frais et obtenir le reçu",
+      "Récupérer le document légalisé",
+      "Si nécessaire : faire légaliser ensuite par l'ambassade du pays de destination"
+    ]
+  },
+  {
+    "number": 38,
+    "slug": "titre-foncier-demande-de-premiere-immatriculation",
+    "category": "legalisations",
+    "title": "Titre foncier — demande de première immatriculation",
+    "source_page": 55,
+    "location": "Direction des Affaires foncières / Conservation foncière / Cadastre",
+    "institution": "Direction des Affaires foncières",
+    "cost": "Variable selon superficie et valeur (5% à 10% de la valeur du bien)",
+    "processing_time": "6 mois à 2 ans",
+    "validity": "Permanente",
+    "required_documents": [
+      "Plan topographique du terrain (établi par un géomètre agréé)",
+      "CNI du demandeur",
+      "Permis d'habiter ou acte de cession de la parcelle",
+      "Attestation administrative de disponibilité du terrain (Mairie ou Préfecture)",
+      "Justificatifs d'occupation : factures, témoignages notariés, photos",
+      "Certificat de non-litige (délivré par le chef de canton ou de quartier)",
+      "Taxes foncières à jour",
+      "Formulaire de demande (Conservation foncière)",
+      "Honoraires du géomètre (plan topographique)"
+    ],
+    "conditions": [
+      "Le titre foncier est le seul document qui confère la pleine propriété légale au Tchad",
+      "Sans titre foncier : le propriétaire ne peut pas vendre, hypothéquer ou léguer légalement",
+      "La procédure commence par un bornage contradictoire (voisins et administration convoqués)",
+      "Tout litige non résolu bloque la procédure d'immatriculation",
+      "Les terrains situés dans des zones non loties (lotissement non officiel) ne peuvent pas être titrés sans régularisation préalable",
+      "L'État peut refuser l'immatriculation si le terrain est situé dans une zone réservée (voirie, couloir électrique, etc.)"
+    ],
+    "procedure_steps": [
+      "Faire établir un plan topographique par un géomètre agréé",
+      "Obtenir l'attestation de disponibilité du terrain à la Mairie/Préfecture",
+      "Déposer la demande à la Conservation foncière avec toutes les pièces",
+      "La Conservation foncière procède au bornage contradictoire (convoque les voisins)",
+      "Publication au Journal Officiel (délai d'opposition de 2 mois)",
+      "Si aucune opposition : le titre foncier est établi et enregistré",
+      "Payer les frais de mutation et taxes correspondantes",
+      "Retirer le titre foncier original (numéroté et enregistré)"
+    ]
+  },
+  {
+    "number": 39,
+    "slug": "copie-certifiee-conforme",
+    "category": "legalisations",
+    "title": "Copie certifiée conforme",
+    "source_page": 56,
+    "location": "Mairie / Notaire / Administration ayant émis le document original",
+    "institution": "Mairie",
+    "cost": "500 à 2 000 FCFA",
+    "processing_time": "Immédiat",
+    "validity": "Généralement 3 mois",
+    "required_documents": [
+      "Document original dont on souhaite une copie certifiée",
+      "CNI du demandeur",
+      "Photocopie du document (apportée par le demandeur)"
+    ],
+    "conditions": [
+      "La copie certifiée conforme atteste que la copie est identique à l'original",
+      "Exigée par les administrations qui ne veulent pas garder les originaux",
+      "Ne vaut pas l'original lui-même — certaines administrations exigent l'original",
+      "Un notaire peut certifier conforme tout type de document",
+      "Les mairies ne peuvent certifier que certains documents (pas les diplômes universitaires étrangers)"
+    ],
+    "procedure_steps": [
+      "Apporter l'original et la photocopie au guichet",
+      "L'agent compare les deux et certifie la conformité",
+      "Tampon et signature de l'agent sur la photocopie",
+      "Payer les frais"
+    ]
+  },
+  {
+    "number": 63,
+    "slug": "mutation-de-titre-foncier-vente-immobiliere",
+    "category": "legalisations",
+    "title": "Mutation de titre foncier (vente immobilière)",
+    "source_page": 56,
+    "location": "Conservation foncière / Direction des Affaires foncières",
+    "institution": "Conservation foncière",
+    "cost": "Variable (5% à 10% de la valeur du bien en droits de mutation)",
+    "processing_time": "1–3 mois",
+    "validity": "Permanente",
+    "required_documents": [
+      "Titre foncier original du vendeur",
+      "Acte de vente notarié (obligatoire pour les mutations immobilières)",
+      "CNI du vendeur et de l'acheteur",
+      "Quittance de taxes foncières à jour (vendeur)",
+      "Attestation de non-litige",
+      "Reçu de paiement des droits de mutation"
+    ],
+    "conditions": [
+      "Toute vente immobilière doit être constatée par acte notarié pour être valable",
+      "Les droits de mutation sont dus sur la valeur déclarée (mais l'État peut revaloriser)",
+      "Sans mutation : l'acheteur n'est pas protégé légalement — le vendeur pourrait revendre à quelqu'un d'autre",
+      "Les droits de mutation sont à la charge de l'acheteur sauf accord contraire"
+    ],
+    "procedure_steps": [
+      "Les parties signent l'acte de vente devant le notaire",
+      "Le notaire dépose la demande de mutation à la Conservation foncière",
+      "Paiement des droits de mutation",
+      "La Conservation foncière inscrit la mutation",
+      "Nouveau titre foncier établi au nom de l'acheteur"
+    ]
+  },
+  {
+    "number": 64,
+    "slug": "permis-de-construction",
+    "category": "legalisations",
+    "title": "Demande de permis de construire",
+    "source_page": 57,
+    "location": "Mairie / Direction de l'Urbanisme et de l'Habitat",
+    "institution": "Mairie",
+    "cost": "Variable selon superficie (50 000 à 500 000 FCFA)",
+    "processing_time": "1–3 mois",
+    "validity": "2 ans (prorogeable 1 an)",
+    "required_documents": [
+      "Titre foncier ou permis d'habiter",
+      "Plan architectural signé par un architecte agréé",
+      "Note de calcul de structure (ingénieur agréé)",
+      "Plan de situation",
+      "CNI du demandeur",
+      "Formulaire de demande (Direction de l'Urbanisme)",
+      "Quittances de taxes foncières à jour"
+    ],
+    "conditions": [
+      "Obligatoire pour toute construction nouvelle ou extension de plus de 20 m²",
+      "La construction doit respecter le Plan Directeur d'Urbanisme de N'Djamena",
+      "Toute construction sans permis peut être démolie par l'administration",
+      "Le permis doit être affiché sur le chantier pendant toute la durée des travaux",
+      "Délai de caducité : si les travaux ne commencent pas dans 2 ans, le permis expire"
+    ],
+    "procedure_steps": [
+      "Faire établir les plans par un architecte agréé",
+      "Déposer le dossier à la Direction de l'Urbanisme",
+      "Instruction du dossier (conformité aux règles d'urbanisme)",
+      "Avis des services techniques (voirie, eau, électricité)",
+      "Délivrance du permis",
+      "Afficher le permis sur le chantier avant tout début de travaux"
+    ]
+  },
+  {
+    "number": 73,
+    "slug": "homologation-de-testament",
+    "category": "legalisations",
+    "title": "Homologation de testament",
+    "source_page": 58,
+    "location": "Tribunal de grande instance",
+    "institution": "Tribunal de grande instance",
+    "cost": "20 000 à 100 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "Permanente",
+    "required_documents": [
+      "Testament original (olographe ou notarié)",
+      "Acte de décès du testateur",
+      "CNI des héritiers",
+      "Actes de naissance des héritiers",
+      "Inventaire des biens mentionnés dans le testament"
+    ],
+    "conditions": [
+      "Le testament olographe (écrit à la main) doit être intégralement écrit, daté et signé du testateur",
+      "Le testament notarié est plus sécurisé et moins susceptible de contestation",
+      "L'homologation par le tribunal donne force exécutoire au testament",
+      "Un testament peut être contesté en justice si les formalités légales ne sont pas respectées",
+      "La réserve héréditaire (part légale des enfants) ne peut être supprimée par testament"
+    ],
+    "procedure_steps": [
+      "Déposer le testament au greffe du tribunal après le décès",
+      "Le greffe vérifie la régularité formelle",
+      "Convocation des héritiers",
+      "Audience d'homologation",
+      "Jugement d'homologation rendant le testament exécutoire Commerce & Entreprise Ministère du Commerce / Greffe du Tribunal de commerce / ANPME Cette section regroupe 8 démarches relevant de Commerce & Entreprise. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 40 Immatriculation au Registre du Commerce (RCCM) 50 000 à 200 000 FCFA selon forme juridique 2 à 4 semaines 41 Numéro d'identification fiscale (NIF) Gratuit 1 à 5 jours ouvrables 42 Licence d'importation / Autorisation commerciale 25 000 à 150 000 FCFA selon produit 2 à 6 semaines 65 Autorisation d'ouverture d'établissement de santé privé 100 000 à 500 000 FCFA 2–6 mois 66 Agrément pour organisme de formation professionnelle 50 000 à 200 000 FCFA 1–3 mois 71 Déclaration de création d'une ONG 10 000 à 50 000 FCFA 1–3 mois 74 Patente (taxe professionnelle annuelle) Variable selon activité et chiffre d'affaires (10 000 à plusieurs millions FCFA) Immédiat après paiement 79 Appel d'offres public — retrait et soumission de dossier 10 000 à 100 000 FCFA (DAO — dossier d'appel d'offres) 15 à 60 jours selon le marché"
+    ]
+  },
+  {
+    "number": 40,
+    "slug": "immatriculation-au-registre-du-commerce-rccm",
+    "category": "commerce",
+    "title": "Immatriculation au Registre du Commerce (RCCM)",
+    "source_page": 60,
+    "location": "Greffe du Tribunal de commerce de N'Djamena",
+    "institution": "Greffe du Tribunal de commerce de N'Djamena",
+    "cost": "50 000 à 200 000 FCFA selon forme juridique",
+    "processing_time": "2 à 4 semaines",
+    "validity": "Annuelle (renouvellement obligatoire)",
+    "required_documents": [
+      "Formulaire de déclaration d'activité commerciale (Greffe)",
+      "Statuts de la société rédigés et signés (pour les sociétés)",
+      "CNI et casier judiciaire vierge de tous les associés/gérants",
+      "Acte de naissance des gérants",
+      "Plan de localisation du siège social",
+      "Contrat de bail ou titre de propriété des locaux",
+      "Attestation de dépôt du capital social (pour SARL, SA)",
+      "Décision de nomination du gérant/directeur général",
+      "Timbre fiscal",
+      "Honoraires du greffier"
+    ],
+    "conditions": [
+      "Obligatoire pour tout commerçant, artisan ou société exerçant une activité commerciale",
+      "L'immatriculation doit précéder le début de l'activité commerciale",
+      "Le numéro RCCM est obligatoire sur tous les documents commerciaux (factures, contrats)",
+      "Renouvellement annuel avant le 31 mars de chaque année",
+      "Une personne ayant un casier judiciaire chargé peut se voir refuser l'immatriculation",
+      "Le défaut d'immatriculation est passible d'amendes et de fermeture administrative",
+      "En droit OHADA (applicable au Tchad) : l'entreprise n'existe juridiquement qu'après immatriculation"
+    ],
+    "procedure_steps": [
+      "Rédiger les statuts de la société avec un juriste ou notaire (pour les sociétés)",
+      "Déposer le capital social à la banque (pour SARL : 100 000 FCFA minimum)",
+      "Obtenir le casier judiciaire vierge de tous les associés",
+      "Constituer le dossier complet",
+      "Déposer au Greffe du Tribunal de commerce",
+      "Le greffier examine le dossier (15 jours)",
+      "Attribution du numéro RCCM et remise du certificat d'immatriculation",
+      "Publication dans un journal d'annonces légales"
+    ]
+  },
+  {
+    "number": 41,
+    "slug": "numero-d-identification-fiscale-nif",
+    "category": "commerce",
+    "title": "Numéro d'identification fiscale (NIF)",
+    "source_page": 60,
+    "location": "Direction Générale des Impôts (DGI) — N'Djamena",
+    "institution": "Direction Générale des Impôts (DGI) — N'Djamena",
+    "cost": "Gratuit",
+    "processing_time": "1 à 5 jours ouvrables",
+    "validity": "Permanente",
+    "required_documents": [
+      "RCCM (si société) ou CNI (si personne physique commerçante)",
+      "Formulaire d'identification fiscale (DGI)",
+      "Acte de naissance",
+      "Contrat de bail des locaux commerciaux",
+      "Statuts de la société (si applicable)"
+    ],
+    "conditions": [
+      "Obligatoire pour toute entité imposable (sociétés et commerçants personnes physiques)",
+      "Le NIF est obligatoire sur toutes les factures émises",
+      "Sans NIF : impossibilité de participer aux appels d'offres publics",
+      "Les importateurs doivent avoir un NIF pour dédouaner leurs marchandises",
+      "En cas de changement d'adresse : mise à jour obligatoire dans les 30 jours"
+    ],
+    "procedure_steps": [
+      "Se rendre à la DGI avec le RCCM et les pièces",
+      "Remplir le formulaire d'identification",
+      "Un agent des impôts peut visiter les locaux",
+      "Attribution du NIF (numéro unique)",
+      "Recevoir la carte d'identification fiscale"
+    ]
+  },
+  {
+    "number": 42,
+    "slug": "licence-d-importation-autorisation-commerciale",
+    "category": "commerce",
+    "title": "Licence d'importation / Autorisation commerciale",
+    "source_page": 61,
+    "location": "Ministère du Commerce — Direction du Commerce intérieur et extérieur",
+    "institution": "Ministère du Commerce — Direction du Commerce intérieur et extérieur",
+    "cost": "25 000 à 150 000 FCFA selon produit",
+    "processing_time": "2 à 6 semaines",
+    "validity": "1 an renouvelable",
+    "required_documents": [
+      "RCCM valide et à jour",
+      "NIF valide",
+      "CNI du gérant/représentant légal",
+      "Description détaillée des produits à importer",
+      "Capacité de stockage (contrat d'entrepôt ou titre de propriété)",
+      "Attestation bancaire (solvabilité)",
+      "Casier judiciaire vierge du gérant",
+      "Formulaire de demande de licence (Ministère du Commerce)",
+      "Timbre fiscal"
+    ],
+    "conditions": [
+      "Certains produits sont soumis à des autorisations spécifiques : médicaments (Ministère Santé), armes (Ministère Défense), produits chimiques (Ministère Environnement)",
+      "Les produits alimentaires importés doivent respecter les normes sanitaires tchadiennes",
+      "La licence est personnelle et ne peut être cédée à un tiers",
+      "Renouvellement annuel avant expiration — une licence expirée entraîne la saisie des marchandises à la douane"
+    ],
+    "procedure_steps": [
+      "Vérifier si le produit est soumis à une réglementation spécifique",
+      "Constituer le dossier",
+      "Déposer au Ministère du Commerce",
+      "Inspection éventuelle des locaux par un agent du Ministère",
+      "Recevoir la licence d'importation",
+      "Joindre la licence aux documents douaniers lors de chaque importation"
+    ]
+  },
+  {
+    "number": 65,
+    "slug": "autorisation-d-ouverture-d-etablissement-de-sante-prive",
+    "category": "commerce",
+    "title": "Autorisation d'ouverture d'établissement de santé privé",
+    "source_page": 62,
+    "location": "Ministère de la Santé publique",
+    "institution": "Ministère de la Santé publique",
+    "cost": "100 000 à 500 000 FCFA",
+    "processing_time": "2–6 mois",
+    "validity": "Annuelle (renouvellement obligatoire)",
+    "required_documents": [
+      "Diplôme médical du responsable technique",
+      "Autorisation d'exercice du responsable",
+      "Plan des locaux (conforme aux normes sanitaires)",
+      "Liste des équipements médicaux",
+      "Contrat de travail des personnels soignants",
+      "CNI du promoteur",
+      "Casier judiciaire vierge",
+      "Formulaire de demande",
+      "Attestation RCCM"
+    ],
+    "conditions": [
+      "Tout établissement de santé privé doit être autorisé par le Ministère",
+      "Le responsable technique doit être un médecin légalement autorisé à exercer",
+      "Les normes minimales (surface, équipement, personnel) varient selon le type d'établissement",
+      "Une inspection préalable est obligatoire avant la délivrance de l'autorisation",
+      "Les établissements non autorisés sont fermés et le promoteur poursuivi pénalement"
+    ],
+    "procedure_steps": [
+      "Préparer les locaux conformément aux normes",
+      "Déposer le dossier au Ministère de la Santé",
+      "Inspection des locaux par une équipe du Ministère",
+      "Commission d'octroi des autorisations",
+      "Délivrance de l'autorisation si conformité"
+    ]
+  },
+  {
+    "number": 66,
+    "slug": "agrement-pour-organisme-de-formation-professionnelle",
+    "category": "commerce",
+    "title": "Agrément pour organisme de formation professionnelle",
+    "source_page": 63,
+    "location": "Ministère de la Formation professionnelle / Ministère de l'Éducation",
+    "institution": "Ministère de la Formation professionnelle",
+    "cost": "50 000 à 200 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "3 ans renouvelable",
+    "required_documents": [
+      "Statuts de l'organisme",
+      "RCCM",
+      "NIF",
+      "Plan des locaux de formation",
+      "CV et diplômes des formateurs",
+      "Liste des formations proposées avec programmes détaillés",
+      "Équipements pédagogiques disponibles",
+      "CNI du directeur",
+      "Casier judiciaire vierge du directeur"
+    ],
+    "conditions": [
+      "Sans agrément, les attestations délivrées n'ont pas de valeur officielle",
+      "Les formateurs doivent avoir au moins le niveau BAC+2 dans leur domaine",
+      "Le ratio formateurs/stagiaires doit respecter les normes (1 pour 20 maximum)",
+      "Un audit annuel peut être effectué par le Ministère"
+    ],
+    "procedure_steps": [
+      "Préparer les locaux et recruter les formateurs",
+      "Déposer le dossier au Ministère",
+      "Inspection des locaux et vérification des formateurs",
+      "Commission d'agrément",
+      "Délivrance de l'agrément"
+    ]
+  },
+  {
+    "number": 71,
+    "slug": "declaration-de-creation-d-une-ong",
+    "category": "commerce",
+    "title": "Déclaration de création d'une ONG",
+    "source_page": 63,
+    "location": "Ministère de l'Administration du territoire / Ministère des Affaires étrangères (pour ONG internationales)",
+    "institution": "Ministère de l'Administration du territoire",
+    "cost": "10 000 à 50 000 FCFA",
+    "processing_time": "1–3 mois",
+    "validity": "Permanente (avec rapport annuel d'activité)",
+    "required_documents": [
+      "Statuts de l'ONG (en français, signés des membres fondateurs)",
+      "Procès-verbal de l'assemblée constitutive",
+      "Liste des membres du bureau (avec CNI de chacun)",
+      "Adresse du siège social",
+      "Programme d'activités",
+      "CNI et casier judiciaire des fondateurs",
+      "Déclaration sur l'honneur d'absence de but lucratif"
+    ],
+    "conditions": [
+      "Les ONG nationales sont déclarées au Ministère de l'Administration du territoire",
+      "Les ONG internationales doivent obtenir l'agrément du Ministère des Affaires étrangères",
+      "Une ONG reconnue bénéficie d'exonérations fiscales",
+      "Rapport d'activité annuel obligatoire — défaut = dissolution possible",
+      "Les activités politiques sont interdites aux ONG déclarées"
+    ],
+    "procedure_steps": [
+      "Tenir l'assemblée constitutive et rédiger les statuts",
+      "Déposer le dossier au Ministère compétent",
+      "Le Ministère instruit le dossier",
+      "Publication au Journal Officiel",
+      "Délivrance du récépissé de déclaration"
+    ]
+  },
+  {
+    "number": 74,
+    "slug": "patente-taxe-professionnelle-annuelle",
+    "category": "commerce",
+    "title": "Patente (taxe professionnelle annuelle)",
+    "source_page": 64,
+    "location": "Direction Générale des Impôts",
+    "institution": "Direction Générale des Impôts",
+    "cost": "Variable selon activité et chiffre d'affaires (10 000 à plusieurs millions FCFA)",
+    "processing_time": "Immédiat après paiement",
+    "validity": "1 an (calendaire)",
+    "required_documents": [
+      "RCCM valide",
+      "NIF",
+      "Déclaration du chiffre d'affaires de l'année précédente",
+      "Formulaire de patente (DGI)"
+    ],
+    "conditions": [
+      "La patente est due chaque année par tout commerçant, industriel, artisan",
+      "Elle doit être payée avant le 31 mars de chaque année (délai légal)",
+      "Le défaut de patente expose à une majoration de 25% et des poursuites fiscales",
+      "Sans patente : impossibilité de participer aux marchés publics et appels d'offres",
+      "La patente est calculée sur le chiffre d'affaires déclaré"
+    ],
+    "procedure_steps": [
+      "Se rendre à la DGI avec le RCCM et les documents fiscaux",
+      "Remplir la déclaration",
+      "Calcul de la patente par l'agent des impôts",
+      "Payer à la caisse",
+      "Recevoir la quittance de patente (à conserver et présenter en cas de contrôle)"
+    ]
+  },
+  {
+    "number": 79,
+    "slug": "appel-d-offres-public-retrait-et-soumission-de-dossier",
+    "category": "commerce",
+    "title": "Appel d'offres public — retrait et soumission de dossier",
+    "source_page": 65,
+    "location": "Autorité de Régulation des Marchés Publics (ARMP)",
+    "institution": "Autorité de Régulation des Marchés Publics (ARMP)",
+    "cost": "10 000 à 100 000 FCFA (DAO — dossier d'appel d'offres)",
+    "processing_time": "15 à 60 jours selon le marché",
+    "validity": "Usage unique par appel d'offres",
+    "required_documents": [
+      "Dossier de soumission complet (technique + financier)",
+      "Caution de soumission bancaire (1 à 3% du montant offert)",
+      "RCCM valide",
+      "NIF valide",
+      "Patente à jour",
+      "Attestation fiscale de non-redevance",
+      "Attestation CNPS à jour",
+      "Casier judiciaire du gérant",
+      "Références de marchés similaires réalisés",
+      "Plan de charge et équipe technique"
+    ],
+    "conditions": [
+      "Les marchés publics de plus d'un certain seuil doivent faire l'objet d'un appel d'offres ouvert",
+      "L'ARMP supervise la régularité des procédures",
+      "Tout soumissionnaire peut contester une attribution irrégulière auprès de l'ARMP",
+      "La caution de soumission est confisquée si l'attributaire refuse le marché",
+      "Les attestations fiscales et CNPS doivent être vierges de dettes",
+      "Un soumissionnaire exclu pour faute grave peut être blacklisté pendant 2 à 5 ans"
+    ],
+    "procedure_steps": [
+      "Surveiller les publications d'appels d'offres (Journal Officiel, presse, site ARMP)",
+      "Retirer le DAO au prix indiqué",
+      "Préparer le dossier technique et financier",
+      "Obtenir la caution bancaire de soumission",
+      "Déposer le dossier scellé avant la date limite",
+      "Assister à l'ouverture publique des plis",
+      "Attendre la notification d'attribution Transport & Véhicules Ministère des Transports terrestres / Direction des transports Cette section regroupe 6 démarches relevant de Transport & Véhicules. Chaque fiche présente les pièces réellement exigées, les règles de gestion et les étapes concrètes basées sur les pratiques administratives tchadiennes actuelles. N° Démarche Coût Délai 43 Immatriculation d'un véhicule neuf (carte grise) Variable selon puissance fiscale du véhicule (30 000 à 150 000 FCFA) 1 à 4 semaines 44 Visite technique obligatoire du véhicule 10 000 à 25 000 FCFA Immédiat (résultat le jour même) 45 Assurance automobile obligatoire (RC) 25 000 à 100 000 FCFA/an selon véhicule Immédiat (délivré le jour même) 67 Autorisation de transport en commun (taxi, bus) 20 000 à 80 000 FCFA 2–4 semaines 68 Permis de transport de marchandises dangereuses 50 000 à 150 000 FCFA 2–4 semaines 80 Déclaration en douane — importation de marchandises Droits de douane variables (0% à 30% selon produit) + TVA 1 à 15 jours"
+    ]
+  },
+  {
+    "number": 43,
+    "slug": "immatriculation-d-un-vehicule-neuf-carte-grise",
+    "category": "transport",
+    "title": "Immatriculation d'un véhicule neuf (carte grise)",
+    "source_page": 67,
+    "location": "Direction des Transports terrestres / Trésorerie nationale",
+    "institution": "Direction des Transports terrestres",
+    "cost": "Variable selon puissance fiscale du véhicule (30 000 à 150 000 FCFA)",
+    "processing_time": "1 à 4 semaines",
+    "validity": "Permanente (à mettre à jour lors de changement de propriétaire)",
+    "required_documents": [
+      "Facture d'achat originale du véhicule (chez le concessionnaire)",
+      "Quittance de douane (si véhicule importé — prouve les droits de douane payés)",
+      "CNI du propriétaire",
+      "Assurance automobile valide (RC minimum)",
+      "Certificat de conformité du véhicule (délivré par le constructeur)",
+      "Formulaire de demande de carte grise (Direction des Transports)",
+      "Reçu de paiement des taxes de première immatriculation"
+    ],
+    "conditions": [
+      "Tout véhicule circulant sur la voie publique doit être immatriculé",
+      "L'immatriculation doit être faite dans les 30 jours suivant l'achat",
+      "Le numéro d'immatriculation est définitif et lié au véhicule (pas au propriétaire)",
+      "En cas de cession : la carte grise doit être transférée au nouveau propriétaire dans les 15 jours",
+      "Un véhicule non immatriculé peut être saisi par les forces de l'ordre"
+    ],
+    "procedure_steps": [
+      "Payer les taxes d'immatriculation à la Trésorerie nationale",
+      "Constituer le dossier complet",
+      "Déposer à la Direction des Transports terrestres",
+      "Inspection physique du véhicule par un agent",
+      "Attribution du numéro d'immatriculation",
+      "Pose des plaques d'immatriculation",
+      "Retrait de la carte grise"
+    ]
+  },
+  {
+    "number": 44,
+    "slug": "visite-technique-obligatoire-du-vehicule",
+    "category": "transport",
+    "title": "Visite technique obligatoire du véhicule",
+    "source_page": 67,
+    "location": "Centre agréé de contrôle technique — N'Djamena",
+    "institution": "Centre agréé de contrôle technique — N'Djamena",
+    "cost": "10 000 à 25 000 FCFA",
+    "processing_time": "Immédiat (résultat le jour même)",
+    "validity": "1 an",
+    "required_documents": [
+      "Carte grise du véhicule",
+      "Assurance en cours de validité",
+      "CNI du propriétaire ou conducteur",
+      "Véhicule propre et en état de marche"
+    ],
+    "conditions": [
+      "Obligatoire pour tous les véhicules de plus de 3 ans",
+      "Les taxis et véhicules de transport en commun : visite tous les 6 mois",
+      "En cas d'échec : le défaut doit être corrigé et une contre-visite effectuée",
+      "Les véhicules avec un procès-verbal de contre-visite négatif ne peuvent pas circuler",
+      "Les points vérifiés : freins, direction, éclairage, pneus, carrosserie, émissions"
+    ],
+    "procedure_steps": [
+      "Se rendre au centre agréé avec le véhicule et les documents",
+      "Le technicien inspecte le véhicule selon une grille officielle",
+      "Délivrance du certificat de conformité ou liste des défauts à corriger",
+      "En cas de défaut : correction puis contre-visite dans les 30 jours"
+    ]
+  },
+  {
+    "number": 45,
+    "slug": "assurance-automobile-obligatoire-rc",
+    "category": "transport",
+    "title": "Assurance automobile obligatoire (RC)",
+    "source_page": 68,
+    "location": "Compagnies d'assurance agréées (STAR, AMAGUPTA, STA, etc.)",
+    "institution": "Compagnies d'assurance agréées (STAR, AMAGUPTA, STA, etc.)",
+    "cost": "25 000 à 100 000 FCFA/an selon véhicule",
+    "processing_time": "Immédiat (délivré le jour même)",
+    "validity": "1 an",
+    "required_documents": [
+      "Carte grise du véhicule",
+      "CNI du propriétaire",
+      "Ancienne attestation d'assurance (pour renouvellement)",
+      "Déclaration de sinistres des années précédentes (si demandée)"
+    ],
+    "conditions": [
+      "L'assurance Responsabilité Civile (RC) est obligatoire pour tout véhicule en circulation",
+      "L'attestation d'assurance doit être affichée sur le pare-brise",
+      "Circuler sans assurance : amende + immobilisation du véhicule",
+      "En cas d'accident sans assurance : responsabilité personnelle et pénale du conducteur",
+      "Le bonus/malus s'applique : bon conducteur = réduction, accidents = majoration"
+    ],
+    "procedure_steps": [
+      "Choisir une compagnie d'assurance agréée",
+      "Présenter les documents du véhicule et du propriétaire",
+      "Choisir le niveau de couverture (RC minimum obligatoire, tous risques optionnel)",
+      "Payer la prime annuelle",
+      "Recevoir l'attestation d'assurance et la vignette à coller sur le pare-brise"
+    ]
+  },
+  {
+    "number": 67,
+    "slug": "autorisation-de-transport-en-commun-taxi-bus",
+    "category": "transport",
+    "title": "Autorisation de transport en commun (taxi, bus)",
+    "source_page": 69,
+    "location": "Direction des Transports terrestres / Préfecture",
+    "institution": "Direction des Transports terrestres",
+    "cost": "20 000 à 80 000 FCFA",
+    "processing_time": "2–4 semaines",
+    "validity": "1 an",
+    "required_documents": [
+      "Carte grise du véhicule",
+      "Assurance transport en commun (plus élevée que l'assurance ordinaire)",
+      "Permis de conduire catégorie D (pour bus) ou B (pour taxi)",
+      "Visite technique valide (tous les 6 mois pour les taxis)",
+      "CNI du propriétaire",
+      "RCCM si exploitation en société",
+      "Attestation de conformité des conditions d'hygiène (pour les taxis -brousse)"
+    ],
+    "conditions": [
+      "Les véhicules de transport en commun sont soumis à des normes plus strictes",
+      "La visite technique est semestrielle (pas annuelle comme pour les voitures particulières)",
+      "Le permis de conduire doit correspondre à la catégorie du véhicule",
+      "Les taxis doivent avoir un compteur fonctionnel et approuvé",
+      "Surcharge : passagers au-delà de la capacité autorisée = infraction grave"
+    ],
+    "procedure_steps": [
+      "Réunir les documents du véhicule",
+      "Faire la visite technique",
+      "Demander l'autorisation à la Direction des Transports",
+      "Obtenir la vignette de transport en commun",
+      "Afficher l'autorisation dans le véhicule"
+    ]
+  },
+  {
+    "number": 68,
+    "slug": "permis-de-transport-de-marchandises-dangereuses",
+    "category": "transport",
+    "title": "Permis de transport de marchandises dangereuses",
+    "source_page": 69,
+    "location": "Direction des Transports terrestres / Ministère de l'Environnement",
+    "institution": "Direction des Transports terrestres",
+    "cost": "50 000 à 150 000 FCFA",
+    "processing_time": "2–4 semaines",
+    "validity": "1 an",
+    "required_documents": [
+      "Permis de conduire catégorie C ou CE",
+      "Formation ADR (transport de matières dangereuses)",
+      "Véhicule aux normes ADR (équipements de sécurité)",
+      "Attestation de formation du conducteur",
+      "RCCM de la société de transport",
+      "Assurance spécifique matières dangereuses"
+    ],
+    "conditions": [
+      "Obligatoire pour les carburants, produits chimiques, explosifs, gaz",
+      "Le conducteur doit avoir une formation spécifique ADR",
+      "Le véhicule doit être équipé d'extincteurs, signalétique ADR et équipements de protection",
+      "Itinéraires imposés pour éviter les zones habitées (selon produit)",
+      "Contrôles fréquents aux checkpoints — documents accessibles immédiatement"
+    ],
+    "procedure_steps": [
+      "Suivre la formation ADR",
+      "Équiper le véhicule aux normes",
+      "Déposer le dossier aux Transports et au Ministère de l'Environnement",
+      "Inspection du véhicule",
+      "Obtenir le permis de transport de matières dangereuses"
+    ]
+  },
+  {
+    "number": 80,
+    "slug": "declaration-en-douane-importation-de-marchandises",
+    "category": "transport",
+    "title": "Déclaration en douane — importation de marchandises",
+    "source_page": 70,
+    "location": "Direction Générale des Douanes — Bureau de douane du point d'entrée",
+    "institution": "Direction Générale des Douanes — Bureau de douane du point d'entrée",
+    "cost": "Droits de douane variables (0% à 30% selon produit) + TVA",
+    "processing_time": "1 à 15 jours",
+    "validity": "Usage unique par expédition",
+    "required_documents": [
+      "Facture commerciale (en français ou traduite)",
+      "Liste de colisage",
+      "Connaissement ou lettre de voiture internationale",
+      "Certificat d'origine des marchandises",
+      "Certificat sanitaire (pour denrées alimentaires)",
+      "Certificat phytosanitaire (pour végétaux)",
+      "Licence d'importation (si requise)",
+      "NIF de l'importateur",
+      "RCCM de l'importateur"
+    ],
+    "conditions": [
+      "Toute marchandise entrant au Tchad doit être déclarée à la douane",
+      "La valeur déclarée doit correspondre à la valeur réelle (fraude douanière = saisie + amendes + poursuites)",
+      "Le Tchad applique le Tarif Extérieur Commun de la CEMAC",
+      "Les marchandises interdites (armes, drogues) sont saisies et le déclarant poursuivi pénalement",
+      "Un transitaire agréé peut effectuer les formalités douanières pour le compte de l'importateur"
+    ],
+    "procedure_steps": [
+      "Arrivée des marchandises au point d'entrée (aéroport, frontière terrestre)",
+      "Dépôt de la déclaration en douane (ou via transitaire)",
+      "Vérification documentaire par les douaniers",
+      "Inspection physique des marchandises (aléatoire ou systématique)",
+      "Calcul et paiement des droits et taxes",
+      "Mainlevée des marchandises (permission de sortir du dépôt douanier) RÈGLES DE GESTION TRANSVERSALES Logique qui s'applique à toutes les démarches Règles communes à toutes les démarches RÈGLE 1 — Validité des pièces d'identité : Toute CNI ou passeport présenté doit être en cours de validité. Une pièce expirée est systématiquement refusée, même si le demandeur peut prouver son identité autrement. RÈGLE 2 — Photos d'identité : Les photos doivent être récentes (moins de 6 mois), fond blanc, tête nue, face visible. Les photos floues, trop sombres ou avec lunettes de soleil sont refusées. RÈGLE 3 — Originaux exigés : Toutes les administrations exigent les originaux + copies. Ne jamais se présenter avec des photocopies seules. Conserver les originaux après présentation. RÈGLE 4 — Dossier incomplet = refus : Un dossier incomplet est systématiquement refusé sans exception. Toutes les pièces listées doivent être présentes lors du dépôt. RÈGLE 5 — Timbres fiscaux : Le timbre fiscal doit être acheté AVANT le dépôt du dossier (Trésorerie nationale ou points de vente agréés). Un dossier sans timbre fiscal est irrecevable. RÈGLE 6 — Récépissé de dépôt : Toujours exiger et conserver le récépissé lors du dépôt. Sans récépissé, il est impossible de suivre le dossier ou de réclamer en cas de perte. RÈGLE 7 — Délais légaux : Certains délais sont impératifs et leur dépassement entraîne des procédures plus lourdes (jugement supplétif pour naissance tardive, majoration pour patente, etc.). Vérifier systématiquement. RÈGLE 8 — Présence physique : La plupart des démarches exigent la présence physique du demandeur. Un mandataire n'est accepté que si une procuration notariée est présentée. Règles spécifiques aux mineurs • Toute démarche pour un mineur nécessite la présence et le consentement des parents ou tuteur légal • L'autorisation parentale doit être légalisée (mairie ou notaire) pour les démarches importantes • En cas de divorce : fournir le jugement de divorce et la décision sur la garde • En cas de décès d'un parent : fournir l'acte de décès et désignation du tuteur légal Règles spécifiques aux étrangers au Tchad • Titre de séjour valide exigé pour toutes les démarches administratives • Permis de travail obligatoire pour toute activité professionnelle rémunérée • Les ressortissants CEMAC bénéficient d'une libre circulation simplifiée (accord régional) • Les diplômes étrangers doivent être préalablement équivalés par le Ministère de l'Enseignement supérieur AUTO-CHECK EXPERT v2.0 Vérification complète du CDC enrichi par un expert SaaS # Critère Statut Observation 01 Données réelles intégrées (pièces authentiques) ✅ OK 80 démarches avec pièces réelles issues des ministères tchadiens 02 Règles de gestion métier détaillées ✅ OK Chaque démarche a 4 à 8 règles de gestion avec conditions et exceptions 03 Étapes procédurales dans l'ordre correct ✅ OK Chaque démarche liste les étapes concrètes dans leur séquence exacte 04 Coûts réels en FCFA ✅ OK Fourchettes réalistes basées sur les tarifs administrations tchadiennes 2025 05 Délais légaux mentionnés ✅ OK Délais légaux (déclaration naissance 30j, décès 3j, etc.) explicitement mentionnés 06 Sanctions en cas de non-respect ✅ OK Conséquences du non-respect documentées dans les règles de gestion 07 10 catégories couvrant tous les ministères ✅ OK Identité, État civil, Voyage, Études, Travail, Santé, Justice, Légalisations, Commerce, Transport 08 80 démarches documentées ✅ OK Objectif initial 100+ : 80 atteint avec les plus demandées. 20+ à ajouter en phase 2 09 Cas particuliers documentés (mineurs, étrangers) ✅ OK Règles spécifiques aux mineurs et aux étrangers dans chaque fiche concernée 10 Architecture technique maintenue (Laravel+Next.js) ✅ OK Stack inchangée — les données s'intègrent dans le modèle de BDD prévu 11 Modèle de données cohérent avec les fiches ✅ OK JSON pieces_requises, champ regles (JSON), champ etapes (JSON) ajoutés au modèle 12 Sources identifiées par ministère ✅ OK Chaque catégorie mentionne le ministère responsable 13 Règles transversales documentées ✅ OK 8 règles globales + règles mineurs + règles étrangers 14 Design prévu pour les fiches (carte visuelle) ✅ OK Bandeau coloré par catégorie, tableau coût/délai/validité, sections distinctes 15 Système de mise à jour prévu ✅ OK Signalement citoyen + date de vérification + source sur chaque fiche VERDICT FINAL v2.0 — 15/15 critères validés (100%). Ce CDC est complet, basé sur des données réelles et prêt pour le démarrage du développement. Action suivante : Sprint 0 — Installation Laravel 11 + Next.js 14. Prochaines démarches à ajouter (phase 2 — 20 démarches restantes) • Naturalisation tchadienne pour étrangers • Carte de séjour pour résidents étrangers • Inscription à l'Ordre des Avocats du Tchad • Autorisation d'exercice pour architectes et ingénieurs • Demande de concession minière • Autorisation de manifestation publique • Demande de pension d'invalidité • Adoption internationale • Enregistrement d'une marque (OAPI) • Obtention d'un agrément d'ONG internationale • Visa diplomatique et de courtoisie • Autorisation de port d'arme (usage professionnel)"
+    ]
+  }
+]

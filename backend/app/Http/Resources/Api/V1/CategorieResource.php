@@ -17,6 +17,7 @@ class CategorieResource extends JsonResource
             'name_fr' => $this->name,
             'slug' => $this->slug,
             'description' => $this->localizedDescription($language),
+            'ministry' => $this->ministry,
             'icon' => $this->icon,
             'color' => $this->color,
             'display_order' => $this->display_order,

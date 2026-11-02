@@ -1,0 +1,14 @@
+[
+  {"title": "Naturalisation tchadienne pour étrangers", "category": "identite", "suggested": true},
+  {"title": "Carte de séjour pour résidents étrangers", "category": "identite", "suggested": true},
+  {"title": "Inscription à l'Ordre des Avocats du Tchad", "category": "justice", "suggested": true},
+  {"title": "Autorisation d'exercice pour architectes et ingénieurs", "category": "legalisations", "suggested": true},
+  {"title": "Demande de concession minière", "category": "commerce", "suggested": true},
+  {"title": "Autorisation de manifestation publique", "category": "justice", "suggested": true},
+  {"title": "Demande de pension d'invalidité", "category": "travail", "suggested": true},
+  {"title": "Adoption internationale", "category": "etat-civil", "suggested": true},
+  {"title": "Enregistrement d'une marque (OAPI)", "category": "commerce", "suggested": true},
+  {"title": "Obtention d'un agrément d'ONG internationale", "category": "commerce", "suggested": true},
+  {"title": "Visa diplomatique et de courtoisie", "category": "voyage", "suggested": true},
+  {"title": "Autorisation de port d'arme (usage professionnel)", "category": "identite", "suggested": true}
+]

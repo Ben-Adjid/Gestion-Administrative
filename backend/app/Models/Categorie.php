@@ -22,6 +22,7 @@ class Categorie extends Model
         'description',
         'description_en',
         'description_ar',
+        'ministry',
         'icon',
         'color',
         'display_order',

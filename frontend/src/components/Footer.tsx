@@ -91,6 +91,7 @@ export const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-5">
             <AppLink href="/demarches" className="transition hover:text-white">{t('footer.catalog')}</AppLink>
             <AppLink href="/faq" className="transition hover:text-white">{t('nav.faq')}</AppLink>
+            <AppLink href="/regles" className="transition hover:text-white">Règles communes</AppLink>
             <AppLink href="/accessibility" className="transition hover:text-white">{t('nav.accessibility')}</AppLink>
             <AppLink href="/confidentialite" className="transition hover:text-white">{t('nav.privacy')}</AppLink>
             <AdminLink />

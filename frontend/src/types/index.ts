@@ -2,6 +2,7 @@ export interface Categorie {
   id: number;
   name: string;
   slug: string;
+  ministry?: string | null;
   description: string | null;
   icon: string;
   color: string;
