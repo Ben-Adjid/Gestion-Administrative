@@ -46,7 +46,7 @@ class CahierPhase2DraftsSeeder extends Seeder
                     'categorie_id' => $categorie->id,
                     'title' => $record['title'],
                     'summary' => self::PENDING_TEXT,
-                    'description' => self::PENDING_TEXT,
+                    'description' => self::draftDescription($record),
                     'institution' => 'À renseigner',
                     'cost' => 'À renseigner',
                     'status' => 'draft',
@@ -56,5 +56,17 @@ class CahierPhase2DraftsSeeder extends Seeder
         }
 
         $this->command?->info('12 démarches de la phase 2 créées en brouillon.');
+    }
+
+    /**
+     * @param  array{verification: string, status: string, sources: array<int, string>}  $record
+     */
+    private static function draftDescription(array $record): string
+    {
+        $sources = $record['sources'] === []
+            ? 'Aucune source officielle trouvée.'
+            : 'Sources : ' . implode(' ; ', $record['sources']);
+
+        return "Statut de vérification : {$record['status']}. {$record['verification']} {$sources}";
     }
 }

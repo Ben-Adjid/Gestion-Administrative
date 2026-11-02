@@ -53,6 +53,8 @@ class CahierCatalogueTest extends TestCase
         $this->assertCount(12, $records);
         foreach ($records as $record) {
             $this->assertContains($record['category'], self::CATEGORIES, $record['title']);
+            $this->assertNotEmpty($record['verification'] ?? null, $record['title']);
+            $this->assertContains($record['status'] ?? null, ['partiel', 'non trouvé', 'suspendue', 'suspension à vérifier'], $record['title']);
         }
     }
 

@@ -1,14 +1,86 @@
 [
-  {"title": "Naturalisation tchadienne pour étrangers", "category": "identite", "suggested": true},
-  {"title": "Carte de séjour pour résidents étrangers", "category": "identite", "suggested": true},
-  {"title": "Inscription à l'Ordre des Avocats du Tchad", "category": "justice", "suggested": true},
-  {"title": "Autorisation d'exercice pour architectes et ingénieurs", "category": "legalisations", "suggested": true},
-  {"title": "Demande de concession minière", "category": "commerce", "suggested": true},
-  {"title": "Autorisation de manifestation publique", "category": "justice", "suggested": true},
-  {"title": "Demande de pension d'invalidité", "category": "travail", "suggested": true},
-  {"title": "Adoption internationale", "category": "etat-civil", "suggested": true},
-  {"title": "Enregistrement d'une marque (OAPI)", "category": "commerce", "suggested": true},
-  {"title": "Obtention d'un agrément d'ONG internationale", "category": "commerce", "suggested": true},
-  {"title": "Visa diplomatique et de courtoisie", "category": "voyage", "suggested": true},
-  {"title": "Autorisation de port d'arme (usage professionnel)", "category": "identite", "suggested": true}
+  {
+    "title": "Naturalisation tchadienne pour étrangers",
+    "category": "identite",
+    "verification": "Cadre trouvé : décret n°211/PG.-INT. du 6 novembre 1963 (texte ancien, à confirmer). Demande adressée au Président de la République, décision par décret publié au Journal officiel, enquête puis transmission au ministère de l'Intérieur. Pièces citées : preuve de nationalité ou pièces d'identité, photos d'identité (3 exemplaires), état signalétique et services, certificat médical. Coût et délais non trouvés.",
+    "status": "partiel",
+    "sources": ["https://www.refworld.org/legal/legislation/natlegbod/1963/fr/20304"]
+  },
+  {
+    "title": "Carte de séjour pour résidents étrangers",
+    "category": "identite",
+    "verification": "Aucune source officielle tchadienne trouvée pour la carte de séjour (pièces, coût, délai). Les seules informations concernent les visas et un enregistrement à l'arrivée (72 heures) rapporté par un site non officiel. À rédiger avec le ministère de l'Intérieur ou la police de l'immigration.",
+    "status": "non trouvé",
+    "sources": []
+  },
+  {
+    "title": "Inscription à l'Ordre des Avocats du Tchad",
+    "category": "justice",
+    "verification": "Le Barreau du Tchad a un site officiel (barreaudutchad.org), créé par la loi n°033/PR/96 du 5 novembre 1996. Conditions d'inscription et pièces non trouvées : à obtenir auprès du secrétariat de l'Ordre ou dans le Règlement intérieur.",
+    "status": "partiel",
+    "sources": ["https://barreaudutchad.org/a-propos/"]
+  },
+  {
+    "title": "Autorisation d'exercice pour architectes et ingénieurs",
+    "category": "legalisations",
+    "verification": "Pour les ingénieurs civils : décret tchadien n°1612/PR/MATDHU/2019 (copie scannée, à relire). Il exige la résidence au Tchad et l'inscription au tableau de l'Ordre national des ingénieurs civils ; un ingénieur étranger doit obtenir le visa de l'Ordre pour un projet au Tchad. Pour les architectes : aucune source tchadienne trouvée.",
+    "status": "partiel",
+    "sources": ["https://onictchad.com/wp-content/uploads/2026/03/Decret1612_PR_MATDHU_2019-1.pdf"]
+  },
+  {
+    "title": "Demande de concession minière",
+    "category": "commerce",
+    "verification": "Point critique : selon Capmad, l'arrêté n°064 du 10 septembre 2026 du ministère des Mines suspend toutes les nouvelles demandes de prospection minière, sans durée précisée. À vérifier avant toute publication. Cadre du Code minier (source secondaire) : permis de recherche de 5 ans renouvelable deux fois, accordé par arrêté ; permis d'exploitation par décret en conseil des ministres. Pièces et délais non trouvés.",
+    "status": "suspension à vérifier",
+    "sources": ["https://www.capmad.com/article/tchad-la-ministre-fatima-haram-acyl-gele-par-arrete-toutes-les-nouvelles-autorisations-de-prospection-miniere"]
+  },
+  {
+    "title": "Autorisation de manifestation publique",
+    "category": "justice",
+    "verification": "Aucun texte tchadien trouvé pour les manifestations politiques ou revendicatives. Pour les événements culturels (festivals, concerts, expositions), une note du ministère de la Culture en application de la circulaire n°005/PR/PM/SG/2023 exige une demande au moins deux semaines avant. Les cérémonies familiales, religieuses ou coutumières sans portée publique sont exclues.",
+    "status": "partiel",
+    "sources": ["https://hamama-media.com/uncategorized/tchad-le-gouvernement-encadre-les-manifestations-culturelles-pour-renforcer-le-secteur/"]
+  },
+  {
+    "title": "Demande de pension d'invalidité",
+    "category": "travail",
+    "verification": "Conditions selon la CNPS Tchad : être immatriculé, avoir cessé toute activité salariée, invalidité constatée par le médecin traitant et approuvée par le médecin-conseil (ces deux dernières conditions non exigées en cas d'accident). Rapport médical obligatoire avant l'admission. Montant : 30 % de la rémunération mensuelle moyenne pour 180 mois d'assurance. Liste complète des pièces non trouvée.",
+    "status": "partiel",
+    "sources": ["https://cnps-tchad.com/pvid/pension-dinvalidite/"]
+  },
+  {
+    "title": "Adoption internationale",
+    "category": "etat-civil",
+    "verification": "Point critique : le ministère français des Affaires étrangères indique que l'adoption internationale au Tchad n'est actuellement pas possible : les adoptions individuelles sont interdites depuis le 23 février 2022 et aucun opérateur n'est habilité. Le Tchad n'a pas ratifié la Convention de La Haye de 1993. Ne pas publier comme démarche active.",
+    "status": "suspendue",
+    "sources": ["https://www.diplomatie.gouv.fr/fr/adopter-a-l-etranger/le-processus-de-l-adoption-internationale/le-choix-du-pays-d-origine/article/tchad-9633"]
+  },
+  {
+    "title": "Enregistrement d'une marque (OAPI)",
+    "category": "commerce",
+    "verification": "Le Tchad est membre de l'OAPI : un dépôt vaut pour tous les États membres. Protection de 10 ans, renouvelable par périodes de 10 ans. Coût contradictoire selon les cabinets (375 000 FCFA ou 500 000 FCFA par classe) : pas de grille officielle trouvée. Délai : 9 à 18 mois selon les sources. Dépôt possible au siège de l'OAPI à Yaoundé.",
+    "status": "partiel",
+    "sources": ["https://www.legafrik.com/d%C3%A9p%C3%B4t-de-votre-marque-%C3%A0-loapi-en-ligne"]
+  },
+  {
+    "title": "Obtention d'un agrément d'ONG internationale",
+    "category": "commerce",
+    "verification": "Cadre trouvé : décret n°1918/MEPD/2018 du 24 décembre 2018 (protocole d'accord standard). Accord de coopération obligatoire avant toute activité. La demande doit justifier le recours à du personnel étranger, le personnel international doit être renouvelé après quatre ans, et un prélèvement de 1 % est mentionné (application non confirmée). Liste de pièces non trouvée.",
+    "status": "partiel",
+    "sources": ["https://www.alwihdainfo.com/Tchad-le-gouvernement-rappelle-les-ONG-internationales-a-l-ordre-pour-le-recrutement-des-etrangers_a122410.html"]
+  },
+  {
+    "title": "Visa diplomatique et de courtoisie",
+    "category": "voyage",
+    "verification": "Ces visas ne passent pas par la plateforme e-Visa (généralisée le 11 mai 2026) : ils restent traités par le service du protocole du ministère des Affaires étrangères. Pour un visa de courtoisie (guide 2022, possiblement dépassé) : passeport, contrat ou arrêté de nomination, deux photos, gratuit, valable un an, délai d'environ deux semaines.",
+    "status": "partiel",
+    "sources": ["https://france-volontaires.org/wp-content/uploads/2022/07/Tchad_guide_daccueil_du_volontaire.pdf"]
+  },
+  {
+    "title": "Autorisation de port d'arme (usage professionnel)",
+    "category": "identite",
+    "verification": "Aucune source tchadienne trouvée (pièces, autorité, délai). Les sources comparatives (Sénégal, Madagascar, France) ne s'appliquent pas au Tchad. À rédiger avec le ministère de la Sécurité publique.",
+    "status": "non trouvé",
+    "sources": []
+  }
 ]
