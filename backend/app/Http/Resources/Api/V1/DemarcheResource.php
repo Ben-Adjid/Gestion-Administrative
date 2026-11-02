@@ -34,6 +34,7 @@ class DemarcheResource extends JsonResource
             'cost_estimate' => $this->costEstimate(),
             'offices' => OfficeResource::collection($this->whenLoaded('offices')),
             'processing_time' => $content['processing_time'],
+            'validity' => $content['validity'],
             'processing_time_days' => $this->processing_time_days,
             'institution' => $content['institution'],
             'authority_level' => $this->authority_level,

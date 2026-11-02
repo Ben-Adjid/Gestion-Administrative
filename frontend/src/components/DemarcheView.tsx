@@ -38,9 +38,14 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
 
   // Lieu compétent renvoyé par le serveur pour la ville choisie (source unique, identique pour le site et l'API).
   const [place, setPlace] = useState<PlaceForCity | null>(null);
+  const [placeLoading, setPlaceLoading] = useState(false);
+  const [placeFailed, setPlaceFailed] = useState(false);
 
   useEffect(() => {
     setTranslationFailed(false);
+    setPlaceFailed(false);
+    setPlace(null);
+    setPlaceLoading(Boolean(city));
     const controller = new AbortController();
     const query = new URLSearchParams({ lang: language });
     if (city) query.set('city', city);
@@ -52,10 +57,16 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json() as Promise<{ data: LocalizedDemarche; place: PlaceForCity }>;
       })
-      .then((json) => { setDemarche(json.data); setPlace(json.place); })
+      .then((json) => {
+        setDemarche(json.data);
+        setPlace(json.place);
+        setPlaceLoading(false);
+      })
       .catch((error: unknown) => {
-        // Échec : la fiche reste en français, et on le dit (aucun mélange silencieux de langues).
-        if (!(error instanceof DOMException && error.name === 'AbortError')) setTranslationFailed(true);
+        if (error instanceof DOMException && error.name === 'AbortError') return;
+        if (language !== 'fr') setTranslationFailed(true);
+        if (city) setPlaceFailed(true);
+        setPlaceLoading(false);
       });
     return () => controller.abort();
   }, [language, initial, city]);
@@ -87,6 +98,7 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
     demarche.summary ?? '',
     `${tc('fiche.cost')} : ${demarche.cost || tc('catalog.cost_unknown')}.`,
     `${tc('fiche.delay')} : ${demarche.processing_time || tc('catalog.delay_unknown')}.`,
+    demarche.validity ? `${tc('fiche.validity')} : ${demarche.validity}.` : '',
     documents.length ? `${tc('fiche.documents')} : ${documents.join(' ; ')}.` : '',
     steps.length ? `${tc('fiche.steps')} : ${steps.map((step, index) => `${index + 1}. ${step}`).join(' ')}` : '',
     conditions.length ? `${tc('fiche.conditions')} : ${conditions.join(' ; ')}.` : '',
@@ -163,7 +175,7 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
           </p>
         </header>
 
-        <div className="grid gap-4 border-b border-slate-200 bg-slate-50 p-5 sm:grid-cols-3 sm:p-7 print:grid-cols-3 print:gap-2 print:border-y print:border-slate-300 print:bg-transparent print:px-0 print:py-3">
+        <div className="grid gap-4 border-b border-slate-200 bg-slate-50 p-5 sm:grid-cols-2 sm:p-7 lg:grid-cols-4 print:grid-cols-4 print:gap-2 print:border-y print:border-slate-300 print:bg-transparent print:px-0 print:py-3">
           <div className="rounded-xl border border-slate-200 bg-white p-4 print:p-2">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t('fiche.cost')}</p>
             <p className="mt-2 text-lg font-bold text-slate-900 print:mt-1 print:text-base">{demarche.cost || t('catalog.cost_unknown')}</p>
@@ -173,6 +185,10 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
             <p className="mt-2 flex items-center gap-2 text-lg font-bold text-slate-900 print:mt-1 print:text-base">
               <Clock3 size={18} aria-hidden="true" className="print:hidden" /> {demarche.processing_time || t('catalog.delay_unknown')}
             </p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-4 print:p-2">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t('fiche.validity')}</p>
+            <p className="mt-2 text-lg font-bold text-slate-900 print:mt-1 print:text-base">{demarche.validity || t('catalog.validity_unknown')}</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-4 print:p-2">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t('fiche.institution')}</p>
@@ -215,7 +231,9 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
             </section>
           )}
 
-          <PlaceSection demarche={demarche} place={place} />
+          {placeLoading && <p role="status" className="rounded-xl border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">{t('common.loading')}</p>}
+          {placeFailed && <p role="alert" className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-800">{t('common.network_error')}</p>}
+          <PlaceSection demarche={demarche} place={placeLoading ? null : place} />
 
           <div className="space-y-9 print:hidden">
             <ReviewsSection slug={demarche.slug} />

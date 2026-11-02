@@ -222,7 +222,7 @@ class DemarchePublicController extends Controller
 
         $demarches = Demarche::published()
             ->where('categorie_id', $categorie->id)
-            ->with('categorie')
+            ->with(['categorie', 'locationCity'])
             ->orderBy('views_count', 'desc')
             ->paginate(min(max((int) $request->query('per_page', 50), 1), 100));
 

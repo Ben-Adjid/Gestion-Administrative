@@ -23,7 +23,7 @@ class ExportController extends Controller
 
         return Csv::download(
             'demarches_' . now()->format('Y-m-d') . '.csv',
-            ['ID', 'Titre', 'Slug', 'Catégorie', 'Statut', 'Archivée', 'Coût', 'Délai', 'Institution', 'Lieu', 'Email', 'Téléphone', 'Pièces requises', 'Source', 'Dernière vérification', 'Mise à jour'],
+            ['ID', 'Titre', 'Slug', 'Catégorie', 'Statut', 'Archivée', 'Coût', 'Délai', 'Validité', 'Institution', 'Lieu', 'Email', 'Téléphone', 'Pièces requises', 'Source', 'Dernière vérification', 'Mise à jour'],
             $demarches->map(fn (Demarche $d) => [
                 $d->id,
                 $d->title,
@@ -33,6 +33,7 @@ class ExportController extends Controller
                 $d->trashed() ? 'oui' : 'non',
                 $d->cost,
                 $d->processing_time,
+                $d->validity,
                 $d->institution,
                 $d->location,
                 $d->contact_email,

@@ -9,7 +9,7 @@ import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Categorie, Demarche } from '@/types';
 
-const TEXT_FIELDS = ['title', 'summary', 'description', 'cost', 'processing_time', 'institution', 'location'] as const;
+const TEXT_FIELDS = ['title', 'summary', 'description', 'cost', 'processing_time', 'validity', 'institution', 'location'] as const;
 const LIST_FIELDS = ['required_documents', 'procedure_steps', 'conditions'] as const;
 type TranslatedField = (typeof TEXT_FIELDS)[number] | (typeof LIST_FIELDS)[number];
 type TranslationForm = Record<TranslatedField, string>;
@@ -18,7 +18,7 @@ type AdminDemarche = Demarche & { translations?: Record<'en' | 'ar', Partial<Rec
 
 type DemarcheForm = {
   title: string; summary: string; description: string; categorie_id: string; cost: string; cost_amount: string;
-  processing_time: string; processing_time_days: string; institution: string; location: string; contact_email: string;
+  processing_time: string; validity: string; processing_time_days: string; institution: string; location: string; contact_email: string;
   contact_phone: string; official_source_url: string; online_url: string; required_documents: string; procedure_steps: string;
   conditions: string; status: 'draft' | 'published' | 'archived'; is_online: boolean;
   en: TranslationForm; ar: TranslationForm;
@@ -37,7 +37,7 @@ const emptyTranslation = (): TranslationForm =>
 
 const emptyForm = (): DemarcheForm => ({
   title: '', summary: '', description: '', categorie_id: '', cost: '', cost_amount: '', processing_time: '',
-  processing_time_days: '', institution: '', location: '', contact_email: '', contact_phone: '', official_source_url: '',
+  validity: '', processing_time_days: '', institution: '', location: '', contact_email: '', contact_phone: '', official_source_url: '',
   online_url: '', required_documents: '', procedure_steps: '', conditions: '', status: 'draft', is_online: false,
   en: emptyTranslation(), ar: emptyTranslation(),
   extra_costs: [], office_ids: [], authority_level: '', location_city_id: '',
@@ -48,6 +48,7 @@ const lines = (value: string): string[] => value.split(/\r?\n/).map((item) => it
 const FIELD_LABELS: Record<TranslatedField, string> = {
   title: 'adm.d_f_title', summary: 'adm.d_f_summary', description: 'adm.d_f_description', cost: 'adm.d_f_cost',
   processing_time: 'adm.d_f_delay', institution: 'adm.d_f_institution', location: 'adm.d_f_location',
+  validity: 'adm.d_f_validity',
   required_documents: 'adm.d_f_documents', procedure_steps: 'adm.d_f_steps', conditions: 'adm.d_f_conditions',
 };
 
@@ -148,6 +149,7 @@ export default function AdminDemarchesPage() {
       cost: demarche.cost || '',
       cost_amount: demarche.cost_amount == null ? '' : String(demarche.cost_amount),
       processing_time: demarche.processing_time || '',
+      validity: demarche.validity || '',
       processing_time_days: demarche.processing_time_days == null ? '' : String(demarche.processing_time_days),
       institution: demarche.institution || '',
       location: demarche.location || '',
@@ -201,6 +203,7 @@ export default function AdminDemarchesPage() {
           summary: form.summary.trim() || null,
           cost_amount: form.cost_amount ? Number(form.cost_amount) : null,
           processing_time: form.processing_time.trim() || null,
+          validity: form.validity.trim() || null,
           processing_time_days: form.processing_time_days ? Number(form.processing_time_days) : null,
           location: form.location.trim() || null,
           contact_email: form.contact_email.trim() || null,
@@ -358,6 +361,9 @@ export default function AdminDemarchesPage() {
                 </label>
                 <label className="text-sm font-medium text-slate-700">{t('adm.d_f_delay')}
                   <input value={form.processing_time} onChange={(e) => update('processing_time', e.target.value)} placeholder={t('adm.d_f_delay_ph')} className={input} />
+                </label>
+                <label className="text-sm font-medium text-slate-700">{t('adm.d_f_validity')}
+                  <input maxLength={255} value={form.validity} onChange={(e) => update('validity', e.target.value)} className={input} />
                 </label>
                 <label className="text-sm font-medium text-slate-700">{t('adm.d_f_delay_days')}
                   <input type="number" min="0" step="1" value={form.processing_time_days} onChange={(e) => update('processing_time_days', e.target.value)} className={input} />

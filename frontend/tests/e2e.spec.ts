@@ -7,9 +7,9 @@ test.describe('DemarchesTchad - Parcours Citoyen et E2E', () => {
     await expect(page).toHaveTitle(/DemarchesTchad/);
     await expect(page.locator('h1')).toContainText('Vos démarches administratives');
     await expect(page.getByRole('link', { name: /Explorer les démarches/ })).toHaveAttribute('href', '/demarches');
-    // Le titre apparaît aussi dans le pied de page : on cible le contenu principal.
-    await expect(page.getByRole('main').getByText('Passeport biométrique').first()).toBeVisible();
+    await expect(page.getByRole('main').getByRole('link', { name: 'Passeport' })).toHaveAttribute('href', '/demarches/passeport-biometrique');
     await expect(page.getByRole('link', { name: /Connexion \/ Login/ })).toHaveCount(0);
+    await expect(page.locator('nav a[href="/villes"]')).toHaveCount(0);
   });
 
   test('Recherche et filtrage dans le catalogue des démarches', async ({ page }) => {

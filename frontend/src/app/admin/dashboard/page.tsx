@@ -31,6 +31,7 @@ interface DashboardData {
     recent_updates: Array<{ id: number; title: string; status: string }>;
   };
   validation_queue?: Array<{ id: number; title: string; author: string | null }>;
+  community?: { pending_reviews: number; pending_questions: number; pending_answers: number };
   audience?: { visitors_today: number; views_today: number; top_demarches: Array<{ id: number; title: string; views_count: number }> };
   team?: { total: number; active: number; by_role: Record<AdminRole, number>; locked: number; with_failed_logins: number };
   recent_activity?: Array<{ id: number; description: string; admin: string | null; created_at: string | null }>;
@@ -120,11 +121,23 @@ export default function AdminDashboard() {
                   : <StatCard label={t('admin.stat_my_published')} value={dashboard.my_work?.my_published ?? 0} icon={CheckCircle2} tone="bg-blue-50 text-blue-700" />}
               </section>
 
+              {dashboard.community && (
+                <section aria-labelledby="community-title" className="mt-6">
+                  <h2 id="community-title" className="mb-4 text-xl font-bold text-slate-950">{t('admin.community_title')}</h2>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    <StatCard label={t('admin.stat_pending_reviews')} value={dashboard.community.pending_reviews} icon={Activity} tone="bg-violet-50 text-violet-700" />
+                    <StatCard label={t('admin.stat_pending_questions')} value={dashboard.community.pending_questions} icon={Activity} tone="bg-sky-50 text-sky-700" />
+                    <StatCard label={t('admin.stat_pending_answers')} value={dashboard.community.pending_answers} icon={Activity} tone="bg-teal-50 text-teal-700" />
+                  </div>
+                </section>
+              )}
+
               <section className="mt-10">
                 <h2 className="mb-4 text-xl font-bold text-slate-950">{t('admin.shortcuts')}</h2>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                   <Shortcut href="/admin/demarches" label={t('admin.demarches')} description={t('admin.sc_demarches')} icon={FileText} />
                   <Shortcut href="/admin/signalements" label={t('admin.signalements')} description={t('admin.sc_signalements')} icon={AlertTriangle} />
+                  {dashboard.capabilities.moderate_community && <Shortcut href="/admin/avis" label={t('admin.community_title')} description={t('admin.community_shortcut')} icon={Users} />}
                   {dashboard.capabilities.manage_categories && <Shortcut href="/admin/categories" label={t('admin.categories')} description={t('admin.sc_categories')} icon={Folder} />}
                   {dashboard.capabilities.view_analytics && <Shortcut href="/admin/analytics" label={t('admin.analytics')} description={t('admin.sc_analytics')} icon={BarChart3} />}
                   {dashboard.capabilities.manage_team && <Shortcut href="/admin/users" label={t('admin.team')} description={t('admin.sc_team')} icon={Users} />}

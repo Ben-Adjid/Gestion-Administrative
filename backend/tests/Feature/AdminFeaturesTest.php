@@ -57,8 +57,10 @@ class AdminFeaturesTest extends TestCase
             'categorie_id' => $categorie->id,
             'cost' => '500 FCFA',
             'institution' => 'Mairie',
+            'validity' => 'Permanente',
             'status' => 'published',
             'title_en' => 'Signature legalisation',
+            'validity_en' => 'Permanent',
             'procedure_steps_en' => ['Go to the town hall'],
             'title_ar' => 'تصديق التوقيع',
         ])->assertCreated()->json('data.id');
@@ -75,6 +77,7 @@ class AdminFeaturesTest extends TestCase
             ->assertJsonPath('data.title', 'تصديق الإمضاء');
         $this->getJson('/api/v1/demarches/legalisation-de-signature?lang=en')
             ->assertOk()
+            ->assertJsonPath('data.validity', 'Permanent')
             ->assertJsonPath('data.procedure_steps.0', 'Go to the town hall');
     }
 

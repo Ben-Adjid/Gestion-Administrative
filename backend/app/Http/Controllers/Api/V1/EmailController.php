@@ -50,6 +50,7 @@ class EmailController extends Controller
             'email' => $admin->email,
             'notifications' => [
                 'signalements' => $admin->notify_signalements ?? true,
+                'community' => $admin->notify_community ?? true,
                 'demarche_updates' => $admin->notify_demarche_updates ?? true,
                 'admin_reports' => $admin->notify_admin_reports ?? true,
                 'newsletter' => $admin->notify_newsletter ?? false,
@@ -68,6 +69,7 @@ class EmailController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'notifications.signalements' => 'boolean',
+            'notifications.community' => 'boolean',
             'notifications.demarche_updates' => 'boolean',
             'notifications.admin_reports' => 'boolean',
             'notifications.newsletter' => 'boolean',
@@ -82,6 +84,7 @@ class EmailController extends Controller
 
         $admin->update([
             'notify_signalements' => $request->boolean('notifications.signalements', true),
+            'notify_community' => $request->boolean('notifications.community', true),
             'notify_demarche_updates' => $request->boolean('notifications.demarche_updates', true),
             'notify_admin_reports' => $request->boolean('notifications.admin_reports', true),
             'notify_newsletter' => $request->boolean('notifications.newsletter', false),

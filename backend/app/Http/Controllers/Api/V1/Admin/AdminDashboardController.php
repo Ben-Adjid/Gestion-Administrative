@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Api\V1\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ActivityLog;
 use App\Models\Admin;
+use App\Models\Answer;
 use App\Models\Demarche;
+use App\Models\DemarcheReview;
+use App\Models\Question;
 use App\Models\Signalement;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -37,6 +40,7 @@ class AdminDashboardController extends Controller
 
         if ($admin->isModerator()) {
             $data['validation_queue'] = $this->validationQueue();
+            $data['community'] = $this->communityBlock();
             $data['audience'] = $this->audienceBlock();
         }
 
@@ -112,6 +116,16 @@ class AdminDashboardController extends Controller
             'recent_updates' => Demarche::where('updated_by', $admin->id)->latest('updated_at')->limit(5)
                 ->get(['id', 'title', 'status', 'updated_at'])
                 ->map(fn ($d) => ['id' => $d->id, 'title' => $d->title, 'status' => $d->status, 'updated_at' => $d->updated_at?->toIso8601String()]),
+        ];
+    }
+
+    /** Contenus publics en attente de modération : avis, questions et réponses. */
+    private function communityBlock(): array
+    {
+        return [
+            'pending_reviews' => DemarcheReview::where('status', 'pending')->count(),
+            'pending_questions' => Question::where('status', 'pending')->count(),
+            'pending_answers' => Answer::where('status', 'pending')->count(),
         ];
     }
 

@@ -16,15 +16,63 @@ class CatalogueTranslationTest extends TestCase
         $this->seed(DatabaseSeeder::class);
     }
 
-    public function test_seeded_catalogue_uses_the_specification_categories_and_valid_slugs(): void
+    public function test_seeded_catalogue_contains_all_documented_procedures_and_categories(): void
     {
-        foreach (['identite', 'etat-civil', 'etudes', 'legalisations', 'sante', 'travail', 'justice', 'voyage'] as $slug) {
+        foreach (['identite', 'etat-civil', 'voyage', 'etudes', 'travail', 'sante', 'justice', 'legalisations', 'commerce', 'transport'] as $slug) {
             $this->assertDatabaseHas('categories', ['slug' => $slug, 'is_active' => true]);
         }
+        $this->assertSame(10, \App\Models\Categorie::where('is_active', true)->count());
 
-        $this->getJson('/api/v1/demarches?per_page=50')->assertOk()->assertJsonCount(11, 'data');
-        $this->getJson('/api/v1/demarches?category=etat-civil')->assertOk()->assertJsonCount(3, 'data');
+        $this->getJson('/api/v1/demarches?per_page=50')
+            ->assertOk()
+            ->assertJsonCount(50, 'data')
+            ->assertJsonPath('meta.total', 80)
+            ->assertJsonPath('meta.last_page', 2);
+        $this->getJson('/api/v1/demarches?per_page=50&page=2')
+            ->assertOk()
+            ->assertJsonCount(30, 'data');
+        $this->getJson('/api/v1/demarches?category=etat-civil&per_page=100')->assertOk()->assertJsonCount(11, 'data');
         $this->getJson('/api/v1/demarches/passeport-biometrique')->assertOk()->assertJsonPath('data.categorie.slug', 'voyage');
+
+        $expectedCounts = [
+            'identite' => 11,
+            'etat-civil' => 11,
+            'voyage' => 7,
+            'etudes' => 9,
+            'travail' => 8,
+            'sante' => 7,
+            'justice' => 6,
+            'legalisations' => 7,
+            'commerce' => 8,
+            'transport' => 6,
+        ];
+        foreach ($expectedCounts as $categorySlug => $expectedCount) {
+            $this->assertSame(
+                $expectedCount,
+                \App\Models\Demarche::whereHas('categorie', fn ($query) => $query->where('slug', $categorySlug))
+                    ->where('status', 'published')
+                    ->count(),
+                "Nombre de démarches incorrect pour {$categorySlug}"
+            );
+        }
+
+        foreach (\App\Models\Demarche::where('status', 'published')->get() as $demarche) {
+            $this->assertNotEmpty($demarche->title);
+            $this->assertNotEmpty($demarche->cost);
+            $this->assertNotEmpty($demarche->processing_time);
+            $this->assertNotEmpty($demarche->validity);
+            $this->assertNotEmpty($demarche->required_documents);
+            $this->assertNotEmpty($demarche->conditions);
+            $this->assertNotEmpty($demarche->procedure_steps);
+        }
+
+        $cni = \App\Models\Demarche::where('slug', 'carte-didentite-nationale')->firstOrFail();
+        $this->assertSame('2 à 8 semaines selon disponibilité', $cni->getAttribute('processing_time'));
+        $this->assertSame('10 ans', $cni->getAttribute('validity'));
+        $this->assertSame(6, \count($cni->getAttribute('required_documents')));
+        $this->assertSame(6, \count($cni->getAttribute('procedure_steps')));
+        $this->assertSame(6, \count($cni->getAttribute('conditions')));
+        $this->assertSame("2 photos d'identité récentes (fond blanc, 4x4 cm)", $cni->getAttribute('required_documents')[1]);
     }
 
     public function test_demarche_is_served_in_the_requested_language(): void
@@ -32,18 +80,19 @@ class CatalogueTranslationTest extends TestCase
         $this->getJson('/api/v1/demarches/acte-de-naissance?lang=ar')
             ->assertOk()
             ->assertJsonPath('data.language', 'ar')
-            ->assertJsonPath('data.is_translated', true)
-            ->assertJsonPath('data.title', 'شهادة الميلاد')
+            ->assertJsonPath('data.is_translated', false)
+            ->assertJsonPath('data.title', 'مستخرج شهادة الميلاد (نسخة)')
             ->assertJsonPath('data.categorie.name', 'الحالة المدنية');
 
         $this->getJson('/api/v1/demarches/acte-de-naissance?lang=en')
             ->assertOk()
-            ->assertJsonPath('data.title', 'Birth Certificate')
-            ->assertJsonPath('data.procedure_steps.0', 'Go to the town hall or civil registry office of the place of birth');
+            ->assertJsonPath('data.title', 'Birth Certificate Extract (Copy)')
+            ->assertJsonPath('data.is_translated', false)
+            ->assertJsonPath('data.procedure_steps.0', 'Se rendre à la mairie du lieu de naissance');
 
         $this->getJson('/api/v1/demarches/acte-de-naissance')
             ->assertOk()
-            ->assertJsonPath('data.title', 'Acte de Naissance');
+            ->assertJsonPath('data.title', "Extrait d'acte de naissance (copie)");
     }
 
     public function test_validation_messages_follow_the_requested_language(): void
@@ -66,11 +115,11 @@ class CatalogueTranslationTest extends TestCase
         $this->getJson('/api/v1/demarches?' . http_build_query(['q' => 'جواز', 'lang' => 'ar']))
             ->assertOk()
             ->assertJsonPath('data.0.slug', 'passeport-biometrique')
-            ->assertJsonPath('data.0.title', 'جواز السفر البيومتري');
+            ->assertJsonPath('data.0.title', 'جواز السفر التشادي العادي — الطلب الأول');
 
         $this->getJson('/api/v1/search/suggest?' . http_build_query(['q' => 'Passport', 'lang' => 'en']))
             ->assertOk()
-            ->assertJsonPath('data.0.title', 'Biometric Passport');
+            ->assertJsonPath('data.0.title', 'Chadian Ordinary Passport — First Application');
     }
 
     public function test_catalogue_normalization_keeps_the_team_category_choices(): void

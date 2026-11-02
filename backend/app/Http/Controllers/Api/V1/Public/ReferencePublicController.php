@@ -9,6 +9,7 @@ use App\Models\City;
 use App\Models\Demarche;
 use App\Models\DocumentValidityRule;
 use App\Models\LifeEvent;
+use App\Models\OfficeService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -56,7 +57,14 @@ class ReferencePublicController extends Controller
     {
         $language = City::requestLanguage();
         $city = City::where('slug', $slug)->where('is_active', true)->firstOrFail();
-        $offices = $city->offices()->where('is_active', true)->with(['city', 'demarches' => fn ($q) => $q->published()])->orderBy('name')->get();
+        $offices = $city->offices()->where('is_active', true)->with([
+            'city',
+            'services' => fn ($q) => $q
+                ->whereIn('status', OfficeService::DISPLAYABLE)
+                ->whereNotNull('source_url')
+                ->whereHas('demarche', fn ($demarches) => $demarches->published())
+                ->with('demarche'),
+        ])->orderBy('name')->get();
 
         return response()->json(['data' => [
             'id' => $city->id,
@@ -64,9 +72,9 @@ class ReferencePublicController extends Controller
             'name' => $city->localized('name', $language),
             'province' => $city->province,
             'offices' => $offices->map(fn ($office) => (new OfficeResource($office))->resolve() + [
-                'demarches' => $office->demarches->map(fn (Demarche $d) => [
-                    'slug' => $d->slug,
-                    'title' => $d->getTranslatedContent($language)['title'],
+                'demarches' => $office->services->map(fn (OfficeService $service) => [
+                    'slug' => $service->demarche->slug,
+                    'title' => $service->demarche->getTranslatedContent($language)['title'],
                 ])->values(),
             ])->values(),
         ]]);

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Models\Categorie;
 use App\Models\Demarche;
 use App\Models\Signalement;
+use Database\Seeders\DemarcheSeeder;
 use Illuminate\Support\Facades\DB;
 
 class PublicApiTest extends TestCase
@@ -155,8 +156,19 @@ class PublicApiTest extends TestCase
         $this->seed(\Database\Seeders\DatabaseSeeder::class);
 
         foreach ($tables as $table) {
-            $this->assertSame($initialCounts[$table], \Illuminate\Support\Facades\DB::table($table)->count());
+            $this->assertSame(
+                $initialCounts[$table],
+                \Illuminate\Support\Facades\DB::table($table)->count(),
+                "Seeder duplicated rows in {$table}"
+            );
         }
+    }
+
+    public function test_legacy_demarche_seeder_does_not_publish_unverified_demo_data(): void
+    {
+        $this->seed(DemarcheSeeder::class);
+
+        $this->assertSame(0, Demarche::count());
     }
 
     public function test_public_page_view_stores_only_a_hashed_session_identifier(): void

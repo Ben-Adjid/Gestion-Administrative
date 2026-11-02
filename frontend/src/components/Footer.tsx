@@ -32,7 +32,8 @@ export const Footer = () => {
   const whatsapp = whatsappLink();
 
   return (
-    <footer className="mt-20 print:hidden border-t-4 border-[#FECB00] bg-[#0b1329] text-slate-200">
+    <footer className="mt-20 print:hidden border-t border-slate-800 bg-gradient-to-br from-slate-950 via-[#0b1329] to-blue-950 text-slate-200">
+      <div aria-hidden="true" className="h-1 bg-gradient-to-r from-blue-700 via-amber-400 to-red-600" />
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">

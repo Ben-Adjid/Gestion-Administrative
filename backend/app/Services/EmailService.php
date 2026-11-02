@@ -7,9 +7,34 @@ use App\Mail\WelcomeMail;
 use App\Mail\PasswordResetMail;
 use App\Mail\SignalementResponseMail;
 use App\Mail\NotificationMail;
+use App\Models\Admin;
 
 class EmailService
 {
+    /**
+     * Alerte immédiate des modérateurs (super admins et admins actifs) qui ont activé la préférence donnée.
+     * Les administrateurs qui ont choisi « jamais » ne reçoivent rien. Les récapitulatifs quotidien et hebdomadaire
+     * ne sont pas encore produits : ces comptes reçoivent l'alerte immédiate.
+     *
+     * @param  string  $preference  colonne booléenne de la table admins (notify_signalements, notify_community…)
+     * @return int nombre de destinataires
+     */
+    public function alertModerators(string $subject, string $body, string $preference): int
+    {
+        $recipients = Admin::query()
+            ->where('is_active', true)
+            ->whereIn('role', ['super_admin', 'admin'])
+            ->where($preference, true)
+            ->where('notification_frequency', '!=', 'never')
+            ->get();
+
+        foreach ($recipients as $admin) {
+            Mail::to($admin->email)->queue(new NotificationMail($admin, $subject, $body, 'admin'));
+        }
+
+        return $recipients->count();
+    }
+
     /**
      * Envoyer email de bienvenue
      */

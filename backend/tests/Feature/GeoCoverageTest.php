@@ -152,6 +152,20 @@ class GeoCoverageTest extends TestCase
         $this->assertSame(now()->subDays(10)->toDateString(), $place['offices'][0]['service_verified_on']);
     }
 
+    public function test_city_page_shows_only_published_procedures_with_displayable_sourced_services(): void
+    {
+        $this->service($this->mongoOffice, 'casier-judiciaire', 'to_verify');
+
+        $this->getJson('/api/v1/cities/moundou')
+            ->assertOk()
+            ->assertJsonPath('data.offices.0.demarches.0.slug', 'acte-de-naissance');
+
+        $this->getJson('/api/v1/cities/mongo')
+            ->assertOk()
+            ->assertJsonCount(1, 'data.offices.0.demarches')
+            ->assertJsonPath('data.offices.0.demarches.0.slug', 'passeport-biometrique');
+    }
+
     public function test_national_coverage_never_leaks_offices_between_cities(): void
     {
         // Toutes les localités × toutes les démarches configurées.

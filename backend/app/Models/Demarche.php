@@ -47,6 +47,8 @@ class Demarche extends Model
         'extra_costs',
         'processing_time',
         'validity',
+        'validity_en',
+        'validity_ar',
         'source_hash',
         'processing_time_en',
         'processing_time_ar',
@@ -301,6 +303,7 @@ class Demarche extends Model
     public const TRANSLATABLE = [
         'title', 'summary', 'description', 'cost', 'required_documents', 'procedure_steps',
         'conditions', 'institution', 'processing_time', 'location',
+        'validity',
     ];
 
     /**

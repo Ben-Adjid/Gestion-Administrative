@@ -23,7 +23,6 @@ const LINKS = [
 // Menu mobile : toutes les pages publiques
 const MOBILE_LINKS = [
   ...LINKS,
-  { href: '/villes', key: 'navx.cities' },
   { href: '/faq', key: 'nav.faq' },
   { href: '/contact', key: 'nav.contact' },
 ];
@@ -77,7 +76,7 @@ export const Navbar = () => {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex" aria-label={t('nav.main')}>
+          <nav className="hidden items-center gap-1 xl:flex" aria-label={t('nav.main')}>
             {LINKS.map(({ href, key }) => (
               <Link
                 key={href}
@@ -111,7 +110,7 @@ export const Navbar = () => {
             aria-label={mobileMenuOpen ? t('nav.close_menu') : t('nav.open_menu')}
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-xl p-2.5 text-slate-700 transition hover:bg-slate-100 lg:hidden"
+            className="rounded-xl p-2.5 text-slate-700 transition hover:bg-slate-100 xl:hidden"
           >
             {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -125,7 +124,7 @@ export const Navbar = () => {
         )}
 
         {mobileMenuOpen && (
-          <nav className="space-y-1 border-t border-slate-100 pb-4 pt-3 lg:hidden" aria-label={t('nav.main')}>
+          <nav className="space-y-1 border-t border-slate-100 pb-4 pt-3 xl:hidden" aria-label={t('nav.main')}>
             {MOBILE_LINKS.map(({ href, key }) => (
               <Link key={href} href={href} aria-current={isActive(pathname, href) ? 'page' : undefined} className={`block rounded-xl px-4 py-3 text-base font-medium transition hover:bg-blue-50 hover:text-blue-800 ${isActive(pathname, href) ? 'bg-blue-50 text-blue-800' : 'text-slate-700'}`}>
                 {t(key)}

@@ -10,6 +10,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\RateLimiter;
 use App\Mail\SignalementReceivedMail;
+use App\Services\EmailService;
+use Illuminate\Support\Str;
 
 class SignalementPublicController extends Controller
 {
@@ -53,6 +55,14 @@ class SignalementPublicController extends Controller
         if (filled($signalement->author_email)) {
             Mail::to($signalement->author_email)->queue(new SignalementReceivedMail($signalement->load('demarche')));
         }
+
+        // Alerte immédiate de l'équipe (préférence « signalements » de chaque administrateur).
+        app(EmailService::class)->alertModerators(
+            'Nouveau signalement : ' . ($signalement->demarche?->title ?? 'site'),
+            "Un signalement de type « {$signalement->type} » vient d'être envoyé.\n\n" . Str::limit($signalement->message, 300)
+                . "\n\nTraiter le signalement : " . config('frontend.url') . '/admin/signalements',
+            'notify_signalements',
+        );
 
         return response()->json([
             'message' => __('messages.signalement_sent'),

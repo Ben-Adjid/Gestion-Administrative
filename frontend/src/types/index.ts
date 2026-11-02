@@ -2,8 +2,8 @@ export interface Categorie {
   id: number;
   name: string;
   slug: string;
-  ministry?: string | null;
   description: string | null;
+  ministry?: string | null;
   icon: string;
   color: string;
   display_order: number;
@@ -23,6 +23,7 @@ export interface Demarche {
   cost: string;
   cost_amount: number | null;
   processing_time: string | null;
+  validity: string | null;
   processing_time_days: number | null;
   institution: string;
   /** Organisme compétent : commune, juridiction/province ou organisme national (null : non précisé). */

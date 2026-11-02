@@ -8,8 +8,58 @@ import { fetchApi } from '@/lib/api';
 import { useLanguage } from '@/hooks/useLanguage';
 
 interface EmailPreferences {
-  notifications: { signalements: boolean; demarche_updates: boolean; admin_reports: boolean; newsletter: boolean };
+  notifications: { signalements: boolean; community: boolean; demarche_updates: boolean; admin_reports: boolean; newsletter: boolean };
   frequency: string;
+}
+
+/** Alertes immédiates de l'équipe : nouveaux signalements, avis, questions et réponses à modérer (modérateurs uniquement). */
+function TeamAlertPreferences() {
+  const { t } = useLanguage();
+  const [preferences, setPreferences] = useState<EmailPreferences | null>(null);
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetchApi<EmailPreferences>('/admin/email/preferences')
+      .then(setPreferences)
+      .catch((e: unknown) => setError(e instanceof Error ? e.message : t('common.error_generic')));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const save = async (key: 'signalements' | 'community', checked: boolean) => {
+    if (!preferences) return;
+    // Le serveur attend toutes les préférences : on renvoie les autres inchangées.
+    const next = { ...preferences, notifications: { ...preferences.notifications, [key]: checked } };
+    setMessage('');
+    setError('');
+    try {
+      await fetchApi('/admin/email/preferences', { method: 'PUT', body: JSON.stringify(next) });
+      setPreferences(next);
+      setMessage(t('adm.p_report_saved'));
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : t('common.error_generic'));
+    }
+  };
+
+  if (!preferences) return null;
+
+  return (
+    <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900"><Mail size={18} aria-hidden="true" /> {t('adm.p_alerts_title')}</h2>
+      <div className="mt-4 space-y-3">
+        <label className="flex items-start gap-3 text-sm text-slate-700">
+          <input type="checkbox" checked={preferences.notifications.signalements} onChange={(e) => save('signalements', e.target.checked)} className="mt-0.5 h-4 w-4" />
+          {t('adm.p_alert_signalements')}
+        </label>
+        <label className="flex items-start gap-3 text-sm text-slate-700">
+          <input type="checkbox" checked={preferences.notifications.community} onChange={(e) => save('community', e.target.checked)} className="mt-0.5 h-4 w-4" />
+          {t('adm.p_alert_community')}
+        </label>
+      </div>
+      {message && <p role="status" className="mt-3 text-sm text-emerald-700">{message}</p>}
+      {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
+    </section>
+  );
 }
 
 /** Abonnement au rapport mensuel (envoyé aux administrateurs et super administrateurs). */
@@ -92,6 +142,7 @@ export default function AdminProfilePage() {
             </section>
           )}
 
+          {admin && isModeratorRole(admin.role) && <TeamAlertPreferences />}
           {admin && isModeratorRole(admin.role) && <MonthlyReportPreference />}
         </div>
       </main>

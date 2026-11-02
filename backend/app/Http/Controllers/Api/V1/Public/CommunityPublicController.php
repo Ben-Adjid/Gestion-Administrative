@@ -8,8 +8,10 @@ use App\Models\Answer;
 use App\Models\Demarche;
 use App\Models\DemarcheReview;
 use App\Models\Question;
+use App\Services\EmailService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 /**
  * Contributions publiques sans compte : avis sur une démarche, questions et réponses.
@@ -89,6 +91,7 @@ class CommunityPublicController extends Controller
 
         $demarche->reviews()->create($data + ['status' => 'pending', 'ip_hash' => $this->ipHash($request)]);
         $this->recordSubmission($request, 'review');
+        $this->alertTeam('Nouvel avis à modérer : ' . $demarche->title, "Note : {$data['rating']}/5. Un avis du public attend validation.", $data['comment'], '/admin/avis');
 
         return response()->json(['message' => __('messages.review_received')], 201);
     }
@@ -172,6 +175,7 @@ class CommunityPublicController extends Controller
             'ip_hash' => $this->ipHash($request),
         ]);
         $this->recordSubmission($request, 'question');
+        $this->alertTeam('Nouvelle question à modérer', 'Une question du public attend validation.', $data['body'], '/admin/questions');
 
         return response()->json(['message' => __('messages.question_received')], 201);
     }
@@ -198,8 +202,19 @@ class CommunityPublicController extends Controller
 
         $question->answers()->create($data + ['is_official' => false, 'status' => 'pending', 'ip_hash' => $this->ipHash($request)]);
         $this->recordSubmission($request, 'answer');
+        $this->alertTeam('Nouvelle réponse à modérer', 'Une réponse de la communauté attend validation.', $data['body'], '/admin/questions');
 
         return response()->json(['message' => __('messages.answer_received')], 201);
+    }
+
+    /** Alerte immédiate des modérateurs qui ont activé « contenus du public » (avis, questions, réponses). */
+    private function alertTeam(string $subject, string $intro, string $content, string $adminPath): void
+    {
+        app(EmailService::class)->alertModerators(
+            $subject,
+            $intro . "\n\n" . Str::limit($content, 300) . "\n\nModérer : " . config('frontend.url') . $adminPath,
+            'notify_community',
+        );
     }
 
     /** Langue de lecture (?lang=) ou, pour un envoi, langue de l'interface (Accept-Language). */

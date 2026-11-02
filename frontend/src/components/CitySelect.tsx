@@ -43,7 +43,7 @@ export function useCitiesState(): { cities: City[]; status: CitiesStatus; retry:
   return { cities, status, retry: () => setAttempt((n) => n + 1) };
 }
 
-/** Liste simple des villes (vide pendant le chargement ou en cas d'erreur : les sélecteurs restent utilisables). */
+/** Liste simple des villes pour les composants qui n'ont pas besoin de piloter le chargement. */
 export function useCities(): City[] {
   return useCitiesState().cities;
 }
@@ -70,7 +70,7 @@ interface Props {
  */
 export function CitySelect({ value, onChange, label, emptyLabel, id = 'city-select', otherGroupLabel, searchLabel }: Props) {
   const { t, language } = useLanguage();
-  const cities = useCities();
+  const { cities, status, retry } = useCitiesState();
   const otherLabel = otherGroupLabel ?? t('placex.city_other');
   const searchText = searchLabel ?? t('placex.city_search');
 
@@ -116,11 +116,11 @@ export function CitySelect({ value, onChange, label, emptyLabel, id = 'city-sele
           {label}
         </span>
         <label htmlFor={`${id}-province`} className="sr-only">{t('placex.province')}</label>
-        <select id={`${id}-province`} value={province} onChange={(e) => changeProvince(e.target.value)} disabled={!!needle} className={selectClass}>
+        <select id={`${id}-province`} value={province} onChange={(e) => changeProvince(e.target.value)} disabled={status !== 'ready' || !!needle} className={selectClass}>
           <option value="">{t('placex.all_provinces')}</option>
           {provinces.map((name) => <option key={name || 'none'} value={name}>{name || otherLabel}</option>)}
         </select>
-        {cities.length > 8 && (
+        {status === 'ready' && cities.length > 8 && (
           <>
             <label htmlFor={`${id}-search`} className="sr-only">{searchText}</label>
             <input
@@ -134,13 +134,21 @@ export function CitySelect({ value, onChange, label, emptyLabel, id = 'city-sele
           </>
         )}
         <label htmlFor={id} className="sr-only">{label}</label>
-        <select id={id} value={value ?? ''} onChange={(e) => pickLocality(e.target.value || null)} className={selectClass}>
+        <select id={id} value={value ?? ''} onChange={(e) => pickLocality(e.target.value || null)} disabled={status !== 'ready'} className={selectClass}>
           <option value="">{emptyLabel}</option>
           {localities.map((city) => (
             <option key={city.slug} value={city.slug}>{city.name}{needle && city.province ? ` (${city.province})` : ''}</option>
           ))}
         </select>
       </div>
+      {status === 'loading' && <p role="status" className="text-xs text-slate-600">{t('common.loading')}</p>}
+      {status === 'error' && (
+        <div role="alert" className="flex flex-wrap items-center gap-2 text-xs text-red-800">
+          <span>{t('common.error_generic')}</span>
+          <button type="button" onClick={retry} className="font-semibold underline hover:text-red-950">{t('common.retry')}</button>
+        </div>
+      )}
+      {status === 'ready' && cities.length === 0 && <p role="status" className="text-xs text-slate-600">{t('cityx.empty')}</p>}
       {needle && localities.length === 0 && <p className="text-xs text-slate-600">{t('placex.no_locality_found')}</p>}
       <MissingLocalityForm language={language} defaultProvince={province} />
     </div>

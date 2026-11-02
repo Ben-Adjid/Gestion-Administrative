@@ -15,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         \App\Providers\AppServiceProvider::class,
     ])
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->redirectGuestsTo(
+            fn (\Illuminate\Http\Request $request) => $request->is('api/*') ? null : route('login')
+        );
         $middleware->statefulApi();
         $middleware->api(prepend: [
             \Illuminate\Http\Middleware\HandleCors::class,

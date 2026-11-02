@@ -1,0 +1,80 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Check local PDF extraction support",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-c",
+				"import importlib.util; print({name: importlib.util.find_spec(name) is not None for name in ['fitz', 'pypdf', 'pdfplumber']})"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test catalogue seeder",
+			"type": "shell",
+			"command": "php",
+			"args": [
+				"backend\\artisan",
+				"test",
+				"--filter=CatalogueTranslationTest"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test catalogue seeder in backend",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/d",
+				"/c",
+				"cd /d backend && php artisan test --filter=CatalogueTranslationTest"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Test catalogue seeder in backend via powershell",
+			"type": "shell",
+			"command": "Set-Location backend; php artisan test --filter=CatalogueTranslationTest",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Full Laravel test suite after catalogue import",
+			"type": "shell",
+			"command": "Set-Location backend; php artisan test",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Retest seeder idempotency",
+			"type": "shell",
+			"command": "Set-Location backend; php artisan test --filter=PublicApiTest",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Identify seeder duplicate table",
+			"type": "shell",
+			"command": "Set-Location backend; php artisan test --filter=\"database seeder does not duplicate demo records\"",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Diagnose seeder idempotency assertion",
+			"type": "shell",
+			"command": "Set-Location backend; php artisan test --filter=PublicApiTest",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

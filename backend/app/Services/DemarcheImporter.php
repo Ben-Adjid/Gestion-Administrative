@@ -26,6 +26,7 @@ class DemarcheImporter
         'cost' => ['cout', true],
         'description' => ['description', true],
         'processing_time' => ['delai', false],
+        'validity' => ['validite', false],
         'summary' => ['resume', false],
         'required_documents' => ['pieces', false],
         'procedure_steps' => ['etapes', false],
@@ -99,7 +100,7 @@ class DemarcheImporter
             }
             $seen[$titleKey] = true;
 
-            foreach ([['title', 255], ['institution', 255], ['cost', 255], ['processing_time', 255], ['location', 255], ['contact_phone', 50], ['contact_email', 255]] as [$field, $max]) {
+            foreach ([['title', 255], ['institution', 255], ['cost', 255], ['processing_time', 255], ['validity', 255], ['location', 255], ['contact_phone', 50], ['contact_email', 255]] as [$field, $max]) {
                 if (mb_strlen($data[$field]) > $max) {
                     $lineErrors[] = __('validation.max.string', ['attribute' => self::COLUMNS[$field][0], 'max' => $max]);
                 }
@@ -159,7 +160,7 @@ class DemarcheImporter
         $writer->addRow(Row::fromValues([
             'Exemple : légalisation de signature', 'legalisations', 'Mairie de la commune', '500 FCFA',
             'Faire certifier une signature sur un document. Remplacez cette ligne par vos démarches.',
-            '1 jour', 'Faire légaliser une signature', "Pièce d'identité ; Document à légaliser",
+            '1 jour', 'Permanente (la signature est authentifiée à la date de légalisation)', 'Faire légaliser une signature', "Pièce d'identité ; Document à légaliser",
             'Se présenter au guichet ; Payer les frais ; Retirer le document', '', 'Mairie', '', '', '',
         ]));
         $writer->close();

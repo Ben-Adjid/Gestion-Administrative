@@ -12,35 +12,76 @@
 return [
     'categories' => [
         // slug => [nom FR, EN, AR, icône Tabler, couleur, ordre, anciens slugs fusionnés]
-        'identite' => ['Identité', 'Identity', 'الهوية', 'ti-id', 'blue', 1, []],
+        'identite' => ['Identité & Documents', 'Identity & Documents', 'الهوية والوثائق', 'ti-id', 'blue', 1, []],
         'etat-civil' => ['État civil', 'Civil status', 'الحالة المدنية', 'ti-heart', 'teal', 2, []],
-        'etudes' => ['Études', 'Education', 'الدراسة', 'ti-school', 'indigo', 3, ['education', 'Éducation', 'éducation']],
-        'legalisations' => ['Légalisations', 'Legalizations', 'التصديقات', 'ti-certificate', 'amber', 4, []],
-        'sante' => ['Santé', 'Health', 'الصحة', 'ti-heart-rate-monitor', 'coral', 5, ['santé']],
-        'travail' => ['Travail', 'Employment', 'العمل', 'ti-briefcase', 'green', 6, ['emploi']],
-        'justice' => ['Justice', 'Justice', 'العدالة', 'ti-gavel', 'pink', 7, []],
-        'voyage' => ['Voyage et Visa', 'Travel & Visa', 'السفر والتأشيرة', 'ti-plane', 'gray', 8, []],
-        // Catégories complémentaires nécessaires aux fiches existantes
-        'transport' => ['Transport', 'Transport', 'النقل', 'ti-car', 'red', 9, []],
-        'urbanisme' => ['Urbanisme et logement', 'Urban planning & housing', 'التعمير والسكن', 'ti-building', 'orange', 10, ['finances']],
+        'voyage' => ['Voyage & Visas', 'Travel & Visas', 'السفر والتأشيرات', 'ti-plane', 'gray', 3, []],
+        'etudes' => ['Études & Formation', 'Education & Training', 'الدراسة والتكوين', 'ti-school', 'indigo', 4, ['education', 'Éducation', 'éducation']],
+        'travail' => ['Travail & Emploi', 'Work & Employment', 'العمل والتوظيف', 'ti-briefcase', 'green', 5, ['emploi']],
+        'sante' => ['Santé & Social', 'Health & Social Services', 'الصحة والشؤون الاجتماعية', 'ti-heart-rate-monitor', 'coral', 6, ['santé']],
+        'justice' => ['Justice & Légal', 'Justice & Legal Affairs', 'العدالة والشؤون القانونية', 'ti-gavel', 'pink', 7, []],
+        'legalisations' => ['Légalisations & Foncier', 'Legalizations & Land', 'التصديقات والعقار', 'ti-certificate', 'amber', 8, ['urbanisme']],
+        'commerce' => ['Commerce & Entreprise', 'Trade & Business', 'التجارة والأعمال', 'ti-building-store', 'orange', 9, ['finances']],
+        'transport' => ['Transport & Véhicules', 'Transport & Vehicles', 'النقل والمركبات', 'ti-car', 'red', 10, []],
+    ],
+    'legacy_category_names' => [
+        'identite' => ['Identité', 'Identity', 'الهوية'],
+        'etudes' => ['Études', 'Education', 'الدراسة'],
+        'legalisations' => ['Légalisations', 'Legalizations', 'التصديقات'],
+        'sante' => ['Santé', 'Health', 'الصحة'],
+        'travail' => ['Travail', 'Employment', 'العمل'],
+        'justice' => ['Justice', 'Justice', 'العدالة'],
+        'voyage' => ['Voyage et Visa', 'Travel & Visa', 'السفر والتأشيرة'],
+        'transport' => ['Transport', 'Transport', 'النقل'],
     ],
 
     // Descriptions des catégories [FR, EN, AR] : écrites seulement si le champ est vide
     // ou contient une valeur obsolète listée dans 'obsolete_category_descriptions'.
     'category_descriptions' => [
-        'identite' => ['Carte d’identité, inscription électorale et documents d’identité.', 'Identity card, voter registration and identity documents.', 'بطاقة التعريف والتسجيل الانتخابي ووثائق الهوية.'],
-        'etat-civil' => ['Actes de naissance, de mariage et de décès.', 'Birth, marriage and death certificates.', 'شهادات الميلاد والزواج والوفاة.'],
-        'etudes' => ['Inscriptions, diplômes et démarches scolaires ou universitaires.', 'Enrolment, diplomas and school or university procedures.', 'التسجيل والشهادات والإجراءات المدرسية والجامعية.'],
-        'legalisations' => ['Légalisation de signatures et certification de copies.', 'Legalisation of signatures and certification of copies.', 'التصديق على التوقيعات والنسخ.'],
-        'sante' => ['Consultations et démarches dans les structures de santé.', 'Consultations and procedures in health facilities.', 'الاستشارات والإجراءات في المرافق الصحية.'],
-        'travail' => ['Emploi, contrats et protection sociale.', 'Employment, contracts and social protection.', 'التشغيل والعقود والحماية الاجتماعية.'],
-        'justice' => ['Casier judiciaire et démarches auprès des tribunaux.', 'Criminal record and court procedures.', 'السجل العدلي والإجراءات لدى المحاكم.'],
-        'voyage' => ['Passeport, visas et documents de voyage.', 'Passport, visas and travel documents.', 'جواز السفر والتأشيرات ووثائق السفر.'],
-        'transport' => ['Permis de conduire et documents des véhicules.', 'Driving licence and vehicle documents.', 'رخصة السياقة ووثائق المركبات.'],
-        'urbanisme' => ['Permis de construire, terrains et logement.', 'Building permits, land and housing.', 'رخص البناء والأراضي والسكن.'],
+        'identite' => ['Ministère responsable : Ministère de la Sécurité publique. Carte d’identité, inscription électorale et documents d’identité.', 'Responsible ministry: Ministry of Public Security. Identity cards, voter registration and identity documents.', 'الوزارة المسؤولة: وزارة الأمن العام. بطاقات الهوية والتسجيل الانتخابي ووثائق الهوية.'],
+        'etat-civil' => ['Ministère responsable : Ministère de l’Administration du territoire / Mairies. Actes de naissance, de mariage et de décès.', 'Responsible ministry: Ministry of Territorial Administration / Municipalities. Birth, marriage and death certificates.', 'الوزارة المسؤولة: وزارة الإدارة الإقليمية / البلديات. شهادات الميلاد والزواج والوفاة.'],
+        'etudes' => ['Ministère responsable : Ministère de l’Éducation / Enseignement supérieur. Inscriptions, diplômes et démarches scolaires ou universitaires.', 'Responsible ministry: Ministry of Education / Higher Education. Enrolment, diplomas and school or university procedures.', 'الوزارة المسؤولة: وزارة التعليم / التعليم العالي. التسجيل والشهادات والإجراءات المدرسية والجامعية.'],
+        'legalisations' => ['Ministère responsable : Ministère des Affaires étrangères / Cadastre. Légalisation de signatures, certification de copies et démarches foncières.', 'Responsible ministry: Ministry of Foreign Affairs / Land Registry. Signature legalisation, certified copies and land procedures.', 'الوزارة المسؤولة: وزارة الشؤون الخارجية / السجل العقاري. التصديق على التوقيعات والنسخ وإجراءات الأراضي.'],
+        'sante' => ['Ministère responsable : Ministère de la Santé publique. Consultations et démarches dans les structures de santé et services sociaux.', 'Responsible ministry: Ministry of Public Health. Healthcare and social-service procedures.', 'الوزارة المسؤولة: وزارة الصحة العامة. إجراءات الرعاية الصحية والخدمات الاجتماعية.'],
+        'travail' => ['Ministère responsable : Ministère du Travail / CNPS / ANPE. Emploi, contrats et protection sociale.', 'Responsible ministry: Ministry of Labour / CNPS / ANPE. Employment, contracts and social protection.', 'الوزارة المسؤولة: وزارة العمل / CNPS / ANPE. التوظيف والعقود والحماية الاجتماعية.'],
+        'justice' => ['Ministère responsable : Ministère de la Justice / Tribunaux. Casier judiciaire et démarches auprès des tribunaux.', 'Responsible ministry: Ministry of Justice / Courts. Criminal record and court procedures.', 'الوزارة المسؤولة: وزارة العدل / المحاكم. السجل العدلي والإجراءات القضائية.'],
+        'voyage' => ['Ministère responsable : Ministère des Affaires étrangères / DGDI. Passeports, visas et documents de voyage.', 'Responsible ministry: Ministry of Foreign Affairs / DGDI. Passports, visas and travel documents.', 'الوزارة المسؤولة: وزارة الشؤون الخارجية / المديرية العامة للوثائق والهجرة. جوازات السفر والتأشيرات ووثائق السفر.'],
+        'commerce' => ['Ministère responsable : Ministère du Commerce / DGI / ARMP. Création d’entreprise et formalités commerciales.', 'Responsible ministry: Ministry of Trade / DGI / ARMP. Business creation and commercial procedures.', 'الوزارة المسؤولة: وزارة التجارة / DGI / ARMP. تأسيس الأعمال والإجراءات التجارية.'],
+        'transport' => ['Ministère responsable : Ministère des Transports terrestres. Permis de conduire et documents des véhicules.', 'Responsible ministry: Ministry of Land Transport. Driving licences and vehicle documents.', 'الوزارة المسؤولة: وزارة النقل البري. رخص القيادة ووثائق المركبات.'],
     ],
     // Anciennes descriptions incorrectes héritées des catégories fusionnées.
-    'obsolete_category_descriptions' => ['Gestion financière'],
+    'obsolete_category_descriptions' => [
+        'Gestion financière',
+        'Carte d’identité, inscription électorale et documents d’identité.',
+        'Identity card, voter registration and identity documents.',
+        'بطاقة التعريف والتسجيل الانتخابي ووثائق الهوية.',
+        'Actes de naissance, de mariage et de décès.',
+        'Birth, marriage and death certificates.',
+        'شهادات الميلاد والزواج والوفاة.',
+        'Inscriptions, diplômes et démarches scolaires ou universitaires.',
+        'Enrolment, diplomas and school or university procedures.',
+        'التسجيل والشهادات والإجراءات المدرسية والجامعية.',
+        'Légalisation de signatures et certification de copies.',
+        'Legalisation of signatures and certification of copies.',
+        'التصديق على التوقيعات والنسخ.',
+        'Consultations et démarches dans les structures de santé.',
+        'Consultations and procedures in health facilities.',
+        'الاستشارات والإجراءات في المرافق الصحية.',
+        'Emploi, contrats et protection sociale.',
+        'Employment, contracts and social protection.',
+        'التشغيل والعقود والحماية الاجتماعية.',
+        'Casier judiciaire et démarches auprès des tribunaux.',
+        'Criminal record and court procedures.',
+        'السجل العدلي والإجراءات لدى المحاكم.',
+        'Passeport, visas et documents de voyage.',
+        'Passport, visas and travel documents.',
+        'جواز السفر والتأشيرات ووثائق السفر.',
+        'Permis de conduire et documents des véhicules.',
+        'Driving licence and vehicle documents.',
+        'رخصة السياقة ووثائق المركبات.',
+        'Permis de construire, terrains et logement.',
+        'Building permits, land and housing.',
+        'رخص البناء والأراضي والسكن.',
+    ],
 
     // slug de la fiche => slug de catégorie
     'placement' => [
@@ -54,14 +95,16 @@ return [
         'casier-judiciaire' => 'justice',
         'passeport-biometrique' => 'voyage',
         'permis-de-conduire' => 'transport',
-        'permis-de-construction' => 'urbanisme',
+        'permis-de-construction' => 'legalisations',
     ],
+
+    'translation_fields' => ['title', 'summary'],
 
     'translations' => [
         'permis-de-construction' => [
             'en' => [
-                'title' => 'Building Permit',
-                'summary' => 'Obtain authorisation to build from the local authorities',
+                'title' => 'Building Permit Application',
+                'summary' => 'Apply for a building permit using the requirements in the procedure sheet',
                 'description' => 'The building permit is an official document issued by the municipal authorities authorising the construction or modification of a structure. This process ensures that your project complies with building codes and local urban plans.',
                 'required_documents' => ['Signed architectural plan', 'Property title', 'Valid identity document', 'Completed application form'],
                 'procedure_steps' => ['Prepare the documents', 'Go to the town hall', 'Submit the file', 'Pay the fees', 'Wait for approval', 'Collect the permit'],
@@ -71,8 +114,8 @@ return [
                 'location' => "N'Djamena Town Hall, 3rd district",
             ],
             'ar' => [
-                'title' => 'رخصة البناء',
-                'summary' => 'الحصول على ترخيص بالبناء من السلطات المحلية',
+                'title' => 'طلب رخصة بناء',
+                'summary' => 'تقديم طلب رخصة بناء وفق متطلبات الإجراء',
                 'description' => 'رخصة البناء وثيقة رسمية تصدرها السلطات البلدية تسمح بتشييد مبنى أو تعديله. وتضمن هذه الإجراءات مطابقة مشروعك لقواعد البناء ومخططات التعمير المحلية.',
                 'required_documents' => ['مخطط معماري موقّع', 'سند الملكية', 'وثيقة هوية سارية', 'استمارة طلب مملوءة'],
                 'procedure_steps' => ['تحضير الوثائق', 'التوجه إلى البلدية', 'إيداع الملف', 'دفع الرسوم', 'انتظار الموافقة', 'استلام الرخصة'],
@@ -84,8 +127,8 @@ return [
         ],
         'certificat-de-mariage' => [
             'en' => [
-                'title' => 'Marriage Certificate',
-                'summary' => 'Obtain an extract of a marriage certificate',
+                'title' => 'Civil Marriage Certificate',
+                'summary' => 'Complete the civil marriage procedure using the listed requirements',
                 'description' => 'The marriage certificate is an official document proving the registration of your marriage. This extract is required for administrative procedures, visa applications or inheritance matters.',
                 'required_documents' => ['Family record book', 'Identity document', 'Written request'],
                 'procedure_steps' => ['Go to the court', 'Request the extract', 'Provide the documents', 'Sign the forms', 'Collect the certificate'],
@@ -95,8 +138,8 @@ return [
                 'location' => 'Courthouse, Avenue Félix Éboué',
             ],
             'ar' => [
-                'title' => 'شهادة الزواج',
-                'summary' => 'الحصول على مستخرج من شهادة الزواج',
+                'title' => 'عقد الزواج المدني',
+                'summary' => 'إتمام إجراءات الزواج المدني وفق المتطلبات المحددة',
                 'description' => 'شهادة الزواج وثيقة رسمية تثبت تسجيل زواجك. ويُطلب هذا المستخرج في الإجراءات الإدارية وطلبات التأشيرة ومسائل الميراث.',
                 'required_documents' => ['الدفتر العائلي', 'وثيقة الهوية', 'طلب كتابي'],
                 'procedure_steps' => ['التوجه إلى المحكمة', 'طلب المستخرج', 'تقديم الوثائق', 'توقيع الاستمارات', 'استلام الشهادة'],
@@ -108,8 +151,8 @@ return [
         ],
         'carte-didentite-nationale' => [
             'en' => [
-                'title' => 'National Identity Card',
-                'summary' => 'Apply for or renew your national identity card',
+                'title' => 'National Identity Card (CNI) — First Application',
+                'summary' => 'Apply for a Chadian national identity card for the first time',
                 'description' => 'The national identity card is the main identification document in Chad. It is required to vote, travel, open a bank account and access many public services.',
                 'required_documents' => ['Birth certificate', 'Extract of supplementary judgment', 'Two 4x6 photos', 'Current identity document'],
                 'procedure_steps' => ['Collect the form', 'Fill in and sign it', 'Provide the documents', 'Have your fingerprints taken', 'Pay the fees', 'Wait for delivery'],
@@ -119,8 +162,8 @@ return [
                 'location' => "Ministry of the Interior, N'Djamena",
             ],
             'ar' => [
-                'title' => 'بطاقة التعريف الوطنية',
-                'summary' => 'طلب بطاقة التعريف الوطنية أو تجديدها',
+                'title' => 'بطاقة الهوية الوطنية — الطلب الأول',
+                'summary' => 'طلب بطاقة الهوية الوطنية التشادية لأول مرة',
                 'description' => 'بطاقة التعريف الوطنية هي وثيقة الهوية الرئيسية في تشاد. وهي مطلوبة للتصويت والسفر وفتح حساب مصرفي والاستفادة من كثير من الخدمات العامة.',
                 'required_documents' => ['شهادة الميلاد', 'مستخرج حكم تكميلي', 'صورتان بمقاس 4x6', 'وثيقة الهوية الحالية'],
                 'procedure_steps' => ['سحب الاستمارة', 'ملؤها وتوقيعها', 'تقديم الوثائق', 'أخذ البصمات', 'دفع الرسوم', 'انتظار التسليم'],
@@ -132,8 +175,8 @@ return [
         ],
         'permis-de-conduire' => [
             'en' => [
-                'title' => "Driving Licence",
-                'summary' => 'Obtain or renew your driving licence',
+                'title' => 'Driving Licence — First Application (Category B)',
+                'summary' => 'Apply for a category B driving licence for the first time',
                 'description' => 'The driving licence is a legal document authorising the holder to drive a motor vehicle on public roads. There are several categories depending on the type of vehicle.',
                 'required_documents' => ['Medical certificate', 'Two 4x6 photos', 'Identity document', 'Vehicle registration certificate', 'Insurance certificate'],
                 'procedure_steps' => ['Take the medical examination', 'Collect the form', 'Submit the documents', 'Take the theory test', 'Take the practical test', 'Collect the licence'],
@@ -143,8 +186,8 @@ return [
                 'location' => "DSCR, Rue de l'Hôtel de Ville",
             ],
             'ar' => [
-                'title' => 'رخصة السياقة',
-                'summary' => 'الحصول على رخصة السياقة أو تجديدها',
+                'title' => 'رخصة القيادة — الطلب الأول (الفئة ب)',
+                'summary' => 'طلب رخصة قيادة من الفئة ب لأول مرة',
                 'description' => 'رخصة السياقة وثيقة قانونية تسمح لحاملها بقيادة مركبة آلية على الطرق العامة. وتوجد عدة فئات حسب نوع المركبة.',
                 'required_documents' => ['شهادة طبية', 'صورتان بمقاس 4x6', 'وثيقة الهوية', 'شهادة تسجيل المركبة', 'شهادة التأمين'],
                 'procedure_steps' => ['إجراء الفحص الطبي', 'سحب الاستمارة', 'تقديم الوثائق', 'اجتياز الاختبار النظري', 'اجتياز الاختبار التطبيقي', 'استلام الرخصة'],
@@ -156,8 +199,8 @@ return [
         ],
         'inscription-universite' => [
             'en' => [
-                'title' => 'University Enrolment',
-                'summary' => 'Enrol in a Chadian university',
+                'title' => "Enrolment at N'Djamena or Another Public University",
+                'summary' => 'Apply to enrol at the University of N’Djamena or a public university',
                 'description' => 'University enrolment is the process by which admitted students register their admission and pay the enrolment fees. Each university has its own fees and conditions.',
                 'required_documents' => ['Admission letter', 'Baccalaureate transcript', 'Copy of identity document', 'Birth certificate', '4x6 photo'],
                 'procedure_steps' => ['Receive the admission letter', 'Collect the form', 'Pay the fees', 'Submit the file', 'Wait for confirmation', 'Receive the enrolment number'],
@@ -167,8 +210,8 @@ return [
                 'location' => 'Main campus, Quartier du Fleuve',
             ],
             'ar' => [
-                'title' => 'التسجيل الجامعي',
-                'summary' => 'التسجيل في جامعة تشادية',
+                'title' => 'التسجيل في جامعة انجامينا أو جامعة حكومية أخرى',
+                'summary' => 'طلب التسجيل في جامعة انجامينا أو إحدى الجامعات الحكومية',
                 'description' => 'التسجيل الجامعي هو الإجراء الذي يثبت به الطلاب المقبولون قبولهم ويدفعون رسوم التسجيل. ولكل جامعة رسومها وشروطها الخاصة.',
                 'required_documents' => ['رسالة القبول', 'كشف نقاط البكالوريا', 'نسخة من الهوية', 'شهادة الميلاد', 'صورة بمقاس 4x6'],
                 'procedure_steps' => ['استلام رسالة القبول', 'سحب الاستمارة', 'دفع الرسوم', 'إيداع الملف', 'انتظار التأكيد', 'استلام رقم التسجيل'],
@@ -204,8 +247,8 @@ return [
         ],
         'passeport-biometrique' => [
             'en' => [
-                'title' => 'Biometric Passport',
-                'summary' => 'Obtain or renew your Chadian biometric passport',
+                'title' => 'Chadian Ordinary Passport — First Application',
+                'summary' => 'Apply for an ordinary Chadian passport for the first time',
                 'description' => "The biometric passport is the official travel document of the Republic of Chad. It contains an electronic chip holding the holder's biometric data (fingerprints, photo). It is required for any international travel.",
                 'required_documents' => ['Birth certificate (original or certified copy)', 'Valid national identity card', 'Two recent biometric photos (white background, 4x6)', 'Clean criminal record extract (less than 3 months old)', 'Fee payment receipt', 'Former passport (for renewal)'],
                 'procedure_steps' => ['Collect the application form at the passport office', 'Fill in and sign the form', 'Put together the complete file', 'Submit the file at the counter', 'Pay the 75,000 FCFA fee at the cash desk', 'Attend the biometric fingerprint session', 'Wait for the notification (SMS or notice board)', 'Collect the passport with your receipt'],
@@ -215,8 +258,8 @@ return [
                 'location' => "Ministry of the Interior, Avenue Charles de Gaulle, N'Djamena",
             ],
             'ar' => [
-                'title' => 'جواز السفر البيومتري',
-                'summary' => 'الحصول على جواز السفر البيومتري التشادي أو تجديده',
+                'title' => 'جواز السفر التشادي العادي — الطلب الأول',
+                'summary' => 'طلب جواز سفر تشادي عادي لأول مرة',
                 'description' => 'جواز السفر البيومتري هو وثيقة السفر الرسمية لجمهورية تشاد. ويتضمن شريحة إلكترونية تحتوي على البيانات البيومترية لحامله (البصمات والصورة). وهو إلزامي لكل سفر دولي.',
                 'required_documents' => ['شهادة الميلاد (الأصل أو نسخة مصادق عليها)', 'بطاقة تعريف وطنية سارية', 'صورتان بيومتريتان حديثتان (خلفية بيضاء، 4x6)', 'مستخرج سجل عدلي نظيف (أقل من 3 أشهر)', 'وصل دفع الرسوم', 'الجواز القديم (في حالة التجديد)'],
                 'procedure_steps' => ['سحب استمارة الطلب من مكتب الجوازات', 'ملء الاستمارة وتوقيعها', 'تكوين الملف الكامل', 'إيداع الملف في الشباك', 'دفع رسوم 75,000 فرنك أفريقي في الصندوق', 'الحضور لأخذ البصمات البيومترية', 'انتظار الإشعار (رسالة نصية أو إعلان)', 'استلام الجواز بتقديم الوصل'],
@@ -228,8 +271,8 @@ return [
         ],
         'acte-de-naissance' => [
             'en' => [
-                'title' => 'Birth Certificate',
-                'summary' => 'Obtain an extract or full copy of your birth certificate',
+                'title' => 'Birth Certificate Extract (Copy)',
+                'summary' => 'Request a copy of a birth certificate from the civil registry',
                 'description' => "The birth certificate is the fundamental civil status document in Chad. It officially attests to a person's birth and is required for almost all administrative procedures (ID card, passport, marriage, school enrolment, etc.).",
                 'required_documents' => ['Family record book or original birth declaration', "Applicant's identity document (parent or adult concerned)", 'Certificate request form'],
                 'procedure_steps' => ['Go to the town hall or civil registry office of the place of birth', 'Fill in the request form', 'Present the supporting documents', 'Pay the stamp duty (1,000 FCFA)', 'Collect the certificate on the spot or within the stated time'],
@@ -239,8 +282,8 @@ return [
                 'location' => "N'Djamena Town Hall or municipality of birth",
             ],
             'ar' => [
-                'title' => 'شهادة الميلاد',
-                'summary' => 'الحصول على مستخرج أو نسخة كاملة من شهادة ميلادك',
+                'title' => 'مستخرج شهادة الميلاد (نسخة)',
+                'summary' => 'طلب نسخة من شهادة الميلاد من مصلحة الحالة المدنية',
                 'description' => 'شهادة الميلاد هي الوثيقة الأساسية للحالة المدنية في تشاد. وهي تثبت رسميًا ولادة الشخص وتُطلب في جميع الإجراءات الإدارية تقريبًا (بطاقة التعريف، جواز السفر، الزواج، التسجيل المدرسي...).',
                 'required_documents' => ['الدفتر العائلي أو التصريح الأصلي بالولادة', 'وثيقة هوية مقدم الطلب (أحد الوالدين أو المعني إذا كان راشدًا)', 'استمارة طلب الشهادة'],
                 'procedure_steps' => ['التوجه إلى البلدية أو مركز الحالة المدنية لمكان الولادة', 'ملء استمارة الطلب', 'تقديم الوثائق الثبوتية', 'دفع رسم الطابع (1,000 فرنك أفريقي)', 'استلام الشهادة في الحين أو في الأجل المحدد'],
@@ -253,7 +296,7 @@ return [
         'acte-de-deces' => [
             'en' => [
                 'title' => 'Death Certificate',
-                'summary' => 'Declare a death and obtain the official death certificate',
+                'summary' => 'Complete the death registration procedure and request the certificate',
                 'description' => 'The death certificate is an official civil status document recording the death of a person. It is essential for inheritance, pensions, closing bank accounts and all administrative procedures related to the death.',
                 'required_documents' => ['Death certificate issued by the doctor or hospital', "Deceased person's family record book", "Declarant's identity document (close relative)"],
                 'procedure_steps' => ['Go to the town hall within 8 days of the death', 'Present the medical death certificate', 'Fill in the death declaration', 'Pay the stamp duty (1,000 FCFA)', 'Collect the official death certificate'],
@@ -264,7 +307,7 @@ return [
             ],
             'ar' => [
                 'title' => 'شهادة الوفاة',
-                'summary' => 'التصريح بالوفاة والحصول على شهادة الوفاة الرسمية',
+                'summary' => 'إتمام إجراءات تسجيل الوفاة وطلب الشهادة',
                 'description' => 'شهادة الوفاة وثيقة رسمية من وثائق الحالة المدنية تثبت وفاة شخص. وهي ضرورية للميراث والمعاشات وإغلاق الحسابات المصرفية وجميع الإجراءات الإدارية المرتبطة بالوفاة.',
                 'required_documents' => ['شهادة الوفاة الصادرة عن الطبيب أو المستشفى', 'الدفتر العائلي للمتوفى', 'وثيقة هوية المصرّح (قريب مباشر)'],
                 'procedure_steps' => ['التوجه إلى البلدية خلال 8 أيام من الوفاة', 'تقديم الشهادة الطبية للوفاة', 'ملء التصريح بالوفاة', 'دفع رسم الطابع (1,000 فرنك أفريقي)', 'استلام شهادة الوفاة الرسمية'],
@@ -276,8 +319,8 @@ return [
         ],
         'casier-judiciaire' => [
             'en' => [
-                'title' => 'Criminal Record Extract',
-                'summary' => 'Obtain a criminal record extract (bulletin no. 3)',
+                'title' => 'Criminal Record Extract (Bulletin No. 3)',
+                'summary' => 'Request a criminal record extract, bulletin number 3',
                 'description' => 'The criminal record (bulletin no. 3) is an official document certifying that you have no criminal history in the Republic of Chad. It is required for public employment, to obtain a passport, or for any procedure requiring proof of good character.',
                 'required_documents' => ['Valid national identity card or passport', 'Birth certificate extract', 'Completed application form', 'Fee payment receipt'],
                 'procedure_steps' => ['Go to the registry of the High Court', 'Collect and fill in the application form', 'Provide the required identity documents', 'Pay the fees (2,000 FCFA)', 'Collect the document within the stated time'],
@@ -287,8 +330,8 @@ return [
                 'location' => "Courthouse, Avenue Félix Éboué, N'Djamena",
             ],
             'ar' => [
-                'title' => 'السجل العدلي',
-                'summary' => 'الحصول على مستخرج السجل العدلي (البطاقة رقم 3)',
+                'title' => 'مستخرج السجل العدلي (النشرة رقم 3)',
+                'summary' => 'طلب مستخرج السجل العدلي، النشرة رقم 3',
                 'description' => 'السجل العدلي (البطاقة رقم 3) وثيقة رسمية تثبت خلوّك من السوابق القضائية في جمهورية تشاد. ويُطلب للتوظيف العمومي والحصول على جواز السفر وكل إجراء يتطلب إثبات حسن السيرة.',
                 'required_documents' => ['بطاقة تعريف وطنية أو جواز سفر ساري', 'مستخرج شهادة الميلاد', 'استمارة طلب مملوءة', 'وصل دفع الرسوم'],
                 'procedure_steps' => ['التوجه إلى كتابة ضبط المحكمة الابتدائية الكبرى', 'سحب استمارة الطلب وملؤها', 'تقديم وثائق الهوية المطلوبة', 'دفع الرسوم (2,000 فرنك أفريقي)', 'سحب الوثيقة في الأجل المحدد'],

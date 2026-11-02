@@ -22,6 +22,13 @@ class AdminDashboardRoleTest extends TestCase
         ]);
     }
 
+    public function test_unauthenticated_admin_api_request_without_accept_header_returns_json_401(): void
+    {
+        $this->get('/api/v1/admin/stats')
+            ->assertUnauthorized()
+            ->assertJson(['message' => 'Unauthenticated.']);
+    }
+
     public function test_editor_dashboard_contains_editor_work_without_moderator_or_team_data(): void
     {
         $this->actingAs($this->admin('editor'), 'sanctum');

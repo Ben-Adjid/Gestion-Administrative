@@ -12,9 +12,9 @@ use Illuminate\Support\Str;
 
 class AdminDemarcheControllerFull extends Controller
 {
-    private const LOGGED_FIELDS = ['title', 'status', 'categorie_id', 'cost', 'processing_time', 'institution', 'location'];
+    private const LOGGED_FIELDS = ['title', 'status', 'categorie_id', 'cost', 'processing_time', 'validity', 'institution', 'location'];
 
-    private const TEXT_TRANSLATIONS = ['title' => 255, 'summary' => 500, 'description' => 20000, 'cost' => 100, 'processing_time' => 100, 'institution' => 255, 'location' => 255];
+    private const TEXT_TRANSLATIONS = ['title' => 255, 'summary' => 500, 'description' => 20000, 'cost' => 100, 'processing_time' => 100, 'validity' => 255, 'institution' => 255, 'location' => 255];
     private const LIST_TRANSLATIONS = ['required_documents', 'procedure_steps', 'conditions'];
 
     /** Règles de validation des champs traduits (_en, _ar), tous facultatifs. */
@@ -147,6 +147,7 @@ class AdminDemarcheControllerFull extends Controller
             'cost' => 'required|string|max:100',
             'cost_amount' => 'nullable|numeric|min:0',
             'processing_time' => 'nullable|string|max:100',
+            'validity' => 'nullable|string|max:255',
             'processing_time_days' => 'nullable|integer|min:0',
             'institution' => 'required|string|max:255',
             'location' => 'nullable|string|max:255',
@@ -189,6 +190,7 @@ class AdminDemarcheControllerFull extends Controller
             // Prix unique : montant toujours déduit du coût affiché (jamais deux valeurs contradictoires).
             'cost_amount' => Demarche::amountFromCost($request->input('cost')) ?? $request->input('cost_amount'),
             'processing_time' => $request->input('processing_time'),
+            'validity' => $request->input('validity'),
             'processing_time_days' => $request->input('processing_time_days'),
             'institution' => $request->input('institution'),
             'location' => $request->input('location'),
@@ -243,6 +245,7 @@ class AdminDemarcheControllerFull extends Controller
             'cost' => 'string|max:100',
             'cost_amount' => 'nullable|numeric|min:0',
             'processing_time' => 'nullable|string|max:100',
+            'validity' => 'nullable|string|max:255',
             'processing_time_days' => 'nullable|integer|min:0',
             'institution' => 'string|max:255',
             'location' => 'nullable|string|max:255',

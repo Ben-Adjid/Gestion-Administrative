@@ -28,14 +28,28 @@ class NormalizeCatalogue extends Command
         // L'instance de commande est réutilisée par Artisan::call : le rapport doit repartir de zéro.
         $this->report = [];
         $data = require database_path('data/catalogue.php');
+        $cahierDemarches = json_decode(
+            file_get_contents(database_path('data/cahier_demarches.json')),
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        );
+        $canonicalSlugs = [];
+        foreach ($cahierDemarches as $record) {
+            $titleSlug = Str::slug($record['title']);
+            $canonicalSlug = $record['slug'] ?? $titleSlug;
+            $canonicalSlugs[$titleSlug] = $canonicalSlug;
+            $data['placement'][$canonicalSlug] = $record['category'];
+        }
         $apply = (bool) $this->option('apply');
 
         DB::beginTransaction();
         try {
-            $categoryIds = $this->normalizeCategories($data['categories']);
+            $categoryIds = $this->normalizeCategories($data['categories'], $data['legacy_category_names'] ?? []);
+            $this->mergeLegacyCategoryDemarches($data['categories'], $categoryIds);
             $this->fillCategoryDescriptions($data['category_descriptions'], $data['obsolete_category_descriptions'], $categoryIds);
-            $this->normalizeDemarches($data['placement'], $categoryIds);
-            $this->fillTranslations($data['translations']);
+            $this->normalizeDemarches($data['placement'], $categoryIds, $canonicalSlugs);
+            $this->fillTranslations($data['translations'], $data['translation_fields'] ?? []);
             $this->deactivateEmptyLegacyCategories(array_keys($data['categories']));
 
             if ($apply) {
@@ -60,7 +74,7 @@ class NormalizeCatalogue extends Command
     }
 
     /** @return array<string, int> slug => id */
-    private function normalizeCategories(array $definitions): array
+    private function normalizeCategories(array $definitions, array $legacyNames): array
     {
         $ids = [];
         foreach ($definitions as $slug => [$fr, $en, $ar, $icon, $color, $order, $legacy]) {
@@ -78,6 +92,12 @@ class NormalizeCatalogue extends Command
             } elseif ($category->slug === $slug && !$category->trashed()) {
                 // Catégorie déjà en place : les choix de l'équipe (nom, icône, couleur, ordre, visibilité) sont conservés ;
                 // seules les traductions vides sont complétées.
+                $oldNames = $legacyNames[$slug] ?? [];
+                foreach (['name', 'name_en', 'name_ar'] as $index => $field) {
+                    if (isset($oldNames[$index]) && $category->{$field} === $oldNames[$index]) {
+                        $category->{$field} = [$fr, $en, $ar][$index];
+                    }
+                }
                 foreach (['name_en' => $en, 'name_ar' => $ar] as $field => $value) {
                     if (blank($category->{$field})) {
                         $category->{$field} = $value;
@@ -104,6 +124,33 @@ class NormalizeCatalogue extends Command
         return $ids;
     }
 
+    /** Regroupe les démarches des anciennes catégories sous les catégories officielles sans supprimer de fiches. */
+    private function mergeLegacyCategoryDemarches(array $definitions, array $categoryIds): void
+    {
+        foreach ($definitions as $slug => $definition) {
+            $targetId = $categoryIds[$slug] ?? null;
+            if (!$targetId) {
+                continue;
+            }
+
+            foreach ($definition[6] ?? [] as $legacySlug) {
+                $legacy = Categorie::withTrashed()->where('slug', $legacySlug)->first();
+                if (!$legacy || $legacy->id === $targetId) {
+                    continue;
+                }
+
+                $moved = DB::table('demarches')->where('categorie_id', $legacy->id)->update(['categorie_id' => $targetId]);
+                if ($moved > 0) {
+                    $this->report[] = "{$moved} démarche(s) déplacée(s) de {$legacy->name} vers {$definition[0]}";
+                }
+                if ($legacy->is_active && !DB::table('demarches')->where('categorie_id', $legacy->id)->exists()) {
+                    $legacy->update(['is_active' => false]);
+                    $this->report[] = "Ancienne catégorie désactivée : {$legacy->name} ({$legacySlug})";
+                }
+            }
+        }
+    }
+
     /** Complète les descriptions vides ou obsolètes ; une description saisie par l'équipe n'est jamais écrasée. */
     private function fillCategoryDescriptions(array $descriptions, array $obsolete, array $categoryIds): void
     {
@@ -125,11 +172,12 @@ class NormalizeCatalogue extends Command
         }
     }
 
-    private function normalizeDemarches(array $placement, array $categoryIds): void
+    private function normalizeDemarches(array $placement, array $categoryIds, array $canonicalSlugs): void
     {
         $groups = Demarche::orderBy('id')->get()->groupBy(fn (Demarche $d) => Str::slug($d->title));
 
-        foreach ($groups as $slug => $demarches) {
+        foreach ($groups as $titleSlug => $demarches) {
+            $slug = $canonicalSlugs[$titleSlug] ?? $titleSlug;
             $keeper = $demarches->first();
 
             foreach ($demarches->slice(1) as $duplicate) {
@@ -169,18 +217,23 @@ class NormalizeCatalogue extends Command
         }
     }
 
-    private function fillTranslations(array $translations): void
+    private function fillTranslations(array $translations, array $allowedFields = []): void
     {
         foreach ($translations as $slug => $languages) {
             $demarche = Demarche::where('slug', $slug)->first();
             if (!$demarche) {
-                $this->report[] = "Traduction ignorée : aucune fiche « {$slug} »";
+                // Simple information : rien n'est modifié, donc rien n'est inscrit au rapport ni au journal.
+                $this->warn("Traduction ignorée : aucune fiche « {$slug} »");
                 continue;
             }
 
             $filled = [];
             foreach ($languages as $language => $fields) {
                 foreach ($fields as $field => $value) {
+                    if ($allowedFields && !in_array($field, $allowedFields, true)) {
+                        continue;
+                    }
+
                     $column = "{$field}_{$language}";
                     $current = $demarche->getAttribute($column);
                     $isEmpty = is_array($current) ? count($current) === 0 : blank($current);
