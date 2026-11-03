@@ -14,6 +14,57 @@ class AdminDemarcheControllerFull extends Controller
 {
     private const LOGGED_FIELDS = ['title', 'status', 'categorie_id', 'cost', 'processing_time', 'validity', 'institution', 'location'];
 
+    /** Champs conservés à chaque modification : suffisants pour restaurer une version antérieure (sans le statut). */
+    private const SNAPSHOT_FIELDS = [
+        'title', 'summary', 'description', 'categorie_id', 'cost', 'cost_amount', 'processing_time', 'validity',
+        'institution', 'location', 'official_source_url', 'required_documents', 'procedure_steps', 'conditions', 'status',
+    ];
+
+    private function isLastEditor(Request $request, Demarche $demarche): bool
+    {
+        return $demarche->updated_by !== null && (int) $demarche->updated_by === (int) $request->user()->id;
+    }
+
+    /** GET /api/v1/admin/demarches/{demarche}/history : versions journalisées (modérateurs). */
+    public function history(Request $request, Demarche $demarche)
+    {
+        if (!$request->user()->isModerator()) {
+            return response()->json(['message' => 'Réservé aux modérateurs.'], 403);
+        }
+
+        $entries = ActivityLog::where('subject_type', Demarche::class)
+            ->where('subject_id', $demarche->id)
+            ->where('action', 'update_demarche')
+            ->latest('id')->limit(30)->get(['id', 'description', 'old_values', 'new_values', 'created_at', 'admin_id']);
+
+        return response()->json(['data' => $entries]);
+    }
+
+    /**
+     * POST /api/v1/admin/demarches/{demarche}/restore/{entry} : remet la fiche dans l'état d'avant une modification.
+     * Le statut n'est jamais restauré : publier ou dépublier reste une décision distincte, soumise aux mêmes garde-fous.
+     */
+    public function restoreVersion(Request $request, Demarche $demarche, ActivityLog $entry)
+    {
+        if (!$request->user()->isModerator()) {
+            return response()->json(['message' => 'Réservé aux modérateurs.'], 403);
+        }
+        if ($entry->subject_type !== Demarche::class || (int) $entry->subject_id !== (int) $demarche->id
+            || $entry->action !== 'update_demarche' || empty($entry->old_values)) {
+            return response()->json(['message' => 'Cette entrée ne permet pas de restaurer la fiche.'], 422);
+        }
+
+        $before = $demarche->only(self::SNAPSHOT_FIELDS);
+        $restorable = array_diff_key($entry->old_values, array_flip(['status']));
+        $demarche->update($restorable + ['updated_by' => $request->user()->id]);
+        $this->log($request, 'restore_demarche', "Restauration de la démarche « {$demarche->title} » (version du {$entry->created_at})", $demarche, $before, $demarche->only(self::SNAPSHOT_FIELDS));
+
+        return response()->json([
+            'message' => 'Fiche restaurée. Son statut (publiée ou non) n’a pas changé.',
+            'data' => new DemarcheResource($demarche->fresh()->load(['categorie', 'offices'])),
+        ]);
+    }
+
     private const TEXT_TRANSLATIONS = ['title' => 255, 'summary' => 500, 'description' => 20000, 'cost' => 100, 'processing_time' => 100, 'validity' => 255, 'institution' => 255, 'location' => 255];
     private const LIST_TRANSLATIONS = ['required_documents', 'procedure_steps', 'conditions'];
 
@@ -78,6 +129,11 @@ class AdminDemarcheControllerFull extends Controller
      */
     public function verify(Request $request, Demarche $demarche)
     {
+        // Pas de vérification sans source officielle : on ne peut pas confirmer ce qu'on ne peut pas citer.
+        if (blank($demarche->official_source_url)) {
+            return response()->json(['message' => 'Vérification refusée : renseignez d’abord la source officielle de la fiche.'], 422);
+        }
+
         $demarche->forceFill(['last_verified_at' => now(), 'updated_by' => $request->user()->id])->save();
         $this->log($request, 'verify_demarche', "Fiche « {$demarche->title} » vérifiée", $demarche);
 
@@ -275,8 +331,18 @@ class AdminDemarcheControllerFull extends Controller
                 'message' => __('messages.status_moderator_only'),
             ], 403);
         }
+        // Même garde-fou que la publication : source officielle et vérification réelle, jamais une date inventée.
         if (($data['status'] ?? null) === 'published' && $demarche->status !== 'published') {
-            $data['last_verified_at'] = now();
+            $sourceAfter = $data['official_source_url'] ?? $demarche->official_source_url;
+            if (blank($sourceAfter)) {
+                return response()->json(['message' => 'Publication refusée : aucune source officielle renseignée pour cette fiche.'], 422);
+            }
+            if ($demarche->last_verified_at === null) {
+                return response()->json(['message' => 'Publication refusée : cette fiche n’a pas encore été vérifiée.'], 422);
+            }
+            if ($this->isLastEditor($request, $demarche)) {
+                return response()->json(['message' => 'Publication refusée : un autre administrateur doit publier la fiche que vous avez modifiée.'], 403);
+            }
         }
 
         // Prix unique : le montant numérique suit toujours le coût affiché.
@@ -293,14 +359,14 @@ class AdminDemarcheControllerFull extends Controller
         $officeIds = array_key_exists('office_ids', $data) ? ($data['office_ids'] ?? []) : null;
         $data = array_diff_key($data, array_flip(['office_ids', 'extra_costs'])) + $this->extraData($data);
 
-        $old = $demarche->only(self::LOGGED_FIELDS);
+        $old = $demarche->only(self::SNAPSHOT_FIELDS);
         $data['updated_by'] = $request->user()->id;
         $demarche->update($data);
         if ($officeIds !== null) {
             $demarche->offices()->sync($officeIds);
         }
 
-        $this->log($request, 'update_demarche', "Modification de la démarche « {$demarche->title} »", $demarche, $old, $demarche->only(self::LOGGED_FIELDS));
+        $this->log($request, 'update_demarche', "Modification de la démarche « {$demarche->title} »", $demarche, $old, $demarche->only(self::SNAPSHOT_FIELDS));
 
         return response()->json([
             'message' => 'Démarche mise à jour avec succès.',
@@ -340,10 +406,22 @@ class AdminDemarcheControllerFull extends Controller
      */
     public function publish(Request $request, Demarche $demarche)
     {
+        // Publier ne vaut pas vérifier : une fiche ne part au public qu'avec une source officielle
+        // et une vérification réelle (action « verify »), jamais avec une date inventée à la publication.
+        if (blank($demarche->official_source_url)) {
+            return response()->json(['message' => 'Publication refusée : aucune source officielle renseignée pour cette fiche.'], 422);
+        }
+        if ($demarche->last_verified_at === null) {
+            return response()->json(['message' => 'Publication refusée : cette fiche n’a pas encore été vérifiée.'], 422);
+        }
+        // Double validation : celui qui a modifié la fiche ne peut pas la publier lui-même.
+        if ($this->isLastEditor($request, $demarche)) {
+            return response()->json(['message' => 'Publication refusée : un autre administrateur doit publier la fiche que vous avez modifiée.'], 403);
+        }
+
         $old = $demarche->status;
         $demarche->update([
             'status' => 'published',
-            'last_verified_at' => now(),
             'updated_by' => $request->user()->id,
         ]);
         $this->log($request, 'publish_demarche', "Publication de la démarche « {$demarche->title} »", $demarche, ['status' => $old], ['status' => 'published']);

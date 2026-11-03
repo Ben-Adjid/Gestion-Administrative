@@ -67,6 +67,6 @@ class CahierPhase2DraftsSeeder extends Seeder
             ? 'Aucune source officielle trouvée.'
             : 'Sources : ' . implode(' ; ', $record['sources']);
 
-        return "Statut de vérification : {$record['status']}. {$record['verification']} {$sources}";
+        return "Statut de vérification : {$record['status']} (consulté le 03/11/2026). {$record['verification']} {$sources}";
     }
 }

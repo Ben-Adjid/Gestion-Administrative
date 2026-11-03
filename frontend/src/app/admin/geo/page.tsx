@@ -86,6 +86,8 @@ export default function GeoAdminPage() {
       <AdminNotice message={message} error={error} />
       {!loaded && <p role="status" className="text-slate-500">{t('adx.loading')}</p>}
 
+      <ImportSection onDone={load} />
+
       <UnitsSection units={units}
         onNew={(body) => run(() => fetchApi('/admin/geo/units', { method: 'POST', body: JSON.stringify(body) }))}
         onSave={(unit, body) => run(() => fetchApi(`/admin/geo/units/${unit.id}`, { method: 'PUT', body: JSON.stringify(body) }))} />
@@ -98,6 +100,81 @@ export default function GeoAdminPage() {
       <SuggestionsSection suggestions={suggestions}
         onReview={(item, body) => run(() => fetchApi(`/admin/geo/suggestions/${item.id}`, { method: 'PUT', body: JSON.stringify(body) }))} />
     </AdminShell>
+  );
+}
+
+interface ImportRow { line: number; data: Record<string, string | null>; problems: string[] }
+interface ImportAnalysis { rows: ImportRow[]; total: number; errors: number; valid: number }
+
+/** Parse un CSV simple (séparateur virgule, première ligne = en-têtes). */
+function parseCsv(text: string): Array<Record<string, string>> {
+  const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(',').map((h) => h.trim());
+  return lines.slice(1).map((line) => {
+    const cells = line.split(',').map((c) => c.trim());
+    return Object.fromEntries(headers.map((h, i) => [h, cells[i] ?? '']));
+  });
+}
+
+/** Import par aperçu : rien n'est enregistré tant que la vérification n'est pas faite, et un seul lot invalide bloque tout. */
+function ImportSection({ onDone }: { onDone: () => void }) {
+  const { t } = useLanguage();
+  const [text, setText] = useState('');
+  const [analysis, setAnalysis] = useState<ImportAnalysis | null>(null);
+  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
+
+  const rowsFromText = () => parseCsv(text);
+
+  const preview = async () => {
+    setError('');
+    setMessage('');
+    try {
+      const res = await fetchApi<ImportAnalysis>('/admin/geo/import/preview', { method: 'POST', body: JSON.stringify({ rows: rowsFromText() }) });
+      setAnalysis(res);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : t('common.error_generic'));
+    }
+  };
+
+  const commit = async () => {
+    setError('');
+    try {
+      const res = await fetchApi<{ created: number }>('/admin/geo/import/commit', { method: 'POST', body: JSON.stringify({ rows: rowsFromText() }) });
+      setMessage(`${t('qualx.import_done')} ${res.created}`);
+      setAnalysis(null);
+      setText('');
+      onDone();
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : t('common.error_generic'));
+    }
+  };
+
+  return (
+    <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-4">
+      <h2 className="text-lg font-bold text-slate-950">{t('qualx.import_title')}</h2>
+      <p className="mt-1 text-sm text-slate-600">{t('qualx.import_help')}</p>
+      <textarea aria-label={t('qualx.import_title')} value={text} onChange={(e) => { setText(e.target.value); setAnalysis(null); }} rows={5}
+        className="mt-3 w-full rounded-lg border border-slate-300 p-2 font-mono text-xs" />
+      <div className="mt-2 flex flex-wrap gap-2">
+        <button type="button" className={primaryButton} onClick={preview} disabled={!text.trim()}>{t('qualx.import_preview')}</button>
+        {analysis && analysis.valid > 0 && <button type="button" className={smallButton} onClick={commit} disabled={analysis.errors > 0}>{t('qualx.import_commit')}</button>}
+      </div>
+      <AdminNotice message={message} error={error} />
+      {analysis && (
+        <>
+          <p className="mt-3 text-sm font-semibold">{t('qualx.import_summary', { total: analysis.total, valid: analysis.valid, errors: analysis.errors })}</p>
+          <ul className="mt-2 space-y-1 text-sm">
+            {analysis.rows.map((row) => (
+              <li key={row.line} className={row.problems.length ? 'text-red-800' : 'text-emerald-800'}>
+                {t('qualx.import_line')} {row.line} · {row.data.name || '—'} {row.problems.length ? `· ${t('qualx.import_problems')} : ${row.problems.join(' ')}` : '✓'}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
   );
 }
 

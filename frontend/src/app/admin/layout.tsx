@@ -22,6 +22,7 @@ const PAGE_CAPABILITIES: Array<[string, string]> = [
   ['/admin/analytics', 'view_analytics'],
   ['/admin/villes', 'manage_reference'],
   ['/admin/geo', 'manage_reference'],
+  ['/admin/qualite', 'manage_reference'],
   ['/admin/parcours', 'manage_reference'],
   ['/admin/calendrier', 'manage_reference'],
   ['/admin/validite', 'manage_reference'],

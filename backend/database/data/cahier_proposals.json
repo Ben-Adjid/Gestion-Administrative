@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Attestation de régularité fiscale",
+    "category": "commerce",
+    "status": "non trouvé",
+    "verification": "Aucune source tchadienne trouvée (pièces, service, délais). Les résultats concernent la Côte d'Ivoire, le Cameroun et la France. Services à contacter : Direction générale des impôts du Tchad.",
+    "sources": []
+  },
+  {
+    "title": "Certificat de célibat",
+    "category": "etat-civil",
+    "status": "partiel",
+    "verification": "Une liste de pièces de l'ambassade de Suisse (guide mariage Tchad) indique un certificat de célibat de moins de 6 mois délivré par la mairie, ou une fiche individuelle d'état civil de moins de 6 mois délivrée par l'office de l'état civil de N'Djaména. Un document de la justice bavaroise précise que le certificat doit être un original émanant de l'officier d'état civil tchadien. Source secondaire étrangère : frais, délais et procédure en mairie à confirmer.",
+    "sources": [
+      "https://www.dfae.admin.ch/content/dam/countries/countries-content/chad/fr/leaflet-mariage-tchad_FR.pdf",
+      "https://www.justiz.bayern.de/media/images/behoerden-und-gerichte/oberlandesgerichte/bamberg/tschad.pdf"
+    ]
+  },
+  {
+    "title": "Certificat de vie (pensionnés)",
+    "category": "travail",
+    "status": "non trouvé",
+    "verification": "Aucune procédure tchadienne trouvée pour le certificat de vie des pensionnés CNPS. Contexte relevé : la CNPS compte près de 11 000 retraités (Tchadinfos, 2025). Les documents sur les certificats de vie trouvés concernent la CNPS de Côte d'Ivoire et ne s'appliquent pas au Tchad. À confirmer auprès de la CNPS (N'Djaména).",
+    "sources": [
+      "https://tchadinfos.com/2025/10/30/la-cnps-lance-une-operation-de-paiement-de-bonus-a-ses-retraites-ayants-droit-et-assures-sociaux/"
+    ]
+  },
+  {
+    "title": "Duplicata de carte grise",
+    "category": "transport",
+    "status": "non trouvé",
+    "verification": "Aucune source tchadienne trouvée. Les résultats décrivent le système français (ANTS, préfectures, déclaration de vol obligatoire). Ne pas appliquer sans vérification au Tchad : service compétent et pièces à confirmer auprès de la Direction de la circulation et des transports terrestres.",
+    "sources": []
+  },
+  {
+    "title": "Déclaration de changement d'adresse",
+    "category": "identite",
+    "status": "partiel",
+    "verification": "L'ANATS est placée sous la tutelle du ministère de la Sécurité publique et de l'Immigration, et a été créée par l'ordonnance n°1 du 29 mars 2016 : elle est chargée de l'enregistrement et de la mise à jour des informations d'identité (Alwihda Info). Aucune procédure de changement d'adresse sur la CNI n'a été trouvée. Pièces, obligation et délai à confirmer auprès de l'ANATS.",
+    "sources": [
+      "https://www.alwihdainfo.com/tchad-delivrance-de-la-carte-nationale-d-identite-a-n-djamena-un-casse-tete-a105086/"
+    ]
+  },
+  {
+    "title": "Mutation de véhicule (changement de propriétaire)",
+    "category": "transport",
+    "status": "non trouvé",
+    "verification": "Aucune source tchadienne trouvée. Les résultats concernent la France, la Côte d'Ivoire (certificat de transfert de propriété légalisé) et le Sénégal. À confirmer auprès de la Direction de la circulation et des transports terrestres, ou d'un notaire tchadien.",
+    "sources": []
+  },
+  {
+    "title": "Copie ou extrait de jugement",
+    "category": "justice",
+    "status": "partiel",
+    "verification": "Aucune procédure générale de copie de jugement au Tchad. Seule information : la délivrance des jugements supplétifs d'acte de naissance, suspendue puis rétablie (Alwihda Info), avec pour pièces l'identité du demandeur et des parents, les dates et lieux de naissance, et les pièces d'identité de trois témoins. Ce cas est une procédure particulière et ne couvre pas la copie générale. Greffe compétent et délais à confirmer.",
+    "sources": [
+      "https://www.alwihdainfo.com/tchad-levee-de-la-suspension-de-la-delivrance-des-jugements-suppletifs-d-acte-de-naissance-a148394/"
+    ]
+  },
+  {
+    "title": "Acte de notoriété",
+    "category": "etat-civil",
+    "status": "non trouvé",
+    "verification": "Aucune procédure tchadienne trouvée. Les résultats relèvent du droit luxembourgeois et français. À confirmer dans le Code de la famille ou le Code de procédure civile du Tchad, ou auprès d'un avocat ou notaire tchadien.",
+    "sources": []
+  }
+]

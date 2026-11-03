@@ -175,6 +175,12 @@ class AdminAuthAndCrudTest extends TestCase
             // L'adresse publique reste stable : les liens déjà partagés continuent de fonctionner.
             ->assertJsonPath('data.slug', 'demarche-a-modifier');
 
+        // Publier exige une source officielle et une vérification réelle.
+        $this->putJson("/api/v1/admin/demarches/{$id}", ['official_source_url' => 'https://example.test/source-officielle'])->assertOk();
+        $this->patchJson("/api/v1/admin/demarches/{$id}/verify")->assertOk();
+        // Double validation : la publication revient à un autre administrateur que celui qui a modifié la fiche.
+        $other = Admin::create(['name' => 'Relecteur', 'email' => 'relecteur@test.td', 'password' => Hash::make('Secret123!'), 'role' => 'admin', 'is_active' => true]);
+        $this->actingAs($other, 'sanctum');
         $this->patchJson("/api/v1/admin/demarches/{$id}/publish")->assertOk()
             ->assertJsonPath('data.status', 'published');
         $this->getJson('/api/v1/admin/demarches?status=published')

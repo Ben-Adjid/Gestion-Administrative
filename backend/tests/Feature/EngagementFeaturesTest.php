@@ -290,7 +290,7 @@ class EngagementFeaturesTest extends TestCase
     public function test_verify_marks_fiche_and_reminder_targets_subscribed_moderators(): void
     {
         Mail::fake();
-        $demarche = $this->demarche('acte');
+        $demarche = $this->demarche('acte', ['official_source_url' => 'https://example.test/source-officielle']);
         $this->admin('admin');
         $this->admin('editor');
 

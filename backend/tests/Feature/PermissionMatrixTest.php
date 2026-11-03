@@ -116,11 +116,15 @@ class PermissionMatrixTest extends TestCase
         $draft = $this->demarche('draft');
         $this->getJson("/api/v1/demarches/{$draft->slug}")->assertNotFound();
 
+        // Source et vérification réelles avant publication (la date de vérification n'est pas inventée à la publication).
+        $verifiedOn = now()->subDays(3)->startOfDay();
+        $draft->forceFill(['official_source_url' => 'https://example.test/source-officielle', 'last_verified_at' => $verifiedOn])->save();
+
         $this->actingAs($this->admin('admin'), 'sanctum');
         $this->patchJson("/api/v1/admin/demarches/{$draft->id}/publish")->assertOk();
 
         $this->assertSame('published', $draft->fresh()->status);
-        $this->assertNotNull($draft->fresh()->last_verified_at);
+        $this->assertSame($verifiedOn->toDateString(), $draft->fresh()->last_verified_at->toDateString());
     }
 
     // ---------------- Catégories, signalements, exports ----------------

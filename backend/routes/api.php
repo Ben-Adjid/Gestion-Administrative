@@ -10,6 +10,8 @@ use App\Http\Controllers\Api\V1\Public\ReferencePublicController;
 use App\Http\Controllers\Api\V1\Public\CommunityPublicController;
 use App\Http\Controllers\Api\V1\Public\WhatsAppController;
 use App\Http\Controllers\Api\V1\Admin\AdminGeoController;
+use App\Http\Controllers\Api\V1\Admin\AdminGeoImportController;
+use App\Http\Controllers\Api\V1\Admin\AdminQualityController;
 use App\Http\Controllers\Api\V1\Admin\AdminReferenceController;
 use App\Http\Controllers\Api\V1\Admin\AdminCommunityController;
 use App\Http\Controllers\Api\V1\Admin\AdminImportController;
@@ -143,6 +145,10 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
             Route::get('/demarches/stats/summary', [AdminDemarcheControllerFull::class, 'statsSummary']);
             Route::get('/demarches/{demarche}', [AdminDemarcheControllerFull::class, 'show']);
             Route::put('/demarches/{demarche}', [AdminDemarcheControllerFull::class, 'update'])->middleware('throttle:20,1,admin-put-demarches-demarche');
+            Route::get('/demarches/{demarche}/history', [AdminDemarcheControllerFull::class, 'history']);
+            Route::post('/demarches/{demarche}/restore/{entry}', [AdminDemarcheControllerFull::class, 'restoreVersion'])->middleware('throttle:30,1,admin-write-reference');
+            Route::post('/geo/import/preview', [AdminGeoImportController::class, 'preview']);
+            Route::post('/geo/import/commit', [AdminGeoImportController::class, 'commit'])->middleware('throttle:10,1,admin-write-reference');
 
             Route::get('/categories', [AdminCategorieControllerFull::class, 'index']);
             Route::get('/categories/stats/summary', [AdminCategorieControllerFull::class, 'statsSummary']);
@@ -161,6 +167,8 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
             Route::get('/cities', [AdminReferenceController::class, 'cities']);
             Route::get('/offices', [AdminReferenceController::class, 'offices']);
             Route::get('/geo', [AdminGeoController::class, 'index']);
+            Route::get('/quality', [AdminQualityController::class, 'index']);
+            Route::get('/quality/drafts', [AdminQualityController::class, 'draftChecklist']);
             Route::get('/geo/suggestions', [AdminGeoController::class, 'suggestions']);
             Route::get('/search-misses', [AdminCommunityController::class, 'searchMisses']);
         });

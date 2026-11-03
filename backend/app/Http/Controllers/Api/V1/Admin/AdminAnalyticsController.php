@@ -35,7 +35,8 @@ class AdminAnalyticsController extends Controller
             ->get();
 
         // Termes les plus recherchés dans le catalogue (terme seul) et nombre de fiches trouvées à la dernière recherche.
-        $topSearches = SearchTerm::orderByDesc('count')->orderByDesc('last_searched_at')->limit(10)
+        // Départage stable : à égalité de nombre et de date, l'ordre alphabétique fixe le résultat.
+        $topSearches = SearchTerm::orderByDesc('count')->orderByDesc('last_searched_at')->orderBy('term')->limit(10)
             ->get(['term', 'count', 'last_results', 'last_searched_at']);
 
         // Conversion sur 30 jours : part des visiteurs uniques ayant envoyé un signalement.
