@@ -118,7 +118,7 @@ export default function CreditsPage() {
           <p className="text-lg text-gray-700 mb-4 italic">{c.creatorTitle}</p>
           <p className="text-gray-700 text-lg leading-relaxed">{c.creatorBio}</p>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label={L('Compétences', 'Skills', 'المهارات')}>
-            {[L('Analyse de données', 'Data analysis', 'تحليل البيانات'), L('Administration réseau', 'Network administration', 'إدارة الشبكات'), L('Développeur backend spécialisé', 'Specialised backend developer', 'مطوّر خلفية متخصص')].map((skill) => (
+            {[L('Analyse de données', 'Data analysis', 'تحليل البيانات'), L('Administration réseau', 'Network administration', 'إدارة الشبكات'), L('Développeur', 'Developer', 'مطوّر')].map((skill) => (
               <li key={skill} className="rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-900">{skill}</li>
             ))}
           </ul>
