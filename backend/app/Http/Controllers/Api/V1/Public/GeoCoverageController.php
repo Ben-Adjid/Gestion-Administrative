@@ -82,6 +82,14 @@ class GeoCoverageController extends Controller
         $exists = GeoSuggestion::where('status', 'new')->whereRaw('LOWER(name) = ?', [mb_strtolower($data['name'])])->exists();
         if (! $exists) {
             GeoSuggestion::create($data + ['status' => 'new', 'ip_hash' => hash('sha256', (string) $request->ip())]);
+
+            // Alerte à l'équipe : la localité doit être vérifiée avant d'être ajoutée au référentiel.
+            app(\App\Services\EmailService::class)->alertModerators(
+                'Localité signalée : ' . $data['name'],
+                "Un visiteur signale la localité « {$data['name']} »" . (filled($data['province'] ?? null) ? " (province : {$data['province']})" : '') . ".\n\n"
+                    . 'Vérifiez-la avant de l’ajouter au référentiel : ' . config('frontend.url') . '/admin/geo',
+                'notify_demarche_updates',
+            );
         }
 
         return response()->json(['message' => 'Merci. Nous vérifierons cette localité avant de l’ajouter.'], 201);

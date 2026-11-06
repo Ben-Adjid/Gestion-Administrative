@@ -73,6 +73,17 @@ class GeoCoverageEndpointsTest extends TestCase
         $this->assertDatabaseMissing('geo_units', ['name' => 'Bokoro']);
     }
 
+    public function test_a_new_suggestion_alerts_the_administrators_once(): void
+    {
+        \Illuminate\Support\Facades\Mail::fake();
+        $this->admin()->update(['notify_demarche_updates' => true]);
+
+        $this->postJson('/api/v1/geo/suggestions', ['name' => 'Bokoro'])->assertCreated();
+        $this->postJson('/api/v1/geo/suggestions', ['name' => 'bokoro'])->assertCreated();
+
+        \Illuminate\Support\Facades\Mail::assertQueued(\App\Mail\NotificationMail::class, 1);
+    }
+
     public function test_repeated_pending_suggestion_is_not_stored_twice(): void
     {
         $this->postJson('/api/v1/geo/suggestions', ['name' => 'Bokoro'])->assertCreated();
