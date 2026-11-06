@@ -301,8 +301,16 @@ function ServicesSection({ services, offices, demarches, onNew, onSave, onDelete
   onNew: (body: Record<string, unknown>) => void; onSave: (service: Service, body: Record<string, unknown>) => void; onDelete: (service: Service) => void;
 }) {
   const { t } = useLanguage();
+  // Filtre par démarche : ouvert depuis la page qualité (« Bureaux de cette fiche »).
+  const [demarcheFilter, setDemarcheFilter] = useState('');
   const [officeId, setOfficeId] = useState('');
   const [demarcheId, setDemarcheId] = useState('');
+  useEffect(() => {
+    const fromUrl = new URLSearchParams(window.location.search).get('demarche') ?? '';
+    setDemarcheFilter(fromUrl);
+    setDemarcheId(fromUrl);
+  }, []);
+  const visibleServices = demarcheFilter ? services.filter((s) => String(s.demarche_id) === demarcheFilter) : services;
   const [status, setStatus] = useState<Service['status']>('to_verify');
   const [sourceUrl, setSourceUrl] = useState('');
   const [verifiedOn, setVerifiedOn] = useState('');
@@ -360,8 +368,8 @@ function ServicesSection({ services, offices, demarches, onNew, onSave, onDelete
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            {services.length === 0 && <tr><td colSpan={6} className="px-3 py-4 text-slate-500">{t('covx.admin_none')}</td></tr>}
-            {services.map((service) => <ServiceRow key={service.id} service={service} onSave={onSave} onDelete={onDelete} />)}
+            {visibleServices.length === 0 && <tr><td colSpan={6} className="px-3 py-4 text-slate-500">{t('covx.admin_none')}</td></tr>}
+            {visibleServices.map((service) => <ServiceRow key={service.id} service={service} onSave={onSave} onDelete={onDelete} />)}
           </tbody>
         </table>
       </div>

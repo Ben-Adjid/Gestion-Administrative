@@ -124,6 +124,7 @@ export default function QualityPage() {
                 </button>
               )}
               <button type="button" className={secondaryButton} onClick={() => toggleHistory(item.id)}>{t('qualx.history_btn')}</button>
+              <Link href={`/admin/geo?demarche=${item.id}`} className={secondaryButton}>{t('qualx.offices_btn')}</Link>
             </div>
             {openHistory === item.id && (
               <ul className="mt-3 space-y-2 text-sm">

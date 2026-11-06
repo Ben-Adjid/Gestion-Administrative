@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\Public\DemarchePublicController;
 use App\Http\Controllers\Api\V1\Public\SignalementPublicController;
 use App\Http\Controllers\Api\V1\Public\PageViewController;
+use App\Http\Controllers\Api\V1\Public\ContactPublicController;
 use App\Http\Controllers\Api\V1\Public\GeoCoverageController;
 use App\Http\Controllers\Api\V1\Public\GeoPublicController;
 use App\Http\Controllers\Api\V1\Public\ReferencePublicController;
@@ -69,6 +70,7 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
         Route::get('/geo/search', [GeoPublicController::class, 'search']);
         Route::get('/geo/coverage', [GeoCoverageController::class, 'coverage']);
         Route::post('/geo/suggestions', [GeoCoverageController::class, 'suggest'])->middleware('throttle:10,1');
+        Route::post('/contact', [ContactPublicController::class, 'store'])->middleware('throttle:10,1');
         Route::get('/calendar/{id}.ics', [ReferencePublicController::class, 'calendarIcs'])->whereNumber('id');
         Route::get('/questions', [CommunityPublicController::class, 'questions']);
         Route::get('/categories', [DemarchePublicController::class, 'categories']);
