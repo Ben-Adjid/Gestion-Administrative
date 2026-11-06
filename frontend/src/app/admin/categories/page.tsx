@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useCallback, useEffect, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUp, Pencil, Plus, Trash2, X } from 'lucide-react';
 import Button from '@/components/Button';
 import { AdminSidebar, useCurrentAdmin } from '@/components/AdminSidebar';
@@ -39,6 +39,7 @@ export default function AdminCategoriesPage() {
   const [moveOpenId, setMoveOpenId] = useState<number | null>(null);
   const [moveTargetId, setMoveTargetId] = useState('');
   const [moving, setMoving] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -55,6 +56,21 @@ export default function AdminCategoriesPage() {
   }, []);
 
   useEffect(() => { void load(); }, [load]);
+
+  // Modifier / Créer : le formulaire s'affiche en haut de la page, on y amène l'administrateur directement.
+  useEffect(() => {
+    if (!showForm) return;
+    const form = formRef.current;
+    if (!form) return;
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    form.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
+  }, [showForm, editing]);
+
+  // Déplacer : le panneau s'ouvre dans la carte, on le centre à l'écran.
+  useEffect(() => {
+    if (moveOpenId === null) return;
+    document.getElementById(`move-panel-${moveOpenId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, [moveOpenId]);
 
   // Réordonner : échange avec la voisine puis enregistre l'ordre complet (1, 2, 3…), affiché tel quel sur le site.
   const [reordering, setReordering] = useState(false);
@@ -202,7 +218,7 @@ export default function AdminCategoriesPage() {
           {notice && <p role="status" className="mb-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">{notice}</p>}
 
           {showForm && (
-            <form onSubmit={submit} className="mb-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <form ref={formRef} onSubmit={submit} className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-lg font-bold text-slate-900">{t(editing ? 'adm.c_edit_title' : 'adm.c_create')}</h2>
                 <button type="button" onClick={closeForm} aria-label={t('adm.d_close_form')} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"><X size={18} /></button>
@@ -289,7 +305,7 @@ export default function AdminCategoriesPage() {
                         {t('catx.move_btn')}
                       </Button>
                       {moveOpenId === category.id && (
-                        <div className="mt-3 rounded-xl bg-slate-50 p-4">
+                        <div id={`move-panel-${category.id}`} className="mt-3 scroll-mt-6 rounded-xl bg-slate-50 p-4">
                           <p className="text-sm font-semibold text-slate-900">{t('catx.move_title')}</p>
                           <p className="mt-1 text-xs leading-5 text-slate-600">{t('catx.move_hint')}</p>
                           {categories.length < 2 ? (
