@@ -563,11 +563,9 @@ export default function AdminDemarchesPage() {
                               {demarche.status === 'published'
                                 ? <Button size="sm" variant="secondary" loading={actionId === demarche.id} onClick={() => void runAction(demarche, 'unpublish')}>{t('adm.d_unpublish')}</Button>
                                 : <Button size="sm" loading={actionId === demarche.id} onClick={() => void runAction(demarche, 'publish')}>{t('adm.d_publish')}</Button>}
-                              {demarche.status === 'published' && (
-                                <Button size="sm" variant="secondary" loading={actionId === demarche.id} onClick={() => void verify(demarche)}>
-                                  <BadgeCheck size={15} aria-hidden="true" /> {t('adx.d_verify')}
-                                </Button>
-                              )}
+                              <Button size="sm" variant="secondary" loading={actionId === demarche.id} onClick={() => void verify(demarche)}>
+                                <BadgeCheck size={15} aria-hidden="true" /> {t('adx.d_verify')}
+                              </Button>
                               <Button size="sm" variant="danger" loading={actionId === demarche.id} onClick={() => void runAction(demarche, 'delete')}>
                                 <Trash2 size={15} aria-hidden="true" /> {t('adm.d_archive')}
                               </Button>

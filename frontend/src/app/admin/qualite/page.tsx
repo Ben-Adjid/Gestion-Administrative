@@ -117,7 +117,7 @@ export default function QualityPage() {
               </span>
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
-              {(item.issues.includes('non_verifiee') || item.issues.includes('verification_perimee')) && !item.issues.includes('sans_source') && (
+              {(item.issues.includes('non_verifiee') || item.issues.includes('verification_perimee')) && (
                 <button type="button" className={smallButton}
                   onClick={() => run(() => fetchApi(`/admin/demarches/${item.id}/verify`, { method: 'PATCH' }), t('qualx.verified_ok'))}>
                   {t('qualx.verify_btn')}

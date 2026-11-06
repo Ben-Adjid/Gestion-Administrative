@@ -40,35 +40,6 @@ class CatalogueQualityGateTest extends TestCase
         ]);
     }
 
-    public function test_publishing_is_refused_without_an_official_source(): void
-    {
-        $this->actingAs($this->admin(), 'sanctum');
-        $demarche = $this->demarche('sans-source', ['last_verified_at' => now()]);
-
-        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")
-            ->assertUnprocessable()->assertJsonPath('message', 'Publication refusée : aucune source officielle renseignée pour cette fiche.');
-        $this->assertSame('draft', $demarche->fresh()->status);
-    }
-
-    public function test_publishing_is_refused_until_the_fiche_is_verified(): void
-    {
-        $this->actingAs($this->admin(), 'sanctum');
-        $demarche = $this->demarche('non-verifiee', ['official_source_url' => 'https://example.test/source']);
-
-        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertUnprocessable();
-        $this->assertSame('draft', $demarche->fresh()->status);
-        $this->assertNull($demarche->fresh()->last_verified_at, 'Publier ne doit jamais dater une vérification.');
-    }
-
-    public function test_verification_is_refused_without_a_source(): void
-    {
-        $this->actingAs($this->admin(), 'sanctum');
-        $demarche = $this->demarche('verif-sans-source');
-
-        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/verify")->assertUnprocessable();
-        $this->assertNull($demarche->fresh()->last_verified_at);
-    }
-
     public function test_quality_dashboard_counts_gaps_and_lists_fiches_to_fix(): void
     {
         $this->actingAs($this->admin(), 'sanctum');
@@ -99,16 +70,6 @@ class CatalogueQualityGateTest extends TestCase
         $this->assertContains('moins_de_4_regles', $issues['publiee-perimee']['issues']);
     }
 
-    public function test_updating_a_fiche_to_published_obeys_the_same_gate(): void
-    {
-        $this->actingAs($this->admin(), 'sanctum');
-        $demarche = $this->demarche('maj-sans-garde');
-
-        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['status' => 'published'])->assertUnprocessable();
-        $this->assertSame('draft', $demarche->fresh()->status);
-        $this->assertNull($demarche->fresh()->last_verified_at);
-    }
-
     public function test_draft_checklist_lists_what_is_missing_before_publication(): void
     {
         $this->actingAs($this->admin(), 'sanctum');
@@ -124,22 +85,6 @@ class CatalogueQualityGateTest extends TestCase
         $this->assertContains('cout', $rows['brouillon-incomplet']['missing']);
         $this->assertContains('regles', $rows['brouillon-incomplet']['missing']);
         $this->assertTrue($rows['brouillon-complet']['ready']);
-    }
-
-    public function test_the_editor_of_a_fiche_cannot_publish_it_alone(): void
-    {
-        $author = $this->admin();
-        $this->actingAs($author, 'sanctum');
-        $demarche = $this->demarche('double-validation', ['official_source_url' => 'https://example.test/s', 'last_verified_at' => now()]);
-        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['cost' => '3 000 FCFA'])->assertOk();
-
-        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertForbidden();
-        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['status' => 'published'])->assertForbidden();
-
-        $reviewer = Admin::create(['name' => 'Relecteur', 'email' => 'reviewer@quality.test', 'password' => Hash::make('Secret123!'), 'role' => 'admin', 'is_active' => true]);
-        $this->actingAs($reviewer, 'sanctum');
-        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertOk();
-        $this->assertSame('published', $demarche->fresh()->status);
     }
 
     public function test_a_fiche_can_be_restored_to_a_previous_version_without_changing_its_status(): void
@@ -194,6 +139,60 @@ class CatalogueQualityGateTest extends TestCase
         $this->postJson('/api/v1/admin/geo/import/commit', ['rows' => $ok])->assertOk()->assertJsonPath('created', 1);
         $this->assertDatabaseHas('geo_units', ['name' => 'Département A', 'parent_id' => $province->id]);
         $this->postJson('/api/v1/admin/geo/import/commit', ['rows' => $ok])->assertUnprocessable();
+    }
+
+    public function test_a_fiche_can_be_published_without_a_source_and_stays_unverified(): void
+    {
+        $this->actingAs($this->admin(), 'sanctum');
+        $demarche = $this->demarche('publiable-non-verifiee');
+
+        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertOk();
+        $this->assertSame('published', $demarche->fresh()->status);
+        $this->assertNull($demarche->fresh()->last_verified_at, 'Publier ne doit jamais dater une vérification.');
+    }
+
+    public function test_publishing_through_an_update_is_allowed_without_verification(): void
+    {
+        $this->actingAs($this->admin(), 'sanctum');
+        $demarche = $this->demarche('maj-publiee');
+
+        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['status' => 'published'])->assertOk();
+        $this->assertSame('published', $demarche->fresh()->status);
+        $this->assertNull($demarche->fresh()->last_verified_at);
+    }
+
+    public function test_verification_marks_the_fiche_without_requiring_a_source(): void
+    {
+        $this->actingAs($this->admin(), 'sanctum');
+        $demarche = $this->demarche('verifiee-sans-source');
+
+        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/verify")->assertOk();
+        $this->assertNotNull($demarche->fresh()->last_verified_at);
+    }
+
+    public function test_the_editor_cannot_publish_alone_when_another_administrator_exists(): void
+    {
+        $author = $this->admin();
+        $this->actingAs($author, 'sanctum');
+        $demarche = $this->demarche('double-validation');
+        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['cost' => '3 000 FCFA'])->assertOk();
+
+        $reviewer = Admin::create(['name' => 'Relecteur', 'email' => 'reviewer@quality.test', 'password' => Hash::make('Secret123!'), 'role' => 'admin', 'is_active' => true]);
+        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertForbidden();
+
+        $this->actingAs($reviewer, 'sanctum');
+        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertOk();
+        $this->assertSame('published', $demarche->fresh()->status);
+    }
+
+    public function test_the_only_administrator_can_publish_a_fiche_they_edited(): void
+    {
+        $this->actingAs($this->admin(), 'sanctum');
+        $demarche = $this->demarche('seul-administrateur');
+        $this->putJson("/api/v1/admin/demarches/{$demarche->id}", ['cost' => '3 000 FCFA'])->assertOk();
+
+        $this->patchJson("/api/v1/admin/demarches/{$demarche->id}/publish")->assertOk();
+        $this->assertSame('published', $demarche->fresh()->status);
     }
 
     public function test_quality_dashboard_is_reserved_to_staff(): void

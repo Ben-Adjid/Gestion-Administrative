@@ -164,17 +164,6 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
             )}
           </div>
 
-          {/* Date de vérification visible sur chaque fiche (cahier des charges §13.4) */}
-          <p className={`mt-5 rounded-lg px-3 py-2 text-sm print:mt-3 print:border print:border-slate-400 print:bg-transparent print:text-xs ${verification === 'ok' ? 'bg-emerald-50 text-emerald-900' : 'bg-amber-50 text-amber-900'}`}>
-            <strong>
-              {verification === 'never'
-                ? t('fichex.verif_never')
-                : verification === 'stale'
-                  ? t('fichex.verif_stale', { date: formatDate(language, demarche.last_verified_at!) })
-                  : t('fiche.verified_on', { date: formatDate(language, demarche.last_verified_at!) })}
-            </strong>{' '}
-            {t('fiche.disclaimer')}
-          </p>
         </header>
 
         <div className="grid gap-4 border-b border-slate-200 bg-slate-50 p-5 sm:grid-cols-2 sm:p-7 lg:grid-cols-4 print:grid-cols-4 print:gap-2 print:border-y print:border-slate-300 print:bg-transparent print:px-0 print:py-3">
@@ -253,6 +242,18 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
             </section>
           </div>
         </div>
+
+          {/* Mention de vérification : affichée en bas de la fiche (cahier des charges §13.4) */}
+          <p className={`mx-5 mb-6 sm:mx-7 rounded-lg px-3 py-2 text-sm print:mt-3 print:border print:border-slate-400 print:bg-transparent print:text-xs ${verification === 'ok' ? 'bg-emerald-50 text-emerald-900' : 'bg-amber-50 text-amber-900'}`}>
+            <strong>
+              {verification === 'never'
+                ? t('fichex.verif_never')
+                : verification === 'stale'
+                  ? t('fichex.verif_stale', { date: formatDate(language, demarche.last_verified_at!) })
+                  : t('fiche.verified_on', { date: formatDate(language, demarche.last_verified_at!) })}
+            </strong>{' '}
+            {t('fiche.disclaimer')}
+          </p>
       </article>
       )}
     </div>

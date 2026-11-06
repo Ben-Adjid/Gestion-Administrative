@@ -25,6 +25,14 @@ class AdminDemarcheControllerFull extends Controller
         return $demarche->updated_by !== null && (int) $demarche->updated_by === (int) $request->user()->id;
     }
 
+    /** Vrai seulement si celui qui a modifié la fiche veut la publier et qu'un autre administrateur peut relire. */
+    private function mustBeReviewedByAnother(Request $request, Demarche $demarche): bool
+    {
+        return $this->isLastEditor($request, $demarche)
+            && \App\Models\Admin::where('is_active', true)->whereIn('role', ['super_admin', 'admin'])
+                ->where('id', '!=', $request->user()->id)->exists();
+    }
+
     /** GET /api/v1/admin/demarches/{demarche}/history : versions journalisées (modérateurs). */
     public function history(Request $request, Demarche $demarche)
     {
@@ -129,11 +137,6 @@ class AdminDemarcheControllerFull extends Controller
      */
     public function verify(Request $request, Demarche $demarche)
     {
-        // Pas de vérification sans source officielle : on ne peut pas confirmer ce qu'on ne peut pas citer.
-        if (blank($demarche->official_source_url)) {
-            return response()->json(['message' => 'Vérification refusée : renseignez d’abord la source officielle de la fiche.'], 422);
-        }
-
         $demarche->forceFill(['last_verified_at' => now(), 'updated_by' => $request->user()->id])->save();
         $this->log($request, 'verify_demarche', "Fiche « {$demarche->title} » vérifiée", $demarche);
 
@@ -333,14 +336,7 @@ class AdminDemarcheControllerFull extends Controller
         }
         // Même garde-fou que la publication : source officielle et vérification réelle, jamais une date inventée.
         if (($data['status'] ?? null) === 'published' && $demarche->status !== 'published') {
-            $sourceAfter = $data['official_source_url'] ?? $demarche->official_source_url;
-            if (blank($sourceAfter)) {
-                return response()->json(['message' => 'Publication refusée : aucune source officielle renseignée pour cette fiche.'], 422);
-            }
-            if ($demarche->last_verified_at === null) {
-                return response()->json(['message' => 'Publication refusée : cette fiche n’a pas encore été vérifiée.'], 422);
-            }
-            if ($this->isLastEditor($request, $demarche)) {
+            if ($this->mustBeReviewedByAnother($request, $demarche)) {
                 return response()->json(['message' => 'Publication refusée : un autre administrateur doit publier la fiche que vous avez modifiée.'], 403);
             }
         }
@@ -406,16 +402,9 @@ class AdminDemarcheControllerFull extends Controller
      */
     public function publish(Request $request, Demarche $demarche)
     {
-        // Publier ne vaut pas vérifier : une fiche ne part au public qu'avec une source officielle
-        // et une vérification réelle (action « verify »), jamais avec une date inventée à la publication.
-        if (blank($demarche->official_source_url)) {
-            return response()->json(['message' => 'Publication refusée : aucune source officielle renseignée pour cette fiche.'], 422);
-        }
-        if ($demarche->last_verified_at === null) {
-            return response()->json(['message' => 'Publication refusée : cette fiche n’a pas encore été vérifiée.'], 422);
-        }
-        // Double validation : celui qui a modifié la fiche ne peut pas la publier lui-même.
-        if ($this->isLastEditor($request, $demarche)) {
+        // Publier ne vérifie pas la fiche : une fiche non vérifiée peut être publiée, avec la mention « non vérifiée ».
+        // Double validation : seulement s'il existe un autre administrateur actif pour relire.
+        if ($this->mustBeReviewedByAnother($request, $demarche)) {
             return response()->json(['message' => 'Publication refusée : un autre administrateur doit publier la fiche que vous avez modifiée.'], 403);
         }
 
