@@ -233,15 +233,15 @@ export default function AdminCategoriesPage() {
                   </p>
                   <p className="mt-2 min-h-10 text-sm leading-5 text-slate-600">{category.description || t('adm.c_no_description')}</p>
                   <p className="mt-3 text-xs text-slate-500">{t('adm.c_count', { n: category.demarches_count ?? 0 })}</p>
-                  <div className="mt-5 flex gap-2 border-t border-slate-100 pt-4">
+                  <div className="mt-5 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
                     <Button variant="secondary" size="sm" disabled={index === 0 || reordering} onClick={() => void move(index, -1)} aria-label={t('adx.j_up')}>
                       <ArrowUp size={15} aria-hidden="true" />
                     </Button>
                     <Button variant="secondary" size="sm" disabled={index === categories.length - 1 || reordering} onClick={() => void move(index, 1)} aria-label={t('adx.j_down')}>
                       <ArrowDown size={15} aria-hidden="true" />
                     </Button>
-                    <Button variant="secondary" size="sm" className="flex-1" onClick={() => openEdit(category)}><Pencil size={15} aria-hidden="true" /> {t('common.edit')}</Button>
-                    <Button variant="danger" size="sm" className="flex-1" disabled={(category.demarches_count ?? 0) > 0} onClick={() => void remove(category)}>
+                    <Button variant="secondary" size="sm" className="min-w-[7rem] flex-1 whitespace-nowrap" onClick={() => openEdit(category)}><Pencil size={15} aria-hidden="true" /> {t('common.edit')}</Button>
+                    <Button variant="danger" size="sm" className="min-w-[7rem] flex-1 whitespace-nowrap" disabled={(category.demarches_count ?? 0) > 0} onClick={() => void remove(category)}>
                       <Trash2 size={15} aria-hidden="true" /> {t('common.delete')}
                     </Button>
                   </div>
