@@ -50,6 +50,7 @@ class DemarcheResource extends JsonResource
             'official_source_url' => $this->official_source_url,
             'last_verified_at' => $this->last_verified_at?->toDateString(),
             'status' => $this->status,
+            'scheduled_publish_at' => $this->when($request->is('api/v1/admin/*'), fn () => $this->scheduled_publish_at?->toISOString()),
             'is_online' => (bool) $this->is_online,
             'online_url' => $this->online_url,
             'views_count' => (int) $this->views_count,

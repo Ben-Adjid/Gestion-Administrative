@@ -181,6 +181,8 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
             Route::patch('/demarches/{demarche}/unpublish', [AdminDemarcheControllerFull::class, 'unpublish'])->middleware('throttle:20,1,admin-patch-demarches-demarche-unpublish');
             Route::delete('/demarches/{demarche}', [AdminDemarcheControllerFull::class, 'destroy'])->middleware('throttle:10,1,admin-delete-demarches-demarche');
             Route::post('/demarches/{id}/restore', [AdminDemarcheControllerFull::class, 'restore'])->middleware('throttle:10,1,admin-post-demarches-id-restore');
+            Route::post('/demarches/bulk', [AdminDemarcheControllerFull::class, 'bulk'])->middleware('throttle:20,1,admin-post-demarches-bulk');
+            Route::post('/demarches/{demarche}/duplicate', [AdminDemarcheControllerFull::class, 'duplicate'])->middleware('throttle:20,1,admin-post-demarches-duplicate');
 
             Route::post('/categories', [AdminCategorieControllerFull::class, 'store'])->middleware('throttle:20,1,admin-post-categories');
             Route::post('/categories/reorder', [AdminCategorieControllerFull::class, 'reorder'])->middleware('throttle:20,1,admin-post-categories-reorder');

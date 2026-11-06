@@ -1,7 +1,7 @@
 'use client';
 
-import { FormEvent, useCallback, useEffect, useState } from 'react';
-import { BadgeCheck, ChevronLeft, ChevronRight, Download, Languages, Pencil, Plus, RotateCcw, Search, Trash2, X } from 'lucide-react';
+import { FormEvent, useCallback, useEffect, useRef, useState } from 'react';
+import { BadgeCheck, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, Languages, Pencil, Plus, RotateCcw, Search, Trash2, X } from 'lucide-react';
 import Button from '@/components/Button';
 import { AdminSidebar, isModeratorRole, useCurrentAdmin } from '@/components/AdminSidebar';
 import { downloadAdminFile, fetchApi } from '@/lib/api';
@@ -15,7 +15,10 @@ const LIST_FIELDS = ['required_documents', 'procedure_steps', 'conditions'] as c
 type TranslatedField = (typeof TEXT_FIELDS)[number] | (typeof LIST_FIELDS)[number];
 type TranslationForm = Record<TranslatedField, string>;
 
-type AdminDemarche = Demarche & { translations?: Record<'en' | 'ar', Partial<Record<TranslatedField, string | string[] | null>>> };
+type AdminDemarche = Demarche & {
+  translations?: Record<'en' | 'ar', Partial<Record<TranslatedField, string | string[] | null>>>;
+  scheduled_publish_at?: string | null;
+};
 
 type DemarcheForm = {
   title: string; summary: string; description: string; categorie_id: string; cost: string; cost_amount: string;
@@ -27,7 +30,10 @@ type DemarcheForm = {
   office_ids: number[];
   authority_level: '' | 'local' | 'regional' | 'national';
   location_city_id: string;
+  scheduled_publish_at: string;
 };
+
+type BulkAction = 'publish' | 'unpublish' | 'archive' | 'move';
 
 type ExtraCostRow = { label: string; label_en: string; label_ar: string; amount: string };
 type OfficeOption = { id: number; name: string; city?: { name: string } };
@@ -41,10 +47,19 @@ const emptyForm = (): DemarcheForm => ({
   validity: '', processing_time_days: '', institution: '', location: '', contact_email: '', contact_phone: '', official_source_url: '',
   online_url: '', required_documents: '', procedure_steps: '', conditions: '', status: 'draft', is_online: false,
   en: emptyTranslation(), ar: emptyTranslation(),
-  extra_costs: [], office_ids: [], authority_level: '', location_city_id: '',
+  extra_costs: [], office_ids: [], authority_level: '', location_city_id: '', scheduled_publish_at: '',
 });
 
 const lines = (value: string): string[] => value.split(/\r?\n/).map((item) => item.trim()).filter(Boolean);
+
+/** Date ISO → valeur d'un champ « date et heure » locale (AAAA-MM-JJTHH:mm). */
+const toLocalInput = (iso?: string | null): string => {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+};
 
 const FIELD_LABELS: Record<TranslatedField, string> = {
   title: 'adm.d_f_title', summary: 'adm.d_f_summary', description: 'adm.d_f_description', cost: 'adm.d_f_cost',
@@ -80,6 +95,12 @@ export default function AdminDemarchesPage() {
   const [meta, setMeta] = useState({ currentPage: 1, lastPage: 1, total: 0 });
   const [offices, setOffices] = useState<OfficeOption[]>([]);
   const [cityOptions, setCityOptions] = useState<CityOption[]>([]);
+  const [selected, setSelected] = useState<number[]>([]);
+  const [bulkAction, setBulkAction] = useState<BulkAction>('publish');
+  const [bulkTarget, setBulkTarget] = useState('');
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const [scheduleOriginal, setScheduleOriginal] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   // Bureaux disponibles pour la liaison (lecture ouverte à toute l'équipe).
   useEffect(() => {
@@ -102,6 +123,7 @@ export default function AdminDemarchesPage() {
         fetchApi<{ data: Categorie[] }>('/admin/categories?per_page=100'),
       ]);
       setDemarches(demarchesResult.data);
+      setSelected([]);
       setCategories(categoriesResult.data);
       setMeta({
         currentPage: demarchesResult.meta?.current_page ?? page,
@@ -119,6 +141,13 @@ export default function AdminDemarchesPage() {
 
   useEffect(() => { void fetchData(); }, [fetchData]);
 
+  // Modifier / Créer : le formulaire s'affiche en haut ; on y amène l'administrateur directement.
+  useEffect(() => {
+    if (!showForm || !formRef.current) return;
+    formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    formRef.current.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
+  }, [showForm, editing]);
+
   const closeForm = () => {
     setShowForm(false);
     setEditing(null);
@@ -127,6 +156,7 @@ export default function AdminDemarchesPage() {
   const openCreate = () => {
     setEditing(null);
     setForm({ ...emptyForm(), categorie_id: categories[0] ? String(categories[0].id) : '' });
+    setScheduleOriginal('');
     setShowTranslations(false);
     setShowForm(true);
     setError('');
@@ -143,6 +173,7 @@ export default function AdminDemarchesPage() {
 
   const openEdit = (demarche: AdminDemarche) => {
     setEditing(demarche);
+    setScheduleOriginal(toLocalInput(demarche.scheduled_publish_at));
     setForm({
       title: demarche.title,
       summary: demarche.summary || '',
@@ -172,6 +203,7 @@ export default function AdminDemarchesPage() {
       office_ids: demarche.office_ids ?? [],
       authority_level: demarche.authority_level ?? '',
       location_city_id: demarche.location_city_id ? String(demarche.location_city_id) : '',
+      scheduled_publish_at: toLocalInput(demarche.scheduled_publish_at),
     });
     setShowTranslations(false);
     setShowForm(true);
@@ -222,6 +254,10 @@ export default function AdminDemarchesPage() {
           office_ids: form.office_ids,
           authority_level: form.authority_level || null,
           location_city_id: form.location_city_id ? Number(form.location_city_id) : null,
+          // Envoyée seulement si elle a changé : une date passée déjà enregistrée ne bloque pas une simple correction.
+          ...(form.scheduled_publish_at !== scheduleOriginal
+            ? { scheduled_publish_at: form.scheduled_publish_at ? new Date(form.scheduled_publish_at).toISOString() : null }
+            : {}),
         }),
       });
       setNotice(t(editing ? 'adm.d_done_updated' : 'adm.d_done_created'));
@@ -262,6 +298,63 @@ export default function AdminDemarchesPage() {
       await fetchApi(`/admin/demarches/${demarche.id}/verify`, { method: 'PATCH' });
       setNotice(t('adx.d_verified'));
       await fetchData();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('adm.action_error'));
+    } finally {
+      setActionId(null);
+    }
+  };
+
+  const toggleSelect = (id: number) =>
+    setSelected((current) => (current.includes(id) ? current.filter((x) => x !== id) : [...current, id]));
+
+  // Un éditeur ne peut que déplacer ; publier, dépublier et archiver sont réservés aux modérateurs.
+  const effectiveAction: BulkAction = isModerator ? bulkAction : 'move';
+
+  const applyBulk = async () => {
+    const target = categories.find((c) => String(c.id) === bulkTarget);
+    if (selected.length === 0 || (effectiveAction === 'move' && !target)) return;
+    if (!(await confirm({
+      title: t('bulkx.confirm', { action: t(`bulkx.act_${effectiveAction}`), n: selected.length }),
+      tone: effectiveAction === 'archive' ? 'danger' : 'default',
+    }))) return;
+
+    setBulkBusy(true);
+    setError('');
+    setNotice('');
+    try {
+      const result = await fetchApi<{ done: number; refused?: { title: string }[] }>('/admin/demarches/bulk', {
+        method: 'POST',
+        body: JSON.stringify({
+          ids: selected,
+          action: effectiveAction,
+          ...(effectiveAction === 'move' ? { target_category_id: target?.id } : {}),
+        }),
+      });
+      const refused = result.refused ?? [];
+      setNotice(
+        t('bulkx.done', { n: result.done }) +
+          (refused.length > 0 ? ' ' + t('bulkx.refused', { n: refused.length, list: refused.map((r) => r.title).join(', ') }) : ''),
+      );
+      setSelected([]);
+      await fetchData();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('adm.action_error'));
+    } finally {
+      setBulkBusy(false);
+    }
+  };
+
+  // Copie en brouillon, ouverte aussitôt en modification.
+  const duplicate = async (demarche: AdminDemarche) => {
+    setActionId(demarche.id);
+    setError('');
+    setNotice('');
+    try {
+      const result = await fetchApi<{ data: AdminDemarche }>(`/admin/demarches/${demarche.id}/duplicate`, { method: 'POST' });
+      setNotice(t('bulkx.duplicated'));
+      await fetchData();
+      openEdit(result.data);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('adm.action_error'));
     } finally {
@@ -335,7 +428,7 @@ export default function AdminDemarchesPage() {
           </section>
 
           {showForm && (
-            <form onSubmit={submit} className="mb-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <form ref={formRef} onSubmit={submit} className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">{t(editing ? 'adm.d_edit_title' : 'adm.d_create')}</h2>
                 <button type="button" onClick={closeForm} aria-label={t('adm.d_close_form')} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"><X size={18} /></button>
@@ -384,6 +477,15 @@ export default function AdminDemarchesPage() {
                       <span className="block text-xs text-slate-500">{t('adm.d_status_hint')}</span>
                     </p>
                   </div>
+                )}
+                {isModerator && (
+                  <label className="text-sm font-medium text-slate-700 sm:col-span-2">{t('bulkx.schedule_label')}
+                    <input type="datetime-local" value={form.scheduled_publish_at} onChange={(e) => update('scheduled_publish_at', e.target.value)} className={input} />
+                    <span className="mt-1 block text-xs font-normal text-slate-500">{t('bulkx.schedule_hint')}</span>
+                    {form.scheduled_publish_at && (
+                      <button type="button" onClick={() => update('scheduled_publish_at', '')} className="mt-1 text-xs font-semibold text-blue-800 hover:underline">{t('bulkx.schedule_clear')}</button>
+                    )}
+                  </label>
                 )}
                 <label className="text-sm font-medium text-slate-700 sm:col-span-2">{t('adm.d_f_summary')}
                   <textarea maxLength={500} rows={2} value={form.summary} onChange={(e) => update('summary', e.target.value)} className={input} />
@@ -526,6 +628,33 @@ export default function AdminDemarchesPage() {
             </form>
           )}
 
+          {!trashedOnly && demarches.length > 0 && (
+            <div className="mb-4 flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <button
+                type="button"
+                onClick={() => setSelected(selected.length === demarches.length ? [] : demarches.map((d) => d.id))}
+                className="text-sm font-semibold text-blue-800 hover:underline"
+              >
+                {selected.length === demarches.length ? t('bulkx.clear') : t('bulkx.select_all')}
+              </button>
+              <span className="text-sm text-slate-600">{t('bulkx.selected', { n: selected.length })}</span>
+              <select aria-label={t('bulkx.action_label')} value={effectiveAction} onChange={(e) => setBulkAction(e.target.value as BulkAction)} className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                {(isModerator ? (['publish', 'unpublish', 'archive', 'move'] as BulkAction[]) : (['move'] as BulkAction[])).map((a) => (
+                  <option key={a} value={a}>{t(`bulkx.act_${a}`)}</option>
+                ))}
+              </select>
+              {effectiveAction === 'move' && (
+                <select aria-label={t('bulkx.target')} value={bulkTarget} onChange={(e) => setBulkTarget(e.target.value)} className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                  <option value="">{t('bulkx.target')}…</option>
+                  {categories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                </select>
+              )}
+              <Button size="sm" disabled={selected.length === 0 || (effectiveAction === 'move' && !bulkTarget)} loading={bulkBusy} onClick={() => void applyBulk()}>
+                {t('bulkx.apply')}
+              </Button>
+            </div>
+          )}
+
           <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             {loading ? (
               <p role="status" className="p-10 text-center text-slate-600">{t('adm.loading')}</p>
@@ -535,6 +664,9 @@ export default function AdminDemarchesPage() {
               <div className="divide-y divide-slate-100">
                 {demarches.map((demarche) => (
                   <article key={demarche.id} className="flex flex-col justify-between gap-4 p-5 sm:flex-row sm:items-center">
+                    {!trashedOnly && (
+                      <input type="checkbox" checked={selected.includes(demarche.id)} onChange={() => toggleSelect(demarche.id)} aria-label={demarche.title} className="mt-1 h-4 w-4 shrink-0 self-start" />
+                    )}
                     <div className="min-w-0">
                       <div className="mb-1 flex flex-wrap items-center gap-2">
                         <h2 className="font-bold text-slate-900">{demarche.title}</h2>
@@ -549,6 +681,9 @@ export default function AdminDemarchesPage() {
                       <p className="mt-0.5 text-xs text-slate-500">
                         {demarche.last_verified_at ? t('adx.d_last_verified', { date: formatDate(language, demarche.last_verified_at) }) : t('adx.d_never_verified')}
                       </p>
+                      {demarche.scheduled_publish_at && (
+                        <p className="mt-0.5 text-xs font-semibold text-blue-800">{t('bulkx.scheduled_at', { date: formatDate(language, demarche.scheduled_publish_at) })}</p>
+                      )}
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {trashedOnly ? (
@@ -560,6 +695,14 @@ export default function AdminDemarchesPage() {
                       ) : (
                         <>
                           <Button size="sm" variant="secondary" onClick={() => openEdit(demarche)}><Pencil size={15} aria-hidden="true" /> {t('common.edit')}</Button>
+                          <Button size="sm" variant="secondary" loading={actionId === demarche.id} onClick={() => void duplicate(demarche)}><Copy size={15} aria-hidden="true" /> {t('bulkx.duplicate')}</Button>
+                          {demarche.status === 'published' ? (
+                            <a href={`/demarches/${demarche.slug}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                              <ExternalLink size={15} aria-hidden="true" /> {t('bulkx.preview')}
+                            </a>
+                          ) : (
+                            <span className="inline-flex items-center px-2 py-1.5 text-xs text-slate-500">{t('bulkx.preview_draft')}</span>
+                          )}
                           {isModerator && (
                             <>
                               {demarche.status === 'published'

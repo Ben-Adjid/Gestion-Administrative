@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 Schedule::command('documents:send-reminders')->dailyAt('08:00')->withoutOverlapping();
 Schedule::command('report:monthly')->monthlyOn(1, '07:00')->withoutOverlapping();
 Schedule::command('demarches:verification-reminder')->weeklyOn(1, '07:30')->withoutOverlapping();
+Schedule::command('demarches:publish-scheduled')->everyMinute()->withoutOverlapping();
 
 Artisan::command('inspire', function () {
     $this->comment('DemarchesTchad - Servir la Nation avec intégrité.');

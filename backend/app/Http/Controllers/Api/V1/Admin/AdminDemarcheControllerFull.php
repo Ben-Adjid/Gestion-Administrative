@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ActivityLog;
+use App\Models\Categorie;
 use App\Models\Demarche;
 use App\Http\Resources\Api\V1\DemarcheResource;
 use Illuminate\Http\Request;
@@ -320,6 +321,7 @@ class AdminDemarcheControllerFull extends Controller
             'conditions' => 'nullable|array',
             'conditions.*' => 'string',
             'status' => 'in:draft,published,archived',
+            'scheduled_publish_at' => 'nullable|date|after:now',
         ] + $this->translationRules() + $this->extraRules());
 
         if ($validator->fails()) {
@@ -327,6 +329,20 @@ class AdminDemarcheControllerFull extends Controller
         }
 
         $data = $validator->validated();
+
+        // Programmer une publication revient à décider de publier : mêmes droits et même double validation.
+        if (!empty($data['scheduled_publish_at'])) {
+            if (!$request->user()->isModerator()) {
+                return response()->json(['message' => 'Seul un modérateur peut programmer une publication.'], 403);
+            }
+            if ($this->mustBeReviewedByAnother($request, $demarche)) {
+                return response()->json(['message' => 'Programmation refusée : un autre administrateur doit relire la fiche que vous avez modifiée.'], 403);
+            }
+        }
+        // Publier maintenant annule la programmation.
+        if (($data['status'] ?? null) === 'published') {
+            $data['scheduled_publish_at'] = null;
+        }
 
         // Le statut n'est modifiable que par un modérateur : un éditeur corrige le contenu sans le (dé)publier.
         if (array_key_exists('status', $data) && $data['status'] !== $demarche->status && !$request->user()->isModerator()) {
@@ -411,6 +427,7 @@ class AdminDemarcheControllerFull extends Controller
         $old = $demarche->status;
         $demarche->update([
             'status' => 'published',
+            'scheduled_publish_at' => null,
             'updated_by' => $request->user()->id,
         ]);
         $this->log($request, 'publish_demarche', "Publication de la démarche « {$demarche->title} »", $demarche, ['status' => $old], ['status' => 'published']);
@@ -434,6 +451,106 @@ class AdminDemarcheControllerFull extends Controller
             'message' => 'Démarche dépubliée avec succès.',
             'data' => new DemarcheResource($demarche->load(['categorie', 'offices'])),
         ]);
+    }
+
+    /**
+     * POST /api/v1/admin/demarches/bulk
+     * Action groupée : publier, dépublier, archiver ou déplacer plusieurs fiches.
+     * Chaque fiche garde ses garde-fous ; les fiches refusées sont renvoyées avec la raison, jamais ignorées en silence.
+     */
+    public function bulk(Request $request)
+    {
+        $validated = $request->validate([
+            'ids' => 'required|array|min:1|max:100',
+            'ids.*' => 'integer|distinct|exists:demarches,id',
+            'action' => 'required|in:publish,unpublish,archive,move',
+            'target_category_id' => ['required_if:action,move', 'nullable', 'integer', 'exists:categories,id'],
+        ]);
+
+        $action = $validated['action'];
+        if (in_array($action, ['publish', 'unpublish', 'archive'], true) && !$request->user()->isModerator()) {
+            return response()->json(['message' => 'Seul un modérateur peut publier, dépublier ou archiver.'], 403);
+        }
+
+        $target = $action === 'move' ? Categorie::find($validated['target_category_id']) : null;
+        $done = 0;
+        $refused = [];
+
+        foreach (Demarche::whereIn('id', $validated['ids'])->get() as $demarche) {
+            switch ($action) {
+                case 'publish':
+                    if ($this->mustBeReviewedByAnother($request, $demarche)) {
+                        $refused[] = ['id' => $demarche->id, 'title' => $demarche->title, 'reason' => 'relecture par un autre administrateur requise'];
+                        continue 2;
+                    }
+                    $old = $demarche->status;
+                    $demarche->update(['status' => 'published', 'scheduled_publish_at' => null, 'updated_by' => $request->user()->id]);
+                    $this->log($request, 'publish_demarche', "Publication de la démarche « {$demarche->title} » (action groupée)", $demarche, ['status' => $old], ['status' => 'published']);
+                    break;
+                case 'unpublish':
+                    $old = $demarche->status;
+                    $demarche->update(['status' => 'draft', 'updated_by' => $request->user()->id]);
+                    $this->log($request, 'unpublish_demarche', "Dépublication de la démarche « {$demarche->title} » (action groupée)", $demarche, ['status' => $old], ['status' => 'draft']);
+                    break;
+                case 'archive':
+                    $demarche->delete();
+                    $this->log($request, 'archive_demarche', "Archivage de la démarche « {$demarche->title} » (action groupée)", $demarche);
+                    break;
+                case 'move':
+                    $old = $demarche->categorie_id;
+                    $demarche->update(['categorie_id' => $target->id, 'updated_by' => $request->user()->id]);
+                    $this->log($request, 'update_demarche', "Déplacement de la démarche « {$demarche->title} » vers « {$target->name} » (action groupée)", $demarche, ['categorie_id' => $old], ['categorie_id' => $target->id]);
+                    break;
+            }
+            $done++;
+        }
+
+        return response()->json([
+            'message' => "{$done} démarche(s) traitée(s)." . (count($refused) > 0 ? ' ' . count($refused) . ' refusée(s).' : ''),
+            'done' => $done,
+            'refused' => $refused,
+        ]);
+    }
+
+    /**
+     * POST /api/v1/admin/demarches/{demarche}/duplicate
+     * Copie une fiche en brouillon (même contenu, catégorie et bureaux) pour préparer une fiche voisine.
+     */
+    public function duplicate(Request $request, Demarche $demarche)
+    {
+        $base = mb_substr('Copie de ' . $demarche->title, 0, 230);
+        $title = $base;
+        $n = 2;
+        while (Demarche::withTrashed()->where('title', $title)->exists()) {
+            $title = $base . ' (' . $n++ . ')';
+        }
+
+        $slugBase = Str::slug($title);
+        $slug = $slugBase;
+        $suffix = 1;
+        while (Demarche::withTrashed()->where('slug', $slug)->exists()) {
+            $slug = "{$slugBase}-{$suffix}";
+            $suffix++;
+        }
+
+        $copy = $demarche->replicate(['slug', 'title', 'status', 'last_verified_at', 'scheduled_publish_at', 'views_count', 'created_by', 'updated_by']);
+        $copy->forceFill([
+            'title' => $title,
+            'slug' => $slug,
+            'status' => 'draft',
+            'last_verified_at' => null,
+            'views_count' => 0,
+            'created_by' => $request->user()->id,
+            'updated_by' => $request->user()->id,
+        ])->save();
+        $copy->offices()->sync($demarche->offices->pluck('id')->all());
+
+        $this->log($request, 'create_demarche', "Copie de la démarche « {$demarche->title} » en brouillon : « {$copy->title} »", $copy, null, $copy->only(self::LOGGED_FIELDS));
+
+        return response()->json([
+            'message' => 'Copie créée en brouillon. Modifiez-la puis publiez-la.',
+            'data' => new DemarcheResource($copy->load(['categorie', 'offices'])),
+        ], 201);
     }
 
     /**

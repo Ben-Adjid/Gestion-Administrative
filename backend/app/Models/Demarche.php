@@ -65,6 +65,7 @@ class Demarche extends Model
         'contact_phone',
         'official_source_url',
         'last_verified_at',
+        'scheduled_publish_at',
         'status',
         'is_online',
         'online_url',
@@ -92,6 +93,7 @@ class Demarche extends Model
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
         'last_verified_at' => 'date',
+        'scheduled_publish_at' => 'datetime',
     ];
 
     /**
