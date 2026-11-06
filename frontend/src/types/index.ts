@@ -125,6 +125,7 @@ export interface City {
   slug: string;
   name: string;
   province: string | null;
+  province_label?: string | null;
   offices_count: number;
 }
 

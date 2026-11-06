@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "licenciement-economique-autorisation-prealable",
+    "en": {
+      "title": "Economic dismissal — prior authorisation",
+      "summary": "Administrative procedure in Chad: economic dismissal — prior authorisation.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 58 (page 39). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "1 to 3 months",
+      "validity": "Single use (per wave of dismissals)",
+      "institution": "Labour Directorate",
+      "location": "Labour Directorate / Labour Inspectorate",
+      "required_documents": ["Reasoned written request from the employer", "Employment safeguard plan (if more than 10 employees are dismissed)", "Income statements for the last 3 financial years", "List of employees concerned, with seniority and salaries", "Minutes of the staff representatives' meeting"],
+      "procedure_steps": ["Consult the staff representatives (minutes)", "File the authorisation request at the Labour Inspectorate", "The Inspector summons both parties (employer and staff representatives)", "Decision of the Inspector (agreement or reasoned refusal)", "If agreed: carry out the dismissals with the legal notice and compensation"],
+      "conditions": ["Any economic dismissal of more than one employee must be authorised by the Labour Inspector", "The employer must consult the staff representatives before the request", "The Inspector may refuse if the economic grounds are not established", "Priority is given to internal redeployment before any dismissal", "Severance pay is mandatory according to seniority"]
+    },
+    "ar": {
+      "title": "الفصل لأسباب اقتصادية — ترخيص مسبق",
+      "summary": "إجراء إداري في تشاد: الفصل لأسباب اقتصادية — ترخيص مسبق.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 58 (الصفحة 39). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "استعمال واحد (لكل موجة فصل)",
+      "institution": "مديرية الشغل",
+      "location": "مديرية الشغل / مفتشية العمل",
+      "required_documents": ["طلب كتابي مُعلَّل من المشغّل", "خطة للحفاظ على مناصب الشغل (إذا فُصل أكثر من 10 أجراء)", "كشوف الحسابات لآخر 3 سنوات مالية", "قائمة الأجراء المعنيين مع الأقدمية والأجور", "محضر اجتماع ممثلي الأجراء"],
+      "procedure_steps": ["استشارة ممثلي الأجراء (محضر)", "إيداع طلب الترخيص لدى مفتشية العمل", "يستدعي المفتش الطرفين (المشغّل وممثلي الأجراء)", "قرار المفتش (الموافقة أو الرفض المُعلَّل)", "في حالة الموافقة: تنفيذ الفصل مع الإشعار القانوني والتعويضات"],
+      "conditions": ["كل فصل اقتصادي لأكثر من أجير واحد يجب أن يحصل على ترخيص من مفتش الشغل", "يجب على المشغّل استشارة ممثلي الأجراء قبل الطلب", "يجوز للمفتش الرفض إذا لم تثبت الأسباب الاقتصادية", "الأولوية لإعادة التوزيع داخل المؤسسة قبل أي فصل", "التعويض عن الفصل إلزامي حسب الأقدمية"]
+    }
+  },
+  {
+    "slug": "permis-de-travail-pour-etranger",
+    "en": {
+      "title": "Work permit for a foreign national",
+      "summary": "Administrative procedure in Chad: work permit for a foreign national.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 70 (page 39). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 150,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "1 year, renewable (tied to the contract)",
+      "institution": "Labour Directorate",
+      "location": "Labour Directorate / Ministry of Labour",
+      "required_documents": ["Employment contract signed by both parties", "CNI or passport of the foreign national", "Diplomas and qualifications (legalised)", "Justification that the post cannot be filled by a Chadian", "Trade register extract (RCCM) of the employer", "Tax identification number (NIF) of the employer", "Criminal record certificate from the foreign national's country of origin"],
+      "procedure_steps": ["The employer files the request with the contract and the justification", "The Ministry checks that the profile is not available locally", "Examination committee", "Work permit issued", "The foreign national may legally take up the post"],
+      "conditions": ["Any foreign national working in Chad must hold a work permit", "The employer must show that the profile does not exist locally (market study)", "Quota: foreign staff must not exceed 25% of the total workforce", "Workers from CEMAC countries benefit from a simplified procedure", "Without a work permit: the employer is liable to fines and the foreign national to expulsion"]
+    },
+    "ar": {
+      "title": "رخصة العمل للأجنبي",
+      "summary": "إجراء إداري في تشاد: رخصة العمل للأجنبي.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 70 (الصفحة 39). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 150 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "سنة واحدة قابلة للتجديد (مرتبطة بالعقد)",
+      "institution": "مديرية الشغل",
+      "location": "مديرية الشغل / وزارة الشغل",
+      "required_documents": ["عقد العمل موقّع من الطرفين", "البطاقة الوطنية أو جواز سفر الأجنبي", "الشهادات والمؤهلات (مصدَّقة)", "ما يثبت أن المنصب لا يمكن شغله من طرف تشادي", "مستخرج السجل التجاري (RCCM) للمشغّل", "رقم التعريف الجبائي (NIF) للمشغّل", "شهادة السوابق القضائية من بلد الأجنبي الأصلي"],
+      "procedure_steps": ["يودع المشغّل الطلب مع العقد والمبرر", "تتحقق الوزارة من عدم توفر الكفاءة محليًا", "لجنة الدراسة", "تسليم رخصة العمل", "يمكن للأجنبي تولي مهامه قانونيًا"],
+      "conditions": ["كل أجنبي يعمل في تشاد يجب أن يحمل رخصة عمل", "على المشغّل إثبات عدم وجود الكفاءة محليًا (دراسة السوق)", "الحصة: لا يجوز أن يتجاوز الأجانب 25% من إجمالي العاملين", "يستفيد عمال دول الجماعة الاقتصادية لوسط إفريقيا من إجراء مبسّط", "بدون رخصة عمل: يتعرض المشغّل لغرامات ويتعرض الأجنبي للطرد"]
+    }
+  },
+  {
+    "slug": "certificat-medical-general",
+    "en": {
+      "title": "General medical certificate",
+      "summary": "Administrative procedure in Chad: general medical certificate.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 30 (page 42). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "2,000 to 15,000 FCFA depending on the establishment",
+      "processing_time": "Immediate to 3 days",
+      "validity": "Generally 3 months",
+      "institution": "Public hospital or approved private clinic",
+      "location": "Public hospital or approved private clinic",
+      "required_documents": ["Identity document (CNI)", "Medical certificate request form (if required by the administration)", "Health booklet (optional but useful)"],
+      "procedure_steps": ["Go to an approved health facility", "Attend the medical consultation with the doctor", "The doctor writes and signs the certificate", "Obtain the stamped and dated certificate"],
+      "conditions": ["Must be issued by a doctor approved by the Ministry of Health", "A medical certificate may only be issued after a physical consultation of the patient", "In case of a false statement by the doctor: removal from the register and criminal proceedings", "Generally valid for 3 months for administrative procedures", "For a driving licence: only a doctor approved by the Land Transport Directorate", "For civil service competitions: a military doctor or an approved hospital doctor"]
+    },
+    "ar": {
+      "title": "شهادة طبية عامة",
+      "summary": "إجراء إداري في تشاد: شهادة طبية عامة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 30 (الصفحة 42). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 2 000 إلى 15 000 FCFA حسب المؤسسة",
+      "processing_time": "فوري إلى 3 أيام",
+      "validity": "عادةً 3 أشهر",
+      "institution": "مستشفى عمومي أو عيادة خاصة معتمدة",
+      "location": "مستشفى عمومي أو عيادة خاصة معتمدة",
+      "required_documents": ["وثيقة الهوية (البطاقة الوطنية)", "استمارة طلب الشهادة الطبية (إذا طلبتها الإدارة)", "دفتر الصحة (اختياري لكنه مفيد)"],
+      "procedure_steps": ["التوجه إلى مؤسسة صحية معتمدة", "إجراء الفحص الطبي مع الطبيب", "يحرّر الطبيب الشهادة ويوقّعها", "الحصول على الشهادة مختومة ومؤرخة"],
+      "conditions": ["يجب أن يُصدرها طبيب معتمد من وزارة الصحة", "لا تُسلَّم الشهادة الطبية إلا بعد فحص المريض فحصًا سريريًا", "في حالة الإدلاء بمعلومات كاذبة من الطبيب: الشطب من السجل والمتابعة الجنائية", "صالحة عادةً لمدة 3 أشهر في الإجراءات الإدارية", "بالنسبة لرخصة السياقة: طبيب معتمد من مديرية النقل البري فقط", "بالنسبة لمسابقات الوظيفة العمومية: طبيب عسكري أو طبيب مستشفى معتمد"]
+    }
+  },
+  {
+    "slug": "carnet-de-vaccination-mise-a-jour-obligatoire-voyage",
+    "en": {
+      "title": "Vaccination record — update required for travel",
+      "summary": "Administrative procedure in Chad: vaccination record — update required for travel.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 31 (page 42). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (EPI vaccines) to 20,000 FCFA (travel vaccines)",
+      "processing_time": "Immediate (some vaccines need 2 to 4 weeks to take effect)",
+      "validity": "Depends on the vaccine (from 1 year to lifetime)",
+      "institution": "Public health centre or approved vaccination centre",
+      "location": "Public health centre or approved vaccination centre",
+      "required_documents": ["Existing vaccination record (to bring for the update)", "Identity document", "Passport (for international travel)"],
+      "procedure_steps": ["Go to the vaccination centre with the existing record", "State the destination and the departure date", "Receive the recommended and mandatory vaccines", "The doctor updates and stamps the vaccination record", "Keep the vaccination record with the passport for travel"],
+      "conditions": ["Yellow fever vaccination is MANDATORY to enter most African countries", "The yellow fever vaccine is valid FOR LIFE (since 2016) — a single dose is enough", "Meningitis: mandatory for travellers to Saudi Arabia (Hajj or Umrah)", "COVID-19, hepatitis A and B and typhoid vaccines are recommended depending on the destination", "The international vaccination certificate (yellow booklet) is the official recognised document", "EPI (Expanded Programme on Immunization) vaccines: free at public centres for children"]
+    },
+    "ar": {
+      "title": "سجل التلقيح — تحديث إلزامي للسفر",
+      "summary": "إجراء إداري في تشاد: سجل التلقيح — تحديث إلزامي للسفر.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 31 (الصفحة 42). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (لقاحات البرنامج الموسع) إلى 20 000 FCFA (لقاحات السفر)",
+      "processing_time": "فوري (بعض اللقاحات تحتاج من أسبوعين إلى 4 أسابيع لتفعل مناعتها)",
+      "validity": "حسب اللقاح (من سنة إلى مدى الحياة)",
+      "institution": "مركز صحي عمومي أو مركز تلقيح معتمد",
+      "location": "مركز صحي عمومي أو مركز تلقيح معتمد",
+      "required_documents": ["سجل التلقيح الحالي (يُحضر للتحديث)", "وثيقة هوية", "جواز السفر (للسفر الدولي)"],
+      "procedure_steps": ["التوجه إلى مركز التلقيح بالسجل الحالي", "ذكر وجهة السفر وتاريخ المغادرة", "أخذ اللقاحات الموصى بها والإلزامية", "يحدّث الطبيب سجل التلقيح ويختمه", "الاحتفاظ بسجل التلقيح مع جواز السفر أثناء السفر"],
+      "conditions": ["التلقيح ضد الحمى الصفراء إلزامي لدخول معظم الدول الإفريقية", "لقاح الحمى الصفراء صالح مدى الحياة (منذ 2016)، ويكفي جرعة واحدة", "التهاب السحايا: إلزامي للمسافرين إلى المملكة العربية السعودية (الحج والعمرة)", "تُوصى لقاحات كوفيد-19 والتهاب الكبد A وB والتيفوئيد حسب الوجهة", "السجل الدولي للتلقيح (الكتيب الأصفر) هو الوثيقة الرسمية المعترف بها", "لقاحات البرنامج الموسع للتلقيح: مجانية في المراكز العمومية للأطفال"]
+    }
+  },
+  {
+    "slug": "demande-dattestation-dindigence-aide-sociale",
+    "en": {
+      "title": "Application for a certificate of indigence (social aid)",
+      "summary": "Administrative procedure in Chad: application for a certificate of indigence (social aid).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 32 (page 43). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "2 to 8 weeks (social inquiry required)",
+      "validity": "6 months to 1 year",
+      "institution": "Town hall",
+      "location": "Town hall / Prefecture / Ministry of Social Affairs",
+      "required_documents": ["Reasoned request letter addressed to the prefect or the mayor", "CNI or birth certificate of the applicant", "Residence certificate", "Proof of income (or proof of no income)", "Birth certificates of dependent children", "Marriage certificate (if applicable)", "Certificate of unemployment or of no income (neighbourhood chief)"],
+      "procedure_steps": ["Write the request letter and gather the documents", "File the file at the town hall or the prefecture", "A social worker visits the home for an inquiry", "The social report is drawn up", "The committee validates it and the certificate is issued", "Present the certificate at the hospital to receive care"],
+      "conditions": ["The certificate of indigence gives access to free care in public hospitals", "A social inquiry is carried out by a social worker to check the situation", "Covered care: consultations, hospital stays, essential medicines (official list)", "It does not cover specialised examinations outside the list (scanner, MRI)", "In a medical emergency: emergency treatment without waiting for the certificate"]
+    },
+    "ar": {
+      "title": "طلب شهادة الفقر (المساعدة الاجتماعية)",
+      "summary": "إجراء إداري في تشاد: طلب شهادة الفقر (المساعدة الاجتماعية).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 32 (الصفحة 43). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من أسبوعين إلى 8 أسابيع (يلزم تحقيق اجتماعي)",
+      "validity": "من 6 أشهر إلى سنة",
+      "institution": "البلدية",
+      "location": "البلدية / المحافظة / وزارة الشؤون الاجتماعية",
+      "required_documents": ["رسالة طلب مُعلَّلة موجهة إلى المحافظ أو العمدة", "البطاقة الوطنية أو عقد الميلاد لصاحب الطلب", "شهادة إقامة", "إثبات الدخل (أو إثبات عدم وجود دخل)", "عقود ميلاد الأطفال المعالين", "عقد الزواج (عند الاقتضاء)", "شهادة بطالة أو بعدم وجود دخل (يصدرها رئيس الحي)"],
+      "procedure_steps": ["كتابة رسالة الطلب وتجميع الوثائق", "إيداع الملف لدى البلدية أو المحافظة", "يقوم مساعد اجتماعي بزيارة المنزل للتحقيق", "يُعدّ التقرير الاجتماعي", "تصادق اللجنة وتُسلَّم الشهادة", "تقديم الشهادة في المستشفى للاستفادة من العلاج"],
+      "conditions": ["تتيح شهادة الفقر الاستفادة من العلاج المجاني في المستشفيات العمومية", "يُجري مساعد اجتماعي تحقيقًا للتأكد من الوضع", "العلاجات المشمولة: الاستشارات، والإقامات بالمستشفى، والأدوية الأساسية (القائمة الرسمية)", "لا تشمل الفحوص المتخصصة خارج القائمة (السكانير، الرنين المغناطيسي)", "في حالة الطوارئ الطبية: علاج طارئ دون انتظار الشهادة"]
+    }
+  },
+  {
+    "slug": "carte-dinvalidite-handicap",
+    "en": {
+      "title": "Disability card",
+      "summary": "Administrative procedure in Chad: disability card.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 59 (page 44). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "2 to 4 weeks",
+      "validity": "Variable (permanent or temporary depending on the disability)",
+      "institution": "Ministry of Social Affairs — Directorate for Persons with Disabilities",
+      "location": "Ministry of Social Affairs — Directorate for Persons with Disabilities",
+      "required_documents": ["Medical certificate describing the disability (specialist doctor)", "CNI of the applicant", "Birth certificate", "2 identity photos", "Application form (Ministry)", "Report from a social worker (field inquiry)"],
+      "procedure_steps": ["Obtain the medical certificate from the specialist", "File the file at the Ministry of Social Affairs", "Summons before the medical assessment committee", "Assignment of the disability rate", "Issue of the card"],
+      "conditions": ["Gives entitlement to benefits: reduced transport fares, tax exemptions, priority in services", "The disability rate is assessed by a medical committee", "For children: request made by the parents with a specialist medical certificate", "The card may be temporary (for a disability that may improve) or permanent"]
+    },
+    "ar": {
+      "title": "بطاقة الإعاقة",
+      "summary": "إجراء إداري في تشاد: بطاقة الإعاقة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 59 (الصفحة 44). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "متغيرة (دائمة أو مؤقتة حسب الإعاقة)",
+      "institution": "وزارة الشؤون الاجتماعية — مديرية الأشخاص ذوي الإعاقة",
+      "location": "وزارة الشؤون الاجتماعية — مديرية الأشخاص ذوي الإعاقة",
+      "required_documents": ["شهادة طبية تصف الإعاقة (طبيب مختص)", "البطاقة الوطنية لصاحب الطلب", "عقد الميلاد", "صورتان شخصيتان", "استمارة الطلب (الوزارة)", "تقرير أخصائي اجتماعي (تحقيق ميداني)"],
+      "procedure_steps": ["الحصول على الشهادة الطبية من المختص", "إيداع الملف لدى وزارة الشؤون الاجتماعية", "استدعاء أمام اللجنة الطبية للتقييم", "تحديد نسبة العجز", "تسليم البطاقة"],
+      "conditions": ["تفتح الحق في امتيازات: تخفيضات في النقل، وإعفاءات ضريبية، والأولوية في الخدمات", "تُقدَّر نسبة العجز من طرف لجنة طبية", "بالنسبة للأطفال: يقدّم الطلب الوالدان مع شهادة طبية مختصة", "يمكن أن تكون البطاقة مؤقتة (لإعاقة قابلة للتحسن) أو دائمة"]
+    }
+  },
+  {
+    "slug": "autorisation-dexercice-pour-professionnel-de-sante",
+    "en": {
+      "title": "Practice authorisation for a health professional",
+      "summary": "Administrative procedure in Chad: practice authorisation for a health professional.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 60 (page 44). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "20,000 to 50,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "Annual (renewal mandatory)",
+      "institution": "Ministry of Public Health — Human Resources Directorate",
+      "location": "Ministry of Public Health — Human Resources Directorate",
+      "required_documents": ["Medical or paramedical diploma (legalised if foreign)", "Diploma equivalence (if foreign diploma)", "CNI", "Clean criminal record", "Certificate of good health", "2 identity photos", "Application form", "Proof of membership of the Chadian Medical Council (for doctors)"],
+      "procedure_steps": ["Register with the Medical Council (for doctors)", "File the file at the Ministry of Health", "File examination committee", "Possible inspection of the practice", "Issue of the authorisation"],
+      "conditions": ["No health professional may practise without the Ministry's authorisation", "Doctors must be registered with the Medical Council", "Foreign doctors must also obtain a work permit", "The authorisation must be displayed in the practice or the establishment", "Illegal practice of medicine: heavy criminal penalties"]
+    },
+    "ar": {
+      "title": "ترخيص مزاولة مهنة الصحة",
+      "summary": "إجراء إداري في تشاد: ترخيص مزاولة مهنة الصحة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 60 (الصفحة 44). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 20 000 إلى 50 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "سنوي (التجديد إلزامي)",
+      "institution": "وزارة الصحة العمومية — مديرية الموارد البشرية",
+      "location": "وزارة الصحة العمومية — مديرية الموارد البشرية",
+      "required_documents": ["دبلوم الطب أو المهن شبه الطبية (مصدَّق إن كان أجنبيًا)", "معادلة الدبلوم (إن كان أجنبيًا)", "البطاقة الوطنية", "سجل عدلي نظيف", "شهادة حسن الصحة", "صورتان شخصيتان", "استمارة الطلب", "إثبات الانتساب إلى هيئة الأطباء التشاديين (للأطباء)"],
+      "procedure_steps": ["التسجيل لدى هيئة الأطباء (للأطباء)", "إيداع الملف لدى وزارة الصحة", "لجنة دراسة الملف", "تفتيش محتمل للعيادة أو المؤسسة", "تسليم الترخيص"],
+      "conditions": ["لا يجوز لأي مهني صحي مزاولة المهنة دون ترخيص الوزارة", "يجب أن يكون الأطباء مسجلين لدى هيئة الأطباء", "يجب على الأطباء الأجانب الحصول كذلك على رخصة عمل", "يجب عرض الترخيص داخل العيادة أو المؤسسة", "ممارسة الطب دون ترخيص: عقوبات جنائية مشددة"]
+    }
+  },
+  {
+    "slug": "autorisation-dimportation-de-medicaments",
+    "en": {
+      "title": "Authorisation to import medicines",
+      "summary": "Administrative procedure in Chad: authorisation to import medicines.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 72 (page 45). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 200,000 FCFA",
+      "processing_time": "1 to 2 months",
+      "validity": "Per import (renewed for each shipment)",
+      "institution": "Directorate of Pharmacy and Medicines — Ministry of Health",
+      "location": "Directorate of Pharmacy and Medicines — Ministry of Health",
+      "required_documents": ["Pharmaceutical licence of the applicant", "Technical data sheet of the medicine (in French)", "Good manufacturing practice certificate of the producer", "Batch analysis results", "Marketing authorisation in the country of origin", "Trade register extract (RCCM) of the importer", "Tax identification number (NIF) of the importer"],
+      "procedure_steps": ["Check that the medicine is authorised in Chad", "File the file at the Directorate of Pharmacy", "Technical examination committee", "Issue of the import authorisation", "Present the authorisation to customs at the time of import"],
+      "conditions": ["Only approved pharmacists or wholesalers may import medicines", "Any imported medicine must be on the national list of essential medicines or have a specific marketing authorisation", "Expired or poor-quality medicines are destroyed at the importer's expense", "Narcotics and psychotropic substances are subject to an even stricter regulation"]
+    },
+    "ar": {
+      "title": "ترخيص استيراد الأدوية",
+      "summary": "إجراء إداري في تشاد: ترخيص استيراد الأدوية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 72 (الصفحة 45). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 200 000 FCFA",
+      "processing_time": "من شهر إلى شهرين",
+      "validity": "لكل استيراد (يُجدَّد مع كل شحنة)",
+      "institution": "مديرية الصيدلة والدواء — وزارة الصحة",
+      "location": "مديرية الصيدلة والدواء — وزارة الصحة",
+      "required_documents": ["رخصة صيدلية لصاحب الطلب", "البطاقة التقنية للدواء (بالفرنسية)", "شهادة الممارسة الجيدة للتصنيع للمنتِج", "نتائج تحليل الدفعة", "ترخيص التسويق في بلد المنشأ", "مستخرج السجل التجاري (RCCM) للمستورد", "رقم التعريف الجبائي (NIF) للمستورد"],
+      "procedure_steps": ["التحقق من أن الدواء مرخّص في تشاد", "إيداع الملف لدى مديرية الصيدلة", "لجنة الدراسة التقنية", "تسليم ترخيص الاستيراد", "تقديم الترخيص للجمارك عند الاستيراد"],
+      "conditions": ["لا يستورد الأدوية إلا الصيادلة أو تجار الجملة المعتمدون", "يجب أن يكون كل دواء مستورد مدرجًا في قائمة الأدوية الأساسية الوطنية أو حاصلًا على ترخيص تسويق خاص", "تُتلف الأدوية منتهية الصلاحية أو رديئة الجودة على نفقة المستورد", "المخدرات والمؤثرات العقلية تخضع لتنظيم أشد صرامة"]
+    }
+  }
+]

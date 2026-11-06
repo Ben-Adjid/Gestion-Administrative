@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "permis-de-construction",
+    "en": {
+      "title": "Building permit application",
+      "summary": "Administrative procedure in Chad: building permit application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 64 (page 57). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Varies by plot size (50,000 to 500,000 FCFA)",
+      "processing_time": "1 to 3 months",
+      "validity": "2 years (extendable by 1 year)",
+      "institution": "Town hall",
+      "location": "Town hall / Urban Planning and Housing Directorate",
+      "required_documents": ["Land title or residence permit (permis d'habiter)", "Architectural plan signed by an approved architect", "Structural calculation note (approved engineer)", "Site plan", "National ID card of the applicant", "Application form (Urban Planning Directorate)", "Up-to-date property tax receipts"],
+      "procedure_steps": ["Have the plans drawn up by an approved architect", "File the application at the Urban Planning Directorate", "Review of the file (compliance with planning rules)", "Opinion of the technical services (roads, water, electricity)", "Permit issued", "Display the permit on site before any work starts"],
+      "conditions": ["Required for any new building or extension over 20 m²", "The construction must comply with the Master Urban Plan of N'Djamena", "Any construction without a permit may be demolished by the administration", "The permit must be displayed on site for the whole duration of the works", "Expiry: if the works do not start within 2 years, the permit lapses"]
+    },
+    "ar": {
+      "title": "طلب رخصة البناء",
+      "summary": "إجراء إداري في تشاد: طلب رخصة البناء.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 64 (الصفحة 57). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "يختلف حسب مساحة الأرض (من 50 000 إلى 500 000 FCFA)",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "سنتان (قابلة للتمديد سنة واحدة)",
+      "institution": "البلدية",
+      "location": "البلدية / مديرية التعمير والسكن",
+      "required_documents": ["شهادة الملكية العقارية أو رخصة السكن", "مخطط معماري موقّع من مهندس معماري معتمد", "مذكرة حساب الهيكل (مهندس معتمد)", "مخطط الموقع", "بطاقة الهوية الوطنية لمقدّم الطلب", "استمارة الطلب (مديرية التعمير)", "إيصالات الضرائب العقارية المسددة"],
+      "procedure_steps": ["إعداد المخططات من قبل مهندس معماري معتمد", "إيداع الملف لدى مديرية التعمير", "دراسة الملف (مطابقة قواعد التعمير)", "رأي المصالح التقنية (الطرق والمياه والكهرباء)", "تسليم الرخصة", "عرض الرخصة في الموقع قبل بدء أي أشغال"],
+      "conditions": ["إلزامية لكل بناء جديد أو توسعة تتجاوز 20 م²", "يجب أن يحترم البناء المخطط التوجيهي للتعمير في انجامينا", "يجوز للإدارة هدم أي بناء دون رخصة", "يجب عرض الرخصة في الموقع طوال مدة الأشغال", "الصلاحية: إذا لم تبدأ الأشغال خلال سنتين تسقط الرخصة"]
+    }
+  },
+  {
+    "slug": "certificat-de-mariage",
+    "en": {
+      "title": "Civil marriage certificate",
+      "summary": "Administrative procedure in Chad: civil marriage certificate.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 10 (page 14). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 5,000 FCFA (varies by town hall)",
+      "processing_time": "Banns published: at least 15 days before the ceremony",
+      "validity": "Permanent",
+      "institution": "Town hall of the home of one of the spouses",
+      "location": "Town hall of the home of one of the spouses",
+      "required_documents": ["Birth certificates of both spouses (less than 3 months old)", "National ID cards of both spouses", "Residence certificate of both spouses", "Certificate of single status or divorce (if previously married)", "4 adult witnesses (2 per spouse) with their ID cards", "For foreigners: legalised birth extract + customary law certificate", "Parental consent if a spouse is a minor (minimum age 18 for women, 20 for men)", "2 identity photos of each spouse"],
+      "procedure_steps": ["File the application at the town hall at least 15 days before the desired date", "The town hall publishes the banns (public display for 15 days)", "If there is no objection within 15 days, the ceremony may take place", "Ceremony in the presence of the civil registrar, the spouses and the witnesses", "Marriage certificate signed by all", "Family book and marriage certificate handed to the spouses"],
+      "conditions": ["Civil marriage is the only form legally recognised in Chad for civil rights", "A customary or religious marriage has no legal value without a civil marriage", "Legal age: 18 for women, 20 for men (exemption possible with the authorisation of the court president)", "Bigamy is legally prohibited in civil marriage (only one civil marriage at a time)", "The banns must be published 15 days before the ceremony", "Witnesses must be physically present on the day of the ceremony"]
+    },
+    "ar": {
+      "title": "عقد الزواج المدني",
+      "summary": "إجراء إداري في تشاد: عقد الزواج المدني.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 10 (الصفحة 14). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 5 000 FCFA (يختلف حسب البلدية)",
+      "processing_time": "نشر الإعلانات: 15 يومًا على الأقل قبل المراسم",
+      "validity": "دائم",
+      "institution": "بلدية محل إقامة أحد الزوجين",
+      "location": "بلدية محل إقامة أحد الزوجين",
+      "required_documents": ["عقدا ميلاد الزوجين (لا يتجاوز عمرهما 3 أشهر)", "بطاقتا الهوية الوطنية للزوجين", "شهادة إقامة للزوجين", "شهادة عزوبة أو طلاق (إذا سبق الزواج)", "4 شهود بالغين (شاهدان لكل زوج) مع بطاقاتهم", "بالنسبة للأجانب: مستخرج ميلاد مصدَّق + شهادة العرف", "موافقة الوالدين إذا كان أحد الزوجين قاصرًا (18 سنة كحد أدنى للمرأة، و20 سنة للرجل)", "صورتان شخصيتان لكل زوج"],
+      "procedure_steps": ["إيداع الملف لدى البلدية قبل 15 يومًا على الأقل من التاريخ المرغوب", "تنشر البلدية الإعلانات (عرض عام لمدة 15 يومًا)", "إذا لم يُقدَّم أي اعتراض خلال 15 يومًا يمكن إقامة المراسم", "المراسم بحضور ضابط الحالة المدنية والزوجين والشهود", "توقيع عقد الزواج من الجميع", "تسليم دفتر العائلة وعقد الزواج للزوجين"],
+      "conditions": ["الزواج المدني هو الشكل الوحيد المعترف به قانونًا في تشاد للحقوق المدنية", "لا قيمة قانونية للزواج العرفي أو الديني دون زواج مدني", "السن القانونية: 18 سنة للمرأة و20 سنة للرجل (يمكن الاستثناء بإذن من رئيس المحكمة)", "تعدد الزوجات محظور قانونًا في الزواج المدني (زواج مدني واحد في الوقت نفسه)", "يجب نشر الإعلانات قبل 15 يومًا من موعد الزواج", "يجب حضور الشهود شخصيًا يوم المراسم"]
+    }
+  },
+  {
+    "slug": "carte-didentite-nationale",
+    "en": {
+      "title": "National Identity Card (CNI) — first application",
+      "summary": "Administrative procedure in Chad: National Identity Card (CNI) — first application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 1 (page 4). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 FCFA (fiscal stamp)",
+      "processing_time": "2 to 8 weeks depending on availability",
+      "validity": "10 years",
+      "institution": "National Agency for Secure Titles (ANATS)",
+      "location": "ANATS reception centres (N'Djamena and provincial capitals)",
+      "required_documents": ["Original birth certificate or supplementary judgment", "2 recent identity photos (white background, 4 x 4 cm)", "Residence certificate (issued by the neighbourhood chief)", "5,000 FCFA fiscal stamp", "Completed CNI application form (available on site)", "For minors aged 15 to 17: parental authorisation + parent's CNI"],
+      "procedure_steps": ["Go to the police station or district office with all the documents", "Fill in the application form on site", "File the complete application at the counter", "Receive the filing receipt (keep it safe)", "Come back on the indicated date for collection (or wait for a summons)", "Present the receipt to collect the CNI"],
+      "conditions": ["Mandatory for every Chadian citizen from age 15", "The application must be made in the constituency of residence", "In case of loss, a loss report at the police station is required before a new application", "A CNI expired for more than 6 months must be renewed following the same procedure", "The fingerprints of all 10 fingers are taken at filing", "The applicant must appear in person — no proxy is accepted for fingerprints"]
+    },
+    "ar": {
+      "title": "بطاقة الهوية الوطنية — الطلب الأول",
+      "summary": "إجراء إداري في تشاد: بطاقة الهوية الوطنية — الطلب الأول.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 1 (الصفحة 4). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "5 000 FCFA (طابع مالي)",
+      "processing_time": "من أسبوعين إلى 8 أسابيع حسب التوفر",
+      "validity": "10 سنوات",
+      "institution": "الوكالة الوطنية للوثائق المؤمّنة (ANATS)",
+      "location": "مراكز استقبال ANATS (انجامينا وعواصم المقاطعات)",
+      "required_documents": ["عقد الميلاد الأصلي أو حكم تكميلي", "صورتان شخصيتان حديثتان (خلفية بيضاء، 4 × 4 سم)", "شهادة إقامة (يصدرها رئيس الحي)", "طابع مالي بقيمة 5 000 FCFA", "استمارة طلب البطاقة الوطنية مكتملة (متوفرة في المكان)", "بالنسبة للقاصرين من 15 إلى 17 سنة: موافقة الولي + بطاقة هوية الولي"],
+      "procedure_steps": ["التوجه إلى مخفر الشرطة أو المندوبية مع جميع الوثائق", "ملء استمارة الطلب في المكان", "إيداع الملف الكامل في الشباك", "استلام وصل الإيداع (احفظه جيدًا)", "العودة في التاريخ المحدد للاستلام (أو انتظار الاستدعاء)", "تقديم الوصل لاستلام البطاقة الوطنية"],
+      "conditions": ["إلزامية لكل مواطن تشادي ابتداءً من سن 15 سنة", "يجب تقديم الطلب في الدائرة التي يقيم فيها صاحبه", "في حالة الضياع يلزم تقديم تصريح بالضياع لدى مخفر الشرطة قبل أي طلب جديد", "البطاقة منتهية الصلاحية منذ أكثر من 6 أشهر تُجدَّد وفق الإجراء نفسه", "تُؤخذ بصمات الأصابع العشرة عند الإيداع", "يجب أن يحضر صاحب الطلب شخصيًا — لا يُقبل وكيل لأخذ البصمات"]
+    }
+  },
+  {
+    "slug": "permis-de-conduire",
+    "en": {
+      "title": "Driving licence — first application (category B)",
+      "summary": "Administrative procedure in Chad: driving licence — first application (category B).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 4 (page 5). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "25,000 to 50,000 FCFA (school fees + exam fees)",
+      "processing_time": "2 to 4 months (training included)",
+      "validity": "10 years",
+      "institution": "Land Transport Directorate",
+      "location": "Land Transport Directorate / approved driving schools / exam centre",
+      "required_documents": ["Valid CNI or birth certificate (minimum age 18 for category B)", "Medical certificate of fitness to drive (issued by an approved doctor)", "4 recent identity photos (white background)", "Fiscal stamp (amount varies by prefecture)", "Certificate of success in the highway code test (driving school)", "Certificate of success in the practical driving test", "Driving licence application form (Land Transport Directorate)"],
+      "procedure_steps": ["Register with a driving school approved by the Land Transport Directorate", "Complete the theory (highway code) and practical (driving) training", "Take and pass the theory exam at the official exam centre", "Take and pass the practical exam with an approved inspector", "Assemble the complete file with all the documents", "File the application at the Land Transport Directorate", "Collect the final licence (a provisional receipt is issued in the meantime)"],
+      "conditions": ["Minimum age: 18 for category B (car), 16 for category AM (moped)", "Training at an approved driving school is mandatory (minimum 20 hours of driving)", "The theory (highway code) exam must be passed before the practical exam", "After a failed exam, a new attempt is possible after at least 15 days", "The medical certificate must be less than 3 months old at filing", "Categories: A (motorcycle), B (car), C (lorry), D (bus), E (trailer)"]
+    },
+    "ar": {
+      "title": "رخصة السياقة — الطلب الأول (الفئة B)",
+      "summary": "إجراء إداري في تشاد: رخصة السياقة — الطلب الأول (الفئة B).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 4 (الصفحة 5). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 25 000 إلى 50 000 FCFA (رسوم مدرسة تعليم السياقة + رسوم الامتحان)",
+      "processing_time": "من شهرين إلى 4 أشهر (التكوين مشمول)",
+      "validity": "10 سنوات",
+      "institution": "مديرية النقل البري",
+      "location": "مديرية النقل البري / مدارس تعليم السياقة المعتمدة / مركز الامتحان",
+      "required_documents": ["بطاقة هوية وطنية سارية أو عقد ميلاد (18 سنة كحد أدنى للفئة B)", "شهادة طبية تثبت اللياقة للقيادة (يصدرها طبيب معتمد)", "4 صور شخصية حديثة (خلفية بيضاء)", "طابع مالي (المبلغ يختلف حسب المحافظة)", "شهادة النجاح في امتحان قانون السير (مدرسة تعليم السياقة)", "شهادة النجاح في امتحان القيادة العملي", "استمارة طلب رخصة السياقة (مديرية النقل البري)"],
+      "procedure_steps": ["التسجيل في مدرسة لتعليم السياقة معتمدة من مديرية النقل البري", "إتمام التكوين النظري (قانون السير) والتطبيقي (القيادة)", "اجتياز امتحان قانون السير النظري بنجاح في مركز الامتحان الرسمي", "اجتياز امتحان القيادة العملي بنجاح أمام مفتش معتمد", "تجميع الملف الكامل بجميع الوثائق", "إيداع الملف لدى مديرية النقل البري", "استلام الرخصة النهائية (يُسلَّم وصل مؤقت في الأثناء)"],
+      "conditions": ["السن الأدنى: 18 سنة للفئة B (السيارة)، و16 سنة للفئة AM (الدراجة النارية الخفيفة)", "التكوين في مدرسة معتمدة إلزامي (20 ساعة قيادة على الأقل)", "يجب اجتياز امتحان قانون السير النظري قبل الامتحان العملي", "بعد الرسوب يمكن إعادة المحاولة بعد 15 يومًا على الأقل", "يجب ألا تتجاوز الشهادة الطبية 3 أشهر وقت الإيداع", "الفئات: A (الدراجة النارية)، B (السيارة)، C (الشاحنة)، D (الحافلة)، E (المقطورة)"]
+    }
+  },
+  {
+    "slug": "inscription-universite",
+    "en": {
+      "title": "Enrolment at the University of N'Djamena or other public universities",
+      "summary": "Administrative procedure in Chad: enrolment at the University of N'Djamena or other public universities.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 21 (page 28). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 30,000 FCFA (enrolment fees vary by faculty)",
+      "processing_time": "According to the academic calendar (July to October)",
+      "validity": "For the current academic year",
+      "institution": "Secretariat of the relevant faculty",
+      "location": "Secretariat of the relevant faculty / Academic Affairs Directorate",
+      "required_documents": ["Original baccalauréat diploma or certificate of success", "Baccalauréat transcripts (series and grades)", "Birth certificate (less than 3 months old)", "Valid CNI", "Certificate of Chadian nationality (for certain courses)", "4 recent identity photos", "Clean criminal record extract (certain courses)", "Receipt for payment of enrolment fees", "Enrolment form (university)"],
+      "procedure_steps": ["Check the dates and courses available on the university notice boards", "Collect and fill in the enrolment form", "Pay the fees at the university cashier", "File the complete file at the secretariat", "Get the student card and the enrolment certificate"],
+      "conditions": ["Numerus clausus in some courses (Medicine, Law, Engineering) — selection on file", "Foreign students must also provide a study authorisation issued by the Ministry", "Re-enrolment is annual — a student who does not re-enrol within the deadline loses their place", "A student who repeats the same academic year twice may be excluded from the course", "Scholarship holders must provide their scholarship certificate at enrolment"]
+    },
+    "ar": {
+      "title": "التسجيل في جامعة انجامينا أو الجامعات العمومية",
+      "summary": "إجراء إداري في تشاد: التسجيل في جامعة انجامينا أو الجامعات العمومية الأخرى.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 21 (الصفحة 28). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 30 000 FCFA (رسوم التسجيل تختلف حسب الكلية)",
+      "processing_time": "حسب الروزنامة الجامعية (من يوليو إلى أكتوبر)",
+      "validity": "للسنة الجامعية الحالية",
+      "institution": "أمانة الكلية المعنية",
+      "location": "أمانة الكلية المعنية / مديرية الشؤون الأكاديمية",
+      "required_documents": ["شهادة البكالوريا الأصلية أو شهادة النجاح", "كشوف نقاط البكالوريا (الشعبة والتقديرات)", "عقد الميلاد (لا يتجاوز 3 أشهر)", "بطاقة هوية وطنية سارية", "شهادة الجنسية التشادية (لبعض التخصصات)", "4 صور شخصية حديثة", "شهادة سوابق قضائية نظيفة (لبعض التخصصات)", "وصل دفع رسوم التسجيل", "استمارة التسجيل (الجامعة)"],
+      "procedure_steps": ["الاطلاع على التواريخ والتخصصات المتاحة في لوحات إعلانات الجامعة", "استلام استمارة التسجيل وملؤها", "دفع الرسوم في صندوق الجامعة", "إيداع الملف الكامل لدى الأمانة", "الحصول على البطاقة الطلابية وشهادة التسجيل"],
+      "conditions": ["عدد محدود من المقاعد في بعض التخصصات (الطب، الحقوق، الهندسة) — الانتقاء على أساس الملف", "يجب على الطلاب الأجانب تقديم إذن دراسة صادر عن الوزارة", "إعادة التسجيل سنوية — الطالب الذي لا يعيد تسجيله في الآجال يفقد مقعده", "الطالب الذي يعيد السنة الجامعية نفسها مرتين قد يُقصى من التخصص", "على الطلبة المتمتعين بمنحة تقديم شهادة المنحة عند التسجيل"]
+    }
+  },
+  {
+    "slug": "passeport-biometrique",
+    "en": {
+      "title": "Ordinary Chadian passport — first application",
+      "summary": "Administrative procedure in Chad: ordinary Chadian passport — first application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 14 (page 21). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "60,000 FCFA",
+      "processing_time": "2 to 6 weeks (standard) / 5 to 10 days (urgent)",
+      "validity": "5 years",
+      "institution": "National Agency for Secure Titles (ANATS)",
+      "location": "ANATS reception centres (N'Djamena and provincial capitals)",
+      "required_documents": ["Valid CNI", "Original birth certificate (less than 3 months old)", "Certificate of Chadian nationality", "2 recent biometric photos (white background, 3.5 x 4.5 cm, bare head)", "Fiscal stamp (amount depends on category)", "Passport application form (available at the DGDI)", "Receipt for payment of fees at the National Treasury", "For civil servants: employer's authorisation (travel order)", "For minors: birth certificate + CNI of both parents + parental authorisation"],
+      "procedure_steps": ["Pay the passport fees at the National Treasury (get the receipt)", "Collect the form at the DGDI and fill it in", "File the complete file at the DGDI counter", "Fingerprints and biometric photo taken on site", "Get the filing receipt with the estimated collection date", "Collect the passport on the indicated date with the receipt and the CNI"],
+      "conditions": ["The Chadian passport has been a biometric document since 2012", "Any Chadian citizen may apply from birth (children included)", "Minors travel with their own passport OR are registered on a parent's passport", "Renew at least 6 months before expiry for international travel (requirement of destination countries)", "An expired passport is not accepted — even to return to Chad from some countries", "The DGDI is the only competent authority — no provincial delegation for biometric passports"]
+    },
+    "ar": {
+      "title": "جواز السفر التشادي العادي — الطلب الأول",
+      "summary": "إجراء إداري في تشاد: جواز السفر التشادي العادي — الطلب الأول.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 14 (الصفحة 21). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "60 000 FCFA",
+      "processing_time": "من أسبوعين إلى 6 أسابيع (عادي) / من 5 إلى 10 أيام (مستعجل)",
+      "validity": "5 سنوات",
+      "institution": "الوكالة الوطنية للوثائق المؤمّنة (ANATS)",
+      "location": "مراكز استقبال ANATS (انجامينا وعواصم المقاطعات)",
+      "required_documents": ["بطاقة هوية وطنية سارية", "عقد الميلاد الأصلي (لا يتجاوز 3 أشهر)", "شهادة الجنسية التشادية", "صورتان بيومتريتان حديثتان (خلفية بيضاء، 3.5 × 4.5 سم، رأس عارٍ)", "طابع مالي (المبلغ حسب الفئة)", "استمارة طلب الجواز (متوفرة لدى المديرية العامة للهجرة والجوازات DGDI)", "وصل دفع الرسوم لدى الخزينة الوطنية", "بالنسبة للموظفين: إذن من جهة العمل (أمر مهمة)", "بالنسبة للقاصرين: عقد الميلاد + بطاقتا هوية الوالدين + إذن الولي"],
+      "procedure_steps": ["دفع رسوم الجواز لدى الخزينة الوطنية والحصول على الوصل", "استلام الاستمارة من DGDI وملؤها", "إيداع الملف الكامل في شباك DGDI", "أخذ البصمات والصورة البيومترية في المكان", "استلام وصل الإيداع مع تاريخ الاستلام المقدَّر", "استلام الجواز في التاريخ المحدد مع الوصل والبطاقة الوطنية"],
+      "conditions": ["الجواز التشادي وثيقة بيومترية منذ سنة 2012", "يحق لكل مواطن تشادي التقدم بالطلب منذ الولادة (بما في ذلك الأطفال)", "يسافر القاصرون بجواز خاص بهم أو مسجلين في جواز أحد الوالدين", "يجب التجديد قبل 6 أشهر على الأقل من انتهاء الصلاحية للسفر الدولي (شرط بلدان الوجهة)", "لا يُقبل الجواز منتهي الصلاحية — حتى للعودة إلى تشاد من بعض البلدان", "المديرية العامة للهجرة والجوازات DGDI هي الجهة الوحيدة المختصة — لا تفويض في المقاطعات للجوازات البيومترية"]
+    }
+  },
+  {
+    "slug": "acte-de-naissance",
+    "en": {
+      "title": "Birth certificate extract (copy)",
+      "summary": "Administrative procedure in Chad: birth certificate extract (copy).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 9 (page 13). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 500 FCFA depending on the town hall",
+      "processing_time": "Immediate to 3 days",
+      "validity": "Generally 3 months for official procedures",
+      "institution": "Town hall of the place of birth",
+      "location": "Town hall of the place of birth",
+      "required_documents": ["Birth certificate number (if known)", "Full name, first name(s), date and place of birth of the declarant", "CNI or identity document of the applicant", "Family relationship if requested on behalf of someone else"],
+      "procedure_steps": ["Go to the town hall of the place of birth", "Present your CNI and give your civil status details", "The officer checks the register", "The extract is issued signed and stamped"],
+      "conditions": ["Can be requested by the person concerned, their parents, spouse or legal representative", "Third parties (employers, administrations) cannot request it directly", "The extract with filiation names the parents — the extract without filiation does not", "Valid 3 months for most administrative and consular procedures"]
+    },
+    "ar": {
+      "title": "مستخرج شهادة الميلاد (نسخة)",
+      "summary": "إجراء إداري في تشاد: مستخرج شهادة الميلاد (نسخة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 9 (الصفحة 13). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 500 FCFA حسب البلدية",
+      "processing_time": "فوري إلى 3 أيام",
+      "validity": "عادةً 3 أشهر للإجراءات الرسمية",
+      "institution": "بلدية مكان الميلاد",
+      "location": "بلدية مكان الميلاد",
+      "required_documents": ["رقم عقد الميلاد (إن كان معروفًا)", "الاسم الكامل والأسماء الشخصية وتاريخ ومكان ميلاد المُصرِّح", "بطاقة الهوية الوطنية أو وثيقة هوية مقدّم الطلب", "صلة القرابة إذا كان الطلب نيابةً عن شخص آخر"],
+      "procedure_steps": ["التوجه إلى بلدية مكان الميلاد", "تقديم بطاقة الهوية الوطنية وذكر البيانات المدنية", "يتحقق الضابط من السجل", "يُسلَّم المستخرج موقّعًا ومختومًا"],
+      "conditions": ["يمكن أن يطلبه المعني بالأمر أو والداه أو زوجه أو ممثله القانوني", "لا يمكن للأطراف الثالثة (أرباب العمل، الإدارات) طلبه مباشرة", "المستخرج الذي يتضمن النسب يذكر الوالدين، أما المستخرج بدون نسب فلا يذكرهما", "صالح لمدة 3 أشهر لمعظم الإجراءات الإدارية والقنصلية"]
+    }
+  },
+  {
+    "slug": "acte-de-deces",
+    "en": {
+      "title": "Death certificate",
+      "summary": "Administrative procedure in Chad: death certificate.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 11 (page 14). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Immediate (declaration to be made within 3 days)",
+      "validity": "Permanent",
+      "institution": "Town hall of the place of death",
+      "location": "Town hall of the place of death",
+      "required_documents": ["Medical death certificate (issued by the doctor who confirmed the death)", "CNI or birth certificate of the deceased", "CNI of the declarant (close relative)", "Family book if available", "If there is no medical certificate: declaration by 2 witnesses"],
+      "procedure_steps": ["Obtain the medical death certificate from the doctor or hospital", "Go to the town hall within 3 days", "Present the documents and declare the death", "The officer records the death and issues the death certificate", "Several certified copies are given to the family"],
+      "conditions": ["Legal deadline for declaration: 3 days after the death", "If the death occurred outside a health facility: declaration by a relative with 2 witnesses", "The death certificate is needed for inheritance, closing bank accounts and widow's pension", "In case of a violent death (accident, homicide): the gendarmerie or police must be informed before the civil declaration"]
+    },
+    "ar": {
+      "title": "شهادة الوفاة",
+      "summary": "إجراء إداري في تشاد: شهادة الوفاة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 11 (الصفحة 14). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "فوري (يجب التصريح خلال 3 أيام)",
+      "validity": "دائم",
+      "institution": "بلدية مكان الوفاة",
+      "location": "بلدية مكان الوفاة",
+      "required_documents": ["شهادة الوفاة الطبية (يصدرها الطبيب الذي عاين الوفاة)", "بطاقة الهوية الوطنية أو عقد ميلاد المتوفى", "بطاقة الهوية الوطنية للمُصرِّح (أحد الأقارب المقربين)", "دفتر العائلة إن توفر", "في حال عدم وجود شهادة طبية: تصريح من شاهدين"],
+      "procedure_steps": ["الحصول على شهادة الوفاة الطبية من الطبيب أو المستشفى", "التوجه إلى البلدية خلال 3 أيام", "تقديم الوثائق والتصريح بالوفاة", "يسجل الضابط الوفاة ويسلّم شهادة الوفاة", "تُسلَّم عدة نسخ مصدّقة للعائلة"],
+      "conditions": ["المهلة القانونية للتصريح: 3 أيام بعد الوفاة", "إذا وقعت الوفاة خارج مؤسسة صحية: يصرّح بها قريب بحضور شاهدين", "شهادة الوفاة لازمة للإرث وإغلاق الحسابات البنكية ومعاش الأرملة", "في حالة الوفاة العنيفة (حادث، جريمة قتل): يجب إبلاغ الدرك أو الشرطة قبل التصريح المدني"]
+    }
+  }
+]

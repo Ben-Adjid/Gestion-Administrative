@@ -39,6 +39,7 @@ class ReferencePublicController extends Controller
             'slug' => $city->slug,
             'name' => $city->localized('name', $language),
             'province' => $city->province,
+            'province_label' => \App\Support\Provinces::label($city->province, $language),
             'offices_count' => $city->offices_count,
         ])]);
     }

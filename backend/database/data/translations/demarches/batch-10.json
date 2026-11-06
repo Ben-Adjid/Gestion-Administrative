@@ -1,0 +1,118 @@
+[
+  {
+    "slug": "assurance-automobile-obligatoire-rc",
+    "en": {
+      "title": "Compulsory motor insurance (third-party liability)",
+      "summary": "Administrative procedure in Chad: compulsory motor insurance (third-party liability).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 45 (page 68). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "25,000 to 100,000 FCFA per year depending on the vehicle",
+      "processing_time": "Immediate (issued the same day)",
+      "validity": "1 year",
+      "institution": "Approved insurance companies (STAR, AMAGUPTA, STA, etc.)",
+      "location": "Approved insurance companies (STAR, AMAGUPTA, STA, etc.)",
+      "required_documents": ["Vehicle registration certificate", "Owner's CNI", "Previous insurance certificate (for renewal)", "Declaration of claims from previous years (if requested)"],
+      "procedure_steps": ["Choose an approved insurance company", "Present the vehicle and owner documents", "Choose the level of cover (minimum third-party liability is compulsory; comprehensive cover is optional)", "Pay the annual premium", "Receive the insurance certificate and the sticker to be placed on the windscreen"],
+      "conditions": ["Third-party liability insurance is compulsory for every vehicle on the road", "The insurance certificate must be displayed on the windscreen", "Driving without insurance: fine and immobilisation of the vehicle", "In case of an accident without insurance: the driver bears personal and criminal liability", "The bonus-malus system applies: a good driver gets a reduction, accidents lead to a surcharge"]
+    },
+    "ar": {
+      "title": "التأمين الإلزامي للسيارات (المسؤولية المدنية)",
+      "summary": "إجراء إداري في تشاد: التأمين الإلزامي للسيارات (المسؤولية المدنية).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 45 (الصفحة 68). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 25 000 إلى 100 000 FCFA في السنة حسب المركبة",
+      "processing_time": "فوري (يُسلَّم في اليوم نفسه)",
+      "validity": "سنة واحدة",
+      "institution": "شركات التأمين المعتمدة (STAR، AMAGUPTA، STA، إلخ)",
+      "location": "شركات التأمين المعتمدة (STAR، AMAGUPTA، STA، إلخ)",
+      "required_documents": ["البطاقة الرمادية للمركبة", "البطاقة الوطنية للمالك", "شهادة التأمين السابقة (للتجديد)", "تصريح بالحوادث في السنوات الماضية (عند الطلب)"],
+      "procedure_steps": ["اختيار شركة تأمين معتمدة", "تقديم وثائق المركبة والمالك", "اختيار مستوى التغطية (المسؤولية المدنية الأدنى إلزامية، والتأمين الشامل اختياري)", "دفع القسط السنوي", "استلام شهادة التأمين والملصق الذي يُلصق على الزجاج الأمامي"],
+      "conditions": ["التأمين عن المسؤولية المدنية إلزامي لكل مركبة تسير على الطريق", "يجب عرض شهادة التأمين على الزجاج الأمامي", "السياقة دون تأمين: غرامة وحجز المركبة", "في حالة حادث دون تأمين: يتحمل السائق المسؤولية الشخصية والجنائية", "يُطبَّق نظام المكافأة والعقوبة: السائق الجيد يحصل على تخفيض، والحوادث تؤدي إلى زيادة"]
+    }
+  },
+  {
+    "slug": "autorisation-de-transport-en-commun-taxi-bus",
+    "en": {
+      "title": "Authorisation for public transport (taxi, bus)",
+      "summary": "Administrative procedure in Chad: authorisation for public transport (taxi, bus).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 67 (page 69). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "20,000 to 80,000 FCFA",
+      "processing_time": "2 to 4 weeks",
+      "validity": "1 year",
+      "institution": "Land Transport Directorate",
+      "location": "Land Transport Directorate / Prefecture",
+      "required_documents": ["Vehicle registration certificate", "Public transport insurance (higher than ordinary insurance)", "Driving licence category D (for buses) or B (for taxis)", "Valid technical inspection (every 6 months for taxis)", "Owner's CNI", "RCCM if operated by a company", "Certificate of compliance with hygiene conditions (for bush taxis)"],
+      "procedure_steps": ["Gather the vehicle documents", "Carry out the technical inspection", "Apply for the authorisation at the Land Transport Directorate", "Obtain the public transport sticker", "Display the authorisation in the vehicle"],
+      "conditions": ["Public transport vehicles are subject to stricter standards", "The technical inspection is every six months (not annual as for private cars)", "The driving licence must match the category of the vehicle", "Taxis must have a working and approved meter", "Overloading: carrying passengers beyond the authorised capacity is a serious offence"]
+    },
+    "ar": {
+      "title": "ترخيص النقل العمومي (سيارة أجرة، حافلة)",
+      "summary": "إجراء إداري في تشاد: ترخيص النقل العمومي (سيارة أجرة، حافلة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 67 (الصفحة 69). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 20 000 إلى 80 000 FCFA",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "سنة واحدة",
+      "institution": "مديرية النقل البري",
+      "location": "مديرية النقل البري / المحافظة",
+      "required_documents": ["البطاقة الرمادية للمركبة", "تأمين النقل العمومي (أعلى من التأمين العادي)", "رخصة السياقة من الفئة D (للحافلات) أو B (لسيارات الأجرة)", "فحص تقني ساري (كل 6 أشهر لسيارات الأجرة)", "البطاقة الوطنية للمالك", "السجل التجاري RCCM إذا كان الاستغلال من طرف شركة", "شهادة مطابقة شروط النظافة (لسيارات الأجرة بين المدن)"],
+      "procedure_steps": ["تجميع وثائق المركبة", "إجراء الفحص التقني", "طلب الترخيص لدى مديرية النقل البري", "الحصول على ملصق النقل العمومي", "عرض الترخيص داخل المركبة"],
+      "conditions": ["مركبات النقل العمومي تخضع لمعايير أشد صرامة", "الفحص التقني كل ستة أشهر (وليس سنويًا كما في السيارات الخاصة)", "يجب أن تتطابق رخصة السياقة مع فئة المركبة", "يجب أن يكون لسيارات الأجرة عداد يعمل ومعتمد", "الحمولة الزائدة: تجاوز عدد الركاب المسموح به مخالفة جسيمة"]
+    }
+  },
+  {
+    "slug": "permis-de-transport-de-marchandises-dangereuses",
+    "en": {
+      "title": "Permit to transport dangerous goods",
+      "summary": "Administrative procedure in Chad: permit to transport dangerous goods.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 68 (page 69). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 150,000 FCFA",
+      "processing_time": "2 to 4 weeks",
+      "validity": "1 year",
+      "institution": "Land Transport Directorate",
+      "location": "Land Transport Directorate / Ministry of Environment",
+      "required_documents": ["Driving licence category C or CE", "ADR training (transport of dangerous goods)", "Vehicle compliant with ADR standards (safety equipment)", "Driver's training certificate", "RCCM of the transport company", "Specific insurance for dangerous goods"],
+      "procedure_steps": ["Complete the ADR training", "Equip the vehicle to the standards", "File the file at the Transport Directorate and the Ministry of Environment", "Inspection of the vehicle", "Obtain the permit to transport dangerous goods"],
+      "conditions": ["Compulsory for fuel, chemicals, explosives and gases", "The driver must hold specific ADR training", "The vehicle must be equipped with fire extinguishers, ADR signage and protective equipment", "Imposed routes to avoid inhabited areas (depending on the product)", "Frequent checks at checkpoints — documents must be immediately accessible"]
+    },
+    "ar": {
+      "title": "رخصة نقل المواد الخطرة",
+      "summary": "إجراء إداري في تشاد: رخصة نقل المواد الخطرة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 68 (الصفحة 69). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 150 000 FCFA",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "سنة واحدة",
+      "institution": "مديرية النقل البري",
+      "location": "مديرية النقل البري / وزارة البيئة",
+      "required_documents": ["رخصة السياقة من الفئة C أو CE", "تكوين ADR (نقل المواد الخطرة)", "مركبة مطابقة لمعايير ADR (معدات السلامة)", "شهادة تكوين السائق", "السجل التجاري RCCM لشركة النقل", "تأمين خاص بالمواد الخطرة"],
+      "procedure_steps": ["إتمام تكوين ADR", "تجهيز المركبة وفق المعايير", "إيداع الملف لدى مديرية النقل ووزارة البيئة", "تفتيش المركبة", "الحصول على رخصة نقل المواد الخطرة"],
+      "conditions": ["إلزامية للوقود والمواد الكيميائية والمتفجرات والغازات", "يجب أن يحصل السائق على تكوين ADR خاص", "يجب أن تكون المركبة مزودة بطفايات حريق وعلامات ADR ومعدات الوقاية", "مسارات إلزامية لتجنب المناطق المأهولة (حسب المنتج)", "مراقبات متكررة في نقاط التفتيش، ويجب أن تكون الوثائق في متناول اليد فورًا"]
+    }
+  },
+  {
+    "slug": "declaration-en-douane-importation-de-marchandises",
+    "en": {
+      "title": "Customs declaration — import of goods",
+      "summary": "Administrative procedure in Chad: customs declaration — import of goods.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 80 (page 70). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Customs duties vary (0% to 30% depending on the product) plus VAT",
+      "processing_time": "1 to 15 days",
+      "validity": "Single use per shipment",
+      "institution": "General Directorate of Customs — customs office at the point of entry",
+      "location": "General Directorate of Customs — customs office at the point of entry",
+      "required_documents": ["Commercial invoice (in French or translated)", "Packing list", "Bill of lading or international road consignment note", "Certificate of origin of the goods", "Health certificate (for food products)", "Phytosanitary certificate (for plants)", "Import licence (if required)", "Importer's NIF", "Importer's RCCM"],
+      "procedure_steps": ["Goods arrive at the point of entry (airport, land border)", "Lodge the customs declaration (or through a customs agent)", "Documentary check by customs officers", "Physical inspection of the goods (random or systematic)", "Calculation and payment of duties and taxes", "Release of the goods (permission to leave the customs warehouse)"],
+      "conditions": ["Every good entering Chad must be declared to customs", "The declared value must match the real value (customs fraud leads to seizure, fines and prosecution)", "Chad applies the Common External Tariff of CEMAC", "Prohibited goods (weapons, drugs) are seized and the declarant is prosecuted", "An approved customs agent may carry out the customs formalities on behalf of the importer"]
+    },
+    "ar": {
+      "title": "التصريح الجمركي — استيراد البضائع",
+      "summary": "إجراء إداري في تشاد: التصريح الجمركي — استيراد البضائع.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 80 (الصفحة 70). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "رسوم جمركية متغيرة (من 0% إلى 30% حسب المنتج) زائد الضريبة على القيمة المضافة",
+      "processing_time": "من يوم إلى 15 يومًا",
+      "validity": "استعمال واحد لكل شحنة",
+      "institution": "المديرية العامة للجمارك — مكتب الجمارك بنقطة الدخول",
+      "location": "المديرية العامة للجمارك — مكتب الجمارك بنقطة الدخول",
+      "required_documents": ["الفاتورة التجارية (بالفرنسية أو مترجمة)", "لائحة التعبئة", "بوليصة الشحن أو رسالة النقل الدولية البرية", "شهادة المنشأ للبضائع", "شهادة صحية (للمواد الغذائية)", "شهادة صحة النبات (للنباتات)", "رخصة الاستيراد (عند الاقتضاء)", "رقم NIF للمستورد", "السجل التجاري RCCM للمستورد"],
+      "procedure_steps": ["وصول البضائع إلى نقطة الدخول (المطار، الحدود البرية)", "إيداع التصريح الجمركي (أو عبر وكيل جمركي)", "مراقبة الوثائق من طرف الجمارك", "الفحص المادي للبضائع (عشوائي أو منهجي)", "احتساب الرسوم والضرائب وأدائها", "رفع اليد عن البضائع (الإذن بالخروج من المستودع الجمركي)"],
+      "conditions": ["كل بضاعة تدخل تشاد يجب التصريح بها لدى الجمارك", "يجب أن تطابق القيمة المصرَّح بها القيمة الحقيقية (الغش الجمركي يؤدي إلى الحجز والغرامات والمتابعة)", "تطبق تشاد التعرفة الخارجية المشتركة لدول الجماعة الاقتصادية لوسط إفريقيا (CEMAC)", "تُحجز البضائع الممنوعة (الأسلحة، المخدرات) ويُتابَع المصرِّح جنائيًا", "يجوز لوكيل جمركي معتمد أن يقوم بالإجراءات الجمركية نيابةً عن المستورد"]
+    }
+  }
+]

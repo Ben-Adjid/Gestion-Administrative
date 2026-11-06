@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "casier-judiciaire",
+    "en": {
+      "title": "Criminal record extract (Bulletin No. 3)",
+      "summary": "Administrative procedure in Chad: criminal record extract (Bulletin No. 3).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 33 (page 48). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "1,000 to 3,000 FCFA",
+      "processing_time": "1 to 5 working days",
+      "validity": "3 months",
+      "institution": "Public Prosecutor's office of the Court of First Instance of the place of birth or residence",
+      "location": "Public Prosecutor's office of the Court of First Instance of the place of birth or residence",
+      "required_documents": ["Valid CNI or birth certificate", "Criminal record application form (available at the court registry)", "Fiscal stamp", "Issuance fee (receipt to obtain before filing)"],
+      "procedure_steps": ["Go to the Public Prosecutor's office", "Pay the fees at the cashier", "Fill in the application form", "File the file at the court registry", "Come back within the indicated time to collect the bulletin"],
+      "conditions": ["Bulletin No. 3 is the only one issued to any person for their own use", "Bulletin No. 1 (full record): only for judicial authorities", "Bulletin No. 2: for certain administrations (ministries, bar association)", "Valid 3 months — request it shortly before the procedure that requires it", "May be requested for someone else only with a notarised power of attorney", "A 'clean' criminal record means that no final criminal conviction is recorded"]
+    },
+    "ar": {
+      "title": "مستخرج من السجل العدلي (النشرة رقم 3)",
+      "summary": "إجراء إداري في تشاد: مستخرج من السجل العدلي (النشرة رقم 3).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 33 (الصفحة 48). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 1 000 إلى 3 000 FCFA",
+      "processing_time": "من يوم إلى 5 أيام عمل",
+      "validity": "3 أشهر",
+      "institution": "النيابة العامة لدى المحكمة الابتدائية بمكان الميلاد أو الإقامة",
+      "location": "النيابة العامة لدى المحكمة الابتدائية بمكان الميلاد أو الإقامة",
+      "required_documents": ["بطاقة الهوية الوطنية السارية أو عقد الميلاد", "استمارة طلب السجل العدلي (متوفرة لدى كتابة الضبط)", "طابع مالي", "رسوم الاستخراج (يجب الحصول على الوصل قبل الإيداع)"],
+      "procedure_steps": ["التوجه إلى النيابة العامة", "دفع الرسوم في الصندوق", "ملء استمارة الطلب", "إيداع الملف لدى كتابة الضبط", "العودة في الأجل المحدد لاستلام النشرة"],
+      "conditions": ["النشرة رقم 3 هي الوحيدة التي تُسلَّم لأي شخص لاستعمال شخصي", "النشرة رقم 1 (كاملة): للسلطات القضائية فقط", "النشرة رقم 2: لبعض الإدارات (الوزارات، هيئة المحامين)", "صالحة 3 أشهر، وتُطلب قبل وقت قصير من الإجراء الذي يتطلبها", "لا تُطلب لشخص آخر إلا بتوكيل موثّق لدى موثّق", "السجل \"النظيف\" يعني عدم تسجيل أي إدانة جنائية نهائية"]
+    }
+  },
+  {
+    "slug": "renouvellement-de-la-cni-expiree-ou-deterioree",
+    "en": {
+      "title": "Renewal of the CNI (expired or damaged)",
+      "summary": "Administrative procedure in Chad: renewal of the CNI (expired or damaged).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 2 (page 4). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 FCFA",
+      "processing_time": "2 to 6 weeks",
+      "validity": "10 years",
+      "institution": "Public Security Delegation",
+      "location": "Public Security Delegation / police station",
+      "required_documents": ["Old CNI (even expired or damaged)", "2 recent identity photos (white background, 4 x 4 cm)", "5,000 FCFA fiscal stamp", "Residence certificate if the address has changed"],
+      "procedure_steps": ["Gather the required documents", "Go to the police station of your home", "File the old CNI and the documents", "Collect the filing receipt", "Collect the new CNI on the indicated date"],
+      "conditions": ["The old CNI must be handed over at the counter when filing", "If the CNI is damaged and unreadable, the birth certificate must also be provided", "Renewal is possible 3 months before the expiry date"]
+    },
+    "ar": {
+      "title": "تجديد البطاقة الوطنية (منتهية الصلاحية أو تالفة)",
+      "summary": "إجراء إداري في تشاد: تجديد البطاقة الوطنية (منتهية الصلاحية أو تالفة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 2 (الصفحة 4). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "5 000 FCFA",
+      "processing_time": "من أسبوعين إلى 6 أسابيع",
+      "validity": "10 سنوات",
+      "institution": "مندوبية الأمن العام",
+      "location": "مندوبية الأمن العام / مخفر الشرطة",
+      "required_documents": ["البطاقة القديمة (حتى لو كانت منتهية أو تالفة)", "صورتان شخصيتان حديثتان (خلفية بيضاء، 4 × 4 سم)", "طابع مالي بقيمة 5 000 FCFA", "شهادة إقامة في حال تغيير العنوان"],
+      "procedure_steps": ["تجميع الوثائق المطلوبة", "التوجه إلى مخفر الشرطة بمكان السكن", "إيداع البطاقة القديمة والوثائق", "استلام وصل الإيداع", "استلام البطاقة الجديدة في التاريخ المحدد"],
+      "conditions": ["يجب تسليم البطاقة القديمة في الشباك عند الإيداع", "إذا كانت البطاقة تالفة وغير مقروءة يُضاف عقد الميلاد", "يمكن التجديد قبل 3 أشهر من تاريخ الانتهاء"]
+    }
+  },
+  {
+    "slug": "declaration-de-perte-de-cni",
+    "en": {
+      "title": "Declaration of loss of CNI",
+      "summary": "Administrative procedure in Chad: declaration of loss of CNI.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 3 (page 5). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 1,000 FCFA (variable fees)",
+      "processing_time": "Immediate (same day)",
+      "validity": "Valid for 3 months to start the renewal",
+      "institution": "Police station or gendarmerie brigade",
+      "location": "Police station or gendarmerie brigade",
+      "required_documents": ["Alternative identity document (passport, driving licence, school card)", "Number of the lost CNI if remembered", "Sworn statement of the loss"],
+      "procedure_steps": ["Go to the police station or the gendarmerie", "Explain the circumstances of the loss", "Fill in the loss declaration form", "Get the receipt signed and stamped", "Use this receipt to start the new CNI application"],
+      "conditions": ["The loss declaration is mandatory before any new CNI application", "Using a declared lost CNI is a criminal offence", "The loss receipt serves as a temporary identity document for 3 months"]
+    },
+    "ar": {
+      "title": "التصريح بضياع البطاقة الوطنية",
+      "summary": "إجراء إداري في تشاد: التصريح بضياع البطاقة الوطنية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 3 (الصفحة 5). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 1 000 FCFA (رسوم متغيرة)",
+      "processing_time": "فوري (في اليوم نفسه)",
+      "validity": "صالح لمدة 3 أشهر لبدء تجديد البطاقة",
+      "institution": "مخفر الشرطة أو فرقة الدرك",
+      "location": "مخفر الشرطة أو فرقة الدرك",
+      "required_documents": ["وثيقة هوية بديلة (جواز سفر، رخصة سياقة، بطاقة مدرسية)", "رقم البطاقة المفقودة إن تذكّرته", "تصريح بالشرف بالضياع"],
+      "procedure_steps": ["التوجه إلى مخفر الشرطة أو الدرك", "شرح ظروف الضياع", "ملء استمارة التصريح بالضياع", "الحصول على الوصل موقّعًا ومختومًا", "استعمال هذا الوصل لبدء طلب بطاقة جديدة"],
+      "conditions": ["التصريح بالضياع إلزامي قبل أي طلب جديد للبطاقة", "استعمال بطاقة مصرَّح بضياعها جريمة يعاقب عليها القانون", "وصل التصريح بالضياع يقوم مقام وثيقة هوية مؤقتة لمدة 3 أشهر"]
+    }
+  },
+  {
+    "slug": "renouvellement-du-permis-de-conduire",
+    "en": {
+      "title": "Renewal of driving licence",
+      "summary": "Administrative procedure in Chad: renewal of driving licence.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 5 (page 6). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "15,000 to 25,000 FCFA",
+      "processing_time": "2 to 6 weeks",
+      "validity": "10 years",
+      "institution": "Land Transport Directorate",
+      "location": "Land Transport Directorate",
+      "required_documents": ["Old driving licence (even expired)", "Medical certificate of fitness (less than 3 months old)", "2 recent identity photos", "Valid CNI", "Fiscal stamp"],
+      "procedure_steps": ["Undergo the medical examination with an approved doctor", "Assemble the file", "File it at the Land Transport Directorate", "Collect the new licence"],
+      "conditions": ["Renewal must be done within 3 months after expiry", "Beyond 2 years after expiry, a practical exam may be required", "Category D (bus): renewal every 5 years with a compulsory medical examination"]
+    },
+    "ar": {
+      "title": "تجديد رخصة السياقة",
+      "summary": "إجراء إداري في تشاد: تجديد رخصة السياقة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 5 (الصفحة 6). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 15 000 إلى 25 000 FCFA",
+      "processing_time": "من أسبوعين إلى 6 أسابيع",
+      "validity": "10 سنوات",
+      "institution": "مديرية النقل البري",
+      "location": "مديرية النقل البري",
+      "required_documents": ["رخصة السياقة القديمة (حتى لو كانت منتهية)", "شهادة طبية تثبت اللياقة (لا يتجاوز عمرها 3 أشهر)", "صورتان شخصيتان حديثتان", "بطاقة هوية وطنية سارية", "طابع مالي"],
+      "procedure_steps": ["إجراء الفحص الطبي لدى طبيب معتمد", "تجميع الملف", "إيداعه لدى مديرية النقل البري", "استلام الرخصة الجديدة"],
+      "conditions": ["يجب التجديد خلال 3 أشهر من تاريخ الانتهاء", "بعد مرور أكثر من سنتين على الانتهاء قد يُشترط اجتياز امتحان عملي", "الفئة D (الحافلات): تجديد كل 5 سنوات مع فحص طبي إلزامي"]
+    }
+  },
+  {
+    "slug": "certificat-de-nationalite-tchadienne",
+    "en": {
+      "title": "Certificate of Chadian nationality",
+      "summary": "Administrative procedure in Chad: certificate of Chadian nationality.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 6 (page 7). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 15,000 FCFA",
+      "processing_time": "2 to 4 weeks",
+      "validity": "Permanent (to be renewed if the information changes)",
+      "institution": "Court of First Instance of the place of residence",
+      "location": "Court of First Instance of the place of residence",
+      "required_documents": ["Original birth certificate", "Applicant's CNI", "Father's birth certificate (proving the father's Chadian nationality)", "Father's CNI or passport", "Applicant's residence certificate", "Fiscal stamp", "Application form (available at the court)", "For married women: marriage certificate as well"],
+      "procedure_steps": ["Go to the registry of the Court of First Instance", "File the complete file with the documents", "The judge examines the file and verifies filiation", "The nationality order is issued", "Collect the certificate at the registry"],
+      "conditions": ["Chadian nationality is acquired through paternal filiation (Chadian father)", "Mandatory for public service competitions, enrolment at a public university and passport applications", "If the father is foreign, a Chadian mother may transmit nationality — a different procedure applies", "This certificate is not the same as the CNI — it proves the link to Chadian nationality"]
+    },
+    "ar": {
+      "title": "شهادة الجنسية التشادية",
+      "summary": "إجراء إداري في تشاد: شهادة الجنسية التشادية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 6 (الصفحة 7). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 15 000 FCFA",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "دائمة (تُجدَّد إذا تغيّرت المعلومات)",
+      "institution": "المحكمة الابتدائية بمحل الإقامة",
+      "location": "المحكمة الابتدائية بمحل الإقامة",
+      "required_documents": ["عقد الميلاد الأصلي", "بطاقة هوية صاحب الطلب", "عقد ميلاد الأب (يثبت الجنسية التشادية للأب)", "بطاقة هوية أو جواز سفر الأب", "شهادة إقامة صاحب الطلب", "طابع مالي", "استمارة الطلب (متوفرة لدى المحكمة)", "بالنسبة للنساء المتزوجات: عقد الزواج إضافةً إلى ذلك"],
+      "procedure_steps": ["التوجه إلى كتابة ضبط المحكمة الابتدائية", "إيداع الملف الكامل مع الوثائق", "يدرس القاضي الملف ويتحقق من النسب", "يصدر أمر الجنسية", "استلام الشهادة من كتابة الضبط"],
+      "conditions": ["تُكتسب الجنسية التشادية بالنسب الأبوي (أب تشادي)", "إلزامية لمسابقات الوظيفة العمومية والتسجيل في الجامعة العمومية وطلب الجواز", "إذا كان الأب أجنبيًا يمكن للأم التشادية نقل الجنسية، وتطبق إجراءات مختلفة", "هذه الشهادة تختلف عن البطاقة الوطنية، فهي تثبت الرابطة بالجنسية التشادية"]
+    }
+  },
+  {
+    "slug": "certificat-de-residence",
+    "en": {
+      "title": "Certificate of residence",
+      "summary": "Administrative procedure in Chad: certificate of residence.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 46 (page 8). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 2,000 FCFA",
+      "processing_time": "1 to 3 days",
+      "validity": "3 months",
+      "institution": "Neighbourhood chief",
+      "location": "Neighbourhood chief / police station",
+      "required_documents": ["Applicant's CNI", "Presence of a neighbourhood chief or a police officer"],
+      "procedure_steps": ["Go to the neighbourhood chief", "He checks the residence and signs the certificate", "Have it stamped at the police station if required"],
+      "conditions": ["Certifies the current place of residence", "Required for CNI, passport, marriage and scholarship applications", "After a recent move, testimony from neighbours may be required"]
+    },
+    "ar": {
+      "title": "شهادة الإقامة",
+      "summary": "إجراء إداري في تشاد: شهادة الإقامة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 46 (الصفحة 8). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 2 000 FCFA",
+      "processing_time": "من يوم إلى 3 أيام",
+      "validity": "3 أشهر",
+      "institution": "رئيس الحي",
+      "location": "رئيس الحي / مخفر الشرطة",
+      "required_documents": ["بطاقة هوية صاحب الطلب", "حضور رئيس الحي أو عون شرطة"],
+      "procedure_steps": ["التوجه إلى رئيس الحي", "يتحقق من محل الإقامة ويوقّع الشهادة", "ختمها لدى مخفر الشرطة عند الاقتضاء"],
+      "conditions": ["تشهد بمحل السكن الحالي", "مطلوبة لطلبات البطاقة الوطنية والجواز والزواج والمنحة", "في حالة الانتقال حديثًا قد يُطلب شهادة الجيران"]
+    }
+  },
+  {
+    "slug": "laissez-passer-frontalier",
+    "en": {
+      "title": "Cross-border pass",
+      "summary": "Administrative procedure in Chad: cross-border pass.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 47 (page 8). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 15,000 FCFA",
+      "processing_time": "1 to 5 days",
+      "validity": "1 year",
+      "institution": "Immigration Directorate",
+      "location": "Immigration Directorate / border prefecture",
+      "required_documents": ["Valid CNI", "2 biometric photos", "Application form", "Proof of cross-border activity", "Fiscal stamp"],
+      "procedure_steps": ["File the file at the prefecture or the immigration directorate", "Verification of the address in the border zone", "Issue of the pass"],
+      "conditions": ["Reserved for residents of border areas (50 km)", "Allows crossing the border without a passport", "Valid only for the designated neighbouring country", "Not valid for travel beyond the border zone"]
+    },
+    "ar": {
+      "title": "تصريح عبور الحدود",
+      "summary": "إجراء إداري في تشاد: تصريح عبور الحدود.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 47 (الصفحة 8). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 15 000 FCFA",
+      "processing_time": "من يوم إلى 5 أيام",
+      "validity": "سنة واحدة",
+      "institution": "مديرية الهجرة",
+      "location": "مديرية الهجرة / المحافظة الحدودية",
+      "required_documents": ["بطاقة هوية وطنية سارية", "صورتان بيومتريتان", "استمارة الطلب", "إثبات النشاط عبر الحدود", "طابع مالي"],
+      "procedure_steps": ["إيداع الملف لدى المحافظة أو مديرية الهجرة", "التحقق من محل السكن في المنطقة الحدودية", "تسليم التصريح"],
+      "conditions": ["مخصص لسكان المناطق الحدودية (50 كم)", "يسمح بعبور الحدود دون جواز سفر", "صالح فقط للبلد المجاور المحدد", "غير صالح للسفر إلى ما بعد المنطقة الحدودية"]
+    }
+  },
+  {
+    "slug": "carte-didentite-diplomatique-ou-consulaire",
+    "en": {
+      "title": "Diplomatic or consular identity card",
+      "summary": "Administrative procedure in Chad: diplomatic or consular identity card.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 48 (page 9). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (for civil servants)",
+      "processing_time": "2 to 4 weeks",
+      "validity": "Duration of the mission",
+      "institution": "Ministry of Foreign Affairs",
+      "location": "Ministry of Foreign Affairs",
+      "required_documents": ["Mission order or appointment decree", "Birth certificate", "2 biometric photos", "Ordinary CNI of the civil servant"],
+      "procedure_steps": ["The employing ministry refers the request to the Ministry of Foreign Affairs", "The Ministry checks the status and issues the card", "The card is handed to the officer before taking up the post"],
+      "conditions": ["Reserved for Chadian diplomatic and consular agents on mission", "Issued by the Ministry of Foreign Affairs at the request of the employing ministry", "Grants diplomatic immunities and privileges under the Vienna Convention"]
+    },
+    "ar": {
+      "title": "بطاقة هوية دبلوماسية أو قنصلية",
+      "summary": "إجراء إداري في تشاد: بطاقة هوية دبلوماسية أو قنصلية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 48 (الصفحة 9). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجانية (لموظفي الدولة)",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "مدة المهمة",
+      "institution": "وزارة الشؤون الخارجية",
+      "location": "وزارة الشؤون الخارجية",
+      "required_documents": ["أمر مهمة أو مرسوم التعيين", "عقد الميلاد", "صورتان بيومتريتان", "البطاقة الوطنية العادية للموظف"],
+      "procedure_steps": ["تحيل الوزارة المشغِّلة الطلب إلى وزارة الشؤون الخارجية", "تتحقق الوزارة من الوضع وتصدر البطاقة", "تُسلَّم البطاقة للموظف قبل مباشرة مهامه"],
+      "conditions": ["مخصصة للأعوان الدبلوماسيين والقنصليين التشاديين في مهمة", "تصدرها وزارة الشؤون الخارجية بطلب من الوزارة المشغِّلة", "تمنح الحصانات والامتيازات الدبلوماسية وفق اتفاقية فيينا"]
+    }
+  }
+]

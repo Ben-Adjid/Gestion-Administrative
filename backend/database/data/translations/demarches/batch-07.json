@@ -1,0 +1,263 @@
+[
+  {
+    "slug": "renouvellement-de-la-carte-detudiant",
+    "en": {
+      "title": "Renewal of the student card",
+      "summary": "Administrative procedure in Chad: renewal of the student card.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 75 (page 10). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 2,000 FCFA",
+      "processing_time": "Immediate to 1 week",
+      "validity": "1 school or academic year",
+      "institution": "Educational establishment",
+      "location": "Educational establishment",
+      "required_documents": ["Receipt for the current year's school fees", "Recent identity photo", "Former student card"],
+      "procedure_steps": ["Pay the school fees", "Go to the secretariat with the documents", "Receive the renewed card"],
+      "conditions": ["The student card is renewed every academic year", "It is essential for access to university services (library, restaurant, transport)", "It may serve as a supplementary identity document but not as an official identity document"]
+    },
+    "ar": {
+      "title": "تجديد البطاقة الطلابية",
+      "summary": "إجراء إداري في تشاد: تجديد البطاقة الطلابية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 75 (الصفحة 10). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 2 000 FCFA",
+      "processing_time": "فوري إلى أسبوع",
+      "validity": "سنة دراسية أو جامعية",
+      "institution": "المؤسسة التعليمية",
+      "location": "المؤسسة التعليمية",
+      "required_documents": ["وصل دفع رسوم الدراسة للسنة الجارية", "صورة شخصية حديثة", "البطاقة الطلابية القديمة"],
+      "procedure_steps": ["دفع رسوم الدراسة", "التوجه إلى الأمانة بالوثائق", "استلام البطاقة المجددة"],
+      "conditions": ["تُجدَّد البطاقة الطلابية كل سنة جامعية", "وهي ضرورية للوصول إلى الخدمات الجامعية (المكتبة، المطعم، النقل)", "يمكن أن تكون وثيقة هوية تكميلية، لكنها ليست وثيقة هوية رسمية"]
+    }
+  },
+  {
+    "slug": "renouvellement-de-passeport",
+    "en": {
+      "title": "Passport renewal",
+      "summary": "Administrative procedure in Chad: passport renewal.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 15 (page 21). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 85,000 FCFA",
+      "processing_time": "2 to 6 weeks",
+      "validity": "5 years",
+      "institution": "DGDI — N'Djamena",
+      "location": "DGDI — N'Djamena",
+      "required_documents": ["Old passport (even expired or full)", "Valid CNI", "2 recent biometric photos", "Fiscal stamp", "Renewal form (DGDI)", "Receipt for payment at the Treasury"],
+      "procedure_steps": ["Pay at the National Treasury", "File the file at the DGDI with the old passport", "Fingerprints and photo taken on site", "Collect the new passport, with the old one cancelled"],
+      "conditions": ["The old passport is handed back when the new one is collected (it is cancelled with a punched hole)", "If the old passport contains valid visas, report it at the counter — they can be transferred", "In case of loss of the passport, a different procedure applies (see Declaration of loss of passport)"]
+    },
+    "ar": {
+      "title": "تجديد جواز السفر",
+      "summary": "إجراء إداري في تشاد: تجديد جواز السفر.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 15 (الصفحة 21). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 85 000 FCFA",
+      "processing_time": "من أسبوعين إلى 6 أسابيع",
+      "validity": "5 سنوات",
+      "institution": "المديرية العامة للهجرة والجوازات DGDI — انجامينا",
+      "location": "المديرية العامة للهجرة والجوازات DGDI — انجامينا",
+      "required_documents": ["الجواز القديم (حتى لو كان منتهيًا أو ممتلئًا)", "بطاقة هوية وطنية سارية", "صورتان بيومتريتان حديثتان", "طابع مالي", "استمارة التجديد (DGDI)", "وصل الدفع لدى الخزينة"],
+      "procedure_steps": ["الدفع لدى الخزينة الوطنية", "إيداع الملف لدى DGDI مع الجواز القديم", "أخذ البصمات والصورة في المكان", "استلام الجواز الجديد مع إلغاء القديم"],
+      "conditions": ["يُسترجع الجواز القديم عند استلام الجديد (يُلغى بثقب)", "إذا كان الجواز القديم يحتوي على تأشيرات سارية، فأبلغ الشباك، إذ يمكن نقلها", "في حالة ضياع الجواز يُتبع إجراء مختلف (انظر التصريح بضياع الجواز)"]
+    }
+  },
+  {
+    "slug": "visa-de-sortie-du-territoire-autorisation",
+    "en": {
+      "title": "Exit visa (authorisation to leave the country)",
+      "summary": "Administrative procedure in Chad: exit visa (authorisation to leave the country).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 16 (page 22). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 15,000 FCFA",
+      "processing_time": "24 to 72 hours",
+      "validity": "Single use or 30 days",
+      "institution": "Immigration Directorate",
+      "location": "Immigration Directorate / Prefecture",
+      "required_documents": ["Valid passport", "Plane ticket or proof of travel", "Exit visa application form", "Fiscal stamp", "Proof of the purpose of the trip (invitation, summons, mission order)", "For minors: legalised parental authorisation"],
+      "procedure_steps": ["File the file at the Immigration Directorate", "Pay the corresponding fees", "Obtain the authorisation within the time limits", "Present the authorisation to immigration services at the airport"],
+      "conditions": ["Mandatory for any Chadian national wishing to leave the territory", "Civil servants must obtain a mission order from their ministry", "Unaccompanied minors must have a parental authorisation certified by a notary or the town hall", "In a medical emergency: an accelerated procedure is possible with a medical certificate"]
+    },
+    "ar": {
+      "title": "تأشيرة الخروج من التراب الوطني (إذن)",
+      "summary": "إجراء إداري في تشاد: تأشيرة الخروج من التراب الوطني (إذن).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 16 (الصفحة 22). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 15 000 FCFA",
+      "processing_time": "من 24 إلى 72 ساعة",
+      "validity": "استعمال واحد أو 30 يومًا",
+      "institution": "مديرية الهجرة",
+      "location": "مديرية الهجرة / المحافظة",
+      "required_documents": ["جواز سفر ساري", "تذكرة طائرة أو إثبات السفر", "استمارة طلب تأشيرة الخروج", "طابع مالي", "إثبات غرض السفر (دعوة، استدعاء، أمر مهمة)", "بالنسبة للقاصرين: إذن أبوي مصدَّق"],
+      "procedure_steps": ["إيداع الملف لدى مديرية الهجرة", "دفع الرسوم المقررة", "الحصول على الإذن في الآجال", "تقديم الإذن لمصالح الهجرة في المطار"],
+      "conditions": ["إلزامي لكل تشادي يريد مغادرة التراب الوطني", "يجب على الموظفين الحصول على أمر مهمة من وزارتهم", "يجب أن يحمل القاصرون غير المصحوبين إذنًا أبويًا مصدّقًا من موثّق أو البلدية", "في حالة طارئة طبية: إجراء مستعجل ممكن بشهادة طبية"]
+    }
+  },
+  {
+    "slug": "demande-de-remboursement-cnps-maladie",
+    "en": {
+      "title": "CNPS sickness reimbursement claim",
+      "summary": "Administrative procedure in Chad: CNPS sickness reimbursement claim.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 77 (page 46). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (reimbursement of costs incurred)",
+      "processing_time": "1 to 3 months",
+      "validity": "Single use per event",
+      "institution": "CNPS — Benefits Office",
+      "location": "CNPS — Benefits Office",
+      "required_documents": ["Original medical prescriptions", "Medicine invoices (pharmacy)", "Medical consultation invoices", "Test results (if reimbursable)", "CNPS reimbursement claim form", "Beneficiary's CNPS card", "Bank details or mobile money details"],
+      "procedure_steps": ["Keep all invoices and prescriptions during care", "Complete the reimbursement form", "File the claim at CNPS within 6 months", "CNPS examines and validates the reimbursable care", "Transfer of the reimbursement to the bank account or mobile money"],
+      "conditions": ["CNPS insured persons are reimbursed 80% of medical costs on the CNPS list", "Only medicines on the CNPS list are reimbursable", "Care must be given at a CNPS-approved establishment", "Deadline for filing the claim: 6 months after the care", "The spouse and dependent children are covered by CNPS health insurance"]
+    },
+    "ar": {
+      "title": "طلب استرداد مصاريف المرض لدى CNPS",
+      "summary": "إجراء إداري في تشاد: طلب استرداد مصاريف المرض لدى CNPS.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 77 (الصفحة 46). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (استرداد المصاريف المدفوعة)",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "استعمال واحد لكل حدث",
+      "institution": "CNPS — مكتب الاستفادات",
+      "location": "CNPS — مكتب الاستفادات",
+      "required_documents": ["الوصفات الطبية الأصلية", "فواتير الأدوية (الصيدلية)", "فواتير الاستشارات الطبية", "نتائج التحاليل (إن كانت قابلة للاسترداد)", "استمارة طلب الاسترداد لدى CNPS", "بطاقة CNPS للمستفيد", "بيانات الحساب البنكي أو حساب الهاتف المحمول"],
+      "procedure_steps": ["الاحتفاظ بجميع الفواتير والوصفات أثناء العلاج", "ملء استمارة الاسترداد", "إيداع الملف لدى CNPS خلال 6 أشهر", "تدرس CNPS الرعاية القابلة للاسترداد وتصادق عليها", "تحويل مبلغ الاسترداد إلى الحساب البنكي أو الهاتف المحمول"],
+      "conditions": ["يُسترد للمؤمَّنين لدى CNPS 80% من المصاريف الطبية المدرجة في لائحة CNPS", "لا تُسترد إلا الأدوية الواردة في لائحة CNPS", "يجب أن يتم العلاج في مؤسسة معتمدة من CNPS", "أجل تقديم الطلب: 6 أشهر بعد العلاج", "يشمل التأمين الصحي لـ CNPS الزوج والأطفال المعالين"]
+    }
+  },
+  {
+    "slug": "procuration-notariee",
+    "en": {
+      "title": "Notarised power of attorney",
+      "summary": "Administrative procedure in Chad: notarised power of attorney.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 34 (page 48). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "15,000 to 80,000 FCFA depending on the purpose",
+      "processing_time": "Immediate to 3 days",
+      "validity": "Duration stated in the deed (or until revocation)",
+      "institution": "Notary's office (approved notary)",
+      "location": "Notary's office (approved notary)",
+      "required_documents": ["CNI of the principal (the person granting power) — physical presence mandatory", "CNI of the agent (the person receiving power) — presence optional depending on the notary", "Precise and detailed description of the purpose of the power of attorney", "Documents relating to the purpose (e.g. land title for a property sale)"],
+      "procedure_steps": ["Make an appointment with an approved notary", "Attend with the documents and explain the exact purpose", "The notary drafts the power of attorney deed", "The principal signs before the notary", "The notary authenticates the deed and gives the original (minute) to the principal", "Give the copy to the agent so they can act"],
+      "conditions": ["A notarised power of attorney has full enforceable and legal value", "It is mandatory for property sales through a representative, inheritance matters and major bank transactions", "A private-deed power of attorney (not notarised) has less value — some administrations refuse it", "It may be revoked at any time by the principal (the agent must be notified)", "It automatically lapses on the death of the principal", "For acts abroad: the power of attorney must be apostilled or legalised"]
+    },
+    "ar": {
+      "title": "توكيل موثّق لدى موثّق",
+      "summary": "إجراء إداري في تشاد: توكيل موثّق لدى موثّق.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 34 (الصفحة 48). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 15 000 إلى 80 000 FCFA حسب موضوع التوكيل",
+      "processing_time": "فوري إلى 3 أيام",
+      "validity": "المدة المحددة في العقد (أو حتى الإلغاء)",
+      "institution": "مكتب موثّق (موثّق معتمد)",
+      "location": "مكتب موثّق (موثّق معتمد)",
+      "required_documents": ["بطاقة هوية الموكِّل (من يمنح التوكيل) — الحضور الشخصي إلزامي", "بطاقة هوية الوكيل (من يتلقى التوكيل) — الحضور اختياري حسب الموثّق", "وصف دقيق ومفصّل لموضوع التوكيل", "وثائق متعلقة بالموضوع (مثلًا: الرسم العقاري لبيع عقار)"],
+      "procedure_steps": ["أخذ موعد لدى موثّق معتمد", "الحضور بالوثائق وشرح الموضوع بدقة", "يحرّر الموثّق عقد التوكيل", "يوقّع الموكِّل أمام الموثّق", "يوثّق الموثّق العقد ويسلّم الأصل للموكِّل", "تسليم النسخة للوكيل ليتمكن من التصرف"],
+      "conditions": ["للتوكيل الموثّق قوة تنفيذية وقيمة قانونية كاملة", "إلزامي في بيع العقار عن طريق نائب، وفي مسائل الإرث، وفي العمليات البنكية الكبيرة", "التوكيل العرفي (غير الموثّق) له قيمة أقل، وترفضه بعض الإدارات", "يجوز للموكِّل إلغاؤه في أي وقت (مع إبلاغ الوكيل)", "يسقط تلقائيًا بوفاة الموكِّل", "بالنسبة للأعمال في الخارج: يجب تصديق التوكيل (apostille أو legalisation)"]
+    }
+  },
+  {
+    "slug": "declaration-de-succession",
+    "en": {
+      "title": "Declaration of inheritance",
+      "summary": "Administrative procedure in Chad: declaration of inheritance.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 35 (page 49). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Variable (inheritance duties depend on the value of the estate)",
+      "processing_time": "6 months from the death (legal deadline)",
+      "validity": "Permanent",
+      "institution": "Court of First Instance",
+      "location": "Court of First Instance / Notary / Tax Directorate",
+      "required_documents": ["Death certificate of the deceased", "Family book or birth certificates of the heirs", "CNI of all heirs", "Inventory of the deceased's property (real estate, bank accounts, movable property)", "Land titles of the real estate", "Bank statements (if balances at the date of death)", "Will, if any (deposited with a notary)", "Marriage certificate of the deceased (if married)", "Divorce judgment (if divorced)"],
+      "procedure_steps": ["Obtain the death certificate", "Identify all legal and/or testamentary heirs", "Take inventory of the deceased's property with a notary if necessary", "File the inheritance declaration at the Tax office within 6 months", "Pay the inheritance duties (if due)", "Share the property among the heirs", "Have real-estate transfers recorded at the land registry"],
+      "conditions": ["The inheritance opens at the place of the deceased's last residence", "Declaration deadline: 6 months for residents, 1 year for non-residents", "Direct-line heirs (children, parents) take priority under the Chadian Civil Code", "Without a will: legal succession under the rules of intestate devolution", "The debts of the deceased are paid from the estate before division", "The surviving spouse is entitled to a legal reserved share", "If there is no heir (escheat): the property reverts to the Chadian State"]
+    },
+    "ar": {
+      "title": "التصريح بالتركة",
+      "summary": "إجراء إداري في تشاد: التصريح بالتركة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 35 (الصفحة 49). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "متغيرة (رسوم الإرث تختلف حسب قيمة التركة)",
+      "processing_time": "6 أشهر من تاريخ الوفاة (الأجل القانوني)",
+      "validity": "دائم",
+      "institution": "المحكمة الابتدائية",
+      "location": "المحكمة الابتدائية / موثّق / مديرية الضرائب",
+      "required_documents": ["شهادة وفاة المتوفى", "دفتر العائلة أو عقود ميلاد الورثة", "البطاقة الوطنية لجميع الورثة", "جرد ممتلكات المتوفى (عقارات، حسابات بنكية، منقولات)", "الرسوم العقارية للعقارات", "كشوف الحسابات البنكية (إن وُجدت أرصدة يوم الوفاة)", "الوصية إن وُجدت (مودعة لدى موثّق)", "عقد زواج المتوفى (إن كان متزوجًا)", "حكم الطلاق (إن كان مطلّقًا)"],
+      "procedure_steps": ["الحصول على شهادة الوفاة", "تحديد جميع الورثة الشرعيين و/أو الموصى لهم", "جرد ممتلكات المتوفى مع موثّق عند الاقتضاء", "إيداع التصريح بالتركة لدى مصلحة الضرائب خلال 6 أشهر", "دفع رسوم الإرث (إن كانت مستحقة)", "قسمة الممتلكات بين الورثة", "تسجيل انتقال العقارات في المسح العقاري"],
+      "conditions": ["تُفتح التركة في آخر محل إقامة للمتوفى", "أجل التصريح: 6 أشهر للمقيمين، وسنة للمقيمين خارج البلاد", "يتقدم الورثة في الخط المباشر (الأبناء، الوالدان) حسب القانون المدني التشادي", "في غياب الوصية: الإرث الشرعي وفق قواعد الإرث", "تُسدَّد ديون المتوفى من التركة قبل القسمة", "للزوج الباقي حصة شرعية محفوظة", "في حالة عدم وجود وارث: تؤول الممتلكات إلى الدولة التشادية"]
+    }
+  },
+  {
+    "slug": "plainte-penale-depot-de-plainte",
+    "en": {
+      "title": "Criminal complaint — filing a complaint",
+      "summary": "Administrative procedure in Chad: criminal complaint — filing a complaint.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 61 (page 50). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Immediate receipt / variable investigation time",
+      "validity": "The complaint triggers judicial action",
+      "institution": "Police station",
+      "location": "Police station / Gendarmerie brigade / Public Prosecutor's office",
+      "required_documents": ["Identity document of the complainant", "Available evidence: photos, witnesses, documents", "Written or oral description of the facts", "Medical certificate in case of assault and injuries"],
+      "procedure_steps": ["Go to the police station or gendarmerie", "Explain the facts to the officer", "The officer records the complaint in a register or draws up a report", "Sign the report", "Receive the complaint receipt", "Follow up on the investigation"],
+      "conditions": ["Filing a complaint is the right of every citizen who is a victim of an offence", "The police or gendarmerie must register the complaint (refusal is unlawful)", "A complaint may be dismissed if the facts do not constitute an offence", "The complainant may join the proceedings as a civil party to claim damages", "Limitation period: 3 years for misdemeanours, 10 years for felonies"]
+    },
+    "ar": {
+      "title": "شكوى جنائية — تقديم شكوى",
+      "summary": "إجراء إداري في تشاد: شكوى جنائية — تقديم شكوى.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 61 (الصفحة 50). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "وصل فوري / مدة التحقيق متغيرة",
+      "validity": "الشكوى تُحرّك الإجراء القضائي",
+      "institution": "مخفر الشرطة",
+      "location": "مخفر الشرطة / فرقة الدرك / النيابة العامة",
+      "required_documents": ["وثيقة هوية الشاكي", "الأدلة المتوفرة: صور، شهود، وثائق", "وصف مكتوب أو شفهي للوقائع", "شهادة طبية في حالة الضرب والجروح"],
+      "procedure_steps": ["التوجه إلى مخفر الشرطة أو الدرك", "شرح الوقائع للعون", "يسجل العون الشكوى في سجل أو يحرّر محضرًا", "توقيع المحضر", "استلام وصل تقديم الشكوى", "متابعة سير التحقيق"],
+      "conditions": ["تقديم الشكوى حق لكل مواطن ضحية جريمة", "على الشرطة أو الدرك تسجيل الشكوى (الرفض غير قانوني)", "يجوز حفظ الشكوى إذا لم تشكل الوقائع جريمة", "يجوز للشاكي أن ينضم كطرف مدني للمطالبة بالتعويض", "مدة التقادم: 3 سنوات للجنح، و10 سنوات للجنايات"]
+    }
+  },
+  {
+    "slug": "demande-daide-juridictionnelle",
+    "en": {
+      "title": "Legal aid application",
+      "summary": "Administrative procedure in Chad: legal aid application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 62 (page 50). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (the application itself)",
+      "processing_time": "1 to 4 weeks",
+      "validity": "For the duration of the ongoing procedure",
+      "institution": "Legal aid office — Court of First Instance",
+      "location": "Legal aid office — Court of First Instance",
+      "required_documents": ["Legal aid application form", "Applicant's CNI", "Proof of low income (salaries, no income)", "Description of the case pending or to be brought", "Proof of residence"],
+      "procedure_steps": ["Collect the form at the legal aid office", "Assemble the file", "File it and wait for the decision", "If granted: choose a lawyer and start the procedure"],
+      "conditions": ["Intended for people without sufficient resources to pay a lawyer", "The office assesses the resources and the apparent merit of the request", "If granted: the State covers the lawyer's fees and court costs", "The beneficiary may choose their lawyer from the list of lawyers accepting legal aid", "A refusal may be challenged"]
+    },
+    "ar": {
+      "title": "طلب المساعدة القضائية",
+      "summary": "إجراء إداري في تشاد: طلب المساعدة القضائية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 62 (الصفحة 50). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (الطلب نفسه)",
+      "processing_time": "من أسبوع إلى 4 أسابيع",
+      "validity": "طوال مدة الإجراء الجاري",
+      "institution": "مكتب المساعدة القضائية — المحكمة الابتدائية",
+      "location": "مكتب المساعدة القضائية — المحكمة الابتدائية",
+      "required_documents": ["استمارة طلب المساعدة القضائية", "بطاقة هوية الطالب", "إثباتات ضعف الموارد (أجور، أو انعدام الدخل)", "وصف القضية الجارية أو المراد رفعها", "إثبات السكن"],
+      "procedure_steps": ["استلام الاستمارة من مكتب المساعدة القضائية", "تجميع الملف", "الإيداع وانتظار القرار", "في حالة القبول: اختيار محامٍ وبدء الإجراء"],
+      "conditions": ["موجهة للأشخاص الذين لا يملكون موارد كافية لأداء أتعاب المحامي", "يقيّم المكتب الموارد ووجاهة الطلب الظاهرة", "في حالة القبول: تتحمل الدولة أتعاب المحامي ومصاريف المحكمة", "يمكن للمستفيد اختيار محاميه من قائمة المحامين المقبولين للمساعدة القضائية", "يجوز الطعن في الرفض"]
+    }
+  },
+  {
+    "slug": "requete-en-refere-urgence-judiciaire",
+    "en": {
+      "title": "Summary proceedings application (urgent judicial matter)",
+      "summary": "Administrative procedure in Chad: summary proceedings application (urgent judicial matter).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 78 (page 51). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 50,000 FCFA plus lawyer's fees",
+      "processing_time": "48 hours to 15 days (urgent procedure)",
+      "validity": "Provisional order (until the judgment on the merits)",
+      "institution": "Court of First Instance — President of the court",
+      "location": "Court of First Instance — President of the court",
+      "required_documents": ["Application for summary proceedings drafted by a lawyer", "Supporting documents showing the urgency", "Applicant's CNI", "Summons of the opposing party (issued by the court)"],
+      "procedure_steps": ["Appoint a lawyer", "Draft and file the summary proceedings application", "The president sets a quick hearing date (24 hours to 7 days)", "Adversarial hearing", "Order of the president issued the same day or within 48 hours"],
+      "conditions": ["Summary proceedings are an urgent procedure — there is no final judgment", "The summary order is provisional — the dispute must later be decided on the merits", "Conditions: manifest urgency OR manifestly unlawful disturbance", "Examples: abusive eviction, blatant breach of a contract, unlawful seizure", "The order is immediately enforceable, even in case of appeal (unless decided otherwise)"]
+    },
+    "ar": {
+      "title": "طلب استعجالي (حالة قضائية مستعجلة)",
+      "summary": "إجراء إداري في تشاد: طلب استعجالي (حالة قضائية مستعجلة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 78 (الصفحة 51). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 50 000 FCFA زائد أتعاب المحامي",
+      "processing_time": "من 48 ساعة إلى 15 يومًا (إجراء مستعجل)",
+      "validity": "أمر مؤقت (إلى حين الفصل في الموضوع)",
+      "institution": "المحكمة الابتدائية — رئيس المحكمة",
+      "location": "المحكمة الابتدائية — رئيس المحكمة",
+      "required_documents": ["طلب استعجالي محرّر من طرف محامٍ", "وثائق مؤيدة للاستعجال", "بطاقة هوية الطالب", "استدعاء الطرف الآخر (تصدره المحكمة)"],
+      "procedure_steps": ["توكيل محامٍ", "تحرير طلب الاستعجال وإيداعه", "يحدد الرئيس موعد جلسة سريعة (من 24 ساعة إلى 7 أيام)", "جلسة بحضور الطرفين", "يصدر الرئيس الأمر في اليوم نفسه أو خلال 48 ساعة"],
+      "conditions": ["الإجراء الاستعجالي إجراء سريع، ولا يصدر فيه حكم نهائي", "الأمر الاستعجالي مؤقت، ويُفصل في النزاع في الموضوع لاحقًا", "الشروط: استعجال واضح أو اضطراب غير مشروع بيّن", "أمثلة: طرد تعسفي، أو خرق صارخ لعقد، أو حجز غير قانوني", "الأمر قابل للتنفيذ فورًا حتى في حالة الاستئناف (إلا إذا قرر خلاف ذلك)"]
+    }
+  }
+]

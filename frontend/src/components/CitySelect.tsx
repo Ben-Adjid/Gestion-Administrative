@@ -81,6 +81,9 @@ export function CitySelect({ value, onChange, label, emptyLabel, id = 'city-sele
   // Quand la localité change de l'extérieur, la province suit la localité.
   useEffect(() => { setProvince(selected?.province ?? ''); }, [selected?.province]);
 
+  // Libellé d'une province dans la langue de la page (la valeur reste le nom français, utilisé pour filtrer).
+  const provinceLabel = (name: string) => cities.find((city) => (city.province ?? "") === name)?.province_label || name;
+
   const provinces = useMemo(() => {
     const names = new Set(cities.map((c) => c.province ?? ''));
     return Array.from(names).sort((a, b) => a.localeCompare(b, 'fr'));
@@ -118,7 +121,7 @@ export function CitySelect({ value, onChange, label, emptyLabel, id = 'city-sele
         <label htmlFor={`${id}-province`} className="sr-only">{t('placex.province')}</label>
         <select id={`${id}-province`} value={province} onChange={(e) => changeProvince(e.target.value)} disabled={status !== 'ready' || !!needle} className={selectClass}>
           <option value="">{t('placex.all_provinces')}</option>
-          {provinces.map((name) => <option key={name || 'none'} value={name}>{name || otherLabel}</option>)}
+          {provinces.map((name) => <option key={name || 'none'} value={name}>{provinceLabel(name) || otherLabel}</option>)}
         </select>
         {status === 'ready' && cities.length > 8 && (
           <>

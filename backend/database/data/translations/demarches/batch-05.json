@@ -1,0 +1,263 @@
+[
+  {
+    "slug": "demande-de-bourse-detudes-a-letranger-bourse-detat",
+    "en": {
+      "title": "Application for a study grant abroad (State grant)",
+      "summary": "Administrative procedure in Chad: application for a study grant abroad (State grant).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 54 (page 31). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (application)",
+      "processing_time": "3 to 6 months",
+      "validity": "1 year, renewable",
+      "institution": "Scholarships Directorate — Ministry of Higher Education",
+      "location": "Scholarships Directorate — Ministry of Higher Education",
+      "required_documents": ["Baccalauréat with mentions", "University transcripts", "CNI and birth certificate", "Certificate of nationality", "Letter of motivation", "Two letters of recommendation", "Proof of admission to the foreign institution (if available)", "Grant application form"],
+      "procedure_steps": ["Collect the form at the Scholarships Directorate", "Assemble the complete file", "Submit before the annual campaign deadline", "Selection committee (interview possible)", "Notification and start of the grant"],
+      "conditions": ["Reserved for students who obtained their baccalauréat with at least the mention Assez Bien", "Priority: Medicine, Engineering, basic sciences", "The student must commit on their honour to return and serve in Chad after their studies", "The grant covers tuition fees plus a monthly allowance (varies by country)", "Suspended in case of withdrawal or repeated failure (more than 2 times in the same year)"]
+    },
+    "ar": {
+      "title": "طلب منحة دراسة في الخارج (منحة الدولة)",
+      "summary": "إجراء إداري في تشاد: طلب منحة دراسة في الخارج (منحة الدولة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 54 (الصفحة 31). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (الطلب)",
+      "processing_time": "من 3 إلى 6 أشهر",
+      "validity": "سنة واحدة قابلة للتجديد",
+      "institution": "مديرية المنح — وزارة التعليم العالي",
+      "location": "مديرية المنح — وزارة التعليم العالي",
+      "required_documents": ["البكالوريا مع التقديرات", "كشوف النقاط الجامعية", "البطاقة الوطنية وعقد الميلاد", "شهادة الجنسية", "رسالة تحفيز", "رسالتا توصية (2)", "إثبات القبول في المؤسسة الأجنبية (إن توفر)", "استمارة طلب المنحة"],
+      "procedure_steps": ["استلام الاستمارة من مديرية المنح", "تجميع الملف الكامل", "التقديم قبل موعد الحملة السنوية", "لجنة الانتقاء (مقابلة ممكنة)", "الإشعار وبدء المنحة"],
+      "conditions": ["مخصصة للطلبة الحاصلين على البكالوريا بتقدير حسن على الأقل", "الأولوية: الطب والهندسة والعلوم الأساسية", "يلتزم الطالب بشرف بالعودة إلى تشاد لخدمة البلاد بعد دراسته", "تغطي المنحة رسوم الدراسة إضافةً إلى منحة شهرية (تختلف حسب البلد)", "تُعلَّق في حالة الانقطاع أو الرسوب المتكرر (أكثر من مرتين في السنة نفسها)"]
+    }
+  },
+  {
+    "slug": "attestation-de-formation-professionnelle",
+    "en": {
+      "title": "Certificate of professional training",
+      "summary": "Administrative procedure in Chad: certificate of professional training.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 55 (page 32). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 5,000 FCFA",
+      "processing_time": "Immediate to 15 days",
+      "validity": "Permanent",
+      "institution": "Training centre",
+      "location": "Training centre / Ministry of Vocational Training",
+      "required_documents": ["Proof of completing the training", "Identity document", "Training registration receipt"],
+      "procedure_steps": ["Complete the training", "Request the certificate from the centre", "Check that the centre is approved by the Ministry", "Receive the certificate with the official stamp"],
+      "conditions": ["The certificate proves participation in and completion of a training course", "The certificate must be issued by a centre approved by the State to have official value", "Training from unapproved centres may be recognised through validation of prior learning"]
+    },
+    "ar": {
+      "title": "شهادة التكوين المهني",
+      "summary": "إجراء إداري في تشاد: شهادة التكوين المهني.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 55 (الصفحة 32). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 5 000 FCFA",
+      "processing_time": "فوري إلى 15 يومًا",
+      "validity": "دائمة",
+      "institution": "مركز التكوين",
+      "location": "مركز التكوين / وزارة التكوين المهني",
+      "required_documents": ["إثبات إتمام التكوين", "وثيقة هوية", "وصل التسجيل في التكوين"],
+      "procedure_steps": ["إتمام التكوين", "طلب الشهادة من المركز", "التحقق من اعتماد المركز من الوزارة", "استلام الشهادة مختومة بالختم الرسمي"],
+      "conditions": ["تثبت الشهادة المشاركة في التكوين وإتمامه", "يجب أن تصدر الشهادة عن مركز معتمد من الدولة لتكون ذات قيمة رسمية", "قد يُعترف بالتكوين من مراكز غير معتمدة عن طريق الاعتراف بالمكتسبات"]
+    }
+  },
+  {
+    "slug": "concours-dentree-a-la-fonction-publique",
+    "en": {
+      "title": "Entrance competitive examination for the civil service",
+      "summary": "Administrative procedure in Chad: entrance competitive examination for the civil service.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 56 (page 32). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 15,000 FCFA (application fee)",
+      "processing_time": "According to the competition calendar (published each year)",
+      "validity": "Results valid for the current recruitment",
+      "institution": "Civil Service Directorate — Ministry of Civil Service",
+      "location": "Civil Service Directorate — Ministry of Civil Service",
+      "required_documents": ["Birth certificate (under 35 for most grades)", "CNI", "Certificate of Chadian nationality", "Diploma required for the targeted grade", "Clean criminal record extract", "Medical certificate of fitness", "4 identity photos", "Application form (Ministry)"],
+      "procedure_steps": ["Watch for competition announcements (radio, press, Ministry website)", "Collect and fill in the application form", "File the file before the deadline", "Sit the written tests (eligibility)", "If eligible: sit the oral or practical tests (admission)", "Results published and assignment of successful candidates"],
+      "conditions": ["Age condition: 18 to 35 depending on the grade (exemptions exist)", "Nationality condition: Chadian nationality required", "Criminal record condition: no final criminal conviction", "Residence in Chad at the time of the competition", "Foreign diplomas must be equivalent beforehand"]
+    },
+    "ar": {
+      "title": "مسابقة الدخول إلى الوظيفة العمومية",
+      "summary": "إجراء إداري في تشاد: مسابقة الدخول إلى الوظيفة العمومية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 56 (الصفحة 32). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 15 000 FCFA (رسوم الملف)",
+      "processing_time": "حسب روزنامة المسابقات (تُنشر كل سنة)",
+      "validity": "النتائج صالحة للتوظيف الجاري",
+      "institution": "مديرية الوظيفة العمومية — وزارة الوظيفة العمومية",
+      "location": "مديرية الوظيفة العمومية — وزارة الوظيفة العمومية",
+      "required_documents": ["عقد الميلاد (دون 35 سنة لمعظم الأسلاك)", "البطاقة الوطنية", "شهادة الجنسية التشادية", "الشهادة المطلوبة للسلك المستهدف", "مستخرج سجل عدلي نظيف", "شهادة طبية تثبت اللياقة", "4 صور شخصية", "استمارة الترشح (الوزارة)"],
+      "procedure_steps": ["متابعة إعلانات المسابقات (الإذاعة، الصحافة، موقع الوزارة)", "استلام استمارة الترشح وملؤها", "إيداع الملف قبل الموعد النهائي", "اجتياز الاختبارات الكتابية (القبول المبدئي)", "في حال القبول المبدئي: اجتياز الاختبارات الشفوية أو العملية (القبول النهائي)", "نشر النتائج وتعيين الناجحين"],
+      "conditions": ["شرط السن: من 18 إلى 35 سنة حسب السلك (توجد استثناءات)", "شرط الجنسية: الجنسية التشادية إلزامية", "شرط السوابق: عدم وجود أي إدانة جنائية نهائية", "الإقامة في تشاد وقت المسابقة", "يجب معادلة الشهادات الأجنبية مسبقًا"]
+    }
+  },
+  {
+    "slug": "enregistrement-dun-contrat-de-travail",
+    "en": {
+      "title": "Registration of an employment contract",
+      "summary": "Administrative procedure in Chad: registration of an employment contract.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 25 (page 35). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Immediate to 7 days",
+      "validity": "Permanent (valid for the whole duration of the contract)",
+      "institution": "Labour Inspectorate of the workplace",
+      "location": "Labour Inspectorate of the workplace",
+      "required_documents": ["Employment contract signed by both parties in 3 copies", "CNI of the employer (or trade register for companies)", "CNI of the employee", "Birth certificate of the employee", "CNPS employer number (if already affiliated)"],
+      "procedure_steps": ["Draft and sign the employment contract in 3 copies", "Go to the Labour Inspectorate within 8 days", "File the 3 copies with the attached documents", "The inspector checks compliance with the Labour Code", "One stamped copy is kept by the Inspectorate, one by the employer and one by the employee"],
+      "conditions": ["Registration of the contract is mandatory within 8 days of taking up the post", "The permanent contract (CDI) is the normal form of employment contract", "A fixed-term contract (CDD) may not exceed 2 years (a single renewal is allowed)", "Failure to register exposes the employer to penalties (fines)", "The Labour Inspectorate may refuse registration if the contract does not comply with the Chadian Labour Code", "Any clause contrary to the Labour Code is deemed void"]
+    },
+    "ar": {
+      "title": "تسجيل عقد العمل",
+      "summary": "إجراء إداري في تشاد: تسجيل عقد العمل.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 25 (الصفحة 35). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "فوري إلى 7 أيام",
+      "validity": "دائم (صالح طوال مدة العقد)",
+      "institution": "مفتشية العمل بمكان العمل",
+      "location": "مفتشية العمل بمكان العمل",
+      "required_documents": ["عقد العمل موقّع من الطرفين في 3 نسخ", "البطاقة الوطنية للمشغّل (أو السجل التجاري للشركات)", "البطاقة الوطنية للأجير", "عقد ميلاد الأجير", "رقم المشغّل لدى الصندوق الوطني للضمان الاجتماعي CNPS (إن كان منخرطًا)"],
+      "procedure_steps": ["تحرير عقد العمل وتوقيعه في 3 نسخ", "التوجه إلى مفتشية العمل خلال 8 أيام", "إيداع النسخ الثلاث مع المرفقات", "يتحقق المفتش من مطابقة العقد لمدونة الشغل", "تحتفظ المفتشية بنسخة مصادَقة، ويحتفظ المشغّل بنسخة، والأجير بنسخة"],
+      "conditions": ["تسجيل العقد إلزامي خلال 8 أيام من مباشرة العمل", "العقد غير محدد المدة (CDI) هو الشكل العادي لعقد العمل", "لا يجوز أن تتجاوز مدة العقد محدد المدة (CDD) سنتين (يُسمح بتجديد واحد)", "عدم التسجيل يعرّض المشغّل لعقوبات (غرامات)", "يجوز لمفتشية العمل رفض التسجيل إذا لم يطابق العقد مدونة الشغل التشادية", "كل شرط مخالف لمدونة الشغل يُعتبر باطلًا"]
+    }
+  },
+  {
+    "slug": "affiliation-a-la-cnps-salarie-du-secteur-formel",
+    "en": {
+      "title": "CNPS registration (formal-sector employee)",
+      "summary": "Administrative procedure in Chad: CNPS registration (formal-sector employee).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 26 (page 35). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (legal obligation)",
+      "processing_time": "Immediate to 15 days",
+      "validity": "Permanent as long as the employee is working",
+      "institution": "National Social Security Fund (CNPS) — N'Djamena or regional offices",
+      "location": "National Social Security Fund (CNPS) — N'Djamena or regional offices",
+      "required_documents": ["Employee registration form (CNPS)", "Registered employment contract", "Employee's CNI", "Employee's birth certificate", "Company's CNPS employer number", "Employee's ID photo (for the CNPS card)", "Children's birth certificates (for family allowances)", "Marriage certificate (if applicable)"],
+      "procedure_steps": ["The employer declares the employee to CNPS within 8 days", "Fill in the employee registration form", "Provide the supporting documents", "CNPS assigns a personal registration number", "The CNPS card is issued to the employee"],
+      "conditions": ["Affiliation with CNPS is mandatory for every employee in the formal sector", "Employer contribution rate: 16.5% of gross salary; employee: 3.5%", "Coverage: pension, family allowances, work accidents", "Self-employed workers may register voluntarily", "The employer must declare any new employee within 8 days of hiring", "Late-payment penalties are significant in case of non-declaration"]
+    },
+    "ar": {
+      "title": "الانخراط في الصندوق الوطني للضمان الاجتماعي CNPS (أجير في القطاع المنظم)",
+      "summary": "إجراء إداري في تشاد: الانخراط في الصندوق الوطني للضمان الاجتماعي CNPS (أجير في القطاع المنظم).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 26 (الصفحة 35). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (التزام قانوني)",
+      "processing_time": "فوري إلى 15 يومًا",
+      "validity": "دائم ما دام الأجير نشيطًا",
+      "institution": "الصندوق الوطني للضمان الاجتماعي (CNPS) — انجامينا أو المندوبيات الجهوية",
+      "location": "الصندوق الوطني للضمان الاجتماعي (CNPS) — انجامينا أو المندوبيات الجهوية",
+      "required_documents": ["استمارة تسجيل الأجير (CNPS)", "عقد العمل المسجَّل", "البطاقة الوطنية للأجير", "عقد ميلاد الأجير", "رقم المشغّل لدى CNPS للشركة", "صورة شخصية للأجير (لبطاقة CNPS)", "عقود ميلاد الأطفال (للمنح العائلية)", "عقد الزواج (عند الاقتضاء)"],
+      "procedure_steps": ["يصرّح المشغّل بالأجير لدى CNPS خلال 8 أيام", "ملء استمارة تسجيل الأجير", "تقديم الوثائق المؤيدة", "تمنح CNPS رقم تسجيل شخصيًا", "تُسلَّم بطاقة CNPS للأجير"],
+      "conditions": ["الانخراط في CNPS إلزامي لكل أجير في القطاع المنظم", "نسبة اشتراك المشغّل: 16.5% من الأجر الإجمالي، والأجير: 3.5%", "التغطية: التقاعد، المنح العائلية، حوادث العمل", "يمكن للعاملين لحسابهم الخاص الانخراط اختياريًا", "يجب على المشغّل التصريح بكل أجير جديد خلال 8 أيام من التوظيف", "غرامات التأخير كبيرة في حالة عدم التصريح"]
+    }
+  },
+  {
+    "slug": "demande-de-pension-de-retraite-cnps",
+    "en": {
+      "title": "CNPS retirement pension application",
+      "summary": "Administrative procedure in Chad: CNPS retirement pension application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 27 (page 36). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent (monthly payment for life)",
+      "institution": "National Social Security Fund (CNPS)",
+      "location": "National Social Security Fund (CNPS)",
+      "required_documents": ["Written request addressed to the Director General of CNPS", "Certificate of cessation of activity (issued by the employer)", "Individual statement of CNPS contributions (obtained from CNPS)", "Valid CNI", "Birth certificate", "Marriage certificate (if applicable)", "Birth certificates of dependent children", "Bank details or mobile money account details", "Recent identity photo"],
+      "procedure_steps": ["Obtain the certificate of cessation of activity from the employer", "Request the contribution statement from CNPS", "Assemble the complete file", "File the file at CNPS 3 months before retirement", "The CNPS committee examines the file and calculates the pension", "Notification of the pension amount", "First payment the month after validation"],
+      "conditions": ["Legal retirement age: 60 (55 for certain high-risk categories)", "Minimum contribution period: 15 years (180 months) for a full-rate pension", "Below 15 years of contributions: old-age allowance (reduced amount)", "The file must be filed 3 to 6 months before the planned departure date", "The pension is calculated on the average of the 10 best contribution years", "Combining work and pension: prohibited in the civil service, possible in the private sector with a declaration"]
+    },
+    "ar": {
+      "title": "طلب معاش التقاعد لدى CNPS",
+      "summary": "إجراء إداري في تشاد: طلب معاش التقاعد لدى CNPS.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 27 (الصفحة 36). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم (صرف شهري مدى الحياة)",
+      "institution": "الصندوق الوطني للضمان الاجتماعي (CNPS)",
+      "location": "الصندوق الوطني للضمان الاجتماعي (CNPS)",
+      "required_documents": ["طلب كتابي موجه إلى المدير العام لـ CNPS", "شهادة توقف النشاط (يصدرها المشغّل)", "كشف فردي باشتراكات CNPS (يُحصَّل من CNPS)", "بطاقة هوية وطنية سارية", "عقد الميلاد", "عقد الزواج (عند الاقتضاء)", "عقود ميلاد الأطفال المعالين", "بيانات الحساب البنكي أو حساب الهاتف المحمول للدفع", "صورة شخصية حديثة"],
+      "procedure_steps": ["الحصول على شهادة توقف النشاط من المشغّل", "طلب كشف الاشتراكات من CNPS", "تجميع الملف الكامل", "إيداع الملف لدى CNPS قبل 3 أشهر من التقاعد", "تدرس لجنة CNPS الملف وتحسب المعاش", "تبليغ مبلغ المعاش", "أول صرف في الشهر الموالي للمصادقة"],
+      "conditions": ["سن التقاعد القانوني: 60 سنة (و55 سنة لبعض الفئات ذات المخاطر)", "مدة الاشتراك الدنيا: 15 سنة (180 شهرًا) للحصول على معاش كامل", "دون 15 سنة من الاشتراك: منحة الشيخوخة (بمبلغ مخفَّض)", "يجب إيداع الملف قبل 3 إلى 6 أشهر من تاريخ المغادرة المقرر", "يُحسب المعاش على متوسط أفضل 10 سنوات اشتراك", "الجمع بين العمل والمعاش: ممنوع في الوظيفة العمومية، وممكن في القطاع الخاص مع التصريح"]
+    }
+  },
+  {
+    "slug": "attestation-de-travail-certificat-de-travail",
+    "en": {
+      "title": "Employment certificate / work certificate",
+      "summary": "Administrative procedure in Chad: employment certificate / work certificate.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 28 (page 37). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (employer's obligation)",
+      "processing_time": "Immediate to 7 days",
+      "validity": "Valid at the time of issue (generally 3 months)",
+      "institution": "Employer (HR department)",
+      "location": "Employer (HR department)",
+      "required_documents": ["Written or verbal request from the employee", "No specific document required (the employer produces it)"],
+      "procedure_steps": ["Send a written request to the HR manager or management", "State the purpose of the request (visa, bank procedure, etc.)", "Receive the certificate within the time limits"],
+      "conditions": ["The employer is legally required to issue an employment certificate on the employee's request", "It must state the position held, seniority, salary (optional) and status (CDD/CDI)", "It is different from the end-of-contract work certificate (issued when the contract ends)", "The employer cannot refuse without reason — appeal is possible to the Labour Inspectorate", "In case of dismissal: the work certificate must be handed over on the day the contract ends"]
+    },
+    "ar": {
+      "title": "شهادة العمل / شهادة الشغل",
+      "summary": "إجراء إداري في تشاد: شهادة العمل / شهادة الشغل.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 28 (الصفحة 37). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (التزام المشغّل)",
+      "processing_time": "فوري إلى 7 أيام",
+      "validity": "صالحة وقت التسليم (عادةً 3 أشهر)",
+      "institution": "المشغّل (قسم الموارد البشرية)",
+      "location": "المشغّل (قسم الموارد البشرية)",
+      "required_documents": ["طلب كتابي أو شفهي من الأجير", "لا توجد وثيقة خاصة مطلوبة (المشغّل هو من يُصدرها)"],
+      "procedure_steps": ["توجيه طلب كتابي إلى مسؤول الموارد البشرية أو الإدارة", "ذكر موضوع الطلب (تأشيرة، إجراء بنكي، إلخ)", "استلام الشهادة في الآجال"],
+      "conditions": ["المشغّل ملزم قانونًا بتسليم شهادة العمل بناءً على طلب الأجير", "يجب أن تذكر المنصب والأقدمية والأجر (اختياري) والوضعية (CDD/CDI)", "تختلف عن شهادة العمل عند نهاية العقد (تُسلَّم عند انتهاء العقد)", "لا يجوز للمشغّل الرفض دون سبب، ويمكن الطعن أمام مفتشية العمل", "في حالة الفصل: تُسلَّم شهادة العمل في اليوم نفسه الذي ينتهي فيه العقد"]
+    }
+  },
+  {
+    "slug": "inscription-a-lagence-nationale-pour-lemploi-anpe",
+    "en": {
+      "title": "Registration with the National Employment Agency (ANPE)",
+      "summary": "Administrative procedure in Chad: registration with the National Employment Agency (ANPE).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 29 (page 37). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Immediate (registration on the same day)",
+      "validity": "1 year, renewable",
+      "institution": "ANPE — N'Djamena or regional offices",
+      "location": "ANPE — N'Djamena or regional offices",
+      "required_documents": ["Valid CNI", "Diplomas and training certificates (originals and copies)", "Up-to-date CV (2 copies)", "Work certificates from previous jobs (if applicable)", "2 identity photos", "Residence certificate"],
+      "procedure_steps": ["Go to ANPE with the documents", "Fill in the registration form", "Interview with an employment adviser", "Receive the ANPE card", "Check the job offers regularly and come back for updates"],
+      "conditions": ["Registration with ANPE gives access to formal-sector job offers", "The ANPE card may be required for certain public recruitments", "Annual renewal is mandatory to keep the status of jobseeker", "ANPE may offer retraining courses to registered unemployed people", "Unemployment benefits do not currently exist in Chad (unlike in developed countries)"]
+    },
+    "ar": {
+      "title": "التسجيل في الوكالة الوطنية للتشغيل (ANPE)",
+      "summary": "إجراء إداري في تشاد: التسجيل في الوكالة الوطنية للتشغيل (ANPE).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 29 (الصفحة 37). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "فوري (التسجيل في اليوم نفسه)",
+      "validity": "سنة واحدة قابلة للتجديد",
+      "institution": "الوكالة الوطنية للتشغيل ANPE — انجامينا أو المندوبيات الجهوية",
+      "location": "الوكالة الوطنية للتشغيل ANPE — انجامينا أو المندوبيات الجهوية",
+      "required_documents": ["بطاقة هوية وطنية سارية", "الشهادات والدبلومات وشهادات التكوين (أصول ونسخ)", "سيرة ذاتية محدّثة (نسختان)", "شهادات العمل للوظائف السابقة (عند الاقتضاء)", "صورتان شخصيتان", "شهادة إقامة"],
+      "procedure_steps": ["التوجه إلى ANPE بالوثائق", "ملء استمارة التسجيل", "مقابلة مع مستشار التشغيل", "استلام بطاقة ANPE", "متابعة عروض العمل بانتظام والعودة للتحديث"],
+      "conditions": ["يتيح التسجيل في ANPE الاطلاع على عروض العمل في القطاع المنظم", "قد تُشترط بطاقة ANPE في بعض التوظيفات العمومية", "التجديد السنوي إلزامي للحفاظ على صفة طالب الشغل", "يمكن لـ ANPE أن تقترح دورات لإعادة التأهيل على العاطلين المسجلين", "لا توجد حاليًا منح بطالة في تشاد (على خلاف البلدان المتقدمة)"]
+    }
+  },
+  {
+    "slug": "declaration-daccident-de-travail-a-la-cnps",
+    "en": {
+      "title": "Declaration of a work accident to CNPS",
+      "summary": "Administrative procedure in Chad: declaration of a work accident to CNPS.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 57 (page 38). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (employer's legal obligation)",
+      "processing_time": "Declaration within 48 hours of the accident",
+      "validity": "For the duration of the claim",
+      "institution": "CNPS — Work Accidents Directorate",
+      "location": "CNPS — Work Accidents Directorate",
+      "required_documents": ["Work accident declaration (CNPS form)", "Initial medical certificate of the injured worker", "CNI of the injured worker", "CNPS registration number of the injured worker", "Accident report drawn up by the employer"],
+      "procedure_steps": ["The employer completes the CNPS form within 48 hours", "Take the injured worker to a CNPS-approved doctor", "Send the initial medical certificate to CNPS", "CNPS opens a file and authorises medical care", "Follow-up until the health condition is consolidated"],
+      "conditions": ["The employer has 48 hours to declare any accident occurring at the workplace or on the way to work", "Failure to declare exposes the employer to criminal and financial penalties", "CNPS covers medical care and daily allowances", "In case of permanent disability: a disability annuity calculated on the disability rate", "In case of death: death benefit and annuity for the beneficiaries"]
+    },
+    "ar": {
+      "title": "التصريح بحادث عمل لدى CNPS",
+      "summary": "إجراء إداري في تشاد: التصريح بحادث عمل لدى CNPS.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 57 (الصفحة 38). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (التزام قانوني على المشغّل)",
+      "processing_time": "التصريح خلال 48 ساعة من الحادث",
+      "validity": "طوال مدة معالجة الملف",
+      "institution": "CNPS — مديرية حوادث العمل",
+      "location": "CNPS — مديرية حوادث العمل",
+      "required_documents": ["التصريح بحادث العمل (استمارة CNPS)", "الشهادة الطبية الأولية للمصاب", "البطاقة الوطنية للمصاب", "رقم تسجيل المصاب لدى CNPS", "تقرير الحادث الذي يُعدّه المشغّل"],
+      "procedure_steps": ["يملأ المشغّل استمارة CNPS خلال 48 ساعة", "نقل المصاب إلى طبيب معتمد لدى CNPS", "إرسال الشهادة الطبية الأولية إلى CNPS", "تفتح CNPS ملفًا وتأذن بالعلاج", "المتابعة إلى حين استقرار الحالة الصحية"],
+      "conditions": ["لدى المشغّل 48 ساعة للتصريح بكل حادث يقع في مكان العمل أو في الطريق إليه", "عدم التصريح يعرّض المشغّل لعقوبات جنائية ومالية", "تتحمل CNPS نفقات العلاج والتعويضات اليومية", "في حالة العجز الدائم: ريع عجز يُحسب حسب نسبة العجز", "في حالة الوفاة: منحة الوفاة وريع للمستفيدين"]
+    }
+  }
+]

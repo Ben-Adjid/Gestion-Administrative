@@ -1,0 +1,263 @@
+[
+  {
+    "slug": "demande-de-visa-schengen-pays-europeens",
+    "en": {
+      "title": "Schengen visa application (European countries)",
+      "summary": "Administrative procedure in Chad: Schengen visa application (European countries).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 17 (page 23). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "80 EUR (about 52,000 FCFA) — non-refundable",
+      "processing_time": "15 to 30 working days",
+      "validity": "As decided by the consulate (short stay: 90 days maximum)",
+      "institution": "Embassy or consulate of the country concerned in N'Djamena",
+      "location": "Embassy or consulate of the country concerned in N'Djamena",
+      "required_documents": ["Valid passport with at least 3 months' validity after the planned return", "At least 2 blank pages in the passport", "2 biometric photos (Schengen standards)", "Schengen application form (from the embassy)", "Travel insurance covering the Schengen area (minimum 30,000 EUR)", "Confirmed hotel booking or accommodation", "Return flight ticket or proof of travel", "Proof of sufficient financial means (bank statements for the last 3 months)", "Letter of motivation / purpose of the trip", "For employees: employer's certificate + 3 payslips", "For students: enrolment certificate + authorisation from the institution", "For a family or friends invitation: invitation letter legalised by a French town hall", "Proof of ties to Chad (land title, employment contract, etc.)"],
+      "procedure_steps": ["Book an appointment on the embassy website or through TLScontact / VFS Global", "Assemble the complete file according to the embassy's list", "Attend the appointment with ALL originals and copies", "Leave the passport at the embassy for processing", "Collect the passport with the visa or the refusal notice within the time limits"],
+      "conditions": ["Visa fees are never refunded, even in case of refusal", "The Schengen visa allows movement within the 27 countries of the Schengen area", "The first country of entry or main stay must be the one that issues the visa", "A refusal must be contested within the time limits stated in the refusal notice", "The consulate may summon the applicant for a biometric interview — attendance is mandatory", "Biometric data (fingerprints, photo) are recorded in the VIS (Visa Information System)"]
+    },
+    "ar": {
+      "title": "طلب تأشيرة شنغن (الدول الأوروبية)",
+      "summary": "إجراء إداري في تشاد: طلب تأشيرة شنغن (الدول الأوروبية).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 17 (الصفحة 23). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "80 يورو (حوالي 52 000 FCFA) — غير قابلة للاسترداد",
+      "processing_time": "من 15 إلى 30 يوم عمل",
+      "validity": "حسب قرار القنصلية (الإقامة القصيرة: 90 يومًا كحد أقصى)",
+      "institution": "سفارة أو قنصلية البلد المعني في انجامينا",
+      "location": "سفارة أو قنصلية البلد المعني في انجامينا",
+      "required_documents": ["جواز سفر ساري لمدة 3 أشهر على الأقل بعد العودة المتوقعة", "صفحتان فارغتان على الأقل في الجواز", "صورتان بيومتريتان (وفق معايير شنغن)", "استمارة طلب شنغن (من السفارة)", "تأمين سفر يغطي منطقة شنغن (30 000 يورو على الأقل)", "حجز فندق أو سكن مؤكد", "تذكرة سفر ذهاب وإياب أو إثبات السفر", "إثبات الموارد المالية الكافية (كشوف بنكية لآخر 3 أشهر)", "رسالة تحفيز / هدف الرحلة", "بالنسبة للأجراء: شهادة من المشغّل + 3 كشوف أجور", "بالنسبة للطلبة: شهادة تسجيل + إذن من المؤسسة", "لدعوة من عائلة أو أصدقاء: رسالة دعوة مصادَقة من بلدية فرنسية", "إثبات الروابط مع تشاد (شهادة عقارية، عقد عمل، ...)"],
+      "procedure_steps": ["حجز موعد عبر موقع السفارة أو عبر TLScontact / VFS Global", "تجميع الملف الكامل حسب قائمة السفارة", "الحضور إلى الموعد مع جميع الأصول والنسخ", "ترك الجواز لدى السفارة للمعالجة", "استلام الجواز مع التأشيرة أو إشعار الرفض في الآجال المحددة"],
+      "conditions": ["رسوم التأشيرة لا تُسترد أبدًا، حتى في حالة الرفض", "تسمح تأشيرة شنغن بالتنقل داخل الدول السبع والعشرين في منطقة شنغن", "يجب أن تكون أول دولة دخول أو إقامة رئيسية هي الدولة التي تمنح التأشيرة", "يجب الطعن في الرفض خلال الآجال المذكورة في إشعار الرفض", "يجوز للقنصلية استدعاء المتقدم لمقابلة بيومترية، والحضور إلزامي", "تُسجَّل البيانات البيومترية (البصمات، الصورة) في نظام معلومات التأشيرات VIS"]
+    }
+  },
+  {
+    "slug": "autorisation-de-sortie-du-territoire-pour-mineur",
+    "en": {
+      "title": "Exit authorisation for a minor",
+      "summary": "Administrative procedure in Chad: exit authorisation for a minor.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 18 (page 23). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "2,000 to 10,000 FCFA depending on the place of legalisation",
+      "processing_time": "1 to 5 days",
+      "validity": "Single use or specified duration",
+      "institution": "Town hall, court, notary or immigration directorate",
+      "location": "Town hall, court, notary or immigration directorate",
+      "required_documents": ["CNI of both parents", "Child's birth certificate", "Child's passport", "Exit authorisation form (to be drafted)", "Identity of the adult companion", "Transport ticket"],
+      "procedure_steps": ["Write the parental authorisation letter", "Have it legalised by the town hall or a notary", "Attach copies of the parents' CNI", "Present the whole file to immigration when leaving"],
+      "conditions": ["Mandatory for any minor under 18 travelling without both parents", "If only one parent travels with the child: authorisation from the absent parent is required", "The authorisation must state the destination, the dates and the identity of the companion", "It must be legalised by a notary or the town hall to be accepted abroad", "If a parent has died: provide the death certificate of the absent parent", "If a parent is unknown or missing: a decision of the guardianship judge is required"]
+    },
+    "ar": {
+      "title": "إذن الخروج من التراب الوطني للقاصر",
+      "summary": "إجراء إداري في تشاد: إذن الخروج من التراب الوطني للقاصر.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 18 (الصفحة 23). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 2 000 إلى 10 000 FCFA حسب مكان التصديق",
+      "processing_time": "من يوم إلى 5 أيام",
+      "validity": "استعمال واحد أو مدة محددة",
+      "institution": "البلدية أو المحكمة أو الموثّق أو مديرية الهجرة",
+      "location": "البلدية أو المحكمة أو الموثّق أو مديرية الهجرة",
+      "required_documents": ["بطاقتا الهوية الوطنية للوالدين", "عقد ميلاد الطفل", "جواز سفر الطفل", "استمارة إذن الخروج من التراب الوطني (تُحرَّر)", "هوية المرافق البالغ", "تذكرة النقل"],
+      "procedure_steps": ["تحرير رسالة الإذن الأبوي", "تصديقها من البلدية أو من موثّق", "إرفاق نسخ من بطاقتي الهوية الوطنية للوالدين", "تقديم الملف كاملًا لمصلحة الهجرة عند المغادرة"],
+      "conditions": ["إلزامي لكل قاصر دون 18 سنة يسافر دون والديه معًا", "إذا سافر أحد الوالدين فقط مع الطفل: يلزم إذن الوالد الغائب", "يجب أن يذكر الإذن الوجهة والتواريخ وهوية المرافق", "يجب تصديقه من موثّق أو البلدية ليُقبل في الخارج", "في حالة وفاة أحد الوالدين: تقديم شهادة الوفاة للوالد الغائب", "في حالة كون أحد الوالدين مجهولًا أو مفقودًا: يلزم قرار قاضي الولاية"]
+    }
+  },
+  {
+    "slug": "visa-pour-larabie-saoudite-hajj-omra",
+    "en": {
+      "title": "Visa for Saudi Arabia (Hajj / Umrah)",
+      "summary": "Administrative procedure in Chad: visa for Saudi Arabia (Hajj / Umrah).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 52 (page 24). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "150,000 to 300,000 FCFA (visa + pilgrimage)",
+      "processing_time": "2 to 6 weeks",
+      "validity": "Duration of the pilgrimage",
+      "institution": "Embassy of Saudi Arabia in N'Djamena",
+      "location": "Embassy of Saudi Arabia in N'Djamena",
+      "required_documents": ["Valid passport (at least 6 months)", "Biometric photo", "Meningitis vaccination certificate (mandatory)", "Proof of payment of the Hajj or Umrah package", "For women: mahram (male guardian) certificate", "Marriage certificate (married women)", "Saudi visa form"],
+      "procedure_steps": ["Register with a pilgrimage operator approved by the Ministry of Religious Affairs", "Get the meningitis vaccination", "File the application through the operator or directly at the embassy", "Receive the visa", "Travel with the group"],
+      "conditions": ["The Hajj visa is issued only within the quota allocated to Chad by Saudi Arabia", "The meningitis vaccination is MANDATORY (certificate required)", "Women under 45 must travel with a mahram (husband, father, brother)", "Some approved pilgrimage companies manage the visa collectively"]
+    },
+    "ar": {
+      "title": "تأشيرة المملكة العربية السعودية (الحج / العمرة)",
+      "summary": "إجراء إداري في تشاد: تأشيرة المملكة العربية السعودية (الحج / العمرة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 52 (الصفحة 24). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 150 000 إلى 300 000 FCFA (التأشيرة + باقة الحج أو العمرة)",
+      "processing_time": "من أسبوعين إلى 6 أسابيع",
+      "validity": "مدة الحج أو العمرة",
+      "institution": "سفارة المملكة العربية السعودية في انجامينا",
+      "location": "سفارة المملكة العربية السعودية في انجامينا",
+      "required_documents": ["جواز سفر ساري (6 أشهر على الأقل)", "صورة بيومترية", "شهادة تطعيم ضد التهاب السحايا (إلزامية)", "إثبات دفع باقة الحج أو العمرة", "بالنسبة للنساء: شهادة محرم (ولي ذكر)", "عقد الزواج (للمتزوجات)", "استمارة تأشيرة السعودية"],
+      "procedure_steps": ["التسجيل لدى منظّم حج معتمد من وزارة الشؤون الدينية", "أخذ تطعيم السحايا", "إيداع الملف عبر المنظّم أو مباشرة لدى السفارة", "استلام التأشيرة", "السفر مع الفوج"],
+      "conditions": ["تأشيرة الحج تُمنح فقط ضمن الحصة المخصصة لتشاد من المملكة العربية السعودية", "تطعيم السحايا إلزامي (الشهادة مطلوبة)", "يجب أن تسافر النساء دون 45 سنة مع محرم (زوج، أب، أخ)", "بعض شركات الحج المعتمدة تتولى التأشيرة بشكل جماعي"]
+    }
+  },
+  {
+    "slug": "declaration-de-perte-de-passeport",
+    "en": {
+      "title": "Declaration of loss of passport",
+      "summary": "Administrative procedure in Chad: declaration of loss of passport.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 53 (page 25). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 2,000 FCFA",
+      "processing_time": "Immediate",
+      "validity": "3 months (to renew the passport)",
+      "institution": "Police station",
+      "location": "Police station / DGDI",
+      "required_documents": ["Alternative identity document (CNI)", "Sworn statement", "Number of the lost passport if remembered"],
+      "procedure_steps": ["Go to the police station", "Fill in the loss declaration", "Get the stamped receipt", "Start the new passport application with this receipt"],
+      "conditions": ["Any loss of passport must be declared immediately", "If the loss occurs abroad: also declare it at the Chadian embassy of the country where the loss occurred", "The loss declaration receipt allows return to Chad with a consular laissez-passer", "Using a passport declared lost is a criminal offence"]
+    },
+    "ar": {
+      "title": "التصريح بضياع جواز السفر",
+      "summary": "إجراء إداري في تشاد: التصريح بضياع جواز السفر.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 53 (الصفحة 25). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 2 000 FCFA",
+      "processing_time": "فوري",
+      "validity": "3 أشهر (لتجديد الجواز)",
+      "institution": "مخفر الشرطة",
+      "location": "مخفر الشرطة / المديرية العامة للهجرة والجوازات DGDI",
+      "required_documents": ["وثيقة هوية بديلة (البطاقة الوطنية)", "تصريح بالشرف", "رقم الجواز المفقود إن تذكّرته"],
+      "procedure_steps": ["التوجه إلى مخفر الشرطة", "ملء التصريح بالضياع", "الحصول على الوصل المختوم", "بدء طلب جواز جديد بهذا الوصل"],
+      "conditions": ["يجب التصريح بضياع الجواز فورًا", "إذا وقع الضياع في الخارج: يُصرَّح به أيضًا لدى السفارة التشادية في البلد الذي وقع فيه", "يتيح وصل التصريح بالضياع العودة إلى تشاد بوثيقة عبور قنصلية", "استعمال جواز مُصرَّح بضياعه جريمة يعاقب عليها القانون"]
+    }
+  },
+  {
+    "slug": "inscription-au-baccalaureat-tchadien",
+    "en": {
+      "title": "Registration for the Chadian baccalauréat",
+      "summary": "Administrative procedure in Chad: registration for the Chadian baccalauréat.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 19 (page 27). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 10,000 FCFA (registration fees)",
+      "processing_time": "According to the school calendar (usually January to March)",
+      "validity": "For the current school year",
+      "institution": "Regional Directorate of National Education (DREN)",
+      "location": "Regional Directorate of National Education (DREN) / Baccalauréat Office",
+      "required_documents": ["Grade transcripts for Seconde, Première and Terminale", "School attendance certificate for Terminale", "Birth certificate (less than 3 months old)", "Valid CNI or student card", "4 identity photos (white background)", "Registration form (available at the DREN)", "Receipt for payment of registration fees", "Parental authorisation if under 18"],
+      "procedure_steps": ["Collect the registration form at the DREN or at the school", "Fill in the form and gather the documents", "Pay the registration fees (get the receipt)", "File the file at the DREN within the deadlines", "Check the exam centre allocation on the published lists", "Present yourself at the exam centre with the admission slip and the CNI"],
+      "conditions": ["Must be regularly enrolled in Terminale at a school recognised by the State", "Must have a sufficient general average in Première (depending on the stream)", "Private candidates must also provide proof of residence and proof of their school level", "Registration is final only after payment of fees and validation by the DREN", "Absence from exams without a valid reason: a score of 0 in every missed exam", "Candidates with disabilities: request accommodations when registering"]
+    },
+    "ar": {
+      "title": "التسجيل في امتحان البكالوريا التشادية",
+      "summary": "إجراء إداري في تشاد: التسجيل في امتحان البكالوريا التشادية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 19 (الصفحة 27). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 10 000 FCFA (رسوم التسجيل)",
+      "processing_time": "حسب الروزنامة المدرسية (عادةً من يناير إلى مارس)",
+      "validity": "للسنة الدراسية الحالية",
+      "institution": "المديرية الجهوية للتربية الوطنية (DREN)",
+      "location": "المديرية الجهوية للتربية الوطنية (DREN) / مكتب البكالوريا",
+      "required_documents": ["كشوف نقاط أقسام الثانية والأولى والنهائية", "شهادة تمدرس في القسم النهائي", "عقد الميلاد (لا يتجاوز 3 أشهر)", "بطاقة هوية وطنية سارية أو بطاقة تلميذ", "4 صور شخصية (خلفية بيضاء)", "استمارة التسجيل (متوفرة لدى المديرية الجهوية)", "وصل دفع رسوم التسجيل", "إذن الولي إذا كان دون 18 سنة"],
+      "procedure_steps": ["استلام استمارة التسجيل من المديرية الجهوية أو من المؤسسة", "ملء الاستمارة وتجميع الوثائق", "دفع رسوم التسجيل والحصول على الوصل", "إيداع الملف لدى المديرية الجهوية في الآجال", "التحقق من مركز الامتحان في القوائم المنشورة", "التوجه إلى مركز الامتحان بالاستدعاء والبطاقة الوطنية"],
+      "conditions": ["يجب أن يكون مسجلًا بانتظام في القسم النهائي بمؤسسة معترف بها من الدولة", "يجب أن يكون معدله العام كافيًا في القسم الأول (حسب الشعبة)", "يجب على المترشحين الأحرار تقديم إثبات السكن وإثبات مستواهم الدراسي", "لا يُعتمد التسجيل نهائيًا إلا بعد دفع الرسوم والمصادقة من المديرية الجهوية", "الغياب عن الامتحانات دون عذر مقبول: علامة 0 في كل امتحان فائت", "المترشحون من ذوي الإعاقة: يُطلب التكييف عند التسجيل"]
+    }
+  },
+  {
+    "slug": "attestation-de-reussite-au-baccalaureat",
+    "en": {
+      "title": "Certificate of success in the baccalauréat",
+      "summary": "Administrative procedure in Chad: certificate of success in the baccalauréat.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 20 (page 27). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 5,000 FCFA",
+      "processing_time": "1 to 6 months after the results",
+      "validity": "Permanent (provisional certificate valid for 1 year)",
+      "institution": "Baccalauréat Office",
+      "location": "Baccalauréat Office / DREN",
+      "required_documents": ["Baccalauréat registration receipt", "CNI", "Exam admission slip", "Candidate number"],
+      "procedure_steps": ["Go to the DREN after the results are published", "Present the registration receipt and the CNI", "Receive the provisional certificate", "Come back a few months later for the final diploma"],
+      "conditions": ["The provisional certificate is issued while waiting for the final diploma", "The final diploma is issued 6 to 18 months after the results", "If the diploma is lost: a duplicate is possible against a fee and a loss declaration", "The grades (Passable, Assez Bien, Bien, Très Bien) are shown on the diploma"]
+    },
+    "ar": {
+      "title": "شهادة النجاح في البكالوريا",
+      "summary": "إجراء إداري في تشاد: شهادة النجاح في البكالوريا.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 20 (الصفحة 27). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 5 000 FCFA",
+      "processing_time": "من شهر إلى 6 أشهر بعد النتائج",
+      "validity": "دائمة (الشهادة المؤقتة صالحة لسنة)",
+      "institution": "مكتب البكالوريا",
+      "location": "مكتب البكالوريا / المديرية الجهوية للتربية الوطنية",
+      "required_documents": ["وصل تسجيل البكالوريا", "البطاقة الوطنية", "استدعاء الامتحان", "رقم المترشح"],
+      "procedure_steps": ["التوجه إلى المديرية الجهوية بعد نشر النتائج", "تقديم وصل التسجيل والبطاقة الوطنية", "استلام الشهادة المؤقتة", "العودة بعد بضعة أشهر للحصول على الشهادة النهائية"],
+      "conditions": ["تُسلَّم الشهادة المؤقتة في انتظار الشهادة النهائية", "تُسلَّم الشهادة النهائية بعد 6 إلى 18 شهرًا من النتائج", "في حالة ضياع الشهادة: يمكن الحصول على نسخة بديلة مقابل رسوم وتصريح بالضياع", "تُذكر التقديرات (مقبول، حسن، جيد، جيد جدًا) في الشهادة"]
+    }
+  },
+  {
+    "slug": "demande-de-bourse-nationale-detudes",
+    "en": {
+      "title": "National study grant application",
+      "summary": "Administrative procedure in Chad: national study grant application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 22 (page 29). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free (application)",
+      "processing_time": "2 to 4 months (selection committee)",
+      "validity": "1 year, renewable under conditions",
+      "institution": "Scholarships Directorate — Ministry of Higher Education",
+      "location": "Scholarships Directorate — Ministry of Higher Education",
+      "required_documents": ["Birth certificate", "CNI", "Certificate of Chadian nationality", "Baccalauréat diploma with mentions", "Certificate of current university enrolment", "University transcripts (if already enrolled)", "Residence certificate", "Certificate of family situation (parents, income)", "Letter of motivation addressed to the Minister", "Grant application form (Ministry)"],
+      "procedure_steps": ["Collect the form at the Scholarships Directorate", "Assemble the complete file", "File it within the deadlines of the annual campaign", "Wait for the committee's decision (list published by the Ministry)", "If selected: sign the grant agreement and start receiving the grant"],
+      "conditions": ["The national grant is awarded on the basis of financial need and academic merit", "Priority to students in Medicine, Engineering and Sciences", "The amount is set by decree (it varies by level: Licence, Master, Doctorate)", "The grant is suspended in case of withdrawal or repeated failure", "Grant holders abroad must send an attendance certificate every semester", "Repayment may be required in case of withdrawal without a valid reason"]
+    },
+    "ar": {
+      "title": "طلب المنحة الوطنية للدراسة",
+      "summary": "إجراء إداري في تشاد: طلب المنحة الوطنية للدراسة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 22 (الصفحة 29). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني (الطلب)",
+      "processing_time": "من شهرين إلى 4 أشهر (لجنة الانتقاء)",
+      "validity": "سنة واحدة قابلة للتجديد بشروط",
+      "institution": "مديرية المنح — وزارة التعليم العالي",
+      "location": "مديرية المنح — وزارة التعليم العالي",
+      "required_documents": ["عقد الميلاد", "البطاقة الوطنية", "شهادة الجنسية التشادية", "شهادة البكالوريا مع التقديرات", "شهادة تسجيل جامعي حالي", "كشوف نقاط جامعية (إن كان مسجلًا من قبل)", "شهادة إقامة", "شهادة الوضعية العائلية (الوالدان، الدخل)", "رسالة تحفيز موجهة إلى الوزير", "استمارة طلب المنحة (الوزارة)"],
+      "procedure_steps": ["استلام الاستمارة من مديرية المنح", "تجميع الملف الكامل", "إيداعه في آجال الحملة السنوية", "انتظار قرار اللجنة (تُنشر القائمة من الوزارة)", "في حالة القبول: توقيع اتفاقية المنحة وبدء استلام المنحة"],
+      "conditions": ["تُمنح المنحة الوطنية بناءً على الحاجة المادية والاستحقاق الدراسي", "الأولوية للطلبة في الطب والهندسة والعلوم", "يُحدَّد المبلغ بمرسوم (ويختلف حسب المستوى: الإجازة، الماستر، الدكتوراه)", "تُعلَّق المنحة في حالة الانقطاع أو الرسوب المتكرر", "على المستفيدين في الخارج إرسال شهادة حضور كل فصل دراسي", "قد يُطلب استرداد المنحة في حالة الانقطاع دون عذر مقبول"]
+    }
+  },
+  {
+    "slug": "equivalence-de-diplome-etranger",
+    "en": {
+      "title": "Equivalence of a foreign diploma",
+      "summary": "Administrative procedure in Chad: equivalence of a foreign diploma.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 23 (page 29). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "15,000 to 50,000 FCFA",
+      "processing_time": "2 to 6 months",
+      "validity": "Permanent",
+      "institution": "Ministry of Higher Education — Equivalence Directorate",
+      "location": "Ministry of Higher Education — Equivalence Directorate",
+      "required_documents": ["Original diploma obtained abroad", "Official transcripts (originals)", "Certified French translation by a sworn translator (if the diploma is not in French)", "Legalisation of the diploma by the Chadian embassy in the country where it was obtained", "Detailed study programme (syllabus)", "CNI or passport", "Birth certificate", "Letter applying for equivalence", "Fiscal stamp"],
+      "procedure_steps": ["Have the diploma legalised by the Chadian embassy in the country where it was obtained", "Have it translated into French if necessary (sworn translator)", "File the complete file at the Ministry", "The equivalence committee examines the file", "Receive the decision (granted, partially granted, or refused with reasons)"],
+      "conditions": ["Equivalence is mandatory to practise a regulated profession in Chad with a foreign diploma", "Diplomas from CEMAC countries (Cameroon, Gabon, Congo, CAR, Equatorial Guinea) benefit from a simplified procedure", "An academic committee examines the programme to validate the equivalence level by level", "Equivalence may be partial (recognised level lower than the one obtained)", "A diploma not recognised by the higher education ministry of the country where it was obtained cannot be made equivalent"]
+    },
+    "ar": {
+      "title": "معادلة الشهادة الأجنبية",
+      "summary": "إجراء إداري في تشاد: معادلة الشهادة الأجنبية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 23 (الصفحة 29). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 15 000 إلى 50 000 FCFA",
+      "processing_time": "من شهرين إلى 6 أشهر",
+      "validity": "دائمة",
+      "institution": "وزارة التعليم العالي — مديرية المعادلات",
+      "location": "وزارة التعليم العالي — مديرية المعادلات",
+      "required_documents": ["الشهادة الأصلية المتحصَّل عليها في الخارج", "كشوف نقاط رسمية (أصول)", "ترجمة مصدَّقة إلى الفرنسية من مترجم محلَّف (إذا لم تكن الشهادة بالفرنسية)", "تصديق الشهادة من السفارة التشادية في البلد الذي تحصّل فيه عليها", "البرنامج الدراسي التفصيلي", "البطاقة الوطنية أو جواز السفر", "عقد الميلاد", "رسالة طلب المعادلة", "طابع مالي"],
+      "procedure_steps": ["تصديق الشهادة من السفارة التشادية في البلد الذي تحصّل فيه عليها", "ترجمتها إلى الفرنسية عند الاقتضاء (مترجم محلَّف)", "إيداع الملف الكامل لدى الوزارة", "تدرس لجنة المعادلة الملف", "استلام القرار (مقبولة، أو مقبولة جزئيًا، أو مرفوضة مع التعليل)"],
+      "conditions": ["المعادلة إلزامية لممارسة مهنة منظَّمة في تشاد بشهادة أجنبية", "تستفيد شهادات دول الجماعة الاقتصادية لوسط إفريقيا (الكاميرون، الغابون، الكونغو، جمهورية أفريقيا الوسطى، غينيا الاستوائية) من إجراء مبسّط", "تدرس لجنة أكاديمية البرنامج للتحقق من المعادلة مستوى بمستوى", "يمكن أن تكون المعادلة جزئية (المستوى المعترف به أدنى من المستوى المحصَّل عليه)", "لا تُعادَل شهادة لا تعترف بها وزارة التعليم العالي في البلد الذي تحصّل فيه عليها"]
+    }
+  },
+  {
+    "slug": "certificat-de-scolarite-attestation-de-frequentation",
+    "en": {
+      "title": "School attendance certificate",
+      "summary": "Administrative procedure in Chad: school attendance certificate.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 24 (page 30). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 1,000 FCFA",
+      "processing_time": "Immediate to 3 days",
+      "validity": "1 school or academic year (for the current year)",
+      "institution": "School establishment",
+      "location": "School or university establishment of the applicant",
+      "required_documents": ["Being regularly enrolled at the establishment", "Identity document", "Receipt for school fees (proving that fees are up to date)"],
+      "procedure_steps": ["Go to the establishment's secretariat", "Make the request verbally or in writing", "Present the school fee receipt", "Receive the certificate signed and stamped"],
+      "conditions": ["Issued only for the current academic year", "Required for scholarship applications, student visas and reduced public transport fares", "The establishment may refuse to issue the certificate if the school fees are not paid"]
+    },
+    "ar": {
+      "title": "شهادة الدراسة",
+      "summary": "إجراء إداري في تشاد: شهادة الدراسة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 24 (الصفحة 30). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 1 000 FCFA",
+      "processing_time": "فوري إلى 3 أيام",
+      "validity": "سنة دراسية أو جامعية واحدة (للسنة الحالية)",
+      "institution": "المؤسسة التعليمية",
+      "location": "المؤسسة المدرسية أو الجامعية لصاحب الطلب",
+      "required_documents": ["التسجيل بانتظام في المؤسسة", "وثيقة هوية", "وصل دفع رسوم الدراسة (إثبات أن الرسوم مسددة)"],
+      "procedure_steps": ["التوجه إلى أمانة المؤسسة", "تقديم الطلب شفويًا أو كتابيًا", "تقديم وصل رسوم الدراسة", "استلام الشهادة موقّعة ومختومة"],
+      "conditions": ["تُسلَّم للسنة الدراسية الجارية فقط", "مطلوبة لطلبات المنح وتأشيرة الطالب والنقل العام بتخفيض", "يجوز للمؤسسة رفض تسليم الشهادة إذا لم تُسدَّد الرسوم الدراسية"]
+    }
+  }
+]

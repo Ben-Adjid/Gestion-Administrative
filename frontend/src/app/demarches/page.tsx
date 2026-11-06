@@ -235,7 +235,7 @@ function DemarchesContent() {
                 <p className="mt-3 line-clamp-3 flex-1 text-sm leading-6 text-slate-600">{demarche.summary || demarche.description}</p>
                 <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-slate-900">{demarche.cost || t('catalog.cost_unknown')}</p>
+                    <p className="break-words text-sm font-semibold text-slate-900"><bdi>{demarche.cost || t('catalog.cost_unknown')}</bdi></p>
                     <p className="mt-1 flex items-center gap-1 text-xs text-slate-500">
                       <Clock3 size={13} aria-hidden="true" /> {demarche.processing_time || t('catalog.delay_unknown')}
                     </p>

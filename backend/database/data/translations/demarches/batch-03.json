@@ -1,0 +1,263 @@
+[
+  {
+    "slug": "carte-biometrique-pour-les-refugies-hcrgouvernement",
+    "en": {
+      "title": "Biometric card for refugees (UNHCR / Government)",
+      "summary": "Administrative procedure in Chad: biometric card for refugees (UNHCR / Government).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 69 (page 9). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "1 to 6 months",
+      "validity": "1 to 2 years, renewable",
+      "institution": "National Eligibility Commission (CNE)",
+      "location": "National Eligibility Commission (CNE) / UNHCR",
+      "required_documents": ["Asylum application form", "Detailed statement of the reasons for fleeing", "Biometric photos", "Any identity document available (even if no longer valid)"],
+      "procedure_steps": ["Present yourself at UNHCR or the CNE", "Individual asylum interview", "Review of the file by the commission", "Notification of the decision", "Issue of the refugee card if status is granted"],
+      "conditions": ["Chad hosts refugees from Sudan, the Central African Republic, Nigeria and Cameroon", "Refugee status is granted by the CNE after an individual hearing", "The refugee card allows movement within Chadian territory and access to services", "Refugees cannot be returned to their country of origin if there is a risk of persecution"]
+    },
+    "ar": {
+      "title": "البطاقة البيومترية للاجئين (المفوضية السامية للاجئين / الحكومة)",
+      "summary": "إجراء إداري في تشاد: البطاقة البيومترية للاجئين (المفوضية / الحكومة).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 69 (الصفحة 9). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من شهر إلى 6 أشهر",
+      "validity": "من سنة إلى سنتين، قابلة للتجديد",
+      "institution": "اللجنة الوطنية للأهلية (CNE)",
+      "location": "اللجنة الوطنية للأهلية (CNE) / المفوضية السامية للاجئين",
+      "required_documents": ["استمارة طلب اللجوء", "تصريح مفصّل بأسباب الفرار", "صور بيومترية", "أي وثيقة هوية متوفرة (حتى لو لم تعد سارية)"],
+      "procedure_steps": ["التوجه إلى المفوضية أو اللجنة الوطنية للأهلية", "مقابلة فردية لطلب اللجوء", "دراسة الملف من طرف اللجنة", "تبليغ القرار", "تسليم بطاقة اللاجئ في حال منح الصفة"],
+      "conditions": ["يستقبل تشاد لاجئين من السودان وجمهورية أفريقيا الوسطى ونيجيريا والكاميرون", "تمنح اللجنة الوطنية للأهلية صفة اللاجئ بعد مقابلة فردية", "تتيح بطاقة اللاجئ التنقل داخل الأراضي التشادية والوصول إلى الخدمات", "لا يجوز ترحيل اللاجئين إلى بلدهم الأصلي إذا وُجد خطر الاضطهاد"]
+    }
+  },
+  {
+    "slug": "declaration-de-naissance-dans-les-delais-legaux-30-jours",
+    "en": {
+      "title": "Birth declaration (within the legal 30-day period)",
+      "summary": "Administrative procedure in Chad: birth declaration within the legal 30-day period.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 7 (page 12). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Immediate (on the day of the declaration)",
+      "validity": "Permanent",
+      "institution": "Town hall or civil registry centre of the place of birth",
+      "location": "Town hall or civil registry centre of the place of birth",
+      "required_documents": ["Birth certificate issued by the maternity ward or health centre", "CNI or birth certificate of the father", "CNI or birth certificate of the mother", "Presence of 2 adult witnesses with their identity documents", "Oral or written declaration of the chosen first names and surname"],
+      "procedure_steps": ["Go to the town hall within 30 days of the birth", "Present the birth certificate and the parents' identity documents", "The civil registrar drafts the birth certificate", "The witnesses sign the certificate", "The certificate is entered in the civil register", "A birth extract is handed over immediately"],
+      "conditions": ["Legal deadline: 30 days from the birth — beyond that, a supplementary judgment is required", "If the birth took place at home without medical assistance: declaration by 2 witnesses who attended the delivery", "Birth to unknown parents: declaration by the health facility or the civil registrar", "First names must follow Chadian customs (no fanciful names)", "A child born to unmarried parents may bear the father's name if the father acknowledges the child"]
+    },
+    "ar": {
+      "title": "التصريح بالولادة (في الآجال القانونية: 30 يومًا)",
+      "summary": "إجراء إداري في تشاد: التصريح بالولادة في الآجال القانونية (30 يومًا).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 7 (الصفحة 12). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "فوري (في يوم التصريح)",
+      "validity": "دائم",
+      "institution": "البلدية أو مركز الحالة المدنية بمكان الولادة",
+      "location": "البلدية أو مركز الحالة المدنية بمكان الولادة",
+      "required_documents": ["شهادة الولادة الصادرة عن مستشفى الولادة أو المركز الصحي", "بطاقة هوية الأب أو عقد ميلاده", "بطاقة هوية الأم أو عقد ميلادها", "حضور شاهدين بالغين مع وثائق هويتهما", "التصريح الشفوي أو الكتابي بالأسماء الشخصية واللقب المختارين"],
+      "procedure_steps": ["التوجه إلى البلدية خلال 30 يومًا من الولادة", "تقديم شهادة الولادة ووثائق هوية الوالدين", "يحرّر ضابط الحالة المدنية عقد الميلاد", "يوقّع الشاهدان على العقد", "يُسجَّل العقد في سجل الحالة المدنية", "يُسلَّم مستخرج عقد الميلاد فورًا"],
+      "conditions": ["المهلة القانونية: 30 يومًا من الولادة، وبعدها يلزم حكم تكميلي", "إذا تمت الولادة في المنزل دون مساعدة طبية: يصرّح بها شاهدان حضرا الولادة", "ولادة من والدين مجهولين: يصرّح بها المؤسسة الصحية أو ضابط الحالة المدنية", "يجب أن تكون الأسماء الشخصية متوافقة مع الأعراف التشادية (دون أسماء غريبة)", "يمكن للطفل المولود من أبوين غير متزوجين أن يحمل اسم الأب إذا أقرّ الأب بنسبه"]
+    }
+  },
+  {
+    "slug": "jugement-suppletif-dacte-de-naissance-declaration-tardive",
+    "en": {
+      "title": "Supplementary judgment for a birth certificate (late declaration)",
+      "summary": "Administrative procedure in Chad: supplementary judgment for a birth certificate (late declaration).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 8 (page 12). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 30,000 FCFA (court fees + optional lawyer)",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent (has the value of a birth certificate)",
+      "institution": "Court of First Instance or Justice of the Peace",
+      "location": "Court of First Instance or Justice of the Peace",
+      "required_documents": ["Baptism certificate or school record showing the date of birth", "Statement from 2 people who know the applicant (parents, neighbours, former teachers)", "CNI of the witnesses", "Residence certificate of the applicant", "Fiscal stamp", "Petition form (available at the court)", "If schooled: school reports and attendance certificates", "If baptised: baptism record or certificate from the church or mosque"],
+      "procedure_steps": ["Gather all available documents proving the existence and date of birth", "File the petition at the court registry with the documents", "The judge sets a hearing date", "The witnesses appear and testify", "The judge issues the supplementary judgment", "Collect the judgment at the registry", "Present the judgment at the town hall for entry in the civil register"],
+      "conditions": ["Required for any birth not declared within 30 days", "The court checks that the documents provided are consistent before validating them", "A supplementary judgment has exactly the same legal value as a birth certificate", "The date retained is the one declared by the witnesses, checked against the documents", "If no document exists at all, the court may order a social inquiry"]
+    },
+    "ar": {
+      "title": "حكم تكميلي بعقد الميلاد (تصريح متأخر)",
+      "summary": "إجراء إداري في تشاد: حكم تكميلي بعقد الميلاد (تصريح متأخر).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 8 (الصفحة 12). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 30 000 FCFA (رسوم المحكمة + محامٍ اختياريًا)",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم (له قيمة عقد الميلاد)",
+      "institution": "المحكمة الابتدائية أو محكمة الصلح",
+      "location": "المحكمة الابتدائية أو محكمة الصلح",
+      "required_documents": ["شهادة معمودية أو شهادة مدرسية تذكر تاريخ الميلاد", "شهادة من شخصين يعرفان صاحب الطلب (والدان، جيران، أساتذة سابقون)", "بطاقات الهوية الوطنية للشهود", "شهادة إقامة صاحب الطلب", "طابع مالي", "استمارة الطلب (متوفرة لدى المحكمة)", "إذا كان متمدرسًا: الكشوف المدرسية وشهادات الدراسة", "إذا كان معمّدًا: سجل المعمودية أو شهادة الكنيسة أو المسجد"],
+      "procedure_steps": ["جمع جميع الوثائق المتوفرة التي تثبت وجود الشخص وتاريخ ميلاده", "إيداع العريضة لدى كتابة ضبط المحكمة مع الوثائق", "يحدد القاضي تاريخ الجلسة", "يحضر الشهود ويدلون بشهاداتهم", "يصدر القاضي الحكم التكميلي", "استلام الحكم من كتابة الضبط", "تقديم الحكم إلى البلدية للتسجيل في سجل الحالة المدنية"],
+      "conditions": ["إلزامي لكل ولادة لم يُصرَّح بها خلال 30 يومًا", "تتحقق المحكمة من اتساق الوثائق المقدمة قبل المصادقة عليها", "للحكم التكميلي القيمة القانونية نفسها لعقد الميلاد", "التاريخ المعتمد هو الذي يصرّح به الشهود ويتأكد من الوثائق", "في غياب أي وثيقة يمكن للمحكمة أن تأمر بتحقيق اجتماعي"]
+    }
+  },
+  {
+    "slug": "livret-de-famille",
+    "en": {
+      "title": "Family book",
+      "summary": "Administrative procedure in Chad: family book.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 12 (page 15). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "Issued at the civil marriage or the birth of the first child",
+      "validity": "Permanent (updated at each event)",
+      "institution": "Town hall",
+      "location": "Town hall",
+      "required_documents": ["Marriage certificate (if the couple is married)", "Birth certificates of the spouses", "Birth certificates of the children (added as births occur)"],
+      "procedure_steps": ["The book is handed over automatically at the marriage at the town hall", "For a duplicate: go to the town hall with the marriage certificate and the CNI", "For each later birth: bring the book to the town hall for an update"],
+      "conditions": ["Issued automatically at the civil marriage", "For unmarried parents: issued at the birth of the first recognised common child", "In case of loss: a duplicate is possible at the town hall with the marriage certificate and the CNI", "Every birth, adoption, death or divorce must be recorded in the book"]
+    },
+    "ar": {
+      "title": "دفتر العائلة",
+      "summary": "إجراء إداري في تشاد: دفتر العائلة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 12 (الصفحة 15). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "يُسلَّم عند الزواج المدني أو ولادة الطفل الأول",
+      "validity": "دائم (يُحدَّث عند كل حدث)",
+      "institution": "البلدية",
+      "location": "البلدية",
+      "required_documents": ["عقد الزواج (إذا كان الزوجان متزوجين)", "عقدا ميلاد الزوجين", "عقود ميلاد الأطفال (تُضاف عند كل ولادة)"],
+      "procedure_steps": ["يُسلَّم الدفتر تلقائيًا عند الزواج في البلدية", "للحصول على نسخة بديلة: التوجه إلى البلدية بعقد الزواج والبطاقة الوطنية", "عند كل ولادة لاحقة: إحضار الدفتر إلى البلدية للتحديث"],
+      "conditions": ["يُسلَّم تلقائيًا عند الزواج المدني", "بالنسبة للوالدين غير المتزوجين: يُسلَّم عند ولادة أول طفل مشترك معترف به", "في حالة الضياع: يمكن الحصول على نسخة بديلة من البلدية بعقد الزواج والبطاقة الوطنية", "يجب تسجيل كل ولادة أو تبنٍّ أو وفاة أو طلاق في الدفتر"]
+    }
+  },
+  {
+    "slug": "reconnaissance-denfant-naturel",
+    "en": {
+      "title": "Acknowledgement of a natural child",
+      "summary": "Administrative procedure in Chad: acknowledgement of a natural child.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 13 (page 16). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free to 2,000 FCFA",
+      "processing_time": "Immediate to 15 days",
+      "validity": "Permanent",
+      "institution": "Town hall or civil registrar",
+      "location": "Town hall or civil registrar",
+      "required_documents": ["CNI of the acknowledging father", "Birth certificate of the child", "CNI of the mother", "Physical presence of the father (voluntary acknowledgement)", "Acknowledgement form (available at the town hall)"],
+      "procedure_steps": ["The father goes to the town hall", "He declares before the civil registrar that he wishes to acknowledge the child", "He signs the acknowledgement deed", "The registrar updates the register and the child's birth certificate"],
+      "conditions": ["Acknowledgement may take place before the birth (prenatal acknowledgement), at the birth or later", "It is voluntary — the father can only be compelled by a court (action to establish paternity)", "Acknowledgement gives the child the right to bear the father's name and inheritance rights", "If the mother refuses: go to court for expertise and judicial acknowledgement"]
+    },
+    "ar": {
+      "title": "الاعتراف بالطفل الطبيعي",
+      "summary": "إجراء إداري في تشاد: الاعتراف بالطفل الطبيعي.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 13 (الصفحة 16). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني إلى 2 000 FCFA",
+      "processing_time": "فوري إلى 15 يومًا",
+      "validity": "دائم",
+      "institution": "البلدية أو ضابط الحالة المدنية",
+      "location": "البلدية أو ضابط الحالة المدنية",
+      "required_documents": ["بطاقة هوية الأب المعترف", "عقد ميلاد الطفل", "بطاقة هوية الأم", "حضور الأب شخصيًا (الاعتراف الطوعي)", "استمارة الاعتراف (متوفرة لدى البلدية)"],
+      "procedure_steps": ["يتوجه الأب إلى البلدية", "يصرّح أمام ضابط الحالة المدنية برغبته في الاعتراف بالطفل", "يوقّع عقد الاعتراف", "يحدّث الضابط السجل وعقد ميلاد الطفل"],
+      "conditions": ["يمكن الاعتراف قبل الولادة (اعتراف قبل الوضع) أو عند الولادة أو بعدها", "الاعتراف طوعي، ولا يُجبر الأب عليه إلا بحكم قضائي (دعوى إثبات النسب)", "يمنح الاعتراف الطفل الحق في حمل اسم الأب وحقوق الإرث", "إذا رفضت الأم: اللجوء إلى المحكمة للخبرة والاعتراف القضائي"]
+    }
+  },
+  {
+    "slug": "transcription-de-mariage-celebre-a-letranger",
+    "en": {
+      "title": "Transcription of a marriage celebrated abroad",
+      "summary": "Administrative procedure in Chad: transcription of a marriage celebrated abroad.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 49 (page 16). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "5,000 to 15,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent",
+      "institution": "Town hall of N'Djamena",
+      "location": "Town hall of N'Djamena / Central civil registry service",
+      "required_documents": ["Original foreign marriage certificate", "Certified French translation", "Legalisation by the Chadian embassy of the country concerned", "CNI of both spouses", "Birth certificates of both spouses"],
+      "procedure_steps": ["Have the foreign marriage certificate legalised by the Chadian embassy", "Have it translated if necessary", "File at the central town hall", "Transcription into the Chadian civil registers"],
+      "conditions": ["Mandatory for Chadian citizens married abroad who wish to have their marriage recognised in Chad", "The marriage must be valid under the law of the country where it was celebrated", "Transcription deadline: 3 months after returning to Chad"]
+    },
+    "ar": {
+      "title": "تسجيل عقد زواج أُبرم في الخارج",
+      "summary": "إجراء إداري في تشاد: تسجيل عقد زواج أُبرم في الخارج.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 49 (الصفحة 16). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 5 000 إلى 15 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم",
+      "institution": "بلدية انجامينا",
+      "location": "بلدية انجامينا / المصلحة المركزية للحالة المدنية",
+      "required_documents": ["عقد الزواج الأجنبي الأصلي", "ترجمة مصدَّقة إلى الفرنسية", "تصديق من السفارة التشادية في البلد المعني", "بطاقتا الهوية الوطنية للزوجين", "عقدا ميلاد الزوجين"],
+      "procedure_steps": ["تصديق عقد الزواج الأجنبي من السفارة التشادية", "ترجمته عند الاقتضاء", "الإيداع لدى البلدية المركزية", "التسجيل في سجلات الحالة المدنية التشادية"],
+      "conditions": ["إلزامي للمواطنين التشاديين المتزوجين في الخارج الراغبين في الاعتراف بزواجهم في تشاد", "يجب أن يكون الزواج صحيحًا وفق قانون البلد الذي أُبرم فيه", "مهلة التسجيل: 3 أشهر بعد العودة إلى تشاد"]
+    }
+  },
+  {
+    "slug": "divorce-judiciaire",
+    "en": {
+      "title": "Judicial divorce",
+      "summary": "Administrative procedure in Chad: judicial divorce.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 50 (page 17). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 300,000 FCFA (lawyer's fees included)",
+      "processing_time": "3 months to 2 years",
+      "validity": "Permanent",
+      "institution": "Court of First Instance",
+      "location": "Court of First Instance",
+      "required_documents": ["Marriage certificate", "CNI of both spouses", "Birth certificates of the children", "Proof of income (for maintenance payments)", "List of joint property", "A lawyer is mandatory"],
+      "procedure_steps": ["Appoint a lawyer", "File the divorce petition with the court", "Attempt at reconciliation before the judge", "If there is no reconciliation: examination of the file", "Hearing and judgment", "Transcription of the judgment at the town hall"],
+      "conditions": ["Divorce is pronounced only by a court — there is no administrative divorce", "Recognised grounds: serious fault, de facto separation for 2 years, mutual consent", "The judge rules on custody of the children, maintenance and the division of property", "The divorce judgment must be recorded on the marriage certificate at the town hall", "The judge may attempt reconciliation before the divorce is pronounced"]
+    },
+    "ar": {
+      "title": "الطلاق القضائي",
+      "summary": "إجراء إداري في تشاد: الطلاق القضائي.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 50 (الصفحة 17). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 300 000 FCFA (أتعاب المحامي مشمولة)",
+      "processing_time": "من 3 أشهر إلى سنتين",
+      "validity": "دائم",
+      "institution": "المحكمة الابتدائية",
+      "location": "المحكمة الابتدائية",
+      "required_documents": ["عقد الزواج", "بطاقتا الهوية الوطنية للزوجين", "عقود ميلاد الأطفال", "إثباتات الدخل (لنفقة النفقة)", "قائمة الممتلكات المشتركة", "المحامي إلزامي"],
+      "procedure_steps": ["توكيل محامٍ", "إيداع عريضة الطلاق لدى المحكمة", "محاولة الصلح أمام القاضي", "في حال عدم الصلح: دراسة الملف", "الجلسة والحكم", "تسجيل الحكم في البلدية"],
+      "conditions": ["لا يُنطق بالطلاق إلا من طرف المحكمة، ولا يوجد طلاق إداري", "الأسباب المعترف بها: الخطأ الجسيم، والهجر الفعلي لمدة سنتين، والتراضي", "يفصل القاضي في حضانة الأطفال والنفقة وتقسيم الممتلكات", "يجب تسجيل حكم الطلاق على عقد الزواج في البلدية", "يجوز للقاضي محاولة الصلح قبل النطق بالطلاق"]
+    }
+  },
+  {
+    "slug": "adoption-legale-dun-enfant",
+    "en": {
+      "title": "Legal adoption of a child",
+      "summary": "Administrative procedure in Chad: legal adoption of a child.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 51 (page 18). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "100,000 to 500,000 FCFA",
+      "processing_time": "6 months to 2 years",
+      "validity": "Permanent",
+      "institution": "Court of First Instance",
+      "location": "Court of First Instance / Family Affairs Judge",
+      "required_documents": ["Written request from the adoptive parents", "CNI and birth certificates of the adoptive parents", "Medical certificate of the adoptive parents (physical fitness)", "Social inquiry (carried out by an approved social worker)", "Birth certificate of the child to be adopted", "Consent of the biological parents (or proof of abandonment)", "Clean criminal record of the adoptive parents"],
+      "procedure_steps": ["File the adoption petition with the court", "Social inquiry on the adoptive parents", "Trial period (provisional placement)", "Hearing before the judge", "Adoption judgment", "Transcription on the child's civil status"],
+      "conditions": ["Full adoption is irrevocable and cuts the ties with the biological family", "Simple adoption keeps some ties with the biological family", "Conditions: adoptive parents married for more than 5 years, OR a single adoptive parent over 30", "The child must be under 15 for full adoption", "A prior social inquiry is mandatory"]
+    },
+    "ar": {
+      "title": "التبني القانوني لطفل",
+      "summary": "إجراء إداري في تشاد: التبني القانوني لطفل.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 51 (الصفحة 18). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 100 000 إلى 500 000 FCFA",
+      "processing_time": "من 6 أشهر إلى سنتين",
+      "validity": "دائم",
+      "institution": "المحكمة الابتدائية",
+      "location": "المحكمة الابتدائية / قاضي شؤون الأسرة",
+      "required_documents": ["طلب كتابي من الزوجين المتبنّيين", "بطاقتا الهوية الوطنية وعقدا ميلاد المتبنّيين", "شهادة طبية للمتبنّيين (اللياقة البدنية)", "تحقيق اجتماعي (يجريه مساعد اجتماعي معتمد)", "عقد ميلاد الطفل المراد تبنيه", "موافقة الوالدين البيولوجيين (أو إثبات التخلي)", "سجل عدلي نظيف للمتبنّيين"],
+      "procedure_steps": ["إيداع طلب التبني لدى المحكمة", "تحقيق اجتماعي مع المتبنّيين", "فترة تجريبية (الكفالة المؤقتة)", "جلسة أمام القاضي", "حكم التبني", "تسجيل الحكم في الحالة المدنية للطفل"],
+      "conditions": ["التبني الكامل لا رجعة فيه ويقطع الروابط مع الأسرة البيولوجية", "التبني البسيط يُبقي على بعض الروابط مع الأسرة البيولوجية", "الشروط: أن يكون المتبنّيان متزوجين منذ أكثر من 5 سنوات، أو أن يكون المتبنّي عازبًا فوق 30 سنة", "يجب أن يكون عمر الطفل أقل من 15 سنة للتبني الكامل", "التحقيق الاجتماعي المسبق إلزامي"]
+    }
+  },
+  {
+    "slug": "changement-de-nom-procedure-judiciaire",
+    "en": {
+      "title": "Change of name (judicial procedure)",
+      "summary": "Administrative procedure in Chad: change of name (judicial procedure).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 76 (page 18). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 200,000 FCFA",
+      "processing_time": "3 to 6 months",
+      "validity": "Permanent",
+      "institution": "Court of First Instance",
+      "location": "Court of First Instance",
+      "required_documents": ["Reasoned petition addressed to the President of the court", "Current CNI", "Current birth certificate", "Criminal record extract", "Legal publications (2 newspapers — mandatory)", "A serious and legitimate reason to justify"],
+      "procedure_steps": ["Consult a lawyer to draft the petition", "Publish in 2 newspapers (proof of publication to be attached)", "File the petition with the court", "Hearing", "Judgment and publication in the Official Journal", "Update of the civil status and a new CNI"],
+      "conditions": ["Change of name is strictly governed by law", "Accepted grounds: ridiculous name, hard to pronounce, foreign to Chadian culture", "The decision is published in the Official Journal", "It amends the civil status and requires a new CNI", "An opposition period of 3 months opens after publication"]
+    },
+    "ar": {
+      "title": "تغيير الاسم (إجراء قضائي)",
+      "summary": "إجراء إداري في تشاد: تغيير الاسم (إجراء قضائي).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 76 (الصفحة 18). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 200 000 FCFA",
+      "processing_time": "من 3 إلى 6 أشهر",
+      "validity": "دائم",
+      "institution": "المحكمة الابتدائية",
+      "location": "المحكمة الابتدائية",
+      "required_documents": ["عريضة مُعلَّلة موجهة إلى رئيس المحكمة", "بطاقة الهوية الوطنية الحالية", "عقد الميلاد الحالي", "مستخرج من السجل العدلي", "نشرات قانونية (في جريدتين، إلزامي)", "سبب جدي ومشروع يُبرَّر"],
+      "procedure_steps": ["استشارة محامٍ لصياغة العريضة", "النشر في جريدتين (يُرفق إثبات النشر)", "إيداع العريضة لدى المحكمة", "الجلسة", "الحكم والنشر في الجريدة الرسمية", "تحديث الحالة المدنية وبطاقة هوية جديدة"],
+      "conditions": ["يخضع تغيير الاسم لأحكام القانون بصرامة", "الأسباب المقبولة: اسم مستهجن، أو صعب النطق، أو غريب عن الثقافة التشادية", "يُنشر القرار في الجريدة الرسمية", "يُعدِّل الحالة المدنية ويتطلب بطاقة هوية جديدة", "تُفتح مهلة اعتراض مدتها 3 أشهر بعد النشر"]
+    }
+  }
+]

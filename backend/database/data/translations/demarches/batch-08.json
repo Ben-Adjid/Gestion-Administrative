@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "legalisation-de-signature",
+    "en": {
+      "title": "Signature certification",
+      "summary": "Administrative procedure in Chad: signature certification.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 36 (page 54). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "500 to 3,000 FCFA",
+      "processing_time": "Immediate to 48 hours",
+      "validity": "Permanent (authentication of the signature at a given time)",
+      "institution": "Town hall",
+      "location": "Town hall / Notary / Prefecture",
+      "required_documents": ["Valid identity document of the signatory (CNI)", "Original document to be certified (preferably not already signed — sign in front of the officer)", "Physical presence of the signatory mandatory"],
+      "procedure_steps": ["Present yourself with the document and the CNI", "Sign the document in front of the officer (or affirm that the signature is yours)", "The officer certifies the signature and stamps the document", "Pay the corresponding fees"],
+      "conditions": ["Signature certification confirms that the signature belongs to the identified person", "It does not authenticate the content of the document (unlike a notarised deed)", "Mandatory for private contracts submitted to the administration and for private-deed powers of attorney", "Town halls may certify signatures on some documents — others require a notary", "Certifying a false signature engages the criminal liability of the signatory"]
+    },
+    "ar": {
+      "title": "تصديق التوقيع",
+      "summary": "إجراء إداري في تشاد: تصديق التوقيع.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 36 (الصفحة 54). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 500 إلى 3 000 FCFA",
+      "processing_time": "فوري إلى 48 ساعة",
+      "validity": "دائم (توثيق التوقيع في تاريخ معين)",
+      "institution": "البلدية",
+      "location": "البلدية / موثّق / المحافظة",
+      "required_documents": ["وثيقة هوية سارية للموقِّع (البطاقة الوطنية)", "الوثيقة الأصلية المراد تصديقها (يُفضَّل ألا تكون موقّعة، والتوقيع أمام العون)", "الحضور الشخصي للموقِّع إلزامي"],
+      "procedure_steps": ["التوجه بالوثيقة والبطاقة الوطنية", "التوقيع على الوثيقة أمام العون (أو التصريح بأن التوقيع توقيعه)", "يصادق العون على التوقيع ويختم الوثيقة", "دفع الرسوم المقررة"],
+      "conditions": ["تصديق التوقيع يشهد بأن التوقيع يعود إلى الشخص المعرَّف", "لا يوثّق مضمون الوثيقة (على خلاف العقد الموثّق)", "إلزامي للعقود العرفية المقدمة للإدارة وللتوكيلات العرفية", "يمكن للبلديات تصديق التوقيعات على بعض الوثائق، وتحتاج وثائق أخرى إلى موثّق", "تصديق توقيع مزوّر يُحمِّل الموقِّع المسؤولية الجنائية"]
+    }
+  },
+  {
+    "slug": "apostille-legalisation-pour-usage-a-letranger",
+    "en": {
+      "title": "Apostille / legalisation for use abroad",
+      "summary": "Administrative procedure in Chad: apostille / legalisation for use abroad.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 37 (page 54). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 30,000 FCFA per document",
+      "processing_time": "1 to 3 weeks",
+      "validity": "Permanent (valid for the validity period of the legalised document)",
+      "institution": "Ministry of Foreign Affairs (Legalisation Directorate) — N'Djamena",
+      "location": "Ministry of Foreign Affairs (Legalisation Directorate) — N'Djamena",
+      "required_documents": ["Original document to be legalised (birth certificate, diploma, criminal record, etc.)", "Certified true copy of the document", "Applicant's CNI", "Legalisation application form (Ministry of Foreign Affairs)", "Legalisation fees (payment receipt)"],
+      "procedure_steps": ["Obtain the original document from the issuing authority (town hall, university, court)", "Have the document certified by the issuing authority", "File at the Ministry of Foreign Affairs with the required documents", "Pay the fees and get the receipt", "Collect the legalised document", "If necessary: have it legalised afterwards by the embassy of the destination country"],
+      "conditions": ["Chad is not a party to the Hague Apostille Convention — the classic legalisation procedure applies", "Legalisation follows a chain: 1) the document is authenticated by the issuing authority, 2) legalised by the Chadian Ministry, 3) legalised by the embassy of the destination country", "Some countries require documents to be translated into their language before legalisation", "The timing may vary with holidays and the volume of files at the Ministry", "For civil status documents: go first through the issuing town hall, then the Ministry"]
+    },
+    "ar": {
+      "title": "تصديق (apostille / legalisation) للاستعمال في الخارج",
+      "summary": "إجراء إداري في تشاد: تصديق (apostille / legalisation) للاستعمال في الخارج.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 37 (الصفحة 54). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 30 000 FCFA للوثيقة الواحدة",
+      "processing_time": "من أسبوع إلى 3 أسابيع",
+      "validity": "دائم (صالح لمدة صلاحية الوثيقة المصدَّقة)",
+      "institution": "وزارة الشؤون الخارجية (مديرية التصديقات) — انجامينا",
+      "location": "وزارة الشؤون الخارجية (مديرية التصديقات) — انجامينا",
+      "required_documents": ["الوثيقة الأصلية المراد تصديقها (عقد ميلاد، شهادة، سجل عدلي، إلخ)", "نسخة مطابقة للأصل للوثيقة", "بطاقة هوية الطالب", "استمارة طلب التصديق (وزارة الشؤون الخارجية)", "رسوم التصديق (وصل الدفع)"],
+      "procedure_steps": ["الحصول على الوثيقة الأصلية من الجهة المصدرة (البلدية، الجامعة، المحكمة)", "تصديق الوثيقة من طرف الجهة المصدرة", "الإيداع لدى وزارة الشؤون الخارجية مع الوثائق المطلوبة", "دفع الرسوم والحصول على الوصل", "استلام الوثيقة المصدَّقة", "عند الاقتضاء: تصديقها لاحقًا من سفارة بلد الوجهة"],
+      "conditions": ["تشاد ليست طرفًا في اتفاقية لاهاي للتصديق بالـ Apostille، ويُتبع إجراء التصديق التقليدي", "يتم التصديق بالتسلسل: 1) توثيق الوثيقة من الجهة المصدرة، 2) تصديقها من الوزارة التشادية، 3) تصديقها من سفارة بلد الوجهة", "بعض الدول تشترط ترجمة الوثائق إلى لغتها قبل التصديق", "قد تختلف المدة حسب العطل وحجم الملفات في الوزارة", "بالنسبة لوثائق الحالة المدنية: المرور أولًا بالبلدية المصدرة ثم الوزارة"]
+    }
+  },
+  {
+    "slug": "titre-foncier-demande-de-premiere-immatriculation",
+    "en": {
+      "title": "Land title — first registration application",
+      "summary": "Administrative procedure in Chad: land title — first registration application.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 38 (page 55). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Varies with area and value (5% to 10% of the property's value)",
+      "processing_time": "6 months to 2 years",
+      "validity": "Permanent",
+      "institution": "Directorate of Land Affairs",
+      "location": "Directorate of Land Affairs / Land Registry / Cadastre",
+      "required_documents": ["Topographic plan of the land (drawn up by an approved surveyor)", "Applicant's CNI", "Residence permit or deed of transfer of the plot", "Administrative certificate of availability of the land (town hall or prefecture)", "Proof of occupation: invoices, notarised statements, photos", "Certificate of no dispute (issued by the canton or neighbourhood chief)", "Up-to-date property taxes", "Application form (Land Registry)", "Surveyor's fees (topographic plan)"],
+      "procedure_steps": ["Have a topographic plan drawn up by an approved surveyor", "Obtain the certificate of availability of the land from the town hall or prefecture", "File the application at the Land Registry with all the documents", "The Land Registry carries out the adversarial boundary survey (it summons the neighbours)", "Publication in the Official Journal (2-month opposition period)", "If no opposition: the land title is established and registered", "Pay the transfer fees and the corresponding taxes", "Collect the original land title (numbered and registered)"],
+      "conditions": ["The land title is the only document that confers full legal ownership in Chad", "Without a land title: the owner cannot legally sell, mortgage or bequeath the property", "The procedure starts with an adversarial boundary survey (neighbours and the administration are summoned)", "Any unresolved dispute blocks the registration procedure", "Land in unplanned (unofficial) subdivisions cannot be titled without prior regularisation", "The State may refuse registration if the land is in a reserved area (roads, power-line corridors, etc.)"]
+    },
+    "ar": {
+      "title": "الرسم العقاري — طلب التسجيل الأول",
+      "summary": "إجراء إداري في تشاد: الرسم العقاري — طلب التسجيل الأول.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 38 (الصفحة 55). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "متغيرة حسب المساحة والقيمة (من 5% إلى 10% من قيمة العقار)",
+      "processing_time": "من 6 أشهر إلى سنتين",
+      "validity": "دائم",
+      "institution": "مديرية الشؤون العقارية",
+      "location": "مديرية الشؤون العقارية / المحافظة العقارية / المسح العقاري",
+      "required_documents": ["المخطط الطوبوغرافي للأرض (يُعدّه مهندس مساح معتمد)", "بطاقة هوية الطالب", "رخصة السكن أو عقد تفويت القطعة", "شهادة إدارية بتوفر الأرض (البلدية أو المحافظة)", "إثباتات الشغل: فواتير، شهادات موثّقة، صور", "شهادة عدم النزاع (يصدرها رئيس الكانتون أو الحي)", "الضرائب العقارية المسددة", "استمارة الطلب (المحافظة العقارية)", "أتعاب المهندس المساح (المخطط الطوبوغرافي)"],
+      "procedure_steps": ["إعداد مخطط طوبوغرافي من طرف مهندس مساح معتمد", "الحصول على شهادة توفر الأرض من البلدية أو المحافظة", "إيداع الطلب لدى المحافظة العقارية مع جميع الوثائق", "تُجري المحافظة العقارية التحديد الحدودي بحضور الأطراف (وتستدعي الجيران)", "النشر في الجريدة الرسمية (مهلة اعتراض شهرين)", "في حال عدم الاعتراض: يُعدّ الرسم العقاري ويُسجَّل", "دفع رسوم التفويت والضرائب المقررة", "استلام الرسم العقاري الأصلي (مرقّم ومسجّل)"],
+      "conditions": ["الرسم العقاري هو الوثيقة الوحيدة التي تمنح الملكية القانونية الكاملة في تشاد", "بدون رسم عقاري: لا يستطيع المالك بيع العقار أو رهنه أو توريثه قانونيًا", "يبدأ الإجراء بتحديد حدودي بحضور الأطراف (الجيران والإدارة)", "أي نزاع غير محسوم يوقف إجراء التسجيل", "لا يمكن تسجيل أراضٍ في تجزئات غير رسمية دون تسوية مسبقة", "يجوز للدولة رفض التسجيل إذا كانت الأرض في منطقة محجوزة (طرق، ممرات كهربائية، إلخ)"]
+    }
+  },
+  {
+    "slug": "copie-certifiee-conforme",
+    "en": {
+      "title": "Certified true copy",
+      "summary": "Administrative procedure in Chad: certified true copy.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 39 (page 56). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "500 to 2,000 FCFA",
+      "processing_time": "Immediate",
+      "validity": "Generally 3 months",
+      "institution": "Town hall",
+      "location": "Town hall / Notary / Administration that issued the original document",
+      "required_documents": ["Original document to be copied", "Applicant's CNI", "Photocopy of the document (brought by the applicant)"],
+      "procedure_steps": ["Bring the original and the photocopy to the counter", "The officer compares the two and certifies that they match", "Stamp and signature of the officer on the photocopy", "Pay the fees"],
+      "conditions": ["A certified true copy attests that the copy is identical to the original", "Required by administrations that do not wish to keep originals", "It is not equivalent to the original itself — some administrations require the original", "A notary may certify any type of document as a true copy", "Town halls may only certify certain documents (not foreign university diplomas)"]
+    },
+    "ar": {
+      "title": "نسخة مطابقة للأصل",
+      "summary": "إجراء إداري في تشاد: نسخة مطابقة للأصل.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 39 (الصفحة 56). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 500 إلى 2 000 FCFA",
+      "processing_time": "فوري",
+      "validity": "عادةً 3 أشهر",
+      "institution": "البلدية",
+      "location": "البلدية / موثّق / الإدارة التي أصدرت الوثيقة الأصلية",
+      "required_documents": ["الوثيقة الأصلية المراد نسخها مطابقةً", "بطاقة هوية الطالب", "نسخة مصوّرة من الوثيقة (يحضرها الطالب)"],
+      "procedure_steps": ["إحضار الأصل والنسخة المصوّرة إلى الشباك", "يقارن العون بينهما ويشهد بالمطابقة", "ختم وتوقيع العون على النسخة المصوّرة", "دفع الرسوم"],
+      "conditions": ["النسخة المطابقة للأصل تشهد بأن النسخة مطابقة تمامًا للأصل", "تطلبها الإدارات التي لا ترغب في الاحتفاظ بالأصول", "لا تعادل الأصل نفسه، وبعض الإدارات تشترط الأصل", "يمكن للموثّق أن يصادق على أي نوع من الوثائق كنسخة مطابقة", "البلديات لا تصادق إلا على وثائق معينة (ولا تصادق على الشهادات الجامعية الأجنبية)"]
+    }
+  },
+  {
+    "slug": "mutation-de-titre-foncier-vente-immobiliere",
+    "en": {
+      "title": "Transfer of land title (property sale)",
+      "summary": "Administrative procedure in Chad: transfer of land title (property sale).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 63 (page 56). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Variable (5% to 10% of the property's value in transfer duties)",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent",
+      "institution": "Land Registry",
+      "location": "Land Registry / Directorate of Land Affairs",
+      "required_documents": ["Seller's original land title", "Notarised sale deed (mandatory for property transfers)", "CNI of the seller and of the buyer", "Up-to-date property tax receipt (seller)", "Certificate of no dispute", "Receipt for payment of transfer duties"],
+      "procedure_steps": ["The parties sign the sale deed before the notary", "The notary files the transfer request at the Land Registry", "Payment of the transfer duties", "The Land Registry records the transfer", "A new land title is issued in the buyer's name"],
+      "conditions": ["Any property sale must be recorded in a notarised deed to be valid", "Transfer duties are due on the declared value (but the State may revalue it)", "Without a transfer: the buyer is not legally protected — the seller could sell to someone else", "Transfer duties are borne by the buyer unless agreed otherwise"]
+    },
+    "ar": {
+      "title": "تفويت الرسم العقاري (بيع عقار)",
+      "summary": "إجراء إداري في تشاد: تفويت الرسم العقاري (بيع عقار).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 63 (الصفحة 56). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "متغيرة (من 5% إلى 10% من قيمة العقار كرسوم تفويت)",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم",
+      "institution": "المحافظة العقارية",
+      "location": "المحافظة العقارية / مديرية الشؤون العقارية",
+      "required_documents": ["الرسم العقاري الأصلي للبائع", "عقد البيع الموثّق (إلزامي لتفويت العقارات)", "بطاقتا هوية البائع والمشتري", "وصل الضرائب العقارية المسددة (البائع)", "شهادة عدم النزاع", "وصل أداء رسوم التفويت"],
+      "procedure_steps": ["يوقّع الطرفان عقد البيع أمام الموثّق", "يودع الموثّق طلب التفويت لدى المحافظة العقارية", "أداء رسوم التفويت", "تسجّل المحافظة العقارية التفويت", "يُصدر رسم عقاري جديد باسم المشتري"],
+      "conditions": ["يجب إثبات كل بيع عقاري بعقد موثّق ليكون صحيحًا", "رسوم التفويت مستحقة على القيمة المصرَّح بها (ويمكن للدولة إعادة تقويمها)", "بدون تفويت: لا يكون المشتري محميًا قانونيًا، ويمكن للبائع أن يبيع لشخص آخر", "رسوم التفويت على عاتق المشتري ما لم يُتفق على خلاف ذلك"]
+    }
+  },
+  {
+    "slug": "homologation-de-testament",
+    "en": {
+      "title": "Homologation of a will",
+      "summary": "Administrative procedure in Chad: homologation of a will.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 73 (page 58). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "20,000 to 100,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent",
+      "institution": "Court of First Instance",
+      "location": "Court of First Instance",
+      "required_documents": ["Original will (handwritten or notarised)", "Death certificate of the testator", "CNI of the heirs", "Birth certificates of the heirs", "Inventory of the property mentioned in the will"],
+      "procedure_steps": ["File the will with the court registry after the death", "The registry checks the formal regularity", "Summons of the heirs", "Homologation hearing", "Homologation judgment making the will enforceable"],
+      "conditions": ["A handwritten (olographic) will must be written entirely in the testator's hand, dated and signed", "A notarised will is more secure and less open to challenge", "Homologation by the court gives the will enforceable force", "A will may be challenged in court if the legal formalities are not respected", "The reserved share of the heirs (the children's legal portion) cannot be removed by will"]
+    },
+    "ar": {
+      "title": "إضفاء الصيغة التنفيذية على الوصية",
+      "summary": "إجراء إداري في تشاد: إضفاء الصيغة التنفيذية على الوصية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 73 (الصفحة 58). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 20 000 إلى 100 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم",
+      "institution": "المحكمة الابتدائية",
+      "location": "المحكمة الابتدائية",
+      "required_documents": ["الوصية الأصلية (مكتوبة بخط اليد أو موثّقة)", "شهادة وفاة الموصي", "البطاقة الوطنية للورثة", "عقود ميلاد الورثة", "جرد الممتلكات المذكورة في الوصية"],
+      "procedure_steps": ["إيداع الوصية لدى كتابة ضبط المحكمة بعد الوفاة", "تتحقق الكتابة من الصحة الشكلية", "استدعاء الورثة", "جلسة إضفاء الصيغة التنفيذية", "حكم يجعل الوصية قابلة للتنفيذ"],
+      "conditions": ["الوصية المكتوبة بخط اليد يجب أن تكون مكتوبة كليًا بخط الموصي، ومؤرخة وموقعة", "الوصية الموثّقة أكثر أمانًا وأقل عرضة للطعن", "إضفاء الصيغة التنفيذية من المحكمة يمنح الوصية قوة التنفيذ", "يجوز الطعن في الوصية أمام القضاء إذا لم تُحترم الشكليات القانونية", "لا يمكن حرمان الورثة من حصتهم الشرعية المحفوظة (نصيب الأبناء القانوني) بالوصية"]
+    }
+  },
+  {
+    "slug": "immatriculation-au-registre-du-commerce-rccm",
+    "en": {
+      "title": "Registration in the Trade Register (RCCM)",
+      "summary": "Administrative procedure in Chad: registration in the Trade Register (RCCM).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 40 (page 60). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 200,000 FCFA depending on the legal form",
+      "processing_time": "2 to 4 weeks",
+      "validity": "Annual (renewal mandatory)",
+      "institution": "Registry of the Commercial Court of N'Djamena",
+      "location": "Registry of the Commercial Court of N'Djamena",
+      "required_documents": ["Declaration of commercial activity form (Registry)", "Drafted and signed company articles (for companies)", "CNI and clean criminal record of all partners and managers", "Birth certificates of the managers", "Location plan of the registered office", "Lease agreement or property title of the premises", "Certificate of deposit of the share capital (for SARL, SA)", "Decision appointing the manager or managing director", "Fiscal stamp", "Registrar's fees"],
+      "procedure_steps": ["Draft the company articles with a legal adviser or notary (for companies)", "Deposit the share capital at the bank (for SARL: 100,000 FCFA minimum)", "Obtain the clean criminal record of all partners", "Assemble the complete file", "File it at the Registry of the Commercial Court", "The registrar examines the file (15 days)", "Allocation of the RCCM number and issue of the registration certificate", "Publication in a legal announcements newspaper"],
+      "conditions": ["Mandatory for every trader, craftsman or company carrying on a commercial activity", "Registration must come before the start of the commercial activity", "The RCCM number is mandatory on all commercial documents (invoices, contracts)", "Annual renewal before 31 March every year", "A person with a heavy criminal record may be refused registration", "Failure to register is punishable by fines and administrative closure", "Under OHADA law (applicable in Chad): a company only exists legally after registration"]
+    },
+    "ar": {
+      "title": "القيد في السجل التجاري (RCCM)",
+      "summary": "إجراء إداري في تشاد: القيد في السجل التجاري (RCCM).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 40 (الصفحة 60). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 200 000 FCFA حسب الشكل القانوني",
+      "processing_time": "من أسبوعين إلى 4 أسابيع",
+      "validity": "سنوي (التجديد إلزامي)",
+      "institution": "كتابة ضبط المحكمة التجارية بانجامينا",
+      "location": "كتابة ضبط المحكمة التجارية بانجامينا",
+      "required_documents": ["استمارة التصريح بالنشاط التجاري (الكتابة)", "القانون الأساسي للشركة محرَّرًا وموقّعًا (للشركات)", "البطاقة الوطنية وسجل عدلي نظيف لجميع الشركاء والمسيرين", "عقود ميلاد المسيّرين", "مخطط موقع المقر الاجتماعي", "عقد الكراء أو سند ملكية المحل", "شهادة إيداع رأس المال الاجتماعي (لـ SARL وSA)", "قرار تعيين المسيّر أو المدير العام", "طابع مالي", "أتعاب كاتب الضبط"],
+      "procedure_steps": ["تحرير القانون الأساسي للشركة مع مستشار قانوني أو موثّق (للشركات)", "إيداع رأس المال الاجتماعي في البنك (لـ SARL: 100 000 FCFA على الأقل)", "الحصول على سجل عدلي نظيف لجميع الشركاء", "تجميع الملف الكامل", "إيداعه لدى كتابة ضبط المحكمة التجارية", "يدرس كاتب الضبط الملف (15 يومًا)", "منح رقم RCCM وتسليم شهادة القيد", "النشر في جريدة الإعلانات القانونية"],
+      "conditions": ["إلزامي لكل تاجر أو حرفي أو شركة تمارس نشاطًا تجاريًا", "يجب أن يسبق القيد بدء النشاط التجاري", "رقم RCCM إلزامي في جميع الوثائق التجارية (الفواتير، العقود)", "التجديد السنوي قبل 31 مارس من كل سنة", "قد يُرفض القيد لشخص عليه سوابق قضائية ثقيلة", "عدم القيد يعرّض للغرامات والإغلاق الإداري", "بموجب قانون OHADA المطبَّق في تشاد: لا توجد الشركة قانونيًا إلا بعد القيد"]
+    }
+  },
+  {
+    "slug": "numero-didentification-fiscale-nif",
+    "en": {
+      "title": "Tax identification number (NIF)",
+      "summary": "Administrative procedure in Chad: tax identification number (NIF).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 41 (page 60). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Free",
+      "processing_time": "1 to 5 working days",
+      "validity": "Permanent",
+      "institution": "General Directorate of Taxes (DGI) — N'Djamena",
+      "location": "General Directorate of Taxes (DGI) — N'Djamena",
+      "required_documents": ["RCCM (for a company) or CNI (for a self-employed trader)", "Tax identification form (DGI)", "Birth certificate", "Lease agreement for the business premises", "Articles of the company (if applicable)"],
+      "procedure_steps": ["Go to the DGI with the RCCM and the documents", "Fill in the identification form", "A tax officer may visit the premises", "Allocation of the NIF (unique number)", "Receive the tax identification card"],
+      "conditions": ["Mandatory for every taxable entity (companies and self-employed traders)", "The NIF must appear on all issued invoices", "Without a NIF: it is impossible to take part in public tenders", "Importers must have a NIF to clear their goods through customs", "In case of change of address: update mandatory within 30 days"]
+    },
+    "ar": {
+      "title": "رقم التعريف الجبائي (NIF)",
+      "summary": "إجراء إداري في تشاد: رقم التعريف الجبائي (NIF).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 41 (الصفحة 60). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "مجاني",
+      "processing_time": "من يوم إلى 5 أيام عمل",
+      "validity": "دائم",
+      "institution": "المديرية العامة للضرائب DGI — انجامينا",
+      "location": "المديرية العامة للضرائب DGI — انجامينا",
+      "required_documents": ["السجل التجاري RCCM (للشركة) أو البطاقة الوطنية (للتاجر الفرد)", "استمارة التعريف الجبائي (DGI)", "عقد الميلاد", "عقد كراء المحل التجاري", "القانون الأساسي للشركة (عند الاقتضاء)"],
+      "procedure_steps": ["التوجه إلى DGI بالسجل التجاري والوثائق", "ملء استمارة التعريف", "قد يزور عون الضرائب المحل", "منح رقم NIF (رقم وحيد)", "استلام بطاقة التعريف الجبائي"],
+      "conditions": ["إلزامي لكل كيان خاضع للضريبة (الشركات والتجار الأفراد)", "يجب أن يظهر رقم NIF في جميع الفواتير الصادرة", "بدون NIF: لا يمكن المشاركة في الصفقات العمومية", "يجب أن يكون للمستوردين NIF لتخليص بضائعهم جمركيًا", "في حالة تغيير العنوان: التحديث إلزامي خلال 30 يومًا"]
+    }
+  }
+]

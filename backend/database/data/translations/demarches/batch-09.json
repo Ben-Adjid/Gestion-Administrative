@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "licence-dimportation-autorisation-commerciale",
+    "en": {
+      "title": "Import licence / commercial authorisation",
+      "summary": "Administrative procedure in Chad: import licence / commercial authorisation.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 42 (page 61). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "25,000 to 150,000 FCFA depending on the product",
+      "processing_time": "2 to 6 weeks",
+      "validity": "1 year, renewable",
+      "institution": "Ministry of Trade — Directorate of Domestic and Foreign Trade",
+      "location": "Ministry of Trade — Directorate of Domestic and Foreign Trade",
+      "required_documents": ["Valid and up-to-date RCCM", "Valid NIF", "CNI of the manager or legal representative", "Detailed description of the products to be imported", "Storage capacity (warehouse contract or property title)", "Bank certificate (solvency)", "Clean criminal record of the manager", "Licence application form (Ministry of Trade)", "Fiscal stamp"],
+      "procedure_steps": ["Check whether the product is subject to specific regulation", "Assemble the file", "File it at the Ministry of Trade", "Possible inspection of the premises by a Ministry officer", "Receive the import licence", "Attach the licence to the customs documents for each import"],
+      "conditions": ["Certain products are subject to specific authorisations: medicines (Ministry of Health), weapons (Ministry of Defence), chemicals (Ministry of Environment)", "Imported food products must comply with Chadian health standards", "The licence is personal and cannot be transferred to a third party", "Annual renewal before expiry — an expired licence leads to seizure of goods at customs"]
+    },
+    "ar": {
+      "title": "رخصة الاستيراد / الترخيص التجاري",
+      "summary": "إجراء إداري في تشاد: رخصة الاستيراد / الترخيص التجاري.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 42 (الصفحة 61). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 25 000 إلى 150 000 FCFA حسب المنتج",
+      "processing_time": "من أسبوعين إلى 6 أسابيع",
+      "validity": "سنة واحدة قابلة للتجديد",
+      "institution": "وزارة التجارة — مديرية التجارة الداخلية والخارجية",
+      "location": "وزارة التجارة — مديرية التجارة الداخلية والخارجية",
+      "required_documents": ["سجل تجاري RCCM ساري ومحدّث", "رقم NIF ساري", "البطاقة الوطنية للمسيّر أو الممثل القانوني", "وصف مفصّل للمنتجات المراد استيرادها", "قدرة التخزين (عقد مستودع أو سند ملكية)", "شهادة بنكية (الملاءة)", "سجل عدلي نظيف للمسيّر", "استمارة طلب الرخصة (وزارة التجارة)", "طابع مالي"],
+      "procedure_steps": ["التحقق مما إذا كان المنتج خاضعًا لتنظيم خاص", "تجميع الملف", "إيداعه لدى وزارة التجارة", "تفتيش محتمل للمحلات من طرف عون الوزارة", "استلام رخصة الاستيراد", "إرفاق الرخصة بالوثائق الجمركية عند كل استيراد"],
+      "conditions": ["بعض المنتجات تخضع لتراخيص خاصة: الأدوية (وزارة الصحة)، والأسلحة (وزارة الدفاع)، والمواد الكيميائية (وزارة البيئة)", "يجب أن تحترم المنتجات الغذائية المستوردة المعايير الصحية التشادية", "الرخصة شخصية ولا يجوز التنازل عنها لغير صاحبها", "التجديد السنوي قبل انتهاء الصلاحية، وانتهاء الرخصة يؤدي إلى حجز البضائع في الجمارك"]
+    }
+  },
+  {
+    "slug": "autorisation-douverture-detablissement-de-sante-prive",
+    "en": {
+      "title": "Authorisation to open a private health establishment",
+      "summary": "Administrative procedure in Chad: authorisation to open a private health establishment.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 65 (page 62). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "100,000 to 500,000 FCFA",
+      "processing_time": "2 to 6 months",
+      "validity": "Annual (renewal mandatory)",
+      "institution": "Ministry of Public Health",
+      "location": "Ministry of Public Health",
+      "required_documents": ["Medical diploma of the technical manager", "Practice authorisation of the manager", "Plan of the premises (compliant with health standards)", "List of medical equipment", "Employment contracts of the health staff", "CNI of the promoter", "Clean criminal record", "Application form", "RCCM certificate"],
+      "procedure_steps": ["Prepare the premises in accordance with the standards", "File the file at the Ministry of Health", "Inspection of the premises by a Ministry team", "Authorisation-granting committee", "Issue of the authorisation if compliant"],
+      "conditions": ["Every private health establishment must be authorised by the Ministry", "The technical manager must be a doctor legally authorised to practise", "The minimum standards (area, equipment, staff) vary by type of establishment", "A prior inspection is mandatory before the authorisation is issued", "Unauthorised establishments are closed and the promoter is prosecuted"]
+    },
+    "ar": {
+      "title": "ترخيص فتح مؤسسة صحية خاصة",
+      "summary": "إجراء إداري في تشاد: ترخيص فتح مؤسسة صحية خاصة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 65 (الصفحة 62). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 100 000 إلى 500 000 FCFA",
+      "processing_time": "من شهرين إلى 6 أشهر",
+      "validity": "سنوي (التجديد إلزامي)",
+      "institution": "وزارة الصحة العمومية",
+      "location": "وزارة الصحة العمومية",
+      "required_documents": ["دبلوم الطب للمسؤول التقني", "ترخيص مزاولة المسؤول", "مخطط المحلات (مطابق للمعايير الصحية)", "قائمة التجهيزات الطبية", "عقود عمل الطاقم الصحي", "البطاقة الوطنية للمبادر", "سجل عدلي نظيف", "استمارة الطلب", "شهادة RCCM"],
+      "procedure_steps": ["تجهيز المحلات وفق المعايير", "إيداع الملف لدى وزارة الصحة", "تفتيش المحلات من طرف فريق الوزارة", "لجنة منح التراخيص", "تسليم الترخيص عند المطابقة"],
+      "conditions": ["يجب أن تُرخَّص كل مؤسسة صحية خاصة من طرف الوزارة", "يجب أن يكون المسؤول التقني طبيبًا مرخصًا له قانونًا بمزاولة المهنة", "تختلف المعايير الدنيا (المساحة، التجهيزات، الطاقم) حسب نوع المؤسسة", "التفتيش المسبق إلزامي قبل تسليم الترخيص", "تُغلق المؤسسات غير المرخّصة ويُتابَع المبادر قضائيًا"]
+    }
+  },
+  {
+    "slug": "agrement-pour-organisme-de-formation-professionnelle",
+    "en": {
+      "title": "Approval of a vocational training provider",
+      "summary": "Administrative procedure in Chad: approval of a vocational training provider.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 66 (page 63). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "50,000 to 200,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "3 years, renewable",
+      "institution": "Ministry of Vocational Training",
+      "location": "Ministry of Vocational Training / Ministry of Education",
+      "required_documents": ["Statutes of the organisation", "RCCM", "NIF", "Plan of the training premises", "CVs and diplomas of the trainers", "List of courses offered, with detailed programmes", "Available teaching equipment", "CNI of the director", "Clean criminal record of the director"],
+      "procedure_steps": ["Prepare the premises and recruit the trainers", "File the file at the Ministry", "Inspection of the premises and verification of the trainers", "Approval committee", "Issue of the approval"],
+      "conditions": ["Without approval, the certificates issued have no official value", "Trainers must have at least a BAC+2 level in their field", "The trainer-to-trainee ratio must comply with the standards (1 for 20 at most)", "An annual audit may be carried out by the Ministry"]
+    },
+    "ar": {
+      "title": "اعتماد مؤسسة للتكوين المهني",
+      "summary": "إجراء إداري في تشاد: اعتماد مؤسسة للتكوين المهني.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 66 (الصفحة 63). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 50 000 إلى 200 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "3 سنوات قابلة للتجديد",
+      "institution": "وزارة التكوين المهني",
+      "location": "وزارة التكوين المهني / وزارة التربية",
+      "required_documents": ["القانون الأساسي للمؤسسة", "السجل التجاري RCCM", "رقم NIF", "مخطط محلات التكوين", "السير الذاتية وشهادات المكونين", "قائمة الدورات المقدَّمة مع البرامج التفصيلية", "التجهيزات البيداغوجية المتوفرة", "البطاقة الوطنية للمدير", "سجل عدلي نظيف للمدير"],
+      "procedure_steps": ["تجهيز المحلات وتوظيف المكونين", "إيداع الملف لدى الوزارة", "تفتيش المحلات والتحقق من المكونين", "لجنة الاعتماد", "تسليم الاعتماد"],
+      "conditions": ["بدون اعتماد، لا تكون الشهادات الصادرة ذات قيمة رسمية", "يجب أن يكون المكونون حاصلين على مستوى BAC+2 على الأقل في تخصصهم", "يجب أن تحترم نسبة المكونين إلى المتدربين المعايير (1 لكل 20 كحد أقصى)", "يجوز للوزارة إجراء تدقيق سنوي"]
+    }
+  },
+  {
+    "slug": "declaration-de-creation-dune-ong",
+    "en": {
+      "title": "Declaration of the creation of an NGO",
+      "summary": "Administrative procedure in Chad: declaration of the creation of an NGO.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 71 (page 63). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 50,000 FCFA",
+      "processing_time": "1 to 3 months",
+      "validity": "Permanent (with an annual activity report)",
+      "institution": "Ministry of Territorial Administration",
+      "location": "Ministry of Territorial Administration / Ministry of Foreign Affairs (for international NGOs)",
+      "required_documents": ["NGO statutes (in French, signed by the founding members)", "Minutes of the constituent assembly", "List of board members (with each person's CNI)", "Address of the registered office", "Programme of activities", "CNI and criminal record of the founders", "Sworn statement that the organisation is non-profit"],
+      "procedure_steps": ["Hold the constituent assembly and draft the statutes", "File the file at the competent Ministry", "The Ministry examines the file", "Publication in the Official Journal", "Issue of the declaration receipt"],
+      "conditions": ["National NGOs are declared to the Ministry of Territorial Administration", "International NGOs must obtain approval from the Ministry of Foreign Affairs", "A recognised NGO benefits from tax exemptions", "An annual activity report is mandatory — failure may lead to dissolution", "Political activities are prohibited for registered NGOs"]
+    },
+    "ar": {
+      "title": "التصريح بإنشاء منظمة غير حكومية",
+      "summary": "إجراء إداري في تشاد: التصريح بإنشاء منظمة غير حكومية.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 71 (الصفحة 63). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 50 000 FCFA",
+      "processing_time": "من شهر إلى 3 أشهر",
+      "validity": "دائم (مع تقرير نشاط سنوي)",
+      "institution": "وزارة الإدارة الترابية",
+      "location": "وزارة الإدارة الترابية / وزارة الشؤون الخارجية (للمنظمات الدولية)",
+      "required_documents": ["القانون الأساسي للمنظمة (بالفرنسية، موقّع من الأعضاء المؤسسين)", "محضر الجمعية التأسيسية", "قائمة أعضاء المكتب (مع بطاقة هوية كل واحد)", "عنوان المقر الاجتماعي", "برنامج الأنشطة", "البطاقة الوطنية والسجل العدلي للمؤسسين", "تصريح بالشرف بعدم السعي إلى الربح"],
+      "procedure_steps": ["عقد الجمعية التأسيسية وصياغة القانون الأساسي", "إيداع الملف لدى الوزارة المختصة", "تدرس الوزارة الملف", "النشر في الجريدة الرسمية", "تسليم وصل التصريح"],
+      "conditions": ["تُصرَّح المنظمات الوطنية لدى وزارة الإدارة الترابية", "يجب على المنظمات الدولية الحصول على اعتماد من وزارة الشؤون الخارجية", "تستفيد المنظمة المعترف بها من إعفاءات ضريبية", "تقرير النشاط السنوي إلزامي، وعدم تقديمه قد يؤدي إلى الحل", "الأنشطة السياسية ممنوعة على المنظمات المصرَّح بها"]
+    }
+  },
+  {
+    "slug": "patente-taxe-professionnelle-annuelle",
+    "en": {
+      "title": "Business licence tax (annual professional tax)",
+      "summary": "Administrative procedure in Chad: business licence tax (annual professional tax).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 74 (page 64). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Varies with activity and turnover (10,000 to several million FCFA)",
+      "processing_time": "Immediate after payment",
+      "validity": "1 year (calendar year)",
+      "institution": "General Directorate of Taxes",
+      "location": "General Directorate of Taxes",
+      "required_documents": ["Valid RCCM", "NIF", "Declaration of the previous year's turnover", "Patente form (DGI)"],
+      "procedure_steps": ["Go to the DGI with the RCCM and the tax documents", "Fill in the declaration", "The tax officer calculates the patente", "Pay at the cash desk", "Receive the patente receipt (keep it and present it in case of inspection)"],
+      "conditions": ["The patente is due every year from every trader, industrialist and craftsman", "It must be paid before 31 March each year (legal deadline)", "Failure to pay the patente leads to a 25% surcharge and tax proceedings", "Without a patente: it is impossible to take part in public markets and tenders", "The patente is calculated on the declared turnover"]
+    },
+    "ar": {
+      "title": "الرسم المهني السنوي (الباتنت)",
+      "summary": "إجراء إداري في تشاد: الرسم المهني السنوي (الباتنت).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 74 (الصفحة 64). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "متغيرة حسب النشاط ورقم الأعمال (من 10 000 إلى عدة ملايين FCFA)",
+      "processing_time": "فوري بعد الدفع",
+      "validity": "سنة واحدة (سنة تقويمية)",
+      "institution": "المديرية العامة للضرائب",
+      "location": "المديرية العامة للضرائب",
+      "required_documents": ["سجل تجاري RCCM ساري", "رقم NIF", "تصريح برقم أعمال السنة الماضية", "استمارة الباتنت (DGI)"],
+      "procedure_steps": ["التوجه إلى DGI بالسجل التجاري والوثائق الجبائية", "ملء التصريح", "يحسب عون الضرائب الباتنت", "الدفع في الصندوق", "استلام وصل الباتنت (يُحتفظ به ويُقدَّم عند المراقبة)"],
+      "conditions": ["الباتنت مستحق كل سنة على كل تاجر وصناعي وحرفي", "يجب أداؤه قبل 31 مارس من كل سنة (الأجل القانوني)", "عدم أداء الباتنت يعرّض لزيادة بنسبة 25% ومتابعات ضريبية", "بدون باتنت: لا يمكن المشاركة في الأسواق والصفقات العمومية", "يُحسب الباتنت على رقم الأعمال المصرَّح به"]
+    }
+  },
+  {
+    "slug": "appel-doffres-public-retrait-et-soumission-de-dossier",
+    "en": {
+      "title": "Public tender — withdrawal and submission of the file",
+      "summary": "Administrative procedure in Chad: public tender — withdrawal and submission of the file.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 79 (page 65). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 100,000 FCFA (tender file, DAO)",
+      "processing_time": "15 to 60 days depending on the contract",
+      "validity": "Single use per tender",
+      "institution": "Public Procurement Regulatory Authority (ARMP)",
+      "location": "Public Procurement Regulatory Authority (ARMP)",
+      "required_documents": ["Complete submission file (technical and financial)", "Bank bid bond (1 to 3% of the amount offered)", "Valid RCCM", "Valid NIF", "Up-to-date patente", "Tax certificate of no outstanding debts", "Up-to-date CNPS certificate", "Criminal record of the manager", "References of similar contracts completed", "Workload plan and technical team"],
+      "procedure_steps": ["Monitor tender announcements (Official Journal, press, ARMP website)", "Withdraw the tender file at the stated price", "Prepare the technical and financial file", "Obtain the bank bid bond", "File the sealed file before the deadline", "Attend the public opening of the bids", "Wait for the award notification"],
+      "conditions": ["Public contracts above a certain threshold must be awarded by open tender", "ARMP supervises the regularity of the procedures", "Any bidder may challenge an irregular award with ARMP", "The bid bond is forfeited if the successful bidder refuses the contract", "The tax and CNPS certificates must show no outstanding debts", "A bidder excluded for serious misconduct may be blacklisted for 2 to 5 years"]
+    },
+    "ar": {
+      "title": "المناقصة العمومية — سحب الملف وتقديمه",
+      "summary": "إجراء إداري في تشاد: المناقصة العمومية — سحب الملف وتقديمه.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 79 (الصفحة 65). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 100 000 FCFA (ملف المناقصة)",
+      "processing_time": "من 15 إلى 60 يومًا حسب الصفقة",
+      "validity": "استعمال واحد لكل مناقصة",
+      "institution": "هيئة تنظيم الصفقات العمومية (ARMP)",
+      "location": "هيئة تنظيم الصفقات العمومية (ARMP)",
+      "required_documents": ["ملف التقديم الكامل (تقني ومالي)", "ضمان المشاركة البنكي (من 1 إلى 3% من المبلغ المعروض)", "سجل تجاري RCCM ساري", "رقم NIF ساري", "الباتنت محدّثة", "شهادة جبائية بعدم وجود متأخرات", "شهادة CNPS محدّثة", "سجل عدلي للمسيّر", "مراجع صفقات مماثلة منجزة", "خطة الحمولة والفريق التقني"],
+      "procedure_steps": ["متابعة إعلانات المناقصات (الجريدة الرسمية، الصحافة، موقع ARMP)", "سحب ملف المناقصة بالثمن المحدد", "إعداد الملف التقني والمالي", "الحصول على ضمان المشاركة البنكي", "إيداع الملف المغلق قبل الموعد النهائي", "حضور فتح الأظرفة علنًا", "انتظار إشعار الإحالة"],
+      "conditions": ["الصفقات العمومية التي تتجاوز سقفًا معينًا يجب أن تُسند بمناقصة مفتوحة", "تشرف ARMP على سلامة الإجراءات", "يجوز لكل مترشح الطعن أمام ARMP في إسناد غير قانوني", "يُصادَر ضمان المشاركة إذا رفض الفائز الصفقة", "يجب أن تُظهر الشهادتان الجبائية وCNPS عدم وجود متأخرات", "المترشح المُقصى لخطأ جسيم قد يُدرج في القائمة السوداء لمدة 2 إلى 5 سنوات"]
+    }
+  },
+  {
+    "slug": "immatriculation-dun-vehicule-neuf-carte-grise",
+    "en": {
+      "title": "Registration of a new vehicle (vehicle registration certificate)",
+      "summary": "Administrative procedure in Chad: registration of a new vehicle (vehicle registration certificate).",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 43 (page 67). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "Varies with the vehicle's fiscal horsepower (30,000 to 150,000 FCFA)",
+      "processing_time": "1 to 4 weeks",
+      "validity": "Permanent (to be updated when the owner changes)",
+      "institution": "Land Transport Directorate",
+      "location": "Land Transport Directorate / National Treasury",
+      "required_documents": ["Original purchase invoice of the vehicle (from the dealer)", "Customs receipt (if imported — proves the customs duties paid)", "CNI of the owner", "Valid car insurance (minimum third-party liability)", "Certificate of conformity of the vehicle (issued by the manufacturer)", "Registration application form (Land Transport Directorate)", "Receipt for payment of first registration taxes"],
+      "procedure_steps": ["Pay the registration taxes at the National Treasury", "Assemble the complete file", "File it at the Land Transport Directorate", "Physical inspection of the vehicle by an officer", "Allocation of the registration number", "Fitting of the number plates", "Collect the vehicle registration certificate"],
+      "conditions": ["Every vehicle using the public road must be registered", "Registration must be done within 30 days of purchase", "The registration number is permanent and attached to the vehicle (not to the owner)", "When the vehicle is transferred: the registration certificate must be transferred to the new owner within 15 days", "An unregistered vehicle may be seized by the law enforcement authorities"]
+    },
+    "ar": {
+      "title": "تسجيل مركبة جديدة (البطاقة الرمادية)",
+      "summary": "إجراء إداري في تشاد: تسجيل مركبة جديدة (البطاقة الرمادية).",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 43 (الصفحة 67). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "متغيرة حسب القوة الجبائية للمركبة (من 30 000 إلى 150 000 FCFA)",
+      "processing_time": "من أسبوع إلى 4 أسابيع",
+      "validity": "دائمة (تُحدَّث عند تغيير المالك)",
+      "institution": "مديرية النقل البري",
+      "location": "مديرية النقل البري / الخزينة الوطنية",
+      "required_documents": ["الفاتورة الأصلية لشراء المركبة (لدى الوكيل)", "وصل الجمارك (إذا كانت المركبة مستوردة، ويثبت أداء الرسوم الجمركية)", "البطاقة الوطنية للمالك", "تأمين سيارة ساري (على الأقل تأمين المسؤولية المدنية)", "شهادة مطابقة المركبة (يصدرها الصانع)", "استمارة طلب البطاقة الرمادية (مديرية النقل البري)", "وصل دفع رسوم التسجيل الأول"],
+      "procedure_steps": ["دفع رسوم التسجيل لدى الخزينة الوطنية", "تجميع الملف الكامل", "إيداعه لدى مديرية النقل البري", "الفحص المادي للمركبة من طرف عون", "منح رقم التسجيل", "تركيب لوحات الترقيم", "استلام البطاقة الرمادية"],
+      "conditions": ["يجب تسجيل كل مركبة تسير على الطريق العمومي", "يجب التسجيل خلال 30 يومًا من الشراء", "رقم التسجيل دائم ومرتبط بالمركبة (لا بالمالك)", "عند التنازل عن المركبة: يجب نقل البطاقة الرمادية إلى المالك الجديد خلال 15 يومًا", "يجوز لقوات الأمن حجز المركبة غير المسجلة"]
+    }
+  },
+  {
+    "slug": "visite-technique-obligatoire-du-vehicule",
+    "en": {
+      "title": "Compulsory vehicle technical inspection",
+      "summary": "Administrative procedure in Chad: compulsory vehicle technical inspection.",
+      "description": "Sheet taken from the DemarchesTchad v2.0 specifications, sheet no. 44 (page 67). The documents, conditions and steps below follow that document. Information may change and must be confirmed with the competent office.",
+      "cost": "10,000 to 25,000 FCFA",
+      "processing_time": "Immediate (result the same day)",
+      "validity": "1 year",
+      "institution": "Approved technical inspection centre — N'Djamena",
+      "location": "Approved technical inspection centre — N'Djamena",
+      "required_documents": ["Vehicle registration certificate", "Valid insurance", "CNI of the owner or driver", "Clean and roadworthy vehicle"],
+      "procedure_steps": ["Go to the approved centre with the vehicle and the documents", "The technician inspects the vehicle according to an official checklist", "Issue of the certificate of conformity or list of defects to correct", "In case of a defect: correction, then a re-inspection within 30 days"],
+      "conditions": ["Compulsory for all vehicles over 3 years old", "Taxis and public transport vehicles: inspection every 6 months", "In case of failure: the defect must be corrected and a re-inspection carried out", "Vehicles with a negative re-inspection report may not be driven", "Points checked: brakes, steering, lighting, tyres, bodywork, emissions"]
+    },
+    "ar": {
+      "title": "الفحص التقني الإلزامي للمركبة",
+      "summary": "إجراء إداري في تشاد: الفحص التقني الإلزامي للمركبة.",
+      "description": "بطاقة مستخرجة من دفتر شروط DemarchesTchad v2.0، البطاقة رقم 44 (الصفحة 67). الوثائق والشروط والخطوات أدناه مأخوذة من هذا المستند. قد تتغير المعلومات، ويجب تأكيدها لدى المصلحة المختصة.",
+      "cost": "من 10 000 إلى 25 000 FCFA",
+      "processing_time": "فوري (النتيجة في اليوم نفسه)",
+      "validity": "سنة واحدة",
+      "institution": "مركز الفحص التقني المعتمد — انجامينا",
+      "location": "مركز الفحص التقني المعتمد — انجامينا",
+      "required_documents": ["البطاقة الرمادية للمركبة", "تأمين ساري", "البطاقة الوطنية للمالك أو السائق", "مركبة نظيفة وصالحة للسير"],
+      "procedure_steps": ["التوجه إلى المركز المعتمد بالمركبة والوثائق", "يفحص الفني المركبة وفق شبكة رسمية", "تسليم شهادة المطابقة أو لائحة العيوب الواجب إصلاحها", "في حالة وجود عيب: الإصلاح ثم إعادة الفحص خلال 30 يومًا"],
+      "conditions": ["إلزامي لكل المركبات التي تتجاوز عمرها 3 سنوات", "سيارات الأجرة ووسائل النقل العمومي: فحص كل 6 أشهر", "في حالة الفشل: يجب إصلاح العيب وإجراء إعادة فحص", "لا يجوز سوق المركبات التي تحمل محضر إعادة فحص سلبي", "النقاط المفحوصة: الفرامل، والتوجيه، والإنارة، والإطارات، والهيكل، والانبعاثات"]
+    }
+  }
+]
