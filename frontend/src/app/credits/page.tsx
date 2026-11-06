@@ -117,13 +117,13 @@ export default function CreditsPage() {
           <p className="text-2xl font-bold text-[#002664] mb-2">{c.creatorName}</p>
           <p className="text-lg text-gray-700 mb-4 italic">{c.creatorTitle}</p>
           <p className="text-gray-700 text-lg leading-relaxed">{c.creatorBio}</p>
-          <ul className="mt-4 flex flex-wrap gap-2" aria-label={L('Compétences', 'Skills', 'المهارات')}>
+          <ul className="mt-6 flex flex-wrap justify-center gap-3" aria-label={L('Compétences', 'Skills', 'المهارات')}>
             {[L('Analyse de données', 'Data analysis', 'تحليل البيانات'), L('Administration réseau', 'Network administration', 'إدارة الشبكات'), L('Développeur', 'Developer', 'مطوّر')].map((skill) => (
               <li key={skill} className="rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-900">{skill}</li>
             ))}
           </ul>
           {socials.length > 0 && (
-            <ul className="mt-4 flex flex-wrap gap-3">
+            <ul className="mt-6 flex flex-wrap justify-center gap-4">
               {socials.map((item) => (
                 <li key={item.label}><a href={item.href} target="_blank" rel="noreferrer noopener" className="font-semibold text-blue-800 underline">{item.label}</a></li>
               ))}
