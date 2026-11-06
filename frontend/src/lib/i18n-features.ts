@@ -99,6 +99,12 @@ const fr = {
     sending: 'Envoi…',
     send: 'Envoyer le message',
   },
+  applyx: {
+    button: 'Postuler en ligne',
+    badge: 'Bientôt',
+    soon_title: 'Bientôt disponible',
+    soon_text: 'La soumission de dossier en ligne est en cours de développement. En attendant, suivez les étapes de cette fiche et déposez votre dossier au guichet indiqué. Nous vous préviendrons dès l’ouverture du service.',
+  },
   covx: {
     title: 'Couverture géographique',
     intro: 'Ce qui est recensé, ce qui est attesté par une source et ce qui reste à vérifier. Une localité recensée n’a pas forcément de bureau.',
@@ -513,6 +519,12 @@ const en: FeatureMessages = {
     sending: 'Sending…',
     send: 'Send the message',
   },
+  applyx: {
+    button: 'Apply online',
+    badge: 'Soon',
+    soon_title: 'Coming soon',
+    soon_text: 'Online application is under development. Meanwhile, follow the steps on this page and file your application at the counter indicated. We will let you know when the service opens.',
+  },
   covx: {
     title: 'Geographic coverage',
     intro: 'What is listed, what a source confirms and what remains to verify. A listed locality does not necessarily have an office.',
@@ -914,6 +926,12 @@ const ar: FeatureMessages = {
     message: 'رسالتكم',
     sending: 'جارٍ الإرسال…',
     send: 'إرسال الرسالة',
+  },
+  applyx: {
+    button: 'قدِّم طلبك إلكترونيًا',
+    badge: 'قريبًا',
+    soon_title: 'متاح قريبًا',
+    soon_text: 'خدمة تقديم الملف إلكترونيًا قيد التطوير. في الأثناء، اتبع خطوات هذه الصفحة وقدّم ملفك في الشباك المذكور. سنخبرك عند فتح الخدمة.',
   },
   covx: {
     title: 'تغطية المناطق',

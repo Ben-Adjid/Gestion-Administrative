@@ -6,6 +6,7 @@ import { AlertTriangle, ArrowLeft, Clock3, FileText, Info, MessageCircle } from 
 import { CostEstimate } from '@/components/fiche/CostEstimate';
 import { DocumentChecklist } from '@/components/fiche/DocumentChecklist';
 import { ListenButton } from '@/components/fiche/ListenButton';
+import { ApplyOnlineButton } from '@/components/fiche/ApplyOnlineButton';
 import { PlaceSection, spokenPlace } from '@/components/fiche/OfficesSection';
 import { useCities } from '@/components/CitySelect';
 import { usePreferences } from '@/contexts/PreferencesContext';
@@ -154,6 +155,7 @@ export default function DemarcheView({ initial }: { initial: LocalizedDemarche }
             <ShareMenu demarcheId={demarche.id} demarcheTitle={demarche.title} demarcheSlug={demarche.slug} />
             <ShareImageButton slug={demarche.slug} title={demarche.title} cost={demarche.cost} delay={demarche.processing_time} documents={documents} language={contentLanguage as Language} />
             <ListenButton text={spokenText} language={contentLanguage as Language} />
+            <ApplyOnlineButton />
             <HeartButton demarcheId={demarche.id} withLabel />
             {whatsapp && (
               <a href={whatsapp} target="_blank" rel="noreferrer noopener" className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3.5 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-100">

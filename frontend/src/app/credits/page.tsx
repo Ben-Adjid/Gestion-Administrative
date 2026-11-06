@@ -150,40 +150,6 @@ export default function CreditsPage() {
           </div>
         </div>
 
-        {/* Tech Stack */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-black text-gray-950 mb-6">{c.tech}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-950 mb-4">{c.frontend}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Next.js 14</li>
-                <li>• React 18</li>
-                <li>• TypeScript</li>
-                <li>• Tailwind CSS</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-950 mb-4">{c.backend}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Laravel 11</li>
-                <li>• PHP 8.2</li>
-                <li>• {L('Authentification Sanctum', 'Sanctum authentication', 'مصادقة Sanctum')}</li>
-                <li>• {L('API REST', 'RESTful API', 'واجهة برمجة REST')}</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-950 mb-4">{c.database}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• MySQL 8</li>
-                <li>• {L('Migrations de base de données', 'Database migrations', 'ترحيلات قاعدة البيانات')}</li>
-                <li>• {L('Données initiales (seeders)', 'Initial data (seeders)', 'بيانات أولية (seeders)')}</li>
-                <li>• {L('Suppressions réversibles', 'Soft deletes', 'حذف قابل للاسترجاع')}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Thank You */}
         <div className="bg-gradient-to-r from-[#002664] to-[#003d99] text-white rounded-2xl p-12 text-center mb-12">
           <h2 className="text-3xl font-black mb-4">{c.thankyou}</h2>
