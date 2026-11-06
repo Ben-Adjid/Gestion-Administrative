@@ -241,9 +241,11 @@ export default function AdminCategoriesPage() {
                       <ArrowDown size={15} aria-hidden="true" />
                     </Button>
                     <Button variant="secondary" size="sm" className="min-w-[7rem] flex-1 whitespace-nowrap" onClick={() => openEdit(category)}><Pencil size={15} aria-hidden="true" /> {t('common.edit')}</Button>
-                    <Button variant="danger" size="sm" className="min-w-[7rem] flex-1 whitespace-nowrap" disabled={(category.demarches_count ?? 0) > 0} onClick={() => void remove(category)}>
+                    <span className="flex min-w-[7rem] flex-1" title={(category.demarches_count ?? 0) > 0 ? t('catx.delete_blocked', { n: category.demarches_count ?? 0 }) : undefined}>
+                    <Button variant="danger" size="sm" className="w-full whitespace-nowrap" disabled={(category.demarches_count ?? 0) > 0} onClick={() => void remove(category)}>
                       <Trash2 size={15} aria-hidden="true" /> {t('common.delete')}
                     </Button>
+                    </span>
                   </div>
                 </article>
               ))}
