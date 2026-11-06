@@ -422,11 +422,12 @@ class EngagementFeaturesTest extends TestCase
         $this->assertSame('بطاقة التعريف الوطنية', $cni['name']);
 
         // Non sourcées : aucune durée, aucune date d'expiration calculable.
-        foreach (['passeport-ordinaire', 'casier-judiciaire'] as $key) {
-            $this->assertNull($rules[$key]['validity_months'], $key);
-            $this->assertFalse($rules[$key]['can_compute_expiry'], $key);
-            $this->assertSame('to_verify', $rules[$key]['status'], $key);
-        }
+        $this->assertNull($rules['passeport-ordinaire']['validity_months']);
+        $this->assertFalse($rules['passeport-ordinaire']['can_compute_expiry']);
+        $this->assertSame('to_verify', $rules['passeport-ordinaire']['status']);
+        // Casier : trois mois calendaires, exigence de l'équipe (calculée, sans source officielle).
+        $this->assertSame(3, $rules['casier-judiciaire']['validity_months']);
+        $this->assertSame('business_requirement', $rules['casier-judiciaire']['status']);
 
         // Actes d'état civil : pas de date d'expiration en soi (validité permanente, ou liée au statut pour le mariage).
         foreach (['acte-de-naissance' => 'permanent', 'acte-de-deces' => 'permanent', 'acte-de-mariage' => 'status_based'] as $key => $status) {

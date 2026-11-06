@@ -107,9 +107,9 @@ return [
         'validity_months' => null, 'validity_start' => 'not_applicable', 'status' => 'status_based',
         'renewal' => $etatCivilRenewal,
         'notes' => [
-            'Le mariage n’a pas de date d’expiration : l’acte reste valable tant que le mariage subsiste. En cas de divorce légalement prononcé, la mention du divorce doit être portée sur l’acte ; l’acte ne disparaît pas et reste la preuve du mariage passé.',
-            'A marriage certificate has no expiry date: it stays valid as long as the marriage lasts. If a divorce is legally granted, the divorce must be noted on the record; the certificate does not disappear and remains proof of the past marriage.',
-            'عقد الزواج ليس له تاريخ انتهاء: يبقى صالحًا ما دام الزواج قائمًا. عند صدور طلاق قانوني تُدوَّن الإشارة إليه في العقد؛ ولا يزول العقد، بل يبقى دليلًا على الزواج السابق.',
+            'Le mariage n’a pas de date d’expiration : l’acte est valable tant que le mariage subsiste. Après un divorce légalement prononcé, il n’est plus valable : une administration peut demander le jugement de divorce.',
+            'A marriage certificate has no expiry date: it stays valid as long as the marriage lasts. After a legally granted divorce, it is no longer valid: an administration may ask for the divorce judgment.',
+            'عقد الزواج ليس له تاريخ انتهاء: يبقى صالحًا ما دام الزواج قائمًا. بعد صدور طلاق قانوني لم يعد العقد صالحًا: قد تطلب الإدارة حكم الطلاق.',
         ],
         'source_label' => null, 'source_url' => null, 'source_date' => null, 'verified_on' => '2026-10-16',
     ],
@@ -128,7 +128,7 @@ return [
     [
         'key' => 'casier-judiciaire', 'position' => 8, 'category' => 'justice', 'demarche' => 'casier-judiciaire',
         'name' => ['Extrait de casier judiciaire (bulletin n°3)', 'Criminal record extract (bulletin no. 3)', 'مستخرج السجل العدلي (البطاقة رقم 3)'],
-        'validity_months' => null, 'validity_start' => 'unknown', 'status' => 'to_verify',
+        'validity_months' => 3, 'validity_start' => 'issue_date', 'status' => 'business_requirement',
         'renewal' => [
             'Un nouvel extrait se demande au tribunal compétent (voir la fiche casier judiciaire).',
             'A new extract is requested from the competent court (see the criminal record page).',
@@ -140,5 +140,21 @@ return [
             'لم يُعثر على مدة تنظيمية. يحمل المستخرج تاريخ صدوره، وتحدّد الجهة التي تطلبه المدة التي تقبلها — فاستفسر لديها.',
         ],
         'source_label' => null, 'source_url' => null, 'source_date' => null, 'verified_on' => '2026-10-16',
+    ],
+    [
+        'key' => 'laissez-passer-frontalier', 'position' => 12, 'category' => 'travel', 'demarche' => 'laissez-passer-frontalier',
+        'name' => ['Laissez-passer frontalier', 'Cross-border pass', 'تصريح عبور الحدود'],
+        'validity_months' => 12, 'validity_start' => 'issue_date', 'status' => 'business_requirement',
+        'renewal' => [
+            'Nouvelle demande auprès de la Direction de l’immigration ou de la préfecture frontalière.',
+            'New application to the Immigration Directorate or the border prefecture.',
+            'تقديم طلب جديد لدى مديرية الهجرة أو محافظة الحدود.',
+        ],
+        'notes' => [
+            'Validité d’un an à partir de la délivrance, selon l’exigence de l’équipe (cahier des charges v2.0). Non confirmée par une source officielle.',
+            'Valid one year from issue, per the team’s requirement (specifications v2.0). Not confirmed by an official source.',
+            'صالح لمدة سنة من تاريخ الإصدار، حسب متطلب الفريق (دفتر الشروط v2.0). غير مؤكد بمصدر رسمي.',
+        ],
+        'source_label' => 'Cahier des charges v2.0, page 8 (exigence de l’équipe)', 'source_url' => null, 'source_date' => null, 'verified_on' => null,
     ],
 ];

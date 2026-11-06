@@ -41,7 +41,7 @@ class DocumentValidityCalculator
         // Validité liée à un statut (ex. mariage) : pas d'expiration automatique ; le statut matrimonial prime.
         if ($rule->status === 'status_based') {
             return $this->result(self::STATE_STATUS_BASED, $issueDate, null, null, false,
-                'La validité de cet acte dépend de votre situation : il n’expire pas automatiquement. En cas de divorce légalement prononcé, la mention doit être portée sur l’acte ; l’acte historique reste une preuve du mariage passé.');
+                'Cet acte est valable tant que le mariage subsiste, sans date d’expiration. Après un divorce légalement prononcé, il n’est plus valable : présentez le jugement de divorce si une administration le demande.');
         }
 
         if (! $rule->canComputeExpiry()) {

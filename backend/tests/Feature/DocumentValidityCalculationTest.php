@@ -105,6 +105,35 @@ class DocumentValidityCalculationTest extends TestCase
         $this->assertStringContainsString('divorce', $result['message']);
     }
 
+    public function test_criminal_record_is_valid_three_calendar_months(): void
+    {
+        $rule = $this->rule(['key' => 'casier-judiciaire', 'validity_months' => 3, 'status' => 'business_requirement', 'validity_start' => 'issue_date']);
+
+        // Délivré le 31 août : valable jusqu'au 30 novembre (trois mois calendaires, pas 90 jours).
+        $this->assertSame('2026-11-30', $this->calc->evaluate($rule, '2026-08-31', Carbon::parse('2026-10-01'))['expiry_date']);
+
+        $expired = $this->calc->evaluate($rule, '2026-08-01', Carbon::parse('2026-11-06'));
+        $this->assertSame(DocumentValidityCalculator::STATE_EXPIRED, $expired['state']);
+        $this->assertStringContainsString('renouvellement à vérifier', $expired['message']);
+    }
+
+    public function test_cross_border_pass_is_valid_one_year(): void
+    {
+        $rule = $this->rule(['key' => 'test-laissez-passer', 'validity_months' => 12, 'status' => 'business_requirement', 'validity_start' => 'issue_date']);
+
+        $this->assertSame('2027-03-01', $this->calc->evaluate($rule, '2026-03-01', Carbon::parse('2026-11-06'))['expiry_date']);
+    }
+
+    public function test_marriage_certificate_is_no_longer_valid_after_a_divorce(): void
+    {
+        $rule = $this->rule(['key' => 'acte-de-mariage', 'validity_months' => null, 'status' => 'status_based', 'validity_start' => 'not_applicable']);
+
+        $result = $this->calc->evaluate($rule, '2015-06-01', Carbon::parse('2026-11-06'));
+        $this->assertNull($result['expiry_date']);
+        $this->assertStringContainsString('divorce', $result['message']);
+        $this->assertStringContainsString('plus valable', $result['message']);
+    }
+
     public function test_seed_data_gives_civil_status_acts_their_real_validity(): void
     {
         $rules = collect(require database_path('data/document_validity.php'))->keyBy('key');
