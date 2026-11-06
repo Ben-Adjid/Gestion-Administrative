@@ -186,6 +186,7 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
             Route::post('/categories/reorder', [AdminCategorieControllerFull::class, 'reorder'])->middleware('throttle:20,1,admin-post-categories-reorder');
             Route::put('/categories/{categorie}', [AdminCategorieControllerFull::class, 'update'])->middleware('throttle:20,1,admin-put-categories-categorie');
             Route::delete('/categories/{categorie}', [AdminCategorieControllerFull::class, 'destroy'])->middleware('throttle:10,1,admin-delete-categories-categorie');
+            Route::post('/categories/{categorie}/move-demarches', [AdminCategorieControllerFull::class, 'moveDemarches'])->middleware('throttle:10,1,admin-post-categories-move');
 
             Route::patch('/signalements/{signalement}/status', [AdminSignalementControllerFull::class, 'updateStatus'])->middleware('throttle:30,1,admin-patch-signalements-signalement-status');
             Route::delete('/signalements/{signalement}', [AdminSignalementControllerFull::class, 'destroy'])->middleware('throttle:10,1,admin-delete-signalements-signalement');

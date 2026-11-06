@@ -8,6 +8,7 @@ import ChatBox from '@/components/ChatBox';
 import { OfflineSupport } from '@/components/OfflineSupport';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { PreferencesProvider, usePreferences } from '@/contexts/PreferencesContext';
+import { ConfirmProvider } from '@/components/ConfirmProvider';
 
 function Chrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -31,7 +32,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <LanguageProvider>
       <PreferencesProvider>
-        <Chrome>{children}</Chrome>
+        <ConfirmProvider>
+          <Chrome>{children}</Chrome>
+        </ConfirmProvider>
       </PreferencesProvider>
     </LanguageProvider>
   );

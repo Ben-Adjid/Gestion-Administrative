@@ -6,6 +6,7 @@ import CitizenNav from '@/components/CitizenNav';
 import { API_V1_URL, fetchApi, splitFormErrors } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 interface ValidityOption { id: number; key: string; name: string; status: string; validity_months: number | null; can_compute_expiry: boolean }
 
@@ -63,6 +64,7 @@ const EMPTY = { type: 'cni', label: '', expiration_date: '', issue_date: '', val
 
 export default function DocumentsPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const [documents, setDocuments] = useState<UserDocument[] | null>(null);
   const [types, setTypes] = useState<string[]>([]);
   const [rules, setRules] = useState<ValidityOption[]>([]);
@@ -142,7 +144,7 @@ export default function DocumentsPage() {
   };
 
   const remove = async (doc: UserDocument) => {
-    if (!window.confirm(t('documents.confirm_delete', { name: nameOf(doc) }))) return;
+    if (!(await confirm({ title: t('documents.confirm_delete', { name: nameOf(doc) }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/me/documents/${doc.id}`, { method: 'DELETE' });
       setMessage(t('documents.deleted'));

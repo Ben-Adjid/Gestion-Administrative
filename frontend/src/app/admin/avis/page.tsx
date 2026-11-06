@@ -7,6 +7,7 @@ import { fetchApi } from '@/lib/api';
 import { formatFcfa } from '@/lib/format';
 import { formatDate, formatDays } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 type Status = 'pending' | 'approved' | 'rejected';
 
@@ -26,6 +27,7 @@ interface Review {
 /** Modération des avis des citoyens. */
 export default function ReviewsModerationPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const [status, setStatus] = useState<Status>('pending');
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -43,7 +45,7 @@ export default function ReviewsModerationPage() {
   useEffect(load, [load]);
 
   const act = async (review: Review, action: 'approved' | 'rejected' | 'delete') => {
-    if (action === 'delete' && !window.confirm(t('adx.confirm_delete', { name: review.comment.slice(0, 40) }))) return;
+    if (action === 'delete' && !(await confirm({ title: t('adx.confirm_delete', { name: review.comment.slice(0, 40) }), tone: 'danger' }))) return;
     setBusy(review.id);
     setError('');
     try {

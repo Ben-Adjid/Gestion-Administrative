@@ -5,6 +5,7 @@ import { Pencil, Plus, Trash2, X } from 'lucide-react';
 import { adminInput, adminLabel, AdminNotice, AdminShell, dangerButton, primaryButton, secondaryButton, smallButton } from '@/components/admin/AdminShell';
 import { fetchApi, splitFormErrors } from '@/lib/api';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 const CATEGORIES = ['identity', 'travel', 'transport', 'civil_status', 'justice', 'other'] as const;
 const STARTS = ['issue_date', 'not_applicable', 'unknown'] as const;
@@ -40,6 +41,7 @@ const FIELDS = ['key', 'name', 'name_en', 'name_ar', 'category', 'demarche_id', 
 /** Règles de validité des documents (calendrier) : aucune durée sans source, contrôlé aussi par l'API. */
 export default function ValidityRulesAdminPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const [rules, setRules] = useState<Rule[]>([]);
   const [demarches, setDemarches] = useState<Array<{ id: number; title: string }>>([]);
   const [loaded, setLoaded] = useState(false);
@@ -109,7 +111,7 @@ export default function ValidityRulesAdminPage() {
   };
 
   const remove = async (rule: Rule) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: rule.name }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: rule.name }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/admin/document-validity/${rule.id}`, { method: 'DELETE' });
       setMessage(t('adx.deleted'));

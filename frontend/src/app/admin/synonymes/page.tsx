@@ -5,12 +5,14 @@ import { ArrowLeftRight, Plus, Trash2 } from 'lucide-react';
 import { adminInput, adminLabel, AdminNotice, AdminShell, dangerButton, primaryButton } from '@/components/admin/AdminShell';
 import { fetchApi, splitFormErrors } from '@/lib/api';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 interface Synonym { id: number; term: string; synonym: string; is_active: boolean }
 
 /** Synonymes de recherche : « pièce d'identité » trouve aussi la carte d'identité, dans les deux sens. */
 export default function SynonymsAdminPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const [items, setItems] = useState<Synonym[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [form, setForm] = useState({ term: '', synonym: '' });
@@ -57,7 +59,7 @@ export default function SynonymsAdminPage() {
   };
 
   const remove = async (item: Synonym) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: `${item.term} ↔ ${item.synonym}` }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: `${item.term} ↔ ${item.synonym}` }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/admin/synonyms/${item.id}`, { method: 'DELETE' });
       setMessage(t('adx.deleted'));

@@ -8,6 +8,7 @@ import {
 import { fetchApi, splitFormErrors } from '@/lib/api';
 import { useAdminDemarches } from '@/hooks/useAdminDemarches';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 import type { Office } from '@/types';
 
 interface CityRow { id: number; name: string; name_ar: string | null; slug: string; province: string | null; is_active: boolean; display_order: number; offices_count: number }
@@ -23,6 +24,7 @@ const OFFICE_FIELDS = ['source_url', 'city_id', 'name', 'name_en', 'name_ar', 'a
 /** Villes et bureaux (guichets) où se font les démarches. */
 export default function CitiesAdminPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const demarches = useAdminDemarches();
   const [cities, setCities] = useState<CityRow[]>([]);
   const [offices, setOffices] = useState<Office[]>([]);
@@ -83,8 +85,8 @@ export default function CitiesAdminPage() {
     );
   };
 
-  const removeCity = (city: CityRow) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: city.name }))) return;
+  const removeCity = async (city: CityRow) => {
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: city.name }), tone: 'danger' }))) return;
     handle(() => fetchApi(`/admin/cities/${city.id}`, { method: 'DELETE' }), [], () => undefined, t('adx.deleted'));
   };
 
@@ -128,8 +130,8 @@ export default function CitiesAdminPage() {
     );
   };
 
-  const removeOffice = (office: Office) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: office.name }))) return;
+  const removeOffice = async (office: Office) => {
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: office.name }), tone: 'danger' }))) return;
     handle(() => fetchApi(`/admin/offices/${office.id}`, { method: 'DELETE' }), [], () => undefined, t('adx.deleted'));
   };
 

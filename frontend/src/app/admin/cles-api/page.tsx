@@ -6,6 +6,7 @@ import { adminInput, adminLabel, AdminNotice, AdminShell, dangerButton, primaryB
 import { fetchApi, splitFormErrors } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 interface ApiKey {
   id: number;
@@ -20,6 +21,7 @@ interface ApiKey {
 /** Clés API des partenaires (super administrateur) : accès sans limite de débit, usage compté. */
 export default function ApiKeysAdminPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const [items, setItems] = useState<ApiKey[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [name, setName] = useState('');
@@ -82,7 +84,7 @@ export default function ApiKeysAdminPage() {
   };
 
   const remove = async (item: ApiKey) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: item.name }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: item.name }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/admin/api-keys/${item.id}`, { method: 'DELETE' });
       setNewKey(null);

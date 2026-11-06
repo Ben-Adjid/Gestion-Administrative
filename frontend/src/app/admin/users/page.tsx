@@ -5,6 +5,7 @@ import { Edit3, Eye, EyeOff, KeyRound, Plus, Power, Trash2, Unlock, X } from 'lu
 import { AdminSidebar, useCurrentAdmin } from '@/components/AdminSidebar';
 import { fetchApi } from '@/lib/api';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 type Role = 'super_admin' | 'admin' | 'editor';
 
@@ -23,6 +24,7 @@ const input = 'mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2.5 text
 
 export default function AdminUsersPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const currentUser = useCurrentAdmin();
   const [users, setUsers] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
@@ -94,13 +96,13 @@ export default function AdminUsersPage() {
     }
   };
 
-  const toggleActive = (user: TeamMember) => {
-    if (user.is_active && !window.confirm(t('adm.u_confirm_toggle_off', { name: user.name }))) return;
+  const toggleActive = async (user: TeamMember) => {
+    if (user.is_active && !(await confirm({ title: t('adm.u_confirm_toggle_off', { name: user.name }) }))) return;
     void run(() => fetchApi(`/admin/users/${user.id}`, { method: 'PUT', body: JSON.stringify({ is_active: !user.is_active }) }), 'adm.u_done_toggled');
   };
 
-  const remove = (user: TeamMember) => {
-    if (!window.confirm(t('adm.u_confirm_delete', { name: user.name, email: user.email }))) return;
+  const remove = async (user: TeamMember) => {
+    if (!(await confirm({ title: t('adm.u_confirm_delete', { name: user.name, email: user.email }), tone: 'danger' }))) return;
     void run(() => fetchApi(`/admin/users/${user.id}`, { method: 'DELETE' }), 'adm.u_done_deleted');
   };
 

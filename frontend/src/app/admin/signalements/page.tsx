@@ -7,6 +7,7 @@ import { AdminSidebar, isModeratorRole, useCurrentAdmin } from '@/components/Adm
 import { downloadAdminFile, fetchApi } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 import { Signalement } from '@/types';
 
 type AdminSignalement = Signalement & { has_contact?: boolean };
@@ -20,6 +21,7 @@ const STATUS_STYLE: Record<Signalement['status'], string> = {
 
 export default function AdminSignalementsPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const currentUser = useCurrentAdmin();
   const isModerator = isModeratorRole(currentUser?.role);
   const [signalements, setSignalements] = useState<AdminSignalement[]>([]);
@@ -161,7 +163,7 @@ export default function AdminSignalementsPage() {
                             <Button size="sm" loading={updatingId === s.id} onClick={() => void update(s, 'resolved')}>
                               <Check size={15} aria-hidden="true" /> {t('adm.s_resolve')}
                             </Button>
-                            <Button variant="danger" size="sm" loading={updatingId === s.id} onClick={() => window.confirm(t('adm.s_confirm_reject')) && void update(s, 'rejected')}>
+                            <Button variant="danger" size="sm" loading={updatingId === s.id} onClick={async () => { if (await confirm({ title: t('adm.s_confirm_reject') })) void update(s, 'rejected'); }}>
                               <Ban size={15} aria-hidden="true" /> {t('adm.s_reject')}
                             </Button>
                           </>

@@ -9,6 +9,7 @@ import { fetchApi, splitFormErrors } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useAdminDemarches } from '@/hooks/useAdminDemarches';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 const CATEGORIES = ['elections', 'education', 'exams', 'identity', 'tax', 'other'] as const;
 const KINDS = ['period', 'deadline', 'event'] as const;
@@ -32,6 +33,7 @@ const FIELDS = ['kind', 'title', 'title_en', 'title_ar', 'description', 'descrip
 /** Calendrier administratif : dates publiées sur le site. */
 export default function CalendarAdminPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const demarches = useAdminDemarches();
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -88,7 +90,7 @@ export default function CalendarAdminPage() {
   };
 
   const remove = async (event: CalendarEvent) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: event.title }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: event.title }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/admin/calendar/${event.id}`, { method: 'DELETE' });
       setMessage(t('adx.deleted'));

@@ -9,6 +9,7 @@ import { LIFE_EVENT_ICONS, LifeEventIcon } from '@/components/LifeEventIcon';
 import { fetchApi, splitFormErrors } from '@/lib/api';
 import { useAdminDemarches } from '@/hooks/useAdminDemarches';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 interface LifeEvent {
   id: number; slug: string; icon: string; display_order: number; is_active: boolean;
@@ -23,6 +24,7 @@ const FIELDS = ['title', 'title_en', 'title_ar', 'description', 'description_en'
 /** Parcours de vie : une situation et ses démarches dans l'ordre. */
 export default function LifeEventsAdminPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const demarches = useAdminDemarches();
   const [events, setEvents] = useState<LifeEvent[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -86,7 +88,7 @@ export default function LifeEventsAdminPage() {
   };
 
   const remove = async (event: LifeEvent) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: event.title }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: event.title }), tone: 'danger' }))) return;
     try {
       await fetchApi(`/admin/life-events/${event.id}`, { method: 'DELETE' });
       setMessage(t('adx.deleted'));

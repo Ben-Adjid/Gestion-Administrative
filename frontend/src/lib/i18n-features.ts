@@ -105,8 +105,20 @@ const fr = {
     soon_title: 'Bientôt disponible',
     soon_text: 'La soumission de dossier en ligne est en cours de développement. En attendant, suivez les étapes de cette fiche et déposez votre dossier au guichet indiqué. Nous vous préviendrons dès l’ouverture du service.',
   },
+  confx: {
+    confirm: 'Confirmer',
+    cancel: 'Annuler',
+  },
   catx: {
     delete_blocked: 'Impossible de supprimer cette catégorie : elle contient {n} démarche(s). Déplacez-les ou archivez-les d’abord.',
+    move_btn: 'Déplacer les démarches',
+    move_title: 'Déplacer les démarches vers une autre catégorie',
+    move_hint: 'Toutes les démarches de cette catégorie, y compris les archivées, passeront dans la catégorie choisie.',
+    move_target: 'Catégorie de destination',
+    move_none: 'Aucune autre catégorie disponible. Créez-en une d’abord.',
+    move_confirm: 'Déplacer {n} démarche(s) de « {from} » vers « {to} » ?',
+    move_submit: 'Déplacer',
+    move_done: '{n} démarche(s) déplacée(s) vers « {to} ».',
   },
   covx: {
     title: 'Couverture géographique',
@@ -528,8 +540,20 @@ const en: FeatureMessages = {
     soon_title: 'Coming soon',
     soon_text: 'Online application is under development. Meanwhile, follow the steps on this page and file your application at the counter indicated. We will let you know when the service opens.',
   },
+  confx: {
+    confirm: 'Confirm',
+    cancel: 'Cancel',
+  },
   catx: {
     delete_blocked: 'Cannot delete this category: it contains {n} procedure(s). Move or archive them first.',
+    move_btn: 'Move procedures',
+    move_title: 'Move procedures to another category',
+    move_hint: 'All procedures in this category, including archived ones, will be moved to the chosen category.',
+    move_target: 'Destination category',
+    move_none: 'No other category is available. Create one first.',
+    move_confirm: 'Move {n} procedure(s) from “{from}” to “{to}”?',
+    move_submit: 'Move',
+    move_done: '{n} procedure(s) moved to “{to}”.',
   },
   covx: {
     title: 'Geographic coverage',
@@ -939,8 +963,20 @@ const ar: FeatureMessages = {
     soon_title: 'متاح قريبًا',
     soon_text: 'خدمة تقديم الملف إلكترونيًا قيد التطوير. في الأثناء، اتبع خطوات هذه الصفحة وقدّم ملفك في الشباك المذكور. سنخبرك عند فتح الخدمة.',
   },
+  confx: {
+    confirm: 'تأكيد',
+    cancel: 'إلغاء',
+  },
   catx: {
     delete_blocked: 'لا يمكن حذف هذه الفئة: تحتوي على {n} إجراء(ات). انقلها أو أرشفها أولًا.',
+    move_btn: 'نقل الإجراءات',
+    move_title: 'نقل الإجراءات إلى فئة أخرى',
+    move_hint: 'ستُنقل جميع الإجراءات في هذه الفئة، بما فيها المؤرشفة، إلى الفئة المختارة.',
+    move_target: 'الفئة المستهدفة',
+    move_none: 'لا توجد فئة أخرى متاحة. أنشئ واحدة أولًا.',
+    move_confirm: 'نقل {n} إجراء(ات) من «{from}» إلى «{to}»؟',
+    move_submit: 'نقل',
+    move_done: 'تم نقل {n} إجراء(ات) إلى «{to}».',
   },
   covx: {
     title: 'تغطية المناطق',

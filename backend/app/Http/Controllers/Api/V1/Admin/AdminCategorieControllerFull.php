@@ -7,6 +7,7 @@ use App\Models\ActivityLog;
 use App\Models\Categorie;
 use App\Http\Resources\Api\V1\CategorieResource;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
@@ -213,6 +214,57 @@ class AdminCategorieControllerFull extends Controller
             return response()->json([
                 'error' => 'Erreur lors de la réorganisation',
                 'message' => 'Les catégories n’ont pas pu être réorganisées.',
+            ], 500);
+        }
+    }
+
+    /**
+     * POST /api/v1/admin/categories/{id}/move-demarches
+     * Déplacer toutes les démarches d'une catégorie vers une autre (archivées incluses,
+     * pour que la catégorie d'origine puisse ensuite être supprimée).
+     */
+    public function moveDemarches(Request $request, Categorie $categorie)
+    {
+        $validated = $request->validate([
+            'target_category_id' => ['required', 'integer', 'exists:categories,id', Rule::notIn([$categorie->id])],
+        ]);
+
+        $target = Categorie::findOrFail($validated['target_category_id']);
+
+        try {
+            $moved = \DB::transaction(function () use ($categorie, $target) {
+                $count = \App\Models\Demarche::withTrashed()->where('categorie_id', $categorie->id)->count();
+                if ($count > 0) {
+                    \App\Models\Demarche::withTrashed()
+                        ->where('categorie_id', $categorie->id)
+                        ->update(['categorie_id' => $target->id, 'updated_at' => now()]);
+                }
+                return $count;
+            });
+
+            ActivityLog::logAction(
+                $request->user()->id,
+                'move_demarches_category',
+                "Déplacement de {$moved} démarche(s) de « {$categorie->name} » vers « {$target->name} »",
+                Categorie::class,
+                $target->id,
+                ['categorie_id' => $categorie->id],
+                ['categorie_id' => $target->id],
+            );
+
+            return response()->json([
+                'message' => $moved > 0
+                    ? "{$moved} démarche(s) déplacée(s) vers « {$target->name} »."
+                    : 'Cette catégorie ne contient aucune démarche à déplacer.',
+                'moved' => $moved,
+                'source_category_id' => $categorie->id,
+                'target_category_id' => $target->id,
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Failed to move demarches between categories.', ['category_id' => $categorie->id, 'exception' => $e]);
+            return response()->json([
+                'error' => 'Erreur lors du déplacement',
+                'message' => 'Les démarches n’ont pas pu être déplacées.',
             ], 500);
         }
     }

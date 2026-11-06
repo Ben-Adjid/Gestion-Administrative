@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import { AdminSidebar, useCurrentAdmin } from '@/components/AdminSidebar';
 import { fetchApi } from '@/lib/api';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 import { Categorie } from '@/types';
 
 type AdminCategorie = Categorie & { translations?: Record<'en' | 'ar', { name: string | null; description: string | null }> };
@@ -25,6 +26,7 @@ const input = 'mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2.5 text
 
 export default function AdminCategoriesPage() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const currentUser = useCurrentAdmin();
   const [categories, setCategories] = useState<AdminCategorie[]>([]);
   const [loading, setLoading] = useState(true);
@@ -34,6 +36,9 @@ export default function AdminCategoriesPage() {
   const [form, setForm] = useState<CategoryForm>(emptyForm);
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
+  const [moveOpenId, setMoveOpenId] = useState<number | null>(null);
+  const [moveTargetId, setMoveTargetId] = useState('');
+  const [moving, setMoving] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -137,7 +142,7 @@ export default function AdminCategoriesPage() {
   };
 
   const remove = async (category: AdminCategorie) => {
-    if (!window.confirm(t('adm.c_confirm_delete', { name: category.name }))) return;
+    if (!(await confirm({ title: t('adm.c_confirm_delete', { name: category.name }), tone: 'danger' }))) return;
     setError('');
     setNotice('');
     try {
@@ -146,6 +151,37 @@ export default function AdminCategoriesPage() {
       await load();
     } catch (err) {
       setError(err instanceof Error ? err.message : t('adm.action_error'));
+    }
+  };
+
+  // Déplacer toutes les démarches d'une catégorie vers une autre (archivées incluses), avant suppression éventuelle.
+  const openMove = (category: AdminCategorie) => {
+    setMoveOpenId(moveOpenId === category.id ? null : category.id);
+    setMoveTargetId('');
+    setError('');
+    setNotice('');
+  };
+
+  const moveDemarches = async (source: AdminCategorie) => {
+    const target = categories.find((c) => String(c.id) === moveTargetId);
+    if (!target) return;
+    const count = source.demarches_count ?? 0;
+    if (!(await confirm({ title: t('catx.move_confirm', { n: count, from: source.name, to: target.name }) }))) return;
+    setMoving(true);
+    setError('');
+    setNotice('');
+    try {
+      await fetchApi(`/admin/categories/${source.id}/move-demarches`, {
+        method: 'POST',
+        body: JSON.stringify({ target_category_id: target.id }),
+      });
+      setNotice(t('catx.move_done', { n: count, to: target.name }));
+      setMoveOpenId(null);
+      await load();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('adm.action_error'));
+    } finally {
+      setMoving(false);
     }
   };
 
@@ -247,6 +283,40 @@ export default function AdminCategoriesPage() {
                     </Button>
                     </span>
                   </div>
+                  {(category.demarches_count ?? 0) > 0 && (
+                    <div className="mt-3">
+                      <Button variant="secondary" size="sm" className="w-full whitespace-nowrap" onClick={() => openMove(category)}>
+                        {t('catx.move_btn')}
+                      </Button>
+                      {moveOpenId === category.id && (
+                        <div className="mt-3 rounded-xl bg-slate-50 p-4">
+                          <p className="text-sm font-semibold text-slate-900">{t('catx.move_title')}</p>
+                          <p className="mt-1 text-xs leading-5 text-slate-600">{t('catx.move_hint')}</p>
+                          {categories.length < 2 ? (
+                            <p className="mt-3 text-sm text-slate-600">{t('catx.move_none')}</p>
+                          ) : (
+                            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                              <label className="sr-only" htmlFor={`move-target-${category.id}`}>{t('catx.move_target')}</label>
+                              <select
+                                id={`move-target-${category.id}`}
+                                value={moveTargetId}
+                                onChange={(e) => setMoveTargetId(e.target.value)}
+                                className="min-h-11 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+                              >
+                                <option value="">{t('catx.move_target')}…</option>
+                                {categories.filter((c) => c.id !== category.id).map((c) => (
+                                  <option key={c.id} value={String(c.id)}>{c.name}</option>
+                                ))}
+                              </select>
+                              <Button size="sm" disabled={!moveTargetId || moving} loading={moving} onClick={() => void moveDemarches(category)}>
+                                {t('catx.move_submit')}
+                              </Button>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </article>
               ))}
             </div>

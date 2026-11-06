@@ -7,6 +7,7 @@ import { AdminSidebar, isModeratorRole, useCurrentAdmin } from '@/components/Adm
 import { downloadAdminFile, fetchApi } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 import { Categorie, Demarche } from '@/types';
 
 const TEXT_FIELDS = ['title', 'summary', 'description', 'cost', 'processing_time', 'validity', 'institution', 'location'] as const;
@@ -56,6 +57,7 @@ const input = 'mt-1.5 w-full rounded-lg border border-slate-300 px-3 py-2.5 text
 
 export default function AdminDemarchesPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const currentUser = useCurrentAdmin();
   const isModerator = isModeratorRole(currentUser?.role);
 
@@ -233,7 +235,7 @@ export default function AdminDemarchesPage() {
   };
 
   const runAction = async (demarche: AdminDemarche, action: 'delete' | 'restore' | 'publish' | 'unpublish') => {
-    if (!window.confirm(t(`adm.d_confirm_${action}`, { title: demarche.title }))) return;
+    if (!(await confirm({ title: t(`adm.d_confirm_${action}`, { title: demarche.title }), tone: action === 'delete' ? 'danger' : 'default' }))) return;
     setActionId(demarche.id);
     setError('');
     setNotice('');

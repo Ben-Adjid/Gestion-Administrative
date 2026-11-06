@@ -6,6 +6,7 @@ import { adminInput, AdminNotice, AdminShell, dangerButton, primaryButton, small
 import { fetchApi } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 type Filter = 'pending' | 'pending_answers' | 'published' | 'rejected';
 type Status = 'pending' | 'published' | 'rejected';
@@ -19,6 +20,7 @@ interface Question {
 /** Modération des questions-réponses et réponses officielles. */
 export default function QuestionsModerationPage() {
   const { language, t } = useLanguage();
+  const confirm = useConfirm();
   const [filter, setFilter] = useState<Filter>('pending');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loaded, setLoaded] = useState(false);
@@ -55,8 +57,8 @@ export default function QuestionsModerationPage() {
     run(() => fetchApi(`/admin/questions/${question.id}`, { method: 'PATCH', body: JSON.stringify({ status }) }), t('adx.saved'));
   const moderateAnswer = (answer: Answer, status: 'published' | 'rejected') =>
     run(() => fetchApi(`/admin/answers/${answer.id}`, { method: 'PATCH', body: JSON.stringify({ status }) }), t('adx.saved'));
-  const removeQuestion = (question: Question) => {
-    if (!window.confirm(t('adx.confirm_delete', { name: question.body.slice(0, 40) }))) return;
+  const removeQuestion = async (question: Question) => {
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: question.body.slice(0, 40) }), tone: 'danger' }))) return;
     run(() => fetchApi(`/admin/questions/${question.id}`, { method: 'DELETE' }), t('adx.deleted'));
   };
   const answer = (question: Question) =>

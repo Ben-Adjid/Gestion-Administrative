@@ -5,6 +5,7 @@ import CitizenNav from '@/components/CitizenNav';
 import { ApiError, fetchApi, splitFormErrors } from '@/lib/api';
 import { formatDate, isLanguage, LANGUAGE_LABELS, LANGUAGES } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useConfirm } from '@/components/ConfirmProvider';
 
 interface Profile {
   name: string;
@@ -107,13 +108,14 @@ export default function ProfilePage() {
 /** Suppression définitive du compte : mot de passe exigé et confirmation explicite. */
 function DeleteAccount() {
   const { t } = useLanguage();
+  const confirm = useConfirm();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [deleting, setDeleting] = useState(false);
 
   const submit = async (event: FormEvent) => {
     event.preventDefault();
-    if (!window.confirm(t('profile.delete_confirm'))) return;
+    if (!(await confirm({ title: t('profile.delete_confirm'), tone: 'danger' }))) return;
     setDeleting(true);
     setError('');
     try {
