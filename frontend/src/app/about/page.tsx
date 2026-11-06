@@ -10,28 +10,28 @@ export default function AboutPage() {
 
   const content = {
     fr: {
-      title: 'A Propos',
-      subtitle: 'DemarchesTchad - Cree par Aboubakar Assedick Mahamat adjid Oumar',
+      title: 'À propos',
+      subtitle: 'DemarchesTchad - Créé par Aboubakar Assedick Mahamat Adjid Oumar',
       mission: 'Mission',
-      missionText: 'DemarchesTchad est un projet personnel pour simplifier l acces aux informations administratives au Tchad.',
-      missionText2: 'Nous mettons a disposition des citoyens tchadiens tous les details essentiels sur les demarches publiques.',
-      objective: 'Objectif: plus de transparence, moins de confusion, zero surfacturation.',
+      missionText: 'DemarchesTchad est un projet personnel pour simplifier l’accès aux informations administratives au Tchad.',
+      missionText2: 'Nous mettons à disposition des citoyens tchadiens tous les détails essentiels sur les démarches publiques.',
+      objective: 'Objectif : plus de transparence, moins de confusion, zéro surfacturation.',
       values: 'Nos Valeurs',
       citizen: 'Au Service du Citoyen',
       citizenDesc: 'Le portail existe pour vous simplifier la vie administrative.',
-      access: 'Acces Pour Tous',
-      accessDesc: 'Information gratuite, accessible 24/7, sans barriere.',
-      efficiency: 'Efficacite',
-      efficiencyDesc: 'Trouve rapidement ce que tu cherches.',
-      government: 'Cree par Aboubakar Assedick Mahamat adjid Oumar',
-      govText: 'Ce portail est un projet personnel cree par Aboubakar Assedick Mahamat adjid Oumar, ingenieur en logiciel.',
-      cta: 'Pret a commencer?',
-      ctaText: 'Accedez au catalogue complet de demarches administratives',
-      button: 'Acceder au Catalogue',
+      access: 'Accès pour tous',
+      accessDesc: 'Information gratuite, accessible 24 h/24 et 7 j/7, sans barrière.',
+      efficiency: 'Efficacité',
+      efficiencyDesc: 'Trouvez rapidement ce que vous cherchez.',
+      government: 'Créé par Aboubakar Assedick Mahamat Adjid Oumar',
+      govText: 'Ce portail est un projet personnel créé par Aboubakar Assedick Mahamat Adjid Oumar, ingénieur logiciel.',
+      cta: 'Prêt à commencer ?',
+      ctaText: 'Accédez au catalogue complet des démarches administratives',
+      button: 'Accéder au catalogue',
     },
     en: {
       title: 'About',
-      subtitle: 'DemarchesTchad - Created by Aboubakar Assedick Mahamat adjid Oumar',
+      subtitle: 'DemarchesTchad - Created by Aboubakar Assedick Mahamat Adjid Oumar',
       mission: 'Mission',
       missionText: 'DemarchesTchad is a personal project to simplify access to administrative information in Chad.',
       missionText2: 'We provide all essential details about public procedures to Chadian citizens.',
@@ -43,8 +43,8 @@ export default function AboutPage() {
       accessDesc: 'Free information, accessible 24/7, without barriers.',
       efficiency: 'Efficiency',
       efficiencyDesc: 'Find quickly what you are looking for.',
-      government: 'Created by Aboubakar Assedick Mahamat adjid Oumar',
-      govText: 'This portal is a personal project created by Aboubakar Assedick Mahamat adjid Oumar, Software Engineer.',
+      government: 'Created by Aboubakar Assedick Mahamat Adjid Oumar',
+      govText: 'This portal is a personal project created by Aboubakar Assedick Mahamat Adjid Oumar, Software Engineer.',
       cta: 'Ready to get started?',
       ctaText: 'Access the complete catalog of administrative procedures',
       button: 'Access Catalog',
@@ -109,8 +109,8 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-6 h-6 text-blue-700 shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold text-gray-950">{language === 'fr' ? 'A jour' : language === 'en' ? 'Up-to-date' : 'محدث'}</h3>
-                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Informations verifiees' : language === 'en' ? 'Information verified' : 'معلومات محدثة'}</p>
+                  <h3 className="font-bold text-gray-950">{language === 'fr' ? 'Transparent' : language === 'en' ? 'Up-to-date' : 'محدث'}</h3>
+                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Sources et dates indiquées' : language === 'en' ? 'Information verified' : 'معلومات محدثة'}</p>
                 </div>
               </div>
             </div>

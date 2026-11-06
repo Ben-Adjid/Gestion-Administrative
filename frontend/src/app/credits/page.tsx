@@ -10,7 +10,7 @@ export default function CreditsPage() {
       title: 'Crédits & Mentions',
       subtitle: 'Un projet personnel au service des citoyens tchadiens',
       creator: 'Créateur & Développeur Principal',
-      creatorName: 'Aboubakar Assedick Mahamat adjid Oumar',
+      creatorName: 'Aboubakar Assedick Mahamat Adjid Oumar',
       creatorTitle: 'Ingénieur en Logiciel',
       creatorBio: 'Jeune ingénieur en génie logiciel passionné par la résolution de problèmes administratifs et la création de solutions numériques accessibles.',
       mission: 'Mission du Projet',
@@ -20,7 +20,7 @@ export default function CreditsPage() {
       backend: 'Backend',
       database: 'Base de Données',
       features: 'Fonctionnalités Principales',
-      feature1: 'Catalogue de 6+ démarches administratives avec détails complets',
+      feature1: 'Catalogue de 80 démarches administratives avec détails complets',
       feature2: 'Système d\'authentification sécurisé pour les administrateurs',
       feature3: 'Gestion complète des démarches (création, modification, suppression)',
       feature4: 'Système de signalement pour les anomalies',
@@ -37,7 +37,7 @@ export default function CreditsPage() {
       title: 'Credits & Mentions',
       subtitle: 'A personal project serving Chadian citizens',
       creator: 'Creator & Lead Developer',
-      creatorName: 'Aboubakar Assedick Mahamat adjid Oumar',
+      creatorName: 'Aboubakar Assedick Mahamat Adjid Oumar',
       creatorTitle: 'Software Engineer',
       creatorBio: 'Young software engineer passionate about solving administrative problems and creating accessible digital solutions.',
       mission: 'Project Mission',
@@ -47,7 +47,7 @@ export default function CreditsPage() {
       backend: 'Backend',
       database: 'Database',
       features: 'Key Features',
-      feature1: 'Catalog of 6+ administrative procedures with complete details',
+      feature1: 'Catalog of 80 administrative procedures with complete details',
       feature2: 'Secure authentication system for administrators',
       feature3: 'Complete procedure management (create, edit, delete)',
       feature4: 'Anomaly reporting system',
@@ -74,7 +74,7 @@ export default function CreditsPage() {
       backend: 'الواجهة الخلفية',
       database: 'قاعدة البيانات',
       features: 'الميزات الرئيسية',
-      feature1: 'فهرس يضم 6+ إجراءات إدارية مع تفاصيل كاملة',
+      feature1: 'فهرس يضم 80 إجراءً إدارياً مع تفاصيل كاملة',
       feature2: 'نظام مصادقة آمن للمسؤولين',
       feature3: 'إدارة كاملة للإجراءات (الإنشاء والتعديل والحذف)',
       feature4: 'نظام الإبلاغ عن الشذوذ',
@@ -90,6 +90,12 @@ export default function CreditsPage() {
   };
 
   const c = content[language as keyof typeof content] || content.fr;
+  const L = (fr: string, en: string, ar: string) => (language === 'fr' ? fr : language === 'en' ? en : ar);
+  // Liens réseaux : affichés seulement si l'adresse est renseignée dans la configuration du site.
+  const socials = [
+    { label: 'LinkedIn', href: process.env.NEXT_PUBLIC_LINKEDIN_URL },
+    { label: 'Facebook', href: process.env.NEXT_PUBLIC_FACEBOOK_URL },
+  ].filter((item): item is { label: string; href: string } => Boolean(item.href));
 
   return (
     <main className="min-h-screen bg-white">
@@ -111,6 +117,18 @@ export default function CreditsPage() {
           <p className="text-2xl font-bold text-[#002664] mb-2">{c.creatorName}</p>
           <p className="text-lg text-gray-700 mb-4 italic">{c.creatorTitle}</p>
           <p className="text-gray-700 text-lg leading-relaxed">{c.creatorBio}</p>
+          <ul className="mt-4 flex flex-wrap gap-2" aria-label={L('Compétences', 'Skills', 'المهارات')}>
+            {[L('Analyse de données', 'Data analysis', 'تحليل البيانات'), L('Administration réseau', 'Network administration', 'إدارة الشبكات'), L('Développeur backend spécialisé', 'Specialised backend developer', 'مطوّر خلفية متخصص')].map((skill) => (
+              <li key={skill} className="rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-900">{skill}</li>
+            ))}
+          </ul>
+          {socials.length > 0 && (
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {socials.map((item) => (
+                <li key={item.label}><a href={item.href} target="_blank" rel="noreferrer noopener" className="font-semibold text-blue-800 underline">{item.label}</a></li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Mission */}
@@ -150,17 +168,17 @@ export default function CreditsPage() {
               <ul className="space-y-2 text-gray-700">
                 <li>• Laravel 11</li>
                 <li>• PHP 8.2</li>
-                <li>• Sanctum Auth</li>
-                <li>• RESTful API</li>
+                <li>• {L('Authentification Sanctum', 'Sanctum authentication', 'مصادقة Sanctum')}</li>
+                <li>• {L('API REST', 'RESTful API', 'واجهة برمجة REST')}</li>
               </ul>
             </div>
             <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
               <h3 className="text-xl font-bold text-gray-950 mb-4">{c.database}</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• MySQL 8</li>
-                <li>• Migrations</li>
-                <li>• Seeders</li>
-                <li>• Soft Deletes</li>
+                <li>• {L('Migrations de base de données', 'Database migrations', 'ترحيلات قاعدة البيانات')}</li>
+                <li>• {L('Données initiales (seeders)', 'Initial data (seeders)', 'بيانات أولية (seeders)')}</li>
+                <li>• {L('Suppressions réversibles', 'Soft deletes', 'حذف قابل للاسترجاع')}</li>
               </ul>
             </div>
           </div>
