@@ -33,12 +33,12 @@ export default async function Image({ params }: { params: { slug: string } }) {
           {fiche && (
             <div style={{ display: 'flex', gap: 30, marginTop: 'auto' }}>
               <div style={{ display: 'flex', flexDirection: 'column', background: '#ecfdf5', borderRadius: 20, padding: '24px 34px' }}>
-                <span style={{ fontSize: 26, color: '#047857' }}>Coût · Cost</span>
+                <span style={{ fontSize: 26, color: '#047857' }}>Coût</span>
                 <span style={{ fontSize: 44, fontWeight: 800 }}>{fiche.cost}</span>
               </div>
               {fiche.processing_time && (
                 <div style={{ display: 'flex', flexDirection: 'column', background: '#fffbeb', borderRadius: 20, padding: '24px 34px' }}>
-                  <span style={{ fontSize: 26, color: '#b45309' }}>Délai · Delay</span>
+                  <span style={{ fontSize: 26, color: '#b45309' }}>Délai</span>
                   <span style={{ fontSize: 44, fontWeight: 800 }}>{fiche.processing_time}</span>
                 </div>
               )}

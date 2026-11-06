@@ -18,8 +18,8 @@ export default function Image() {
         <div style={{ marginTop: 70, fontSize: 64, fontWeight: 800, lineHeight: 1.15, maxWidth: 1000 }}>
           Pièces à fournir, coût, délai et lieu de vos démarches au Tchad
         </div>
-        {/* Image générée par le serveur, sans langue choisie : texte bilingue (le site reste en fr/en/ar). */}
-        <div style={{ marginTop: 'auto', fontSize: 30, color: '#bfdbfe' }}>Guide citoyen indépendant · Independent guide · gratuit · free · sans inscription</div>
+        {/* Image générée par le serveur, sans langue choisie par la personne qui la voit : texte en français uniquement. */}
+        <div style={{ marginTop: 'auto', fontSize: 30, color: '#bfdbfe' }}>Guide citoyen indépendant · gratuit · sans inscription</div>
       </div>
     ),
     size,

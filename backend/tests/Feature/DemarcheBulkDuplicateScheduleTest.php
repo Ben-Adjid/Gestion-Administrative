@@ -88,6 +88,23 @@ class DemarcheBulkDuplicateScheduleTest extends TestCase
         $this->assertDatabaseHas('demarches', ['id' => $a->id, 'status' => 'draft']);
     }
 
+    public function test_status_change_through_a_plain_update_is_logged_as_publication(): void
+    {
+        $this->actingAs($this->admin(), 'sanctum');
+        $cat = $this->category();
+        $a = $this->demarche($cat, 'Fiche publiée par modification');
+
+        $this->putJson("/api/v1/admin/demarches/{$a->id}", ['status' => 'published'])->assertOk();
+
+        $this->assertDatabaseHas('demarches', ['id' => $a->id, 'status' => 'published']);
+        $this->assertTrue(
+            \App\Models\ActivityLog::where('subject_type', Demarche::class)
+                ->where('subject_id', $a->id)
+                ->where('action', 'publish_demarche')
+                ->exists()
+        );
+    }
+
     public function test_editor_cannot_bulk_archive(): void
     {
         $this->actingAs($this->admin('editor', 'editor3@test.td'), 'sanctum');

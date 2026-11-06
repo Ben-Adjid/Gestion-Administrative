@@ -96,7 +96,7 @@ export default function AboutPage() {
                 <CheckCircle2 className="w-6 h-6 text-blue-700 shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-gray-950">{language === 'fr' ? 'Transparent' : language === 'en' ? 'Transparent' : 'شفاف'}</h3>
-                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Tous les couts et delais' : language === 'en' ? 'All costs and delays' : 'جميع التكاليف'}</p>
+                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Tous les coûts et délais' : language === 'en' ? 'All costs and delays' : 'جميع التكاليف والمدد'}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -109,8 +109,8 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-6 h-6 text-blue-700 shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold text-gray-950">{language === 'fr' ? 'Transparent' : language === 'en' ? 'Up-to-date' : 'محدث'}</h3>
-                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Sources et dates indiquées' : language === 'en' ? 'Information verified' : 'معلومات محدثة'}</p>
+                  <h3 className="font-bold text-gray-950">{language === 'fr' ? 'Vérifiable' : language === 'en' ? 'Verifiable' : 'قابل للتحقق'}</h3>
+                  <p className="text-sm text-gray-600">{language === 'fr' ? 'Sources et dates indiquées' : language === 'en' ? 'Sources and dates shown' : 'المصادر والتواريخ معروضة'}</p>
                 </div>
               </div>
             </div>

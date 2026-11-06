@@ -371,6 +371,7 @@ class AdminDemarcheControllerFull extends Controller
         $officeIds = array_key_exists('office_ids', $data) ? ($data['office_ids'] ?? []) : null;
         $data = array_diff_key($data, array_flip(['office_ids', 'extra_costs'])) + $this->extraData($data);
 
+        $previousStatus = $demarche->status;
         $old = $demarche->only(self::SNAPSHOT_FIELDS);
         $data['updated_by'] = $request->user()->id;
         $demarche->update($data);
@@ -379,6 +380,12 @@ class AdminDemarcheControllerFull extends Controller
         }
 
         $this->log($request, 'update_demarche', "Modification de la démarche « {$demarche->title} »", $demarche, $old, $demarche->only(self::SNAPSHOT_FIELDS));
+
+        // Un changement de statut dans une simple modification est tracé comme une vraie publication, dépublication ou archivage.
+        if (array_key_exists('status', $data) && $data['status'] !== $previousStatus) {
+            $statusAction = ['published' => 'publish_demarche', 'archived' => 'archive_demarche'][$data['status']] ?? 'unpublish_demarche';
+            $this->log($request, $statusAction, "Changement de statut de « {$demarche->title} » : {$previousStatus} → {$data['status']}", $demarche, ['status' => $previousStatus], ['status' => $data['status']]);
+        }
 
         return response()->json([
             'message' => 'Démarche mise à jour avec succès.',
