@@ -70,7 +70,7 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
         Route::get('/geo/search', [GeoPublicController::class, 'search']);
         Route::get('/geo/coverage', [GeoCoverageController::class, 'coverage']);
         Route::post('/geo/suggestions', [GeoCoverageController::class, 'suggest'])->middleware('throttle:10,1');
-        Route::post('/contact', [ContactPublicController::class, 'store'])->middleware('throttle:10,1');
+        Route::post('/contact', [ContactPublicController::class, 'store'])->middleware(['throttle:10,1', 'turnstile']);
         Route::get('/calendar/{id}.ics', [ReferencePublicController::class, 'calendarIcs'])->whereNumber('id');
         Route::get('/questions', [CommunityPublicController::class, 'questions']);
         Route::get('/categories', [DemarchePublicController::class, 'categories']);
@@ -79,11 +79,11 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
     });
     Route::post('/analytics/page-views', [PageViewController::class, 'store'])->middleware('throttle:120,1,post-analytics-page-views');
     Route::post('/demarches/{slug}/view', [DemarchePublicController::class, 'recordView'])->middleware('throttle:30,1,post-demarches-slug-view');
-    Route::post('/signalements', [SignalementPublicController::class, 'store'])->middleware('throttle:10,1,post-signalements');
+    Route::post('/signalements', [SignalementPublicController::class, 'store'])->middleware(['throttle:10,1,post-signalements', 'turnstile']);
     // Contributions sans compte : la limite horaire réelle est appliquée dans le contrôleur (envois réussis uniquement).
-    Route::post('/demarches/{slug}/reviews', [CommunityPublicController::class, 'storeReview'])->middleware('throttle:10,1,post-reviews');
-    Route::post('/questions', [CommunityPublicController::class, 'storeQuestion'])->middleware('throttle:10,1,post-questions');
-    Route::post('/questions/{question}/answers', [CommunityPublicController::class, 'storeAnswer'])->middleware('throttle:10,1,post-answers');
+    Route::post('/demarches/{slug}/reviews', [CommunityPublicController::class, 'storeReview'])->middleware(['throttle:10,1,post-reviews', 'turnstile']);
+    Route::post('/questions', [CommunityPublicController::class, 'storeQuestion'])->middleware(['throttle:10,1,post-questions', 'turnstile']);
+    Route::post('/questions/{question}/answers', [CommunityPublicController::class, 'storeAnswer'])->middleware(['throttle:10,1,post-answers', 'turnstile']);
 
     // Assistant WhatsApp (actif seulement si les clés WhatsApp Business sont configurées)
     Route::get('/whatsapp/webhook', [WhatsAppController::class, 'verify'])->middleware('throttle:30,1,whatsapp-verify');
@@ -93,9 +93,9 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
     // 2. ESPACE CITOYEN
     // ==========================================
     Route::prefix('auth')->group(function () {
-        Route::post('/register', [AuthUserController::class, 'register'])->middleware('throttle:5,1,citizen-auth-register')->name('auth.register');
-        Route::post('/login', [AuthUserController::class, 'login'])->middleware('throttle:5,1,citizen-auth-login')->name('auth.login');
-        Route::post('/forgot-password', [AuthUserController::class, 'forgotPassword'])->middleware('throttle:3,1,citizen-auth-forgot-password');
+        Route::post('/register', [AuthUserController::class, 'register'])->middleware(['throttle:5,1,citizen-auth-register', 'turnstile'])->name('auth.register');
+        Route::post('/login', [AuthUserController::class, 'login'])->middleware(['throttle:5,1,citizen-auth-login', 'turnstile'])->name('auth.login');
+        Route::post('/forgot-password', [AuthUserController::class, 'forgotPassword'])->middleware(['throttle:3,1,citizen-auth-forgot-password', 'turnstile']);
         Route::post('/reset-password', [AuthUserController::class, 'resetPassword'])->middleware('throttle:3,1,citizen-auth-reset-password');
 
         Route::middleware(['auth:sanctum', 'citizen', 'throttle:200,1,citizen-session'])->group(function () {
@@ -127,7 +127,7 @@ Route::prefix('v1')->group(function () use ($staff, $moderators, $superAdmin) {
     // 3. BACK-OFFICE
     // ==========================================
     Route::prefix('admin/auth')->group(function () use ($staff) {
-        Route::post('/login', [AuthAdminController::class, 'login'])->middleware('throttle:5,1,admin-auth-login');
+        Route::post('/login', [AuthAdminController::class, 'login'])->middleware(['throttle:5,1,admin-auth-login', 'turnstile']);
 
         Route::middleware(['auth:sanctum', $staff, 'throttle:200,1,admin-session'])->group(function () {
             Route::get('/me', [AuthAdminController::class, 'me']);

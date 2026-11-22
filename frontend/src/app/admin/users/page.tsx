@@ -204,7 +204,7 @@ export default function AdminUsersPage() {
               <button type="button" onClick={() => setModal(null)} aria-label={t('common.close')}><X className="h-6 w-6" /></button>
             </div>
 
-            <form onSubmit={submit} className="space-y-5 p-6">
+            <form onSubmit={submit} noValidate className="space-y-5 p-6">
               {formError && <p role="alert" className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">{formError}</p>}
 
               {modal.type !== 'password' && (

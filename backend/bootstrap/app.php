@@ -30,6 +30,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => \App\Http\Middleware\CheckAdminRole::class,
             'citizen' => \App\Http\Middleware\EnsureCitizen::class,
+            'turnstile' => \App\Http\Middleware\VerifyTurnstile::class,
         ]);
         $middleware->validateCsrfTokens(except: [
             'api/*',

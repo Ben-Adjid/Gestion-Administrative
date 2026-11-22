@@ -54,10 +54,14 @@ export default function QuestionsModerationPage() {
     }
   };
 
-  const moderateQuestion = (question: Question, status: 'published' | 'rejected') =>
+  const moderateQuestion = async (question: Question, status: 'published' | 'rejected') => {
+    if (status === 'published' && !(await confirm({ title: t('adx.confirm_publish', { name: clip(question.body, 40) }) }))) return;
     run(() => fetchApi(`/admin/questions/${question.id}`, { method: 'PATCH', body: JSON.stringify({ status }) }), t('adx.saved'));
-  const moderateAnswer = (answer: Answer, status: 'published' | 'rejected') =>
+  };
+  const moderateAnswer = async (answer: Answer, status: 'published' | 'rejected') => {
+    if (status === 'published' && !(await confirm({ title: t('adx.confirm_publish', { name: clip(answer.body, 40) }) }))) return;
     run(() => fetchApi(`/admin/answers/${answer.id}`, { method: 'PATCH', body: JSON.stringify({ status }) }), t('adx.saved'));
+  };
   const removeQuestion = async (question: Question) => {
     if (!(await confirm({ title: t('adx.confirm_delete', { name: clip(question.body, 40) }), tone: 'danger' }))) return;
     run(() => fetchApi(`/admin/questions/${question.id}`, { method: 'DELETE' }), t('adx.deleted'));
@@ -127,7 +131,7 @@ export default function QuestionsModerationPage() {
                 <label className="block text-sm font-semibold text-slate-700" htmlFor={`answer-${question.id}`}>{t('adx.q_answer')}</label>
                 <textarea id={`answer-${question.id}`} rows={3} maxLength={3000} value={drafts[question.id] || ''} onChange={(e) => setDrafts((d) => ({ ...d, [question.id]: e.target.value }))} placeholder={t('adx.q_answer_ph')} className={adminInput} />
                 {question.author_email && <p className="mt-1 text-xs text-slate-500">{t('adx.q_email_note')}</p>}
-                <button type="button" disabled={busy || (drafts[question.id] || '').trim().length < 5} onClick={() => answer(question)} className={`${primaryButton} mt-2`}>
+                <button type="button" disabled={busy} onClick={() => answer(question)} className={`${primaryButton} mt-2`}>
                   <Send size={15} aria-hidden="true" className="rtl:-scale-x-100" /> {t('adx.q_send')}
                 </button>
               </div>

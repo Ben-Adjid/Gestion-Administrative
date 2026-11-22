@@ -193,7 +193,7 @@ function MissingLocalityForm({ language, defaultProvince }: { language: string; 
   }
 
   return (
-    <form onSubmit={submit} className="flex flex-wrap items-end gap-2 rounded-lg border border-slate-200 bg-white p-3 print:hidden">
+    <form onSubmit={submit} noValidate className="flex flex-wrap items-end gap-2 rounded-lg border border-slate-200 bg-white p-3 print:hidden">
       <label className="text-xs font-semibold text-slate-700">
         {t('placex.missing_name')}
         <input required minLength={2} maxLength={120} value={name} onChange={(e) => setName(e.target.value)} className="mt-1 block w-48 rounded-lg border border-slate-300 px-2 py-1.5 text-sm" />

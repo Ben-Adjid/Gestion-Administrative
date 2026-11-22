@@ -120,7 +120,7 @@ export default function ChatBox() {
         <Link href="/signalement" className="font-semibold text-red-700 hover:underline">{t('chat.report')}</Link>
       </div>
 
-      <form onSubmit={ask} className="flex gap-2 border-t border-slate-200 p-3">
+      <form onSubmit={ask} noValidate className="flex gap-2 border-t border-slate-200 p-3">
         <label htmlFor="chat-question" className="sr-only">{t('chat.input_label')}</label>
         <input
           id="chat-question"

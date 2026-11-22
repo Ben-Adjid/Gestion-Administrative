@@ -119,7 +119,7 @@ function SignalementContent() {
           <div className="pt-2">
             <button
               type="submit"
-              disabled={status === 'submitting' || form.message.trim().length < 10}
+              disabled={status === 'submitting'}
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-800 py-3 font-bold text-white shadow-sm transition hover:bg-blue-900 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === 'submitting' ? t('signal.submitting') : <><Send aria-hidden="true" className="h-4 w-4 rtl:-scale-x-100" /> {t('signal.submit')}</>}

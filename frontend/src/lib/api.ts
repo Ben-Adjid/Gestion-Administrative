@@ -1,4 +1,5 @@
 import { isLanguage, translate } from '@/lib/i18n';
+import { getTurnstileToken, resetTurnstile } from '@/lib/turnstile';
 
 const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000')
   .replace(/\/+$/, '')
@@ -59,20 +60,30 @@ export async function fetchApi<T>(endpoint: string, options: RequestInit = {}): 
     }
   }
 
+  // Anti-robot : jeton Turnstile envoyé avec chaque écriture (utilisé une seule fois, puis renouvelé).
+  const isWrite = (options.method || 'GET').toUpperCase() !== 'GET';
+  const turnstileToken = isWrite ? getTurnstileToken() : '';
+
   const headers: HeadersInit = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
     'Accept-Language': language,
     ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
+    ...(turnstileToken ? { 'X-Turnstile-Token': turnstileToken } : {}),
     ...(options.headers || {}),
   };
 
-  const response = await fetch(url, {
-    ...options,
-    credentials: 'include', // Inclure cookies httpOnly
-    cache: options.cache ?? 'no-store',
-    headers,
-  });
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      ...options,
+      credentials: 'include', // Inclure cookies httpOnly
+      cache: options.cache ?? 'no-store',
+      headers,
+    });
+  } finally {
+    if (isWrite && turnstileToken) resetTurnstile();
+  }
 
   if (response.status === 401 && token) {
     if (typeof window !== 'undefined') {
@@ -80,7 +91,12 @@ export async function fetchApi<T>(endpoint: string, options: RequestInit = {}): 
       localStorage.removeItem('demarches_admin');
       localStorage.removeItem(isAdminEndpoint ? 'admin_token' : 'token');
       localStorage.removeItem(isAdminEndpoint ? 'admin' : 'user');
-      window.location.href = isAdminEndpoint ? '/admin/login' : '/auth/login';
+      // Redirection seulement dans les espaces réservés : une fiche publique reste consultable
+      // même si un ancien jeton (compte supprimé, session expirée) traîne dans le navigateur.
+      const inProtectedArea = window.location.pathname.startsWith('/dashboard') || window.location.pathname.startsWith('/admin');
+      if (inProtectedArea) {
+        window.location.href = isAdminEndpoint ? '/admin/login' : '/auth/login';
+      }
     }
   }
 
@@ -94,7 +110,8 @@ export async function fetchApi<T>(endpoint: string, options: RequestInit = {}): 
     const lang = isLanguage(language) ? language : 'fr';
     // 403/429/5xx : message du site (le serveur peut répondre en anglais ou de façon technique).
     const generic = response.status === 403
-      ? translate(lang, 'common.forbidden')
+      // Refus métier précis (ex. « un autre administrateur doit relire la fiche ») : on l'affiche tel quel.
+      ? errorData.message && !/unauthori[sz]ed|forbidden/i.test(errorData.message) ? errorData.message : translate(lang, 'common.forbidden')
       : response.status === 429
         // Les limites métier (ex. signalements) renvoient un message traduit et précis.
         ? errorData.message && !/too many attempts/i.test(errorData.message) ? errorData.message : translate(lang, 'common.throttled')

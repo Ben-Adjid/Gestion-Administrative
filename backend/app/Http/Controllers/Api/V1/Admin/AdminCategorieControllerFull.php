@@ -169,8 +169,16 @@ class AdminCategorieControllerFull extends Controller
                 ], 409);
             }
 
+            $label = $categorie->name;
+            // Libère le nom et l'identifiant : une catégorie supprimée ne doit pas bloquer la création d'une nouvelle
+            // (le nom et l'identifiant sont uniques en base, y compris dans la corbeille).
+            $suffix = ' (supprimée #' . $categorie->id . ')';
+            $categorie->forceFill([
+                'name' => mb_substr($categorie->name, 0, 100 - mb_strlen($suffix)) . $suffix,
+                'slug' => mb_substr($categorie->slug, 0, 120 - 20) . '-supprimee-' . $categorie->id,
+            ])->save();
             $categorie->delete();
-            ActivityLog::logAction($request->user()->id, 'delete_category', "Suppression de la catégorie « {$categorie->name} »", Categorie::class, $categorie->id);
+            ActivityLog::logAction($request->user()->id, 'delete_category', "Suppression de la catégorie « {$label} »", Categorie::class, $categorie->id);
 
             return response()->json([
                 'message' => 'Catégorie supprimée avec succès',

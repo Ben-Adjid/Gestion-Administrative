@@ -48,7 +48,7 @@ export default function LoginPage() {
 
         {error && <p role="alert" className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">{error}</p>}
 
-        <form onSubmit={submit} className="mt-7 space-y-5">
+        <form onSubmit={submit} noValidate className="mt-7 space-y-5">
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-slate-700">{t('auth.email')}</label>
             <input id="email" type="email" autoComplete="email" required dir="ltr" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={input} />

@@ -36,7 +36,7 @@ export default function ForgotPasswordPage() {
         {message && <p role="status" className="mt-5 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800">{message}</p>}
         {error && <p role="alert" className="mt-5 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">{error}</p>}
 
-        <form onSubmit={submit} className="mt-6 space-y-4">
+        <form onSubmit={submit} noValidate className="mt-6 space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-slate-700">{t('auth.email')}</label>
             <input

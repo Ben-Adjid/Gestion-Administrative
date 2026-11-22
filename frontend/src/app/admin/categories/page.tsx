@@ -218,7 +218,7 @@ export default function AdminCategoriesPage() {
           {notice && <p role="status" className="mb-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">{notice}</p>}
 
           {showForm && (
-            <form ref={formRef} onSubmit={submit} className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <form ref={formRef} onSubmit={submit} noValidate className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-lg font-bold text-slate-900">{t(editing ? 'adm.c_edit_title' : 'adm.c_create')}</h2>
                 <button type="button" onClick={closeForm} aria-label={t('adm.d_close_form')} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"><X size={18} /></button>

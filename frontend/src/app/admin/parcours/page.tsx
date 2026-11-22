@@ -172,7 +172,7 @@ export default function LifeEventsAdminPage() {
             </label>
             <div className="flex justify-end gap-2">
               <button type="button" onClick={() => setEditing(null)} className={secondaryButton}>{t('adx.cancel')}</button>
-              <button type="submit" disabled={saving || form.steps.length === 0 || !form.title.fr.trim()} className={primaryButton}>{t('adx.save')}</button>
+              <button type="submit" disabled={saving} className={primaryButton}>{t('adx.save')}</button>
             </div>
           </form>
         </AdminModal>

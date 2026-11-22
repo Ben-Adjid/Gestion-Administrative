@@ -53,7 +53,7 @@ function AnswerForm({ questionId, onDone }: { questionId: number; onDone: (messa
       <textarea id={`answer-${questionId}`} rows={3} maxLength={1500} value={body} onChange={(e) => setBody(e.target.value)} placeholder={t('qa.answer_ph')} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" />
       <input value={name} maxLength={100} onChange={(e) => setName(e.target.value)} placeholder={t('qa.name')} aria-label={t('qa.name')} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" />
       {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
-      <button type="submit" disabled={sending || body.trim().length < 10} className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
+      <button type="submit" disabled={sending} className="rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
         {sending ? t('qa.sending') : t('qa.answer_submit')}
       </button>
     </form>
@@ -219,7 +219,7 @@ export function QuestionsSection({ demarcheSlug, full = false }: { demarcheSlug?
             {errors.author_email && <span className="mt-1 block text-sm text-red-700">{errors.author_email[0]}</span>}
           </label>
         </div>
-        <button type="submit" disabled={sending || form.body.trim().length < 10} className="rounded-lg bg-blue-700 px-5 py-2.5 font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
+        <button type="submit" disabled={sending} className="rounded-lg bg-blue-700 px-5 py-2.5 font-semibold text-white hover:bg-blue-800 disabled:opacity-50">
           {sending ? t('qa.sending') : t('qa.submit')}
         </button>
       </form>

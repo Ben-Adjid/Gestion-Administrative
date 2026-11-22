@@ -47,6 +47,7 @@ export default function ReviewsModerationPage() {
 
   const act = async (review: Review, action: 'approved' | 'rejected' | 'delete') => {
     if (action === 'delete' && !(await confirm({ title: t('adx.confirm_delete', { name: clip(review.comment, 40) }), tone: 'danger' }))) return;
+    if (action === 'approved' && !(await confirm({ title: t('adx.confirm_publish', { name: clip(review.comment, 40) }) }))) return;
     setBusy(review.id);
     setError('');
     try {

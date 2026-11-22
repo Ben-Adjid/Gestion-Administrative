@@ -206,7 +206,7 @@ export default function CitiesAdminPage() {
             <label className="flex items-center gap-2 text-sm font-semibold text-slate-700"><input type="checkbox" checked={cityForm.is_active} onChange={(e) => setCityForm({ ...cityForm, is_active: e.target.checked })} className="h-4 w-4" /> {t('adx.visible')}</label>
             <div className="flex justify-end gap-2">
               <button type="button" onClick={() => setCityEditing(null)} className={secondaryButton}>{t('adx.cancel')}</button>
-              <button type="submit" disabled={saving || !cityForm.name.trim()} className={primaryButton}>{t('adx.save')}</button>
+              <button type="submit" disabled={saving} className={primaryButton}>{t('adx.save')}</button>
             </div>
           </form>
         </AdminModal>
@@ -253,7 +253,7 @@ export default function CitiesAdminPage() {
             <label className="flex items-center gap-2 text-sm font-semibold text-slate-700"><input type="checkbox" checked={officeForm.is_active} onChange={(e) => setOfficeForm({ ...officeForm, is_active: e.target.checked })} className="h-4 w-4" /> {t('adx.visible')}</label>
             <div className="flex justify-end gap-2">
               <button type="button" onClick={() => setOfficeEditing(null)} className={secondaryButton}>{t('adx.cancel')}</button>
-              <button type="submit" disabled={saving || !officeForm.name.fr.trim() || !officeForm.city_id} className={primaryButton}>{t('adx.save')}</button>
+              <button type="submit" disabled={saving} className={primaryButton}>{t('adx.save')}</button>
             </div>
           </form>
         </AdminModal>

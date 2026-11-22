@@ -70,7 +70,7 @@ export default function AdminLoginPage() {
 
         {error && <p role="alert" className="mb-4 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">{error}</p>}
 
-        <form onSubmit={submit} className="space-y-4">
+        <form onSubmit={submit} noValidate className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-slate-700">{t('admin.login_email')}</label>
             <input id="email" type="email" autoComplete="username" required dir="ltr" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={input} />

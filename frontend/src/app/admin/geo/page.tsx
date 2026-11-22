@@ -69,15 +69,18 @@ export default function GeoAdminPage() {
 
   useEffect(load, [load]);
 
-  const run = async (action: () => Promise<unknown>) => {
+  // Renvoie true seulement si l'enregistrement a réussi : le formulaire ne se vide qu'à ce moment-là.
+  const run = async (action: () => Promise<unknown>): Promise<boolean> => {
     setError('');
     setMessage('');
     try {
       await action();
       setMessage(t('covx.admin_saved'));
       load();
+      return true;
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : t('common.error_generic'));
+      return false;
     }
   };
 
@@ -178,7 +181,7 @@ function ImportSection({ onDone }: { onDone: () => void }) {
   );
 }
 
-function UnitsSection({ units, onNew, onSave }: { units: Unit[]; onNew: (body: Record<string, unknown>) => void; onSave: (unit: Unit, body: Record<string, unknown>) => void }) {
+function UnitsSection({ units, onNew, onSave }: { units: Unit[]; onNew: (body: Record<string, unknown>) => Promise<boolean>; onSave: (unit: Unit, body: Record<string, unknown>) => void }) {
   const { t } = useLanguage();
   const [level, setLevel] = useState<(typeof LEVELS)[number]>('locality');
   const [parentId, setParentId] = useState('');
@@ -198,25 +201,28 @@ function UnitsSection({ units, onNew, onSave }: { units: Unit[]; onNew: (body: R
       return;
     }
     setLocalError('');
-    onNew({ level, parent_id: parentId ? Number(parentId) : null, name, status, source_url: sourceUrl || null, source_label: sourceLabel || null, verified_on: verifiedOn || null });
-    setName('');
+    void onNew({ level, parent_id: parentId ? Number(parentId) : null, name, status, source_url: sourceUrl || null, source_label: sourceLabel || null, verified_on: verifiedOn || null })
+      .then((ok) => { if (ok) setName(''); });
   };
 
   return (
     <section className="mt-8">
       <h2 className="text-lg font-bold text-slate-950">{t('covx.admin_units')}</h2>
-      <form onSubmit={submit} className="mt-3 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-3">
+      <form onSubmit={submit} noValidate className="mt-3 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-3">
         <h3 className="font-semibold text-slate-800 sm:col-span-3">{t('covx.admin_add_unit')}</h3>
         <label className={adminLabel}>{t('covx.admin_level')}
           <select className={adminInput} value={level} onChange={(e) => { setLevel(e.target.value as (typeof LEVELS)[number]); setParentId(''); }}>
             {LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
           </select>
         </label>
-        <label className={adminLabel}>{t('covx.admin_parent')}
-          <select className={adminInput} value={parentId} onChange={(e) => setParentId(e.target.value)} disabled={level === 'province'}>
+        <label className={adminLabel}>{t('covx.admin_parent')}{level !== 'province' ? ' *' : ''}
+          <select className={adminInput} value={parentId} onChange={(e) => setParentId(e.target.value)} disabled={level === 'province'} required={level !== 'province'} aria-required={level !== 'province'}>
             <option value="">—</option>
             {parents.map((u) => <option key={u.id} value={u.id}>{u.path}</option>)}
           </select>
+          {level !== 'province' && parents.length === 0 && (
+            <span className="mt-1 block text-xs text-amber-700">Ajoutez d’abord une unité de niveau « {ALLOWED_PARENTS[level].join(' ou ')} » : ce niveau doit être rattaché à un parent.</span>
+          )}
         </label>
         <label className={adminLabel}>{t('covx.admin_name')}
           <input className={adminInput} required value={name} onChange={(e) => setName(e.target.value)} />
@@ -298,7 +304,7 @@ function UnitRow({ unit, onSave }: { unit: Unit; onSave: (unit: Unit, body: Reco
 
 function ServicesSection({ services, offices, demarches, onNew, onSave, onDelete }: {
   services: Service[]; offices: OfficeOption[]; demarches: Array<{ id: number; title: string }>;
-  onNew: (body: Record<string, unknown>) => void; onSave: (service: Service, body: Record<string, unknown>) => void; onDelete: (service: Service) => void;
+  onNew: (body: Record<string, unknown>) => Promise<boolean>; onSave: (service: Service, body: Record<string, unknown>) => void; onDelete: (service: Service) => void;
 }) {
   const { t } = useLanguage();
   // Filtre par démarche : ouvert depuis la page qualité (« Bureaux de cette fiche »).
@@ -320,13 +326,13 @@ function ServicesSection({ services, offices, demarches, onNew, onSave, onDelete
     event.preventDefault();
     if (status === 'confirmed' && !DATE.test(verifiedOn)) { setLocalError(t('covx.admin_confirmed_hint')); return; }
     setLocalError('');
-    onNew({ office_id: Number(officeId), demarche_id: Number(demarcheId), status, source_url: sourceUrl || null, verified_on: verifiedOn || null });
+    void onNew({ office_id: Number(officeId), demarche_id: Number(demarcheId), status, source_url: sourceUrl || null, verified_on: verifiedOn || null });
   };
 
   return (
     <section className="mt-10">
       <h2 className="text-lg font-bold text-slate-950">{t('covx.admin_services')}</h2>
-      <form onSubmit={submit} className="mt-3 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-3">
+      <form onSubmit={submit} noValidate className="mt-3 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 sm:grid-cols-3">
         <label className={adminLabel}>{t('covx.admin_office')}
           <select className={adminInput} required value={officeId} onChange={(e) => setOfficeId(e.target.value)}>
             <option value="">—</option>

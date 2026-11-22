@@ -174,7 +174,7 @@ export default function AdminSignalementsPage() {
                     </div>
 
                     {replyId === s.id && (
-                      <form onSubmit={(event) => submitReply(event, s)} className="mt-5 border-t border-slate-100 pt-5">
+                      <form onSubmit={(event) => submitReply(event, s)} noValidate className="mt-5 border-t border-slate-100 pt-5">
                         <label htmlFor={`reply-${s.id}`} className="mb-2 block text-sm font-semibold text-slate-800">
                           {t('adm.s_reply_label')}
                           {!s.author_email && <span className="ms-2 font-normal text-slate-500">({t('adm.s_no_email')})</span>}

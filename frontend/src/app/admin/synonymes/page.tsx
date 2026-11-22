@@ -83,7 +83,7 @@ export default function SynonymsAdminPage() {
           <input required maxLength={100} value={form.synonym} onChange={(e) => setForm({ ...form, synonym: e.target.value })} placeholder={t('adx.syn_synonym_ph')} className={adminInput} />
           {errors.synonym && <span className="mt-1 block text-sm text-red-700">{errors.synonym[0]}</span>}
         </label>
-        <button type="submit" disabled={saving || !form.term.trim() || !form.synonym.trim()} className={primaryButton}><Plus size={16} aria-hidden="true" /> {t('adx.add')}</button>
+        <button type="submit" disabled={saving} className={primaryButton}><Plus size={16} aria-hidden="true" /> {t('adx.add')}</button>
       </form>
 
       {!loaded && <p role="status" className="text-slate-500">{t('adx.loading')}</p>}

@@ -10,6 +10,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import { PreferencesProvider, usePreferences } from '@/contexts/PreferencesContext';
 import { ConfirmProvider } from '@/components/ConfirmProvider';
 import { RouteTitle } from '@/components/RouteTitle';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 
 function Chrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -19,6 +20,7 @@ function Chrome({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <RouteTitle />
+      <TurnstileWidget />
       {!isAdminRoute && <PageViewTracker />}
       <OfflineSupport />
       {!isAdminRoute && <Navbar />}

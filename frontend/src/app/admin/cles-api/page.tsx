@@ -104,7 +104,7 @@ export default function ApiKeysAdminPage() {
           <input required maxLength={150} value={name} onChange={(e) => setName(e.target.value)} placeholder={t('adx.key_name_ph')} className={adminInput} />
           {errors.name && <span className="mt-1 block text-sm text-red-700">{errors.name[0]}</span>}
         </label>
-        <button type="submit" disabled={saving || !name.trim()} className={primaryButton}><Plus size={16} aria-hidden="true" /> {t('adx.key_create')}</button>
+        <button type="submit" disabled={saving} className={primaryButton}><Plus size={16} aria-hidden="true" /> {t('adx.key_create')}</button>
       </form>
 
       {newKey && (

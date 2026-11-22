@@ -32,7 +32,10 @@ export default function ImportPage() {
 
   // Envoi multipart : fetchApi impose du JSON, on appelle donc l'API directement avec le jeton admin.
   const send = async (dryRun: boolean) => {
-    if (!file) return;
+    if (!file) {
+      setError(t('adx.i_no_file'));
+      return;
+    }
     setBusy(true);
     setError('');
     setMessage('');
@@ -80,11 +83,11 @@ export default function ImportPage() {
 
       <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
         <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <form onSubmit={check} className="space-y-4">
+          <form onSubmit={check} noValidate className="space-y-4">
             <label className={adminLabel}>{t('adx.i_file')}
               <input type="file" accept=".xlsx,.csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" onChange={(e) => { setFile(e.target.files?.[0] ?? null); setReport(null); }} className={adminInput} />
             </label>
-            <button type="submit" disabled={!file || busy} className={primaryButton}>
+            <button type="submit" disabled={busy} className={primaryButton}>
               <FileCheck2 size={16} aria-hidden="true" /> {busy ? t('adx.i_checking') : t('adx.i_check')}
             </button>
           </form>

@@ -428,7 +428,7 @@ export default function AdminDemarchesPage() {
           </section>
 
           {showForm && (
-            <form ref={formRef} onSubmit={submit} className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+            <form ref={formRef} onSubmit={submit} noValidate className="mb-8 scroll-mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">{t(editing ? 'adm.d_edit_title' : 'adm.d_create')}</h2>
                 <button type="button" onClick={closeForm} aria-label={t('adm.d_close_form')} className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"><X size={18} /></button>

@@ -134,7 +134,7 @@ function DeleteAccount() {
   };
 
   return (
-    <form onSubmit={submit} className="mt-8 max-w-xl space-y-4 rounded-2xl border border-red-200 bg-red-50/40 p-6">
+    <form onSubmit={submit} noValidate className="mt-8 max-w-xl space-y-4 rounded-2xl border border-red-200 bg-red-50/40 p-6">
       <h2 className="text-lg font-bold text-red-900">{t('profile.delete_title')}</h2>
       <p className="text-sm text-slate-700">{t('profile.delete_text')}</p>
       {error && <p role="alert" className="rounded-lg border border-red-200 bg-white p-3 text-sm text-red-800">{error}</p>}
