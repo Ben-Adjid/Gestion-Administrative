@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#1e3a8a"/>
-  <rect y="448" width="512" height="64" fill="#fbbf24"/>
-  <text x="256" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="210" font-weight="800" fill="#ffffff">DT</text>
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#fond)"/>
+  <rect x="128" y="88" width="256" height="330" rx="30" fill="#ffffff"/>
+  <rect x="168" y="150" width="176" height="20" rx="10" fill="#cbd5e1"/>
+  <rect x="168" y="198" width="176" height="20" rx="10" fill="#cbd5e1"/>
+  <rect x="168" y="246" width="120" height="20" rx="10" fill="#cbd5e1"/>
+  <rect x="168" y="300" width="176" height="12" rx="6" fill="#93c5fd"/>
+  <circle cx="352" cy="336" r="98" fill="#d97706"/>
+  <circle cx="352" cy="336" r="86" fill="#fbbf24"/>
+  <path d="M318 338 L342 362 L394 306" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

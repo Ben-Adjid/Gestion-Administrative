@@ -4,7 +4,34 @@
     {
       "name": "sngect-ui",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "C:/Users/aboub/Desktop/SNGECT/frontend", "run", "dev"],
+      "runtimeArgs": [
+        "--prefix",
+        "C:/Users/aboub/Desktop/SNGECT/frontend",
+        "run",
+        "dev"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "demarches-api",
+      "runtimeExecutable": "php",
+      "runtimeArgs": [
+        "artisan",
+        "serve",
+        "--port=8000"
+      ],
+      "cwd": "C:/Users/aboub/Desktop/Ges_admin/backend",
+      "port": 8000
+    },
+    {
+      "name": "demarches-front",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "C:/Users/aboub/Desktop/Ges_admin/frontend",
+        "run",
+        "dev"
+      ],
       "port": 3000
     }
   ]

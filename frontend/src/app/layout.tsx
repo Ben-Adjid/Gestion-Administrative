@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   },
   description: 'Guide citoyen indépendant : pièces à fournir, coût, délai et lieu de dépôt des démarches administratives au Tchad (CNI, passeport, actes d’état civil…).',
   keywords: ['démarches Tchad', 'passeport Tchad', 'carte d’identité Tchad', 'acte de naissance', 'casier judiciaire', 'permis de conduire'],
-  icons: { icon: '/icon.svg', apple: '/icon.svg' },
+  icons: { icon: '/icon.svg', apple: '/apple-touch-icon.png' },
+  appleWebApp: { capable: true, title: 'DemarchesTchad', statusBarStyle: 'default' },
   authors: [{ name: 'Aboubakar Assedick Mahamat Adjid Oumar' }],
   creator: 'Aboubakar Assedick Mahamat Adjid Oumar',
   openGraph: {
