@@ -7,6 +7,7 @@ import { fetchApi } from '@/lib/api';
 import { formatDate } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useConfirm } from '@/components/ConfirmProvider';
+import { clip } from '@/lib/clip';
 
 type Filter = 'pending' | 'pending_answers' | 'published' | 'rejected';
 type Status = 'pending' | 'published' | 'rejected';
@@ -58,7 +59,7 @@ export default function QuestionsModerationPage() {
   const moderateAnswer = (answer: Answer, status: 'published' | 'rejected') =>
     run(() => fetchApi(`/admin/answers/${answer.id}`, { method: 'PATCH', body: JSON.stringify({ status }) }), t('adx.saved'));
   const removeQuestion = async (question: Question) => {
-    if (!(await confirm({ title: t('adx.confirm_delete', { name: question.body.slice(0, 40) }), tone: 'danger' }))) return;
+    if (!(await confirm({ title: t('adx.confirm_delete', { name: clip(question.body, 40) }), tone: 'danger' }))) return;
     run(() => fetchApi(`/admin/questions/${question.id}`, { method: 'DELETE' }), t('adx.deleted'));
   };
   const answer = (question: Question) =>

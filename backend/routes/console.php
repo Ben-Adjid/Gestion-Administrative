@@ -10,6 +10,8 @@ Schedule::command('documents:send-reminders')->dailyAt('08:00')->withoutOverlapp
 Schedule::command('report:monthly')->monthlyOn(1, '07:00')->withoutOverlapping();
 Schedule::command('demarches:verification-reminder')->weeklyOn(1, '07:30')->withoutOverlapping();
 Schedule::command('demarches:publish-scheduled')->everyMinute()->withoutOverlapping();
+// Envoi des e-mails : vide la file chaque minute (utile en hébergement classique, sans processus permanent).
+Schedule::command('queue:work --stop-when-empty --max-time=50 --tries=3')->everyMinute()->withoutOverlapping();
 
 Artisan::command('inspire', function () {
     $this->comment('DemarchesTchad - Servir la Nation avec intégrité.');

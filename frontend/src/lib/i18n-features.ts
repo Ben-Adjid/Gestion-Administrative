@@ -132,6 +132,11 @@ const fr = {
     schedule_clear: 'Annuler la programmation',
     scheduled_at: 'Publication prévue le {date}',
   },
+  pagex: {
+    login: "Connexion", register: "Créer mon espace citoyen", forgot: "Mot de passe oublié", reset: "Nouveau mot de passe",
+    signal: "Signaler une erreur", dashboard: "Mon espace", documents: "Mes documents", favorites: "Mes démarches",
+    profile: "Mon profil", password: "Changer mon mot de passe", admin_login: "Accès administration", admin: "Administration",
+  },
   catx: {
     delete_blocked: 'Impossible de supprimer cette catégorie : elle contient {n} démarche(s). Déplacez-les ou archivez-les d’abord.',
     move_btn: 'Déplacer les démarches',
@@ -590,6 +595,11 @@ const en: FeatureMessages = {
     schedule_clear: 'Cancel the schedule',
     scheduled_at: 'Scheduled to publish on {date}',
   },
+  pagex: {
+    login: "Log in", register: "Create my citizen account", forgot: "Forgot password", reset: "New password",
+    signal: "Report an error", dashboard: "My space", documents: "My documents", favorites: "My procedures",
+    profile: "My profile", password: "Change my password", admin_login: "Administration access", admin: "Administration",
+  },
   catx: {
     delete_blocked: 'Cannot delete this category: it contains {n} procedure(s). Move or archive them first.',
     move_btn: 'Move procedures',
@@ -1035,6 +1045,11 @@ const ar: FeatureMessages = {
     schedule_hint: 'سيُنشر الإجراء تلقائيًا في هذا التاريخ والوقت، إذا لم يكن منشورًا بالفعل.',
     schedule_clear: 'إلغاء الجدولة',
     scheduled_at: 'النشر المقرر في {date}',
+  },
+  pagex: {
+    login: "تسجيل الدخول", register: "إنشاء حسابي", forgot: "نسيت كلمة المرور", reset: "كلمة مرور جديدة",
+    signal: "الإبلاغ عن خطأ", dashboard: "فضائي", documents: "وثائقي", favorites: "إجراءاتي",
+    profile: "ملفي الشخصي", password: "تغيير كلمة المرور", admin_login: "الدخول إلى الإدارة", admin: "الإدارة",
   },
   catx: {
     delete_blocked: 'لا يمكن حذف هذه الفئة: تحتوي على {n} إجراء(ات). انقلها أو أرشفها أولًا.',

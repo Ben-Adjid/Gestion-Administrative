@@ -197,7 +197,7 @@ export function AdminSidebar({ user }: { user: AdminUser | null }) {
   const header = (
     <div className="border-b border-slate-800 px-4 py-4">
       <Link href="/" className="flex items-center gap-2" dir="ltr">
-        <span className="grid h-7 w-7 place-items-center rounded-lg bg-blue-600 text-[11px] font-black text-white">DT</span>
+        <img src="/icon.svg" alt="" aria-hidden="true" width={28} height={28} className="h-7 w-7 rounded-lg" />
         <span className="text-base font-extrabold tracking-tight text-white">Demarches<span className="text-amber-400">Tchad</span></span>
       </Link>
       <div className="mt-3">

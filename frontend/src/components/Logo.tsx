@@ -19,16 +19,8 @@ export function Logo({ className = '', size = 'md', inverted = false }: LogoProp
 
   return (
     <div className={`flex items-center gap-3.5 ${className}`}>
-      <div className={`relative ${EMBLEM_SIZES[size]} flex items-center justify-center overflow-hidden rounded-2xl border-2 border-[#FECB00] shadow-md`} aria-hidden="true">
-        <div className="absolute inset-0 flex">
-          <div className="h-full w-1/3 bg-[#002664]" />
-          <div className="h-full w-1/3 bg-[#FECB00]" />
-          <div className="h-full w-1/3 bg-[#C60C30]" />
-        </div>
-        <div className="relative z-10 flex h-4/5 w-4/5 items-center justify-center rounded-xl bg-white/95">
-          <span className="text-xs font-black tracking-tighter text-[#002664]">DT</span>
-        </div>
-      </div>
+      <img src="/icon.svg" alt="" aria-hidden="true" width={56} height={56} className={`${EMBLEM_SIZES[size]} shrink-0 rounded-2xl shadow-md`} />
+
       <div className="flex flex-col">
         <span className="text-2xl font-extrabold tracking-tight" dir="ltr">
           <span className={inverted ? 'text-white' : 'text-[#002664]'}>Demarches</span>

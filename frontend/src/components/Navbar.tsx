@@ -68,9 +68,7 @@ export const Navbar = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-10">
         <div className="flex h-[4.5rem] items-center justify-between gap-4">
           <Link href="/" className="group flex items-center gap-3" aria-label={`DemarchesTchad — ${t('nav.home')}`}>
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-blue-900 text-sm font-extrabold tracking-tight text-white shadow-md shadow-blue-900/15 transition group-hover:bg-blue-800" dir="ltr">
-              DT
-            </span>
+            <img src="/icon.svg" alt="" aria-hidden="true" width={40} height={40} className="h-10 w-10 rounded-xl shadow-md shadow-blue-900/15 transition group-hover:scale-105" />
             <span className="text-lg font-bold tracking-tight text-slate-900 sm:text-xl" dir="ltr">
               Demarches<span className="text-blue-800">Tchad</span>
             </span>

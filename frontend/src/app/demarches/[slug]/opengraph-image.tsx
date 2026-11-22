@@ -12,7 +12,17 @@ export const revalidate = 3600;
 
 interface Fiche { title: string; cost: string; processing_time: string | null; categorie?: { name: string } }
 
+
+// Logo lu depuis le dossier public (moteur edge : pas d’accès au disque, donc chargement par URL du projet).
+async function logoDataUri(): Promise<string> {
+  const bytes = await fetch(new URL("../../../../public/icon-512.png", import.meta.url)).then((r) => r.arrayBuffer());
+  let binary = "";
+  new Uint8Array(bytes).forEach((b) => { binary += String.fromCharCode(b); });
+  return "data:image/png;base64," + btoa(binary);
+}
+
 export default async function Image({ params }: { params: { slug: string } }) {
+  const logo = await logoDataUri();
   let fiche: Fiche | null = null;
   try {
     const res = await fetch(`${API_V1_URL}/demarches/${encodeURIComponent(params.slug)}`, { next: { revalidate }, headers: serverApiHeaders() });
@@ -25,6 +35,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', background: 'white', color: '#0f172a' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 20, background: '#1e3a8a', color: 'white', padding: '36px 70px', fontSize: 40, fontWeight: 800 }}>
+          <img src={logo} width={64} height={64} style={{ borderRadius: 16 }} />
           DemarchesTchad
           {fiche?.categorie?.name && <span style={{ marginLeft: 'auto', fontSize: 28, color: '#fbbf24' }}>{fiche.categorie.name}</span>}
         </div>
@@ -32,14 +43,14 @@ export default async function Image({ params }: { params: { slug: string } }) {
           <div style={{ fontSize: 66, fontWeight: 800, lineHeight: 1.1 }}>{fiche?.title ?? 'Démarche administrative au Tchad'}</div>
           {fiche && (
             <div style={{ display: 'flex', gap: 30, marginTop: 'auto' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', background: '#ecfdf5', borderRadius: 20, padding: '24px 34px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', background: '#ecfdf5', borderRadius: 20, padding: '24px 34px', maxWidth: 470 }}>
                 <span style={{ fontSize: 26, color: '#047857' }}>Coût</span>
-                <span style={{ fontSize: 44, fontWeight: 800 }}>{fiche.cost}</span>
+                <span style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.2 }}>{fiche.cost}</span>
               </div>
               {fiche.processing_time && (
-                <div style={{ display: 'flex', flexDirection: 'column', background: '#fffbeb', borderRadius: 20, padding: '24px 34px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', background: '#fffbeb', borderRadius: 20, padding: '24px 34px', maxWidth: 560 }}>
                   <span style={{ fontSize: 26, color: '#b45309' }}>Délai</span>
-                  <span style={{ fontSize: 44, fontWeight: 800 }}>{fiche.processing_time}</span>
+                  <span style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.2 }}>{fiche.processing_time}</span>
                 </div>
               )}
             </div>

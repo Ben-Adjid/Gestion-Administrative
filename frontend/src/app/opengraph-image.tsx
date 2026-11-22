@@ -7,12 +7,22 @@ export const contentType = 'image/png';
 // Moteur « edge » : le moteur Node de next/og échoue sous Windows (chargement de police par chemin de fichier).
 export const runtime = 'edge';
 
-export default function Image() {
+
+// Logo lu depuis le dossier public (moteur edge : pas d’accès au disque, donc chargement par URL du projet).
+async function logoDataUri(): Promise<string> {
+  const bytes = await fetch(new URL("../../public/icon-512.png", import.meta.url)).then((r) => r.arrayBuffer());
+  let binary = "";
+  new Uint8Array(bytes).forEach((b) => { binary += String.fromCharCode(b); });
+  return "data:image/png;base64," + btoa(binary);
+}
+
+export default async function Image() {
+  const logo = await logoDataUri();
   return new ImageResponse(
     (
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', background: '#1e3a8a', color: 'white', padding: 80 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-          <div style={{ width: 96, height: 96, borderRadius: 24, background: '#fbbf24', color: '#1e3a8a', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48, fontWeight: 800 }}>DT</div>
+          <img src={logo} width={120} height={120} style={{ borderRadius: 28 }} />
           <div style={{ fontSize: 56, fontWeight: 800 }}>DemarchesTchad</div>
         </div>
         <div style={{ marginTop: 70, fontSize: 64, fontWeight: 800, lineHeight: 1.15, maxWidth: 1000 }}>

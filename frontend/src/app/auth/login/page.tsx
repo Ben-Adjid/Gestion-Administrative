@@ -37,7 +37,7 @@ export default function LoginPage() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_15%_20%,rgba(30,64,175,0.55),transparent_42%),radial-gradient(ellipse_at_90%_85%,rgba(217,119,6,0.18),transparent_38%)]" />
       <div className="w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/10 bg-white p-7 shadow-2xl shadow-black/25 sm:p-10">
         <Link href="/" className="mb-8 inline-flex items-center gap-3" aria-label="DemarchesTchad">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-blue-900 text-sm font-extrabold text-white shadow-lg shadow-blue-900/20" dir="ltr">DT</span>
+          <img src="/icon.svg" alt="" aria-hidden="true" width={44} height={44} className="h-11 w-11 rounded-2xl shadow-lg shadow-blue-900/20" />
           <span className="text-lg font-bold text-slate-900" dir="ltr">Demarches<span className="text-blue-800">Tchad</span></span>
         </Link>
         <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-800">

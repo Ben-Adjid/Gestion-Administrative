@@ -9,6 +9,7 @@ import { OfflineSupport } from '@/components/OfflineSupport';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { PreferencesProvider, usePreferences } from '@/contexts/PreferencesContext';
 import { ConfirmProvider } from '@/components/ConfirmProvider';
+import { RouteTitle } from '@/components/RouteTitle';
 
 function Chrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -17,6 +18,7 @@ function Chrome({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <RouteTitle />
       {!isAdminRoute && <PageViewTracker />}
       <OfflineSupport />
       {!isAdminRoute && <Navbar />}

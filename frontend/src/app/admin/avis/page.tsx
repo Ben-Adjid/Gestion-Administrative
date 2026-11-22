@@ -8,6 +8,7 @@ import { formatFcfa } from '@/lib/format';
 import { formatDate, formatDays } from '@/lib/i18n';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useConfirm } from '@/components/ConfirmProvider';
+import { clip } from '@/lib/clip';
 
 type Status = 'pending' | 'approved' | 'rejected';
 
@@ -45,7 +46,7 @@ export default function ReviewsModerationPage() {
   useEffect(load, [load]);
 
   const act = async (review: Review, action: 'approved' | 'rejected' | 'delete') => {
-    if (action === 'delete' && !(await confirm({ title: t('adx.confirm_delete', { name: review.comment.slice(0, 40) }), tone: 'danger' }))) return;
+    if (action === 'delete' && !(await confirm({ title: t('adx.confirm_delete', { name: clip(review.comment, 40) }), tone: 'danger' }))) return;
     setBusy(review.id);
     setError('');
     try {
